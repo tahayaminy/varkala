@@ -1,17 +1,24 @@
-<nav>
-  <i class="fab fa-facebook-f inline-block"></i>
-  <i class="fab fa-twitter inline-block"></i>
-  <i class="bi bi-telephone inline-block">020-800-456-747</i>
-  Free in-store delivery
-  <button mat-button [matMenuTriggerFor]="lang">English<i class="fas fa-caret-down"></i></button>
-  <mat-menu #lang="matMenu">
-    <button mat-menu-item>German</button>
-    <button mat-menu-item>French</button>
-  </mat-menu>
-  <button mat-button [matMenuTriggerFor]="usd">USD<i class="fas fa-caret-down"></i></button>
-  <mat-menu #usd="matMenu">
-    <button mat-menu-item>EUR</button>
-    <button mat-menu-item>GBP</button>
-  </mat-menu>
-  
+<nav class="columns-3 sm:w-full px-4 md:w-full lg:w-full">
+  <div class="inline-block w-full">
+    <i class="fab fa-facebook-f mx-1 inline-block"></i>
+    <i class="fab fa-twitter mx-1 inline-block"></i>
+    <span class="bi bi-telephone ml-5 inline-block"> 020-800-456-747</span>
+  </div>
+  <div class="text-center px-5 w-full">Free in-store delivery</div>
+  <div class="text-right w-full">
+    <button mat-button [matMenuTriggerFor]="lang">
+      English<i class="fas fa-caret-down"></i>
+    </button>
+    <mat-menu #lang="matMenu">
+      <button mat-menu-item>German</button>
+      <button mat-menu-item>French</button>
+    </mat-menu>
+    <button mat-button [matMenuTriggerFor]="usd">
+      USD<i class="fas fa-caret-down"></i>
+    </button>
+    <mat-menu #usd="matMenu">
+      <button mat-menu-item>EUR</button>
+      <button mat-menu-item>GBP</button>
+    </mat-menu>
+  </div>  
 </nav>

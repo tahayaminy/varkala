@@ -1,24 +1,24 @@
-<nav class="columns-3 sm:w-full px-4 md:w-full lg:w-full">
-  <div class="inline-block w-full">
+<nav class="sm:columns-2 md:columns-3 px-4 py-4 lg:px-12 w-full">
+  <div class="hidden md:inline-block inline-block w-full">
     <i class="fab fa-facebook-f mx-1 inline-block"></i>
     <i class="fab fa-twitter mx-1 inline-block"></i>
-    <span class="bi bi-telephone ml-5 inline-block"> 020-800-456-747</span>
+    <span class="ml-5 pl-6 inline-block relative"><i style="transform:translateY(25%)" class="bi bi-telephone absolute left-0 bottom-0 text-lg"></i> 020-800-456-747</span>
   </div>
-  <div class="text-center px-5 w-full">Free in-store delivery</div>
+  <div class="md:text-center w-full">Free in-store delivery</div>
   <div class="text-right w-full">
-    <button mat-button [matMenuTriggerFor]="lang">
-      English<i class="fas fa-caret-down"></i>
+    <button mat-button [matMenuTriggerFor]="lang" class="hidden sm:inline-block px-4 border-r">
+      English <i class="fas fa-caret-down"></i>
     </button>
-    <mat-menu #lang="matMenu">
-      <button mat-menu-item>German</button>
-      <button mat-menu-item>French</button>
+    <mat-menu class="mt-4" #lang="matMenu" xPosition="before">
+      <button mat-menu-item class="mat-menu-item">German</button>
+      <button mat-menu-item class="mat-menu-item">French</button>
     </mat-menu>
-    <button mat-button [matMenuTriggerFor]="usd">
-      USD<i class="fas fa-caret-down"></i>
+    <button mat-button [matMenuTriggerFor]="usd" class="hidden sm:inline-block px-4">
+      USD <i class="fas fa-caret-down"></i>
     </button>
-    <mat-menu #usd="matMenu">
-      <button mat-menu-item>EUR</button>
-      <button mat-menu-item>GBP</button>
+    <mat-menu class="mt-4" #usd="matMenu" xPosition="before" yPosition="below">
+      <button mat-menu-item class="mat-menu-item">EUR</button>
+      <button mat-menu-item class="mat-menu-item">GBP</button>
     </mat-menu>
   </div>  
 </nav>

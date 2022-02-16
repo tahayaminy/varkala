@@ -21,8 +21,8 @@
         English <i class="fas fa-caret-down"></i>
       </button>
       <mat-menu class="mt-4" #lang="matMenu" xPosition="before">
-        <button mat-menu-item class="mat-menu-item">German</button>
-        <button mat-menu-item class="mat-menu-item">French</button>
+        <button mat-menu-item class="mat-nav-item">German</button>
+        <button mat-menu-item class="mat-nav-item">French</button>
       </mat-menu>
       <button
         mat-button
@@ -52,9 +52,15 @@
     <section class="px-4 lg:px-12 flex items-center">
       <span class="w-full py-2 lg:w-auto lg:mr-4">Varkala</span>
       <ul class="hidden lg:block">
-        <li class="inline-block p-2 pr-5">
+        <li [matMenuTriggerFor]="home" class="inline-block p-2 pr-5">
           Home <i class="fas text-xs fa-angle-down"></i>
         </li>
+        <mat-menu class="mt-4" #home="matMenu">
+          <button mat-menu-item class="mat-submenu-item">Home 1 - Fashion</button>
+          <button mat-menu-item class="mat-submenu-item">Home 2 - Fashion</button>
+          <button mat-menu-item class="mat-submenu-item">Home 3 - Design <b class="bg-yellow-100 text-yellow-600 inline-block p-1 rounded ml-1 fs-10">New</b></button>
+          <button mat-menu-item class="mat-submenu-item">Home 4 - Design <b class="bg-yellow-100 text-yellow-600 inline-block p-1 rounded ml-1 fs-10">New</b></button>
+        </mat-menu>
         <li class="inline-block p-2 pr-5">
           Shop <i class="fas text-xs fa-angle-down"></i>
         </li>
@@ -139,7 +145,7 @@
   </section>
 </nav>
 <mat-drawer-container class="example-container" autosize [hasBackdrop]="true">
-  <mat-drawer #drawer opened class="example-sidenav" mode="side" position="end">
+  <mat-drawer #drawer class="example-sidenav" mode="side" position="end">
     <div class="flex justify-end p-4">
       <i (click)="drawer.toggle()" class="fas text-3xl px-2 fa-times"></i>
     </div>

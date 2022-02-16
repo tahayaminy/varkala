@@ -1,9 +1,22 @@
-.mat-menu-item {
+.mat-nav-item {
   padding: 0 24px !important;
   display: flex;
   align-items: center;
   width: 160px;
   height: 35px;
+}
+.mat-submenu-item{
+  padding: 0 24px !important;
+  display: flex;
+  align-items: center;
+  height: 35px;
+  b{
+    line-height: normal;
+  }
+  &:hover{
+    background-color: transparent !important;
+    color: rgba(0, 0, 0, 0.592);
+  }
 }
 #searchBox:hover > input,
 #searchBox:hover > i {

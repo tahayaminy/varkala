@@ -65,4 +65,20 @@
 .example-sidenav {
   width: 500px;
   pointer-events: all;
+  h5{
+    margin-bottom: 48px;
+    font-size: 20px;
+    font-weight: 900;
+  }
+  ul>li{
+    font-weight: 700;
+  }
+  .fa-times{
+    transform-origin: 50% 50%;
+    transition: .5s;
+    cursor: pointer;
+  }
+  .fa-times:hover{
+    transform: rotateZ(90deg);
+  }
 }

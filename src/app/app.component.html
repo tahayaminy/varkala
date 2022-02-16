@@ -141,24 +141,24 @@
 <mat-drawer-container class="example-container" autosize [hasBackdrop]="true">
   <mat-drawer #drawer opened class="example-sidenav" mode="side" position="end">
     <div class="flex justify-end p-4">
-      <i class="fas text-3xl pr-2 fa-times"></i>
+      <i (click)="drawer.toggle()" class="fas text-3xl px-2 fa-times"></i>
     </div>
     <div class="p-12 pt-4">
-      <h5>Varkala</h5>
-      <ul>
-        <li>Home</li>
-        <li>Link</li>
-        <li>Disabled</li>
-        <li>Dropdown link <i class="fas fa-angle-down"></i></li>
+      <h5 class="font-bold">Varkala</h5>
+      <ul class="mb-12">
+        <li class="py-3">Home</li>
+        <li class="py-3">Link</li>
+        <li class="py-3">Disabled</li>
+        <li class="py-3">Dropdown link <i class="fas fa-caret-down"></i></li>
       </ul>
-      <div class="flex items-center">
-        <i class="fab fa-facebook-f inline-block"></i>
-        <i class="fab fa-twitter inline-block"></i>
+      <div class="flex items-center mb-6">
+        <i class="fab mr-2 fa-facebook-f inline-block"></i>
+        <i class="fab mr-2 fa-twitter inline-block"></i>
         <span class="inline-block"
-          ><i class="bi bi-telephone text-lg"></i> 020-800-456-747</span
+          ><i class="mr-2 bi bi-telephone text-lg"></i> 020-800-456-747</span
         >
       </div>
-      <p>
+      <p class="text-sm">
         Samsa was a travelling salesman - and above it there hung a picture that
         he had recently cut out of an illustrated magazine and housed in a nice,
         gilded frame.

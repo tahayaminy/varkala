@@ -10,6 +10,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatIconModule,
     MatInputModule,
     MatBadgeModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

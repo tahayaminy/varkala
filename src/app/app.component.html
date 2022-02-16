@@ -88,7 +88,10 @@
           <span matBadge="6" class="bi text-2xl ml-3 bi-bag"></span>
         </li>
         <li class="inline-block">
-          <i class="fas text-2xl ml-3 mr-5 fa-align-left"></i>
+          <i
+            (click)="drawer.toggle()"
+            class="fas text-2xl ml-3 mr-5 fa-align-left cursor-pointer"
+          ></i>
         </li>
       </ul>
       <div class="lg:hidden w-full text-center">
@@ -97,21 +100,24 @@
         <span matBadge="6" class="bi text-2xl ml-3 bi-bag"></span>
       </div>
       <div class="lg:hidden w-full text-right">
-        <i (click)="responsiveMenu()" class="fas text-2xl ml-3 mr-4 fa-align-left cursor-pointer"></i>
+        <i
+          (click)="responsiveMenu()"
+          class="fas text-2xl ml-3 mr-4 fa-align-left cursor-pointer"
+        ></i>
       </div>
     </section>
     <section #contMenu id="responsiveMenu" class="px-4">
       <ul class="mt-7">
-        <li style="height: 42px;" class="flex py-2 items-center">
+        <li style="height: 42px" class="flex py-2 items-center">
           Home <i class="fas ml-auto mr-5 text-xs fa-angle-down"></i>
         </li>
-        <li style="height: 42px;" class="flex py-2 items-center">
+        <li style="height: 42px" class="flex py-2 items-center">
           Shop <i class="fas ml-auto mr-5 text-xs fa-angle-down"></i>
         </li>
-        <li style="height: 42px;" class="flex py-2 items-center">
+        <li style="height: 42px" class="flex py-2 items-center">
           Icons <i class="fas ml-auto mr-5 text-xs fa-angle-down"></i>
         </li>
-        <li style="height: 42px;" class="flex py-2 items-center">
+        <li style="height: 42px" class="flex py-2 items-center">
           Pages <i class="fas ml-auto mr-5 text-xs fa-angle-down"></i>
         </li>
       </ul>
@@ -132,3 +138,31 @@
     </section>
   </section>
 </nav>
+<mat-drawer-container class="example-container" autosize [hasBackdrop]="true">
+  <mat-drawer #drawer opened class="example-sidenav" mode="side" position="end">
+    <div class="flex justify-end p-4">
+      <i class="fas text-3xl pr-2 fa-times"></i>
+    </div>
+    <div class="p-12 pt-4">
+      <h5>Varkala</h5>
+      <ul>
+        <li>Home</li>
+        <li>Link</li>
+        <li>Disabled</li>
+        <li>Dropdown link <i class="fas fa-angle-down"></i></li>
+      </ul>
+      <div class="flex items-center">
+        <i class="fab fa-facebook-f inline-block"></i>
+        <i class="fab fa-twitter inline-block"></i>
+        <span class="inline-block"
+          ><i class="bi bi-telephone text-lg"></i> 020-800-456-747</span
+        >
+      </div>
+      <p>
+        Samsa was a travelling salesman - and above it there hung a picture that
+        he had recently cut out of an illustrated magazine and housed in a nice,
+        gilded frame.
+      </p>
+    </div>
+  </mat-drawer>
+</mat-drawer-container>

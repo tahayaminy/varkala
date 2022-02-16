@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'varkala';
+  Menu=false;
+  @ViewChild('contMenu') menuCont!:ElementRef;
+  responsiveMenu(){
+    this.Menu=!this.Menu;
+    console.log('run')
+    if(this.Menu){
+      this.menuCont.nativeElement.style.height='auto';
+    }else{
+      this.menuCont.nativeElement.style.height=0;
+    }
+  }
 }

@@ -9,6 +9,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatBadgeModule} from '@angular/material/badge';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

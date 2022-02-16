@@ -28,3 +28,26 @@
 @keyframes searchBox {
     from{width: 0px;}to{width: 217px;}
 }
+#searchResponsive{
+  overflow-x: hidden;
+  width: 100%;
+  input {
+    width: calc(100% - 50px);
+  }
+  i {
+    width: 50px;
+  }
+}
+#searchResponsive:hover > input,
+#searchResponsive:hover > i {
+  border-bottom-color: black;
+  transition: 0.5s;
+}
+#searchResponsive input:focus {
+  border-bottom-color: black;
+  transition: 0.5s;
+}
+#responsiveMenu{
+  height: 0;
+  overflow-y: hidden;
+}

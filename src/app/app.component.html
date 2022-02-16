@@ -1,6 +1,6 @@
 <nav class="w-full">
   <section
-    class="sm:columns-2 md:columns-3 px-4 py-3 lg:px-12 fs-14 flex align-items"
+    class="sm:columns-2 md:columns-3 px-4 py-4 lg:px-12 fs-14 flex align-items"
   >
     <div class="hidden md:inline-flex items-center w-full">
       <i class="fab fa-facebook-f mx-1 inline-block"></i>
@@ -47,56 +47,88 @@
       box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.04),
         0 4px 6px -4px rgb(0 0 0 / 0.04);
     "
-    class="px-4 py-5 lg:px-12 flex items-center"
+    class="py-4"
   >
-    <span class="w-full py-2 lg:w-auto lg:mr-4">Varkala</span>
-    <ul class="hidden lg:block">
-      <li class="inline-block p-2 pr-5">
-        Home <i class="fas text-xs fa-angle-down"></i>
-      </li>
-      <li class="inline-block p-2 pr-5">
-        Shop <i class="fas text-xs fa-angle-down"></i>
-      </li>
-      <li class="inline-block p-2 pr-5">
-        Icons <i class="fas text-xs fa-angle-down"></i>
-      </li>
-      <li class="inline-block p-2 pr-5">
-        Pages <i class="fas text-xs fa-angle-down"></i>
-      </li>
-    </ul>
-    <form class="ml-auto mr-28 hidden lg:block">
-      <div id="searchBox" class="inline-flex flex-nowrap items-center">
-        <input
-          style="height: 40px"
-          placeholder="Search"
-          class="border-b inline-block py-1 pr-3 pl-4"
-          type="text"
-        />
-        <i
-          style="height: 39px"
-          class="fas fa-search border-b inline-flex items-center py-1 px-3 cursor-pointer"
-        ></i>
-      </div>
-    </form>
-    <ul class="hidden lg:block">
-      <li class="inline-block"><i class="far text-2xl mr-2 fa-user"></i></li>
-      <li class="inline-block">
+    <section class="px-4 lg:px-12 flex items-center">
+      <span class="w-full py-2 lg:w-auto lg:mr-4">Varkala</span>
+      <ul class="hidden lg:block">
+        <li class="inline-block p-2 pr-5">
+          Home <i class="fas text-xs fa-angle-down"></i>
+        </li>
+        <li class="inline-block p-2 pr-5">
+          Shop <i class="fas text-xs fa-angle-down"></i>
+        </li>
+        <li class="inline-block p-2 pr-5">
+          Icons <i class="fas text-xs fa-angle-down"></i>
+        </li>
+        <li class="inline-block p-2 pr-5">
+          Pages <i class="fas text-xs fa-angle-down"></i>
+        </li>
+      </ul>
+      <form class="ml-auto mr-28 hidden lg:block">
+        <div id="searchBox" class="inline-flex flex-nowrap items-center">
+          <input
+            style="height: 40px"
+            placeholder="Search"
+            class="border-b inline-block py-1 pr-3 pl-4"
+            type="text"
+          />
+          <i
+            style="height: 39px"
+            class="fas fa-search border-b inline-flex items-center py-1 px-3 cursor-pointer"
+          ></i>
+        </div>
+      </form>
+      <ul class="hidden lg:block">
+        <li class="inline-block"><i class="far text-2xl mr-2 fa-user"></i></li>
+        <li class="inline-block">
+          <span matBadge="1" class="far text-2xl ml-3 fa-heart"></span>
+        </li>
+        <li class="inline-block">
+          <span matBadge="6" class="bi text-2xl ml-3 bi-bag"></span>
+        </li>
+        <li class="inline-block">
+          <i class="fas text-2xl ml-3 mr-5 fa-align-left"></i>
+        </li>
+      </ul>
+      <div class="lg:hidden w-full text-center">
+        <i class="far text-2xl mr-2 fa-user"></i>
         <span matBadge="1" class="far text-2xl ml-3 fa-heart"></span>
-      </li>
-      <li class="inline-block">
         <span matBadge="6" class="bi text-2xl ml-3 bi-bag"></span>
-      </li>
-      <li class="inline-block">
-        <i class="fas text-2xl ml-3 mr-5 fa-align-left"></i>
-      </li>
-    </ul>
-    <div class="lg:hidden w-full text-center">
-      <i class="far text-2xl mr-2 fa-user"></i>
-      <span matBadge="1" class="far text-2xl ml-3 fa-heart"></span>
-      <span matBadge="6" class="bi text-2xl ml-3 bi-bag"></span>
-    </div>
-    <div class="lg:hidden w-full text-right">
-      <i class="fas text-2xl ml-3 mr-5 fa-align-left"></i>
-    </div>
+      </div>
+      <div class="lg:hidden w-full text-right">
+        <i (click)="responsiveMenu()" class="fas text-2xl ml-3 mr-4 fa-align-left cursor-pointer"></i>
+      </div>
+    </section>
+    <section #contMenu id="responsiveMenu" class="px-4">
+      <ul class="mt-7">
+        <li style="height: 42px;" class="flex py-2 items-center">
+          Home <i class="fas ml-auto mr-5 text-xs fa-angle-down"></i>
+        </li>
+        <li style="height: 42px;" class="flex py-2 items-center">
+          Shop <i class="fas ml-auto mr-5 text-xs fa-angle-down"></i>
+        </li>
+        <li style="height: 42px;" class="flex py-2 items-center">
+          Icons <i class="fas ml-auto mr-5 text-xs fa-angle-down"></i>
+        </li>
+        <li style="height: 42px;" class="flex py-2 items-center">
+          Pages <i class="fas ml-auto mr-5 text-xs fa-angle-down"></i>
+        </li>
+      </ul>
+      <form class="mt-9 mb-5">
+        <div id="searchResponsive" class="inline-flex flex-nowrap items-center">
+          <input
+            style="height: 40px"
+            placeholder="Search"
+            class="border-b inline-block py-1 pr-3 pl-4"
+            type="text"
+          />
+          <i
+            style="height: 40px"
+            class="fas fa-search border-b inline-flex items-center py-1 px-3 cursor-pointer"
+          ></i>
+        </div>
+      </form>
+    </section>
   </section>
 </nav>

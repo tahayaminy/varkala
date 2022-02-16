@@ -1,24 +1,102 @@
-<nav class="sm:columns-2 md:columns-3 px-4 py-4 lg:px-12 w-full">
-  <div class="hidden md:inline-block inline-block w-full">
-    <i class="fab fa-facebook-f mx-1 inline-block"></i>
-    <i class="fab fa-twitter mx-1 inline-block"></i>
-    <span class="ml-5 pl-6 inline-block relative"><i style="transform:translateY(25%)" class="bi bi-telephone absolute left-0 bottom-0 text-lg"></i> 020-800-456-747</span>
-  </div>
-  <div class="md:text-center w-full">Free in-store delivery</div>
-  <div class="text-right w-full">
-    <button mat-button [matMenuTriggerFor]="lang" class="hidden sm:inline-block px-4 border-r">
-      English <i class="fas fa-caret-down"></i>
-    </button>
-    <mat-menu class="mt-4" #lang="matMenu" xPosition="before">
-      <button mat-menu-item class="mat-menu-item">German</button>
-      <button mat-menu-item class="mat-menu-item">French</button>
-    </mat-menu>
-    <button mat-button [matMenuTriggerFor]="usd" class="hidden sm:inline-block px-4">
-      USD <i class="fas fa-caret-down"></i>
-    </button>
-    <mat-menu class="mt-4" #usd="matMenu" xPosition="before" yPosition="below">
-      <button mat-menu-item class="mat-menu-item">EUR</button>
-      <button mat-menu-item class="mat-menu-item">GBP</button>
-    </mat-menu>
-  </div>  
+<nav class="w-full">
+  <section
+    class="sm:columns-2 md:columns-3 px-4 py-3 lg:px-12 fs-14 flex align-items"
+  >
+    <div class="hidden md:inline-flex items-center w-full">
+      <i class="fab fa-facebook-f mx-1 inline-block"></i>
+      <i class="fab fa-twitter mx-1 inline-block"></i>
+      <span class="ml-5 mr-6 inline-block"
+        ><i class="bi bi-telephone text-lg"></i> 020-800-456-747</span
+      >
+    </div>
+    <div class="md:justify-center inline-flex items-center w-full">
+      Free in-store delivery
+    </div>
+    <div class="justify-end inline-flex items-center w-full">
+      <button
+        mat-button
+        [matMenuTriggerFor]="lang"
+        class="hidden sm:inline-block px-4 border-r"
+      >
+        English <i class="fas fa-caret-down"></i>
+      </button>
+      <mat-menu class="mt-4" #lang="matMenu" xPosition="before">
+        <button mat-menu-item class="mat-menu-item">German</button>
+        <button mat-menu-item class="mat-menu-item">French</button>
+      </mat-menu>
+      <button
+        mat-button
+        [matMenuTriggerFor]="usd"
+        class="hidden sm:inline-block px-4"
+      >
+        USD <i class="fas fa-caret-down"></i>
+      </button>
+      <mat-menu
+        class="mt-4"
+        #usd="matMenu"
+        xPosition="before"
+        yPosition="below"
+      >
+        <button mat-menu-item class="mat-menu-item">EUR</button>
+        <button mat-menu-item class="mat-menu-item">GBP</button>
+      </mat-menu>
+    </div>
+  </section>
+  <section
+    style="
+      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.04),
+        0 4px 6px -4px rgb(0 0 0 / 0.04);
+    "
+    class="px-4 py-5 lg:px-12 flex items-center"
+  >
+    <span class="w-full py-2 lg:w-auto lg:mr-4">Varkala</span>
+    <ul class="hidden lg:block">
+      <li class="inline-block p-2 pr-5">
+        Home <i class="fas text-xs fa-angle-down"></i>
+      </li>
+      <li class="inline-block p-2 pr-5">
+        Shop <i class="fas text-xs fa-angle-down"></i>
+      </li>
+      <li class="inline-block p-2 pr-5">
+        Icons <i class="fas text-xs fa-angle-down"></i>
+      </li>
+      <li class="inline-block p-2 pr-5">
+        Pages <i class="fas text-xs fa-angle-down"></i>
+      </li>
+    </ul>
+    <form class="ml-auto mr-28 hidden lg:block">
+      <div id="searchBox" class="inline-flex flex-nowrap items-center">
+        <input
+          style="height: 40px"
+          placeholder="Search"
+          class="border-b inline-block py-1 pr-3 pl-4"
+          type="text"
+        />
+        <i
+          style="height: 39px"
+          class="fas fa-search border-b inline-flex items-center py-1 px-3 cursor-pointer"
+        ></i>
+      </div>
+    </form>
+    <ul class="hidden lg:block">
+      <li class="inline-block"><i class="far text-2xl mr-2 fa-user"></i></li>
+      <li class="inline-block">
+        <span matBadge="1" class="far text-2xl ml-3 fa-heart"></span>
+      </li>
+      <li class="inline-block">
+        <span matBadge="6" class="bi text-2xl ml-3 bi-bag"></span>
+      </li>
+      <li class="inline-block">
+        <i class="fas text-2xl ml-3 mr-5 fa-align-left"></i>
+      </li>
+    </ul>
+    <div class="lg:hidden w-full text-center">
+      <i class="far text-2xl mr-2 fa-user"></i>
+      <span matBadge="1" class="far text-2xl ml-3 fa-heart"></span>
+      <span matBadge="6" class="bi text-2xl ml-3 bi-bag"></span>
+    </div>
+    <div class="lg:hidden w-full text-right">
+      <i class="fas text-2xl ml-3 mr-5 fa-align-left"></i>
+    </div>
+  </section>
 </nav>

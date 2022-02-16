@@ -5,6 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatMenuModule } from '@angular/material/menu';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {MatBadgeModule} from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -14,7 +18,11 @@ import { MatMenuModule } from '@angular/material/menu';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatMenuModule
+    MatMenuModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

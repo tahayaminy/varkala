@@ -1,7 +1,30 @@
-.mat-menu-item{
-    padding: 0 24px !important;
-    display: flex;
-    align-items: center;
-    width: 160px;
-    height: 35px;
+.mat-menu-item {
+  padding: 0 24px !important;
+  display: flex;
+  align-items: center;
+  width: 160px;
+  height: 35px;
+}
+#searchBox:hover > input,
+#searchBox:hover > i {
+  border-bottom-color: black;
+  transition: 0.5s;
+}
+#searchBox input:focus {
+  border-bottom-color: black;
+  transition: 0.5s;
+}
+#searchBox {
+  overflow-x: hidden;
+  width: 265px;
+  input {
+    width: 0;
+    animation: searchBox 1s ease-out .2s forwards;
+  }
+  i {
+    width: 48px;
+  }
+}
+@keyframes searchBox {
+    from{width: 0px;}to{width: 217px;}
 }

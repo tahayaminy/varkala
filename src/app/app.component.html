@@ -27,7 +27,7 @@
       <button
         mat-button
         [matMenuTriggerFor]="usd"
-        class="hidden sm:inline-block px-4"
+        class="hidden sm:inline-block pl-4"
       >
         USD <i class="fas fa-caret-down"></i>
       </button>
@@ -52,7 +52,7 @@
     <section class="px-4 lg:px-12 flex items-center">
       <span class="w-full py-2 lg:w-auto lg:mr-4">Varkala</span>
       <ul class="hidden lg:block">
-        <li [matMenuTriggerFor]="home" class="inline-block p-2 pr-5">
+        <li [matMenuTriggerFor]="home" class="inline-block p-2 pr-2">
           Home <i class="fas text-xs fa-angle-down"></i>
         </li>
         <mat-menu class="mt-4 py-2" #home="matMenu">
@@ -61,7 +61,7 @@
           <button mat-menu-item class="mat-submenu-item">Home 3 - Design <b class="bg-yellow-100 text-yellow-600 inline-block p-1 rounded ml-1 fs-10">New</b></button>
           <button mat-menu-item class="mat-submenu-item">Home 4 - Design <b class="bg-yellow-100 text-yellow-600 inline-block p-1 rounded ml-1 fs-10">New</b></button>
         </mat-menu>
-        <li [matMenuTriggerFor]="shop" class="inline-block p-2 pr-5">
+        <li [matMenuTriggerFor]="shop" class="inline-block p-2 pr-2">
           Shop <i class="fas text-xs fa-angle-down"></i>
         </li>
         <mat-menu class="mt-4 p-0" #shop="matMenu">
@@ -82,19 +82,74 @@
               <span>Product with background</span>
               <span>product standard</span>
             </div>
-            <div style="background: url('../assets/img/shop-menu.jpg') no-repeat center ;background-size: cover;width: 249px;">
-              
-            </div>
+            <div style="background: url('../assets/img/shop-menu.jpg') no-repeat center ;background-size: cover;width: 249px;"></div>
           </section>
         </mat-menu>
-        <li class="inline-block p-2 pr-5">
+        <li [matMenuTriggerFor]="icons" class="inline-block p-2 pr-2">
           Icons <i class="fas text-xs fa-angle-down"></i>
         </li>
-        <li class="inline-block p-2 pr-5">
+        <mat-menu class="mt-4 p-0" #icons="matMenu">
+          <section class="mat-icons">
+            <section class="main columns-6 pt-12 px-6">
+              <div>
+                <img width="48px" src="../assets/icon/trousers.png" alt="">
+                <h6>Trousers</h6>
+              </div>
+              <div>
+                <img width="48px" src="../assets/icon/jacket.png" alt="">
+                <h6>Jackets</h6>
+              </div>
+              <div>
+                <img width="48px" src="../assets/icon/tshirt.png" alt="">
+                <h6>T-Shirts</h6>
+              </div>
+              <div>
+                <img width="48px" src="../assets/icon/shirt.png" alt="">
+                <h6>Shirts</h6>
+              </div>
+              <div>
+                <img width="48px" src="../assets/icon/pullover.png" alt="">
+                <h6>Pullovers</h6>
+              </div>
+              <div>
+                <img width="48px" src="../assets/icon/scarf.png" alt="">
+                <h6>Scarfs</h6>
+              </div>
+              <div>
+                <img width="48px" src="../assets/icon/shorts.png" alt="">
+                <h6>Shorts</h6>
+              </div>
+              <div>
+                <img width="48px" src="../assets/icon/underwear.png" alt="">
+                <h6>Underwear</h6>
+              </div>
+              <div>
+                <img width="48px" src="../assets/icon/watches.png" alt="">
+                <h6>Watches</h6>
+              </div>
+              <div>
+                <img width="48px" src="../assets/icon/bags.png" alt="">
+                <h6>Bags</h6>
+              </div>
+              <div>
+                <img width="48px" src="../assets/icon/cap.png" alt="">
+                <h6>Caps</h6>
+              </div>
+              <div>
+                <img width="48px" src="../assets/icon/accessories.png" alt="">
+                <h6>Accessories</h6>
+              </div>
+            </section>
+            <section class="bg-yellow-600 p-4 text-center fs-14 footer">
+              <p>Don't miss our biggest sales this year. Use the code 'SUMMER35' at checkout until Jun. 15!</p>
+            </section>
+          </section>
+        </mat-menu>
+        <li class="inline-block p-2 pr-2">
           Pages <i class="fas text-xs fa-angle-down"></i>
         </li>
       </ul>
-      <form class="ml-auto mr-28 hidden lg:block">
+      <form class="ml-auto mr-24 hidden lg:block">
         <div id="searchBox" class="inline-flex flex-nowrap items-center">
           <input
             style="height: 40px"
@@ -109,17 +164,17 @@
         </div>
       </form>
       <ul class="hidden lg:block">
-        <li class="inline-block"><i class="far text-2xl mr-2 fa-user"></i></li>
+        <li class="inline-block"><i style="font-size: 27px;" class="far mr-2 fa-user"></i></li>
         <li class="inline-block">
-          <span matBadge="1" class="far text-2xl ml-3 fa-heart"></span>
+          <span matBadge="1" style="font-size: 27px;" class="far ml-3 fa-heart"></span>
         </li>
         <li class="inline-block">
-          <span matBadge="6" class="bi text-2xl ml-3 bi-bag"></span>
+          <span matBadge="6"style="font-size: 27px;"  class="bi ml-3 bi-bag"></span>
         </li>
         <li class="inline-block">
           <i
             (click)="drawer.toggle()"
-            class="fas text-2xl ml-3 mr-5 fa-align-left cursor-pointer"
+            style="font-size: 27px;" class="fas ml-3 fa-align-left cursor-pointer"
           ></i>
         </li>
       </ul>

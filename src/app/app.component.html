@@ -47,10 +47,11 @@
       box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.04),
         0 4px 6px -4px rgb(0 0 0 / 0.04);
     "
-    class="py-4"
+    class="lg:py-4 py-3"
   >
-    <section class="px-4 lg:px-12 flex items-center">
+    <section class="px-2 lg:px-12 flex items-center">
       <span class="w-full py-2 lg:w-auto lg:mr-4">Varkala</span>
+      <!-- LARGE SCREEN MENU -->
       <ul class="hidden lg:block">
         <li [matMenuTriggerFor]="home" class="inline-block p-2 pr-2">
           Home <i class="fas text-xs fa-angle-down"></i>
@@ -178,7 +179,8 @@
           ></i>
         </li>
       </ul>
-      <div class="lg:hidden w-full text-center">
+      <!-- MENU IN SMALL SCREEN -->
+      <div class="lg:hidden w-full pl-4 ml-1 text-center">
         <i class="far text-2xl mr-2 fa-user"></i>
         <span matBadge="1" class="far text-2xl ml-3 fa-heart"></span>
         <span matBadge="6" class="bi text-2xl ml-3 bi-bag"></span>
@@ -186,23 +188,24 @@
       <div class="lg:hidden w-full text-right">
         <i
           (click)="responsiveMenu()"
-          class="fas text-2xl ml-3 mr-4 fa-align-left cursor-pointer"
+          class="fas text-2xl ml-3 fa-align-left cursor-pointer"
         ></i>
       </div>
     </section>
-    <section #contMenu id="responsiveMenu" class="px-4">
-      <ul class="mt-7">
-        <li style="height: 42px" class="flex py-2 items-center">
-          Home <i class="fas ml-auto mr-5 text-xs fa-angle-down"></i>
+    <!-- RESPONSIVE MENU OPEN -->
+    <section #contMenu id="responsiveMenu" class="px-2">
+      <ul class="mt-6">
+        <li style="height: 42px" class="flex pb-2 items-center">
+          Home <i class="fas ml-auto mr-2 text-xs fa-angle-down"></i>
         </li>
         <li style="height: 42px" class="flex py-2 items-center">
-          Shop <i class="fas ml-auto mr-5 text-xs fa-angle-down"></i>
+          Shop <i class="fas ml-auto mr-2 text-xs fa-angle-down"></i>
         </li>
         <li style="height: 42px" class="flex py-2 items-center">
-          Icons <i class="fas ml-auto mr-5 text-xs fa-angle-down"></i>
+          Icons <i class="fas ml-auto mr-2 text-xs fa-angle-down"></i>
         </li>
-        <li style="height: 42px" class="flex py-2 items-center">
-          Pages <i class="fas ml-auto mr-5 text-xs fa-angle-down"></i>
+        <li style="height: 42px" class="flex pt-2 items-center">
+          Pages <i class="fas ml-auto mr-2 text-xs fa-angle-down"></i>
         </li>
       </ul>
       <form class="mt-9 mb-5">

@@ -95,3 +95,17 @@
     transform: rotateZ(90deg);
   }
 }
+.mat-shop{
+  display: flex;
+}
+.mat-shop-item{  
+    font-size: 14px;
+    white-space: nowrap;
+    span:not(.withNew){
+      display: block;
+    }
+    span{
+      padding: 6.4px 0 6.4px 0;
+      color: rgba(0, 0, 0, 0.463);
+    }  
+}

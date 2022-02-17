@@ -55,15 +55,38 @@
         <li [matMenuTriggerFor]="home" class="inline-block p-2 pr-5">
           Home <i class="fas text-xs fa-angle-down"></i>
         </li>
-        <mat-menu class="mt-4" #home="matMenu">
+        <mat-menu class="mt-4 py-2" #home="matMenu">
           <button mat-menu-item class="mat-submenu-item">Home 1 - Fashion</button>
           <button mat-menu-item class="mat-submenu-item">Home 2 - Fashion</button>
           <button mat-menu-item class="mat-submenu-item">Home 3 - Design <b class="bg-yellow-100 text-yellow-600 inline-block p-1 rounded ml-1 fs-10">New</b></button>
           <button mat-menu-item class="mat-submenu-item">Home 4 - Design <b class="bg-yellow-100 text-yellow-600 inline-block p-1 rounded ml-1 fs-10">New</b></button>
         </mat-menu>
-        <li class="inline-block p-2 pr-5">
+        <li [matMenuTriggerFor]="shop" class="inline-block p-2 pr-5">
           Shop <i class="fas text-xs fa-angle-down"></i>
         </li>
+        <mat-menu class="mt-4 p-0" #shop="matMenu">
+          <section class="mat-shop">
+            <div class="mat-shop-item p-12">
+              <b class="py-2 inline-block">Shop pages</b>
+              <span>Full width</span>
+              <span>Full width with category Menu</span>
+              <span>Full width with big products</span>
+              <span>Fixed width</span>
+              <span>Fixed width & sidebar</span>
+              <span class="withNew">Fixed width & masonry Layout <b class="bg-yellow-100 text-yellow-600 inline-block p-1 rounded ml-1 fs-10">New</b></span>
+              <span>Subcategories</span>
+            </div>
+            <div class="mat-shop-item p-12">
+              <b class="py-2 inline-block">Product pages</b>
+              <span>Product with sticky info</span>
+              <span>Product with background</span>
+              <span>product standard</span>
+            </div>
+            <div style="background: url('../assets/img/shop-menu.jpg') no-repeat center ;background-size: cover;width: 249px;">
+              
+            </div>
+          </section>
+        </mat-menu>
         <li class="inline-block p-2 pr-5">
           Icons <i class="fas text-xs fa-angle-down"></i>
         </li>

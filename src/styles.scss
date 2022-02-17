@@ -35,3 +35,10 @@ input:focus{
 .mat-badge-content{
   background-color: #bcac76 !important;
 }
+
+.mat-menu-panel{
+  max-width: none !important;
+}
+.mat-menu-content{
+  padding: 0 !important;
+}

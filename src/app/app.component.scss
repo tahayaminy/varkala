@@ -5,15 +5,15 @@
   width: 160px;
   height: 35px;
 }
-.mat-submenu-item{
+.mat-submenu-item {
   padding: 0 24px !important;
   display: flex;
   align-items: center;
   height: 35px;
-  b{
+  b {
     line-height: normal;
   }
-  &:hover{
+  &:hover {
     background-color: transparent !important;
     color: rgba(0, 0, 0, 0.592);
   }
@@ -32,16 +32,21 @@
   width: 265px;
   input {
     width: 0;
-    animation: searchBox 1s ease-out .2s forwards;
+    animation: searchBox 1s ease-out 0.2s forwards;
   }
   i {
     width: 48px;
   }
 }
 @keyframes searchBox {
-    from{width: 0px;}to{width: 217px;}
+  from {
+    width: 0px;
+  }
+  to {
+    width: 217px;
+  }
 }
-#searchResponsive{
+#searchResponsive {
   overflow-x: hidden;
   width: 100%;
   input {
@@ -60,7 +65,7 @@
   border-bottom-color: black;
   transition: 0.5s;
 }
-#responsiveMenu{
+#responsiveMenu {
   height: 0;
   overflow-y: hidden;
 }
@@ -78,86 +83,100 @@
 .example-sidenav {
   width: 500px;
   pointer-events: all;
-  h5{
+  h5 {
     margin-bottom: 48px;
     font-size: 20px;
     font-weight: 900;
   }
-  ul>li{
+  ul > li {
     font-weight: 700;
   }
-  .fa-times{
+  .fa-times {
     transform-origin: 50% 50%;
-    transition: .5s;
+    transition: 0.5s;
     cursor: pointer;
   }
-  .fa-times:hover{
+  .fa-times:hover {
     transform: rotateZ(90deg);
   }
 }
-.mat-shop{
+.mat-shop {
   display: flex;
 }
-.mat-shop-item{  
-    font-size: 14px;
-    white-space: nowrap;
-    span:not(.withNew){
-      display: block;
-    }
-    span{
-      padding: 6.4px 0 6.4px 0;
-      color: rgba(0, 0, 0, 0.463);
-    }  
+.mat-shop-item {
+  font-size: 14px;
+  white-space: nowrap;
+  span:not(.withNew) {
+    display: block;
+  }
+  span {
+    padding: 6.4px 0 6.4px 0;
+    color: rgba(0, 0, 0, 0.463);
+  }
 }
-.mat-icons{
-  &>.main{
+.mat-icons {
+  & > .main {
     margin: auto;
-    &>div{
+    & > div {
       text-align: center;
       padding: 0 15px 0 0;
       margin-bottom: 48px;
-      &>img{
+      & > img {
         margin: auto auto 8px auto;
       }
-      h6{
+      h6 {
         font-size: 16px;
         margin: auto auto 8px auto;
       }
     }
-  }  
-  &>.footer{
-    p{
+  }
+  & > .footer {
+    p {
       margin-bottom: 0;
     }
   }
 }
-.submenu-page{
+.submenu-page {
   width: 98.5%;
   margin-left: auto;
   margin-right: auto;
-  @media only screen and (min-width:1300px){
+  @media only screen and (min-width: 1300px) {
     width: 1299px;
   }
-  &>section{
-    margin-left: 15px;margin-right: 15px;
-    &>div{
-      &>span,&>b{
+  & > section {
+    margin-left: 15px;
+    margin-right: 15px;
+    & > div {
+      & > span,
+      & > b {
         display: block;
       }
-      &>span{
+      & > span {
         padding-bottom: 5px;
         font-size: 12.8px;
-        b{
+        b {
           font-size: 9.6px;
           padding: 0px 6.72px;
         }
       }
     }
   }
-  &>section:first-child{
+  & > section:first-child {
     margin-left: 0;
   }
-  &>section:last-child{
+  & > section:last-child {
     margin-right: 0;
   }
+}
+#pageSub > section {
+  margin-top: 176px;
+  opacity: 0;
+  pointer-events: none;
+  transition: margin-top 0.2s;
+  box-shadow: 0 0px 10px 6px rgba(0, 0, 0, 0.08);
+}
+#togglePage:focus ~ #pageSub > section {
+  margin-top: 128px;
+  opacity: 1;
+  pointer-events: all;
 }

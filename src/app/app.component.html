@@ -177,22 +177,16 @@
             </section>
           </section>
         </mat-menu>
-        <li (click)="togglePage()" class="inline-block p-2 pr-2">
+        <li id="togglePage" tabindex="0" class="inline-block p-2 pr-2">
           Pages <i class="fas text-xs fa-angle-down"></i>
         </li>
         <section
+          id="pageSub"
           style="pointer-events: none"
           class="fixed w-full h-full top-0 left-0"
         >
           <section
-            #pageSub
-            style="
-              opacity: 1;
-              transition: margin-top 0.2s;
-              box-shadow: 0 0px 10px 6px rgba(0, 0, 0, 0.08);
-              pointer-events: all;
-            "
-            class="bg-white mt-32 flex flex-row submenu-page shadow-xl rounded-xl p-12"
+            class="bg-white flex flex-row submenu-page shadow-xl rounded-xl p-12"
           >
             <section class="basis-1/4">
               <img class="mb-7" src="../assets/img/pages-menu-1.jpg" alt="" />
@@ -215,19 +209,85 @@
                   ></span
                 >
               </div>
-              <div>
-                <b class="mb-2">Homepage</b>
-                <span class="pb-1">Home 1 - Fashion</span>
-                <span class="pb-1">Home 2 - Fashion</span>
+              <div class="mb-5">
+                <b class="mb-2">Category</b>
+                <span class="pb-1">Full width</span>
+                <span class="pb-1">Full width with category Menu</span>
+                <span class="pb-1">Full width with big products</span>
+                <span class="pb-1">Fixed width</span>
+                <span class="pb-1">Fixed width & sidebar</span>
                 <span class="pb-1"
-                  >Home 3 - Desing
+                  >Fixed width & masonry Layout
                   <b
-                    class="bg-yellow-100 text-yellow-600 inline-block rounded ml-1"
+                    class="bg-yellow-100 text-yellow-600 inline-block rounded ml-1 fs-10"
                     >New</b
                   ></span
                 >
+                <span class="pb-1">Subcategories</span>
+              </div>
+            </section>
+            <section class="basis-1/4">
+              <img class="mb-7" src="../assets/img/pages-menu-2.jpg" alt="" />
+              <div class="mb-5">
+                <b class="mb-2">Oreder process</b>
+                <span class="pb-1">shopping Cart</span>
                 <span class="pb-1"
-                  >Home 4 - Desing
+                  >Checkout - Five steps
+                  <b
+                    class="bg-yellow-100 text-yellow-600 inline-block rounded ml-1 fs-10"
+                    >New</b
+                  ></span
+                >
+                <span class="pb-1">Checkout - Single-page</span>
+                <span class="pb-1">Checkout - confirmed</span>
+                <span class="pb-1">Wishlist</span>
+              </div>
+              <div class="mb-5">
+                <b class="mb-2">Product pages</b>
+                <span class="pb-1">Product with sticky info</span>
+                <span class="pb-1">Product with background</span>
+                <span class="pb-1">product standard</span>
+              </div>
+            </section>
+            <section class="basis-1/4">
+              <img class="mb-7" src="../assets/img/pages-menu-3.jpg" alt="" />
+
+              <div class="mb-5">
+                <b class="mb-2">Blog</b>
+                <span class="pb-1">Blog</span>
+                <span class="pb-1">Blog - Masonry</span>
+                <span class="pb-1">Post</span>
+              </div>
+              <div class="mb-5">
+                <b class="mb-2">Page</b>
+                <span class="pb-1"
+                  >About - Company
+                  <b
+                    class="bg-yellow-100 text-yellow-600 inline-block rounded ml-1 fs-10"
+                    >New</b
+                  ></span
+                >
+
+                <span class="pb-1"
+                  >About v.2 - Person
+                  <b
+                    class="bg-yellow-100 text-yellow-600 inline-block rounded ml-1 fs-10"
+                    >New</b
+                  ></span
+                >
+
+                <span class="pb-1"
+                  >F.A.Q
+                  <b
+                    class="bg-yellow-100 text-yellow-600 inline-block rounded ml-1 fs-10"
+                    >New</b
+                  ></span
+                >
+
+                <span class="pb-1">Contact</span>
+
+                <span class="pb-1"
+                  >Privacy - policy
                   <b
                     class="bg-yellow-100 text-yellow-600 inline-block rounded ml-1 fs-10"
                     >New</b
@@ -236,18 +296,64 @@
               </div>
             </section>
             <section class="basis-1/4">
-              <div class="mb-7">
-                <img src="../assets/img/pages-menu-2.jpg" alt="" />
-              </div>
-            </section>
-            <section class="basis-1/4">
-              <div class="mb-7">
-                <img src="../assets/img/pages-menu-3.jpg" alt="" />
-              </div>
-            </section>
-            <section class="basis-1/4">
-              <div class="mb-7">
-                <img src="../assets/img/pages-menu-4.jpg" alt="" />
+              <img class="mb-7" src="../assets/img/pages-menu-4.jpg" alt="" />
+              <div class="mb-5">
+                <b class="mb-2">Customer</b>
+                <span class="pb-1"
+                  >Login/sign up
+                  <b
+                    class="bg-yellow-100 text-yellow-600 inline-block rounded ml-1 fs-10"
+                    >New</b
+                  ></span
+                >
+
+                <span class="pb-1"
+                  >Orders
+                  <b
+                    class="bg-yellow-100 text-yellow-600 inline-block rounded ml-1 fs-10"
+                    >New</b
+                  ></span
+                >
+
+                <span class="pb-1"
+                  >Order detail
+                  <b
+                    class="bg-yellow-100 text-yellow-600 inline-block rounded ml-1 fs-10"
+                    >New</b
+                  ></span
+                >
+
+                <span class="pb-1"
+                  >Order tracking
+                  <b
+                    class="bg-yellow-100 text-yellow-600 inline-block rounded ml-1 fs-10"
+                    >New</b
+                  ></span
+                >
+
+                <span class="pb-1"
+                  >Addresses
+                  <b
+                    class="bg-yellow-100 text-yellow-600 inline-block rounded ml-1 fs-10"
+                    >New</b
+                  ></span
+                >
+
+                <span class="pb-1"
+                  >Profile
+                  <b
+                    class="bg-yellow-100 text-yellow-600 inline-block rounded ml-1 fs-10"
+                    >New</b
+                  ></span
+                >
+
+                <span class="pb-1"
+                  >Wishlist
+                  <b
+                    class="bg-yellow-100 text-yellow-600 inline-block rounded ml-1 fs-10"
+                    >New</b
+                  ></span
+                >
               </div>
             </section>
           </section>

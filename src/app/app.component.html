@@ -52,9 +52,9 @@
     <section class="px-2 lg:px-12 flex items-center">
       <span class="w-full py-2 lg:w-auto lg:mr-4">Varkala</span>
       <!-- LARGE SCREEN MENU -->
-      <ul class="hidden lg:block">
-        <li [matMenuTriggerFor]="home" class="inline-block p-2 pr-2">
-          Home <i class="fas text-xs fa-angle-down"></i>
+      <ul class="hidden lg:block menu-cont">
+        <li #homeAngle="matMenuTrigger" mat-button [matMenuTriggerFor]="home" class="inline-block p-2 pr-2">
+          Home <i [ngClass]="homeAngle.menuOpen ? 'angle-180' : 'angle-0'" class="fas text-xs fa-angle-down"></i>
         </li>
         <mat-menu class="mt-4 py-2" #home="matMenu">
           <button mat-menu-item class="mat-submenu-item">
@@ -78,8 +78,8 @@
             >
           </button>
         </mat-menu>
-        <li [matMenuTriggerFor]="shop" class="inline-block p-2 pr-2">
-          Shop <i class="fas text-xs fa-angle-down"></i>
+        <li #shopAngle="matMenuTrigger" [matMenuTriggerFor]="shop" class="inline-block p-2 pr-2">
+          Shop <i [ngClass]="shopAngle.menuOpen ? 'angle-180' : 'angle-0'" class="fas text-xs fa-angle-down"></i>
         </li>
         <mat-menu class="mt-4 p-0" #shop="matMenu">
           <section class="mat-shop">
@@ -114,8 +114,8 @@
             ></div>
           </section>
         </mat-menu>
-        <li [matMenuTriggerFor]="icons" class="inline-block p-2 pr-2">
-          Icons <i class="fas text-xs fa-angle-down"></i>
+        <li #iconsAngle="matMenuTrigger" [matMenuTriggerFor]="icons" class="inline-block p-2 pr-2">
+          Icons <i [ngClass]="iconsAngle.menuOpen ? 'angle-180' : 'angle-0'" class="fas text-xs fa-angle-down"></i>
         </li>
         <mat-menu class="mt-4 p-0" #icons="matMenu">
           <section class="mat-icons">
@@ -180,12 +180,8 @@
         <li id="togglePage" tabindex="0" class="inline-block p-2 pr-2">
           Pages <i class="fas text-xs fa-angle-down"></i>
         </li>
-        <section
-          id="pageSub"
-          style="pointer-events: none"
-          class="fixed w-full h-full top-0 left-0"
-        >
           <section
+            id="pageSub"
             class="bg-white flex flex-row submenu-page shadow-xl rounded-xl p-12"
           >
             <section class="basis-1/4">
@@ -357,7 +353,6 @@
               </div>
             </section>
           </section>
-        </section>
       </ul>
       <form class="ml-auto mr-24 hidden lg:block">
         <div id="searchBox" class="inline-flex flex-nowrap items-center">
@@ -399,7 +394,7 @@
           ></i>
         </li>
       </ul>
-      <!-- MENU IN SMALL SCREEN -->
+      <!-- NAVBAR IN SMALL SCREEN -->
       <div class="lg:hidden w-full pl-4 ml-1 text-center">
         <i class="far text-2xl mr-2 fa-user"></i>
         <span matBadge="1" class="far text-2xl ml-3 fa-heart"></span>
@@ -414,7 +409,7 @@
     </section>
     <!-- RESPONSIVE MENU OPEN -->
     <section #contMenu id="responsiveMenu" class="px-2">
-      <ul class="mt-6">
+      <ul class="mt-6 menu-cont">
         <li style="height: 42px" class="flex pb-2 items-center">
           Home <i class="fas ml-auto mr-2 text-xs fa-angle-down"></i>
         </li>

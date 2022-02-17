@@ -78,7 +78,6 @@
   right: 0;
   pointer-events: none;
   background-color: transparent;
-  border: 1px solid rgba(0, 0, 0, 0.5);
 }
 .example-sidenav {
   width: 500px;
@@ -138,10 +137,11 @@
 }
 .submenu-page {
   width: 98.5%;
-  margin-left: auto;
-  margin-right: auto;
+  left: 0.75%;
   @media only screen and (min-width: 1300px) {
     width: 1299px;
+    left: 50%;
+    transform: translateX(-50%);
   }
   & > section {
     margin-left: 15px;
@@ -168,15 +168,41 @@
     margin-right: 0;
   }
 }
-#pageSub > section {
-  margin-top: 176px;
+#pageSub {
+  position: absolute;
+  top: 176px;
   opacity: 0;
   pointer-events: none;
-  transition: margin-top 0.2s;
+  transition: top 0.2s;
   box-shadow: 0 0px 10px 6px rgba(0, 0, 0, 0.08);
+  height: 0;
+  overflow-y: hidden;
 }
-#togglePage:focus ~ #pageSub > section {
-  margin-top: 128px;
-  opacity: 1;
-  pointer-events: all;
+#togglePage{
+  & > i {
+    transform: rotate(0deg);
+    transition: 0.2s;
+  }}
+#togglePage:focus{
+  & > i {
+    transform: rotate(180deg);
+    transition: 0.2s;
+  }
+  & ~ #pageSub {
+    top: 128px;
+    opacity: 1;
+    pointer-events: all;
+    height: auto;
+  }
+}
+.menu-cont > li {
+  cursor: pointer;
+}
+.angle-0 {
+  transform: rotate(0deg);
+  transition: 0.2s;
+}
+.angle-180 {
+  transform: rotate(180deg);
+  transition: 0.2s;
 }

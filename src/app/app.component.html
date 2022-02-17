@@ -57,10 +57,26 @@
           Home <i class="fas text-xs fa-angle-down"></i>
         </li>
         <mat-menu class="mt-4 py-2" #home="matMenu">
-          <button mat-menu-item class="mat-submenu-item">Home 1 - Fashion</button>
-          <button mat-menu-item class="mat-submenu-item">Home 2 - Fashion</button>
-          <button mat-menu-item class="mat-submenu-item">Home 3 - Design <b class="bg-yellow-100 text-yellow-600 inline-block p-1 rounded ml-1 fs-10">New</b></button>
-          <button mat-menu-item class="mat-submenu-item">Home 4 - Design <b class="bg-yellow-100 text-yellow-600 inline-block p-1 rounded ml-1 fs-10">New</b></button>
+          <button mat-menu-item class="mat-submenu-item">
+            Home 1 - Fashion
+          </button>
+          <button mat-menu-item class="mat-submenu-item">
+            Home 2 - Fashion
+          </button>
+          <button mat-menu-item class="mat-submenu-item">
+            Home 3 - Design
+            <b
+              class="bg-yellow-100 text-yellow-600 inline-block p-1 rounded ml-1 fs-10"
+              >New</b
+            >
+          </button>
+          <button mat-menu-item class="mat-submenu-item">
+            Home 4 - Design
+            <b
+              class="bg-yellow-100 text-yellow-600 inline-block p-1 rounded ml-1 fs-10"
+              >New</b
+            >
+          </button>
         </mat-menu>
         <li [matMenuTriggerFor]="shop" class="inline-block p-2 pr-2">
           Shop <i class="fas text-xs fa-angle-down"></i>
@@ -74,7 +90,13 @@
               <span>Full width with big products</span>
               <span>Fixed width</span>
               <span>Fixed width & sidebar</span>
-              <span class="withNew">Fixed width & masonry Layout <b class="bg-yellow-100 text-yellow-600 inline-block p-1 rounded ml-1 fs-10">New</b></span>
+              <span class="withNew"
+                >Fixed width & masonry Layout
+                <b
+                  class="bg-yellow-100 text-yellow-600 inline-block p-1 rounded ml-1 fs-10"
+                  >New</b
+                ></span
+              >
               <span>Subcategories</span>
             </div>
             <div class="mat-shop-item p-12">
@@ -83,7 +105,13 @@
               <span>Product with background</span>
               <span>product standard</span>
             </div>
-            <div style="background: url('../assets/img/shop-menu.jpg') no-repeat center ;background-size: cover;width: 249px;"></div>
+            <div
+              style="
+                background: url('../assets/img/shop-menu.jpg') no-repeat center;
+                background-size: cover;
+                width: 249px;
+              "
+            ></div>
           </section>
         </mat-menu>
         <li [matMenuTriggerFor]="icons" class="inline-block p-2 pr-2">
@@ -93,62 +121,137 @@
           <section class="mat-icons">
             <section class="main columns-6 pt-12 px-6">
               <div>
-                <img width="48px" src="../assets/icon/trousers.png" alt="">
+                <img width="48px" src="../assets/icon/trousers.png" alt="" />
                 <h6>Trousers</h6>
               </div>
               <div>
-                <img width="48px" src="../assets/icon/jacket.png" alt="">
+                <img width="48px" src="../assets/icon/jacket.png" alt="" />
                 <h6>Jackets</h6>
               </div>
               <div>
-                <img width="48px" src="../assets/icon/tshirt.png" alt="">
+                <img width="48px" src="../assets/icon/tshirt.png" alt="" />
                 <h6>T-Shirts</h6>
               </div>
               <div>
-                <img width="48px" src="../assets/icon/shirt.png" alt="">
+                <img width="48px" src="../assets/icon/shirt.png" alt="" />
                 <h6>Shirts</h6>
               </div>
               <div>
-                <img width="48px" src="../assets/icon/pullover.png" alt="">
+                <img width="48px" src="../assets/icon/pullover.png" alt="" />
                 <h6>Pullovers</h6>
               </div>
               <div>
-                <img width="48px" src="../assets/icon/scarf.png" alt="">
+                <img width="48px" src="../assets/icon/scarf.png" alt="" />
                 <h6>Scarfs</h6>
               </div>
               <div>
-                <img width="48px" src="../assets/icon/shorts.png" alt="">
+                <img width="48px" src="../assets/icon/shorts.png" alt="" />
                 <h6>Shorts</h6>
               </div>
               <div>
-                <img width="48px" src="../assets/icon/underwear.png" alt="">
+                <img width="48px" src="../assets/icon/underwear.png" alt="" />
                 <h6>Underwear</h6>
               </div>
               <div>
-                <img width="48px" src="../assets/icon/watches.png" alt="">
+                <img width="48px" src="../assets/icon/watches.png" alt="" />
                 <h6>Watches</h6>
               </div>
               <div>
-                <img width="48px" src="../assets/icon/bags.png" alt="">
+                <img width="48px" src="../assets/icon/bags.png" alt="" />
                 <h6>Bags</h6>
               </div>
               <div>
-                <img width="48px" src="../assets/icon/cap.png" alt="">
+                <img width="48px" src="../assets/icon/cap.png" alt="" />
                 <h6>Caps</h6>
               </div>
               <div>
-                <img width="48px" src="../assets/icon/accessories.png" alt="">
+                <img width="48px" src="../assets/icon/accessories.png" alt="" />
                 <h6>Accessories</h6>
               </div>
             </section>
             <section class="bg-yellow-600 p-4 text-center fs-14 footer">
-              <p>Don't miss our biggest sales this year. Use the code 'SUMMER35' at checkout until Jun. 15!</p>
+              <p>
+                Don't miss our biggest sales this year. Use the code 'SUMMER35'
+                at checkout until Jun. 15!
+              </p>
             </section>
           </section>
         </mat-menu>
-        <li class="inline-block p-2 pr-2">
+        <li (click)="togglePage()" class="inline-block p-2 pr-2">
           Pages <i class="fas text-xs fa-angle-down"></i>
         </li>
+        <section
+          style="pointer-events: none"
+          class="fixed w-full h-full top-0 left-0"
+        >
+          <section
+            #pageSub
+            style="
+              opacity: 1;
+              transition: margin-top 0.2s;
+              box-shadow: 0 0px 10px 6px rgba(0, 0, 0, 0.08);
+              pointer-events: all;
+            "
+            class="bg-white mt-32 flex flex-row submenu-page shadow-xl rounded-xl p-12"
+          >
+            <section class="basis-1/4">
+              <img class="mb-7" src="../assets/img/pages-menu-1.jpg" alt="" />
+              <div class="mb-5">
+                <b class="mb-2">Homepage</b>
+                <span class="pb-1">Home 1 - Fashion</span>
+                <span class="pb-1">Home 2 - Fashion</span>
+                <span class="pb-1"
+                  >Home 3 - Desing
+                  <b
+                    class="bg-yellow-100 text-yellow-600 inline-block rounded ml-1"
+                    >New</b
+                  ></span
+                >
+                <span class="pb-1"
+                  >Home 4 - Desing
+                  <b
+                    class="bg-yellow-100 text-yellow-600 inline-block rounded ml-1 fs-10"
+                    >New</b
+                  ></span
+                >
+              </div>
+              <div>
+                <b class="mb-2">Homepage</b>
+                <span class="pb-1">Home 1 - Fashion</span>
+                <span class="pb-1">Home 2 - Fashion</span>
+                <span class="pb-1"
+                  >Home 3 - Desing
+                  <b
+                    class="bg-yellow-100 text-yellow-600 inline-block rounded ml-1"
+                    >New</b
+                  ></span
+                >
+                <span class="pb-1"
+                  >Home 4 - Desing
+                  <b
+                    class="bg-yellow-100 text-yellow-600 inline-block rounded ml-1 fs-10"
+                    >New</b
+                  ></span
+                >
+              </div>
+            </section>
+            <section class="basis-1/4">
+              <div class="mb-7">
+                <img src="../assets/img/pages-menu-2.jpg" alt="" />
+              </div>
+            </section>
+            <section class="basis-1/4">
+              <div class="mb-7">
+                <img src="../assets/img/pages-menu-3.jpg" alt="" />
+              </div>
+            </section>
+            <section class="basis-1/4">
+              <div class="mb-7">
+                <img src="../assets/img/pages-menu-4.jpg" alt="" />
+              </div>
+            </section>
+          </section>
+        </section>
       </ul>
       <form class="ml-auto mr-24 hidden lg:block">
         <div id="searchBox" class="inline-flex flex-nowrap items-center">
@@ -165,17 +268,28 @@
         </div>
       </form>
       <ul class="hidden lg:block">
-        <li class="inline-block"><i style="font-size: 27px;" class="far mr-2 fa-user"></i></li>
         <li class="inline-block">
-          <span matBadge="1" style="font-size: 27px;" class="far ml-3 fa-heart"></span>
+          <i style="font-size: 27px" class="far mr-2 fa-user"></i>
         </li>
         <li class="inline-block">
-          <span matBadge="6"style="font-size: 27px;"  class="bi ml-3 bi-bag"></span>
+          <span
+            matBadge="1"
+            style="font-size: 27px"
+            class="far ml-3 fa-heart"
+          ></span>
+        </li>
+        <li class="inline-block">
+          <span
+            matBadge="6"
+            style="font-size: 27px"
+            class="bi ml-3 bi-bag"
+          ></span>
         </li>
         <li class="inline-block">
           <i
             (click)="drawer.toggle()"
-            style="font-size: 27px;" class="fas ml-3 fa-align-left cursor-pointer"
+            style="font-size: 27px"
+            class="fas ml-3 fa-align-left cursor-pointer"
           ></i>
         </li>
       </ul>

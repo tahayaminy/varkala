@@ -1,3 +1,17 @@
+$fab:#212529;
+$black:#343a40d4;
+$black-0:#000;
+$black-o:#00000080;
+$gray:#868e96;
+$hov:#16181b;
+.upper-navbar{
+  color: $black;
+  background-color: #e9ecef;
+  padding: 17px 14px 17px 14px;
+  .fab{
+    color: $fab;
+  }
+}
 .mat-nav-item {
   padding: 0 24px !important;
   display: flex;

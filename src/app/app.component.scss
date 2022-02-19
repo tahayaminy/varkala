@@ -1,23 +1,35 @@
-$fab:#212529;
-$black:#343a40d4;
-$black-0:#000;
-$black-o:#00000080;
-$gray:#868e96;
-$hov:#16181b;
-.upper-navbar{
+$fab: #212529;
+$black: #343a40d4;
+$black-0: #000;
+$black-o: #00000080;
+$gray: #868e96;
+$hov: #16181b;
+
+$newbg: #f5f3ea;
+$newcolor: #bcac76;
+.upper-navbar {
   color: $black;
   background-color: #e9ecef;
-  padding: 17px 14px 17px 14px;
-  .fab{
+  padding-top: 17px;
+  padding-bottom: 17px;
+  .fab {
     color: $fab;
   }
 }
-.mat-nav-item {
-  padding: 0 24px !important;
-  display: flex;
-  align-items: center;
-  width: 160px;
-  height: 35px;
+.mat-upper-nav {
+  .item {
+    padding: 0 24px !important;
+    display: flex;
+    align-items: center;
+    width: 160px;
+    height: 35px;
+    max-width: none !important;
+  }
+}
+.main-navbar {
+  color: $black-o;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.04),
+    0 4px 6px -4px rgb(0 0 0 / 0.04);
 }
 .mat-submenu-item {
   padding: 0 24px !important;
@@ -27,92 +39,25 @@ $hov:#16181b;
   b {
     line-height: normal;
   }
+}
+.mat-item {
+  color: $gray;
+  cursor: pointer;
   &:hover {
-    background-color: transparent !important;
-    color: rgba(0, 0, 0, 0.592);
+    background-color: transparent;
+    color: $black-0;
   }
-}
-#searchBox:hover > input,
-#searchBox:hover > i {
-  border-bottom-color: black;
-  transition: 0.5s;
-}
-#searchBox input:focus {
-  border-bottom-color: black;
-  transition: 0.5s;
-}
-#searchBox {
-  overflow-x: hidden;
-  width: 265px;
-  input {
-    width: 0;
-    animation: searchBox 1s ease-out 0.2s forwards;
+  .new {
+    background-color: $newbg;
+    color: $newcolor;
+    padding: 4px 7px !important;
+    height: 19.49px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
   }
-  i {
-    width: 48px;
-  }
-}
-@keyframes searchBox {
-  from {
-    width: 0px;
-  }
-  to {
-    width: 217px;
-  }
-}
-#searchResponsive {
-  overflow-x: hidden;
-  width: 100%;
-  input {
-    width: calc(100% - 50px);
-  }
-  i {
-    width: 50px;
-  }
-}
-#searchResponsive:hover > input,
-#searchResponsive:hover > i {
-  border-bottom-color: black;
-  transition: 0.5s;
-}
-#searchResponsive input:focus {
-  border-bottom-color: black;
-  transition: 0.5s;
-}
-#responsiveMenu {
-  height: 0;
-  overflow-y: hidden;
 }
 
-.example-container {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  right: 0;
-  pointer-events: none;
-  background-color: transparent;
-}
-.example-sidenav {
-  width: 500px;
-  pointer-events: all;
-  h5 {
-    margin-bottom: 48px;
-    font-size: 20px;
-    font-weight: 900;
-  }
-  ul > li {
-    font-weight: 700;
-  }
-  .fa-times {
-    transform-origin: 50% 50%;
-    transition: 0.5s;
-    cursor: pointer;
-  }
-  .fa-times:hover {
-    transform: rotateZ(90deg);
-  }
-}
 .mat-shop {
   display: flex;
 }
@@ -124,7 +69,6 @@ $hov:#16181b;
   }
   span {
     padding: 6.4px 0 6.4px 0;
-    color: rgba(0, 0, 0, 0.463);
   }
 }
 .mat-icons {
@@ -132,26 +76,35 @@ $hov:#16181b;
     margin: auto;
     & > div {
       text-align: center;
-      padding: 0 15px 0 0;
+      padding: 5px 15px 5px 0;
       margin-bottom: 48px;
+      cursor: pointer;
+      &:hover{
+        h6{
+          text-decoration: underline;
+        }
+      }
       & > img {
         margin: auto auto 8px auto;
       }
       h6 {
         font-size: 16px;
         margin: auto auto 8px auto;
+        font-family: 'Roboto' !important;
+        font-weight: bold;
       }
     }
   }
   & > .footer {
+    background-color: #bcac77;
     p {
       margin-bottom: 0;
     }
   }
 }
 .submenu-page {
-  width: 98.5%;
-  left: 0.75%;
+  width: 100%;
+  left: 0%;
   @media only screen and (min-width: 1300px) {
     width: 1299px;
     left: 50%;
@@ -192,12 +145,13 @@ $hov:#16181b;
   height: 0;
   overflow-y: hidden;
 }
-#togglePage{
+#togglePage {
   & > i {
     transform: rotate(0deg);
     transition: 0.2s;
-  }}
-#togglePage:focus{
+  }
+}
+#togglePage:focus {
   & > i {
     transform: rotate(180deg);
     transition: 0.2s;
@@ -219,4 +173,98 @@ $hov:#16181b;
 .angle-180 {
   transform: rotate(180deg);
   transition: 0.2s;
+}
+
+#searchBox:hover > input,
+#searchBox:hover > i {
+  border-bottom-color: black;
+  transition: 0.5s;
+}
+#searchBox input:focus {
+  border-bottom-color: black;
+  transition: 0.5s;
+}
+#searchBox {
+  overflow-x: hidden;
+  width: 265px;
+  input {
+    width: 0;
+    animation: searchBox 1s ease-out 0.2s forwards;
+  }
+  i {
+    width: 48px;
+  }
+}
+@keyframes searchBox {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 217px;
+  }
+}
+#searchResponsive:hover > input,
+#searchResponsive:hover > i {
+  border-bottom-color: black;
+  transition: 0.5s;
+}
+#searchResponsive input:focus {
+  border-bottom-color: black;
+  transition: 0.5s;
+}
+#responsiveMenu {
+  height: 0;
+  overflow-y: hidden;
+}
+#searchResponsive {
+  overflow-x: hidden;
+  width: 100%;
+  input {
+    width: calc(100% - 50px);
+  }
+  i {
+    width: 50px;
+  }
+}
+.sidenav-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  pointer-events: none;
+  background-color: transparent;
+}
+.sidenav {
+  width: 500px;
+  pointer-events: all;
+  h5 {
+    margin-bottom: 48px;
+    font-size: 20px;
+    font-weight: 900;
+  }
+  ul > li {
+    font-weight: 700;
+    color:$black-o;
+    cursor:default;
+    &:hover{
+      &:not(.disabled){
+        color:#bcac76a8;
+        cursor: pointer;
+      }
+    }
+  }
+  .fa-times {
+    transform-origin: 50% 50%;
+    transition: 0.5s;
+    cursor: pointer;
+    color: $black-o;
+  }
+  .fa-times:hover {
+    transform: rotateZ(90deg);
+  }
+  div>p{
+    color: $black-o;
+    font-family: font;
+  }
 }

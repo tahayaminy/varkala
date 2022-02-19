@@ -13,6 +13,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { NavbarComponent } from './common/navbar/navbar.component';
 import { IndexComponent } from './index/index.component';
+import { SwiperModule } from 'swiper/angular';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { IndexComponent } from './index/index.component';
     MatInputModule,
     MatBadgeModule,
     MatExpansionModule,
-    MatSidenavModule
+    MatSidenavModule,
+    SwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -27,9 +27,17 @@ $newcolor: #bcac76;
         font-weight: bold;
       }
 }
+nav{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+.upper-navbar-bg{  
+  background-color: #e9ecef;
+}
 .upper-navbar {
   color: $black;
-  background-color: #e9ecef;
   padding-top: 17px;
   padding-bottom: 17px;
   .fab {
@@ -46,10 +54,13 @@ $newcolor: #bcac76;
     max-width: none !important;
   }
 }
-.main-navbar {
-  color: $black-o;
+.main-navbar-shadow{
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.04),
     0 4px 6px -4px rgb(0 0 0 / 0.04);
+}
+.main-navbar {
+  color: $black-o;
+  
 }
 .mat-submenu-item {
   padding: 0 24px !important;

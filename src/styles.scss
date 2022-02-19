@@ -37,6 +37,9 @@ input:focus{
   top: -5px !important;
   width: 20px !important;
   height: 20px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .mat-menu-panel{
   max-width: none !important;

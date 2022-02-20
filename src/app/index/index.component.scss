@@ -4,7 +4,7 @@
 $gray: #868e96;
 $black: #212529;
 $crem:#bcac76;
-.swiper {
+.mySwiper {
   width: 100%;
   height: 100%;
 }
@@ -76,4 +76,62 @@ $crem:#bcac76;
 .second{
   justify-content: center;
   text-align: center;
+}
+.category{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  &:hover > img{
+    transition: .2s;
+    transform: scale(1.02);
+  }
+  div{
+    font-size: calc(1.525rem + 3.3vw);
+    font-weight: bolder;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s;
+    &:hover{
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  }
+}
+.new-arrival{
+  padding: 0 70px;
+  h1{
+    font-size: calc(1.525rem + 3.3vw);
+    margin-bottom: 77px;
+  }
+  p{
+    font-size: 20px;
+    color: $gray;
+    line-height: 1.6;
+  }
+}
+.history{
+  h1{
+    color: $crem;
+    letter-spacing: .3rem;
+    font-weight: bolder;
+    font: 20px;
+  }
+  p{
+    color:$gray;
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+}
+.history-slider{
+  div{
+    width: 96px !important;
+    height: 96px !important;
+    margin: 0 10px;
+  }
 }

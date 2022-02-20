@@ -1,7 +1,8 @@
-<swiper
+<header style="position: relative;
+height: 95vh;
+min-height: 600px;">
+  <swiper
   style="position: absolute; top: 0;
-    height: 95vh;
-    min-height: 600px;
   "
   [pagination]="{
     dynamicBullets: true
@@ -79,4 +80,68 @@
       </div>
     </div></ng-template
   >
+  </swiper>
+</header>
+<section style="background-color: #f8f9fa;">
+  <section class="flex sm:flex-row flex-col py-24 container mx-auto">
+    <section class="mx-4 sm:mb-0 mb-11 relative category rounded">
+      <img src="../../assets/img/category-women.jpg" alt="">
+      <div class="absolute">Women</div>
+    </section>
+    <section class="mx-4 sm:mb-0 mb-11 relative category rounded">
+      <img src="../../assets/img/category-men.jpg" alt="">
+      <div class="absolute">Men</div>
+    </section>
+  </section>
+</section>
+<section class="text-center mt-28 container mx-auto new-arrival">
+  <h1>New Arrivals</h1>
+  <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections</p>
+</section>
+<section class="mt-28 history">
+  <h1>OUR HISTORY</h1>
+  <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections</p>
+  <p>He must have tried it a hundred times, shut his eyes so that he wouldn't have to look at the floundering legs, and only stopped when he began to feel a mild, dull pain there that he had never felt before.</p>
+</section>
+<swiper
+  class="history-slider mx-auto container"
+  [pagination]="{
+    dynamicBullets: true
+  }"
+  [slidesPerView]="4"
+  [spaceBetween]="60"
+  [speed]="1500"
+  [navigation]="true"
+>
+  <ng-template swiperSlide>
+    <div>
+      <img src="../../assets/img/history/1.svg" alt="">
+    </div>
+  </ng-template>
+  <ng-template swiperSlide>
+    <div>
+      <img src="../../assets/img/history/2.svg" alt="">
+    </div>
+  </ng-template>
+  <ng-template swiperSlide>
+    <div>
+      <img src="../../assets/img/history/3.svg" alt="">
+    </div>
+  </ng-template>
+  <ng-template swiperSlide>
+    <div>
+      <img src="../../assets/img/history/4.svg" alt="">
+    </div>
+  </ng-template>
+  <ng-template swiperSlide>
+    <div>
+      <img src="../../assets/img/history/5.svg" alt="">
+    </div>
+  </ng-template>
+  <ng-template swiperSlide>
+    <div>
+      <img src="../../assets/img/history/6.svg" alt="">
+    </div>
+  </ng-template>
 </swiper>
+<br><br>s

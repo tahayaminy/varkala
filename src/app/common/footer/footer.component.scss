@@ -1,8 +1,8 @@
 .footer-cont-items{
-    span , b{
+    li , b{
         display: block;
     }
-    span,p{
+    li,p{
         color:#868e96;
     }
     
@@ -33,5 +33,50 @@
 .footer{
     span{
         color:#adb5bd;
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width:1024px){
+    .footer-cont-items{
+        &>b{
+            display: flex;
+            &>span{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .hor,.ver{
+                    position: absolute;
+                    background-color: #212529;
+                    left: 50%;top: 50%;
+                    transform: translate(-50%,-50%);
+                    transition: .5s;
+                }
+            }
+            .hor{
+                width: 24px;
+                height: 2px;
+            }
+            .ver{
+                width: 2px;
+                height: 24px;
+            }
+        }
+        ul{
+            overflow-y: hidden;
+            white-space: nowrap;
+            height: 0;
+            transition: .25s;
+        }
+        &>b:focus{
+            & ~ ul{height: 140px;}
+            &>span{
+                .hor{
+                    transform: translate(-50%,-50%) rotate(180deg);
+                }
+                .ver{
+                    transform: translate(-50%,-50%) rotate(90deg);
+                }
+            }
+        }
     }
 }

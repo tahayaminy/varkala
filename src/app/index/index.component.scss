@@ -148,3 +148,25 @@ header{
     bottom: 0;
   }
 }
+.conditions{
+  background-color: #f8f9fa;
+  &>div{
+    display: flex;
+    align-items: center;
+    padding: 24px 15px;
+  }
+  .cont-img{
+    width: 32px;
+    height: 32px;
+      margin-right: 16px;
+    
+  }
+  .cont-text{
+    display: flex;
+    flex-direction: column;
+    span{
+      color:$gray;
+      font-weight: 100;
+    }
+  }
+}

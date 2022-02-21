@@ -1,17 +1,14 @@
-<header style="position: relative;
-height: 95vh;
-min-height: 600px;">
-  <swiper
+<swiper
+  [pagination]="{
+    dynamicBullets: true
+  }" 
   style="position: absolute; top: 0;
   height: 95vh;
   "
-  [pagination]="{
-    dynamicBullets: true
-  }"
   [parallax]="true"
   [speed]="2500"
   [navigation]="true"
-  class="mySwiper"
+  class="myHomeSlider"
 >
   <ng-template swiperSlide
     ><div
@@ -82,7 +79,6 @@ min-height: 600px;">
     </div></ng-template
   >
   </swiper>
-</header>
 <section style="background-color: #f8f9fa;">
   <section class="flex sm:flex-row flex-col py-24 container mx-auto">
     <section class="mx-4 sm:mb-0 mb-11 relative category rounded">

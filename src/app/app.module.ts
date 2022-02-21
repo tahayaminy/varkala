@@ -14,12 +14,14 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { NavbarComponent } from './common/navbar/navbar.component';
 import { IndexComponent } from './index/index.component';
 import { SwiperModule } from 'swiper/angular';
+import { FooterComponent } from './common/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     IndexComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

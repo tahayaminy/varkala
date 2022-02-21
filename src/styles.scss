@@ -5,10 +5,34 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 @import "~@fortawesome/fontawesome-free/css/all.css";
 *{margin: 0;padding: 0;}
+
 @font-face {
-  font-family: font;
-  font-style:normal;
-  src: url("./assets/font/VremenaGrotesk.woff") format("woff");
+  font-family: "regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Vremena Grotesk Regular"),
+    url("./assets/font/VremenaGrotesk.woff") format("woff");
+}
+@font-face {
+  font-family: "bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Vremena Grotesk Bold"),
+    url("./assets/font/VremenaGroteskBold.woff") format("woff");
+}
+@font-face {
+  font-family: "book";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Vremena Grotesk Book"),
+    url("./assets/font/VremenaGroteskBook.woff") format("woff");
+}
+@font-face {
+  font-family: "medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Vremena Grotesk Medium"),
+    url("./assets/font/VremenaGroteskMedium.woff") format("woff");
 }
 
 html,

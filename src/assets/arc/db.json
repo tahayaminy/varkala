@@ -1,0 +1,126 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Trucker jacket",
+      "description": "Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.",
+      "status": "FRESH",
+      "price": 40,
+      "gender": "WOMEN",
+      "discount": {
+        "isAvailable": true,
+        "percent": 5
+      },
+      "category": {
+        "id": 2
+      },
+      "images": [
+        "https://varkala-react-2.vercel.app/img/product/detail-3-gray.jpg",
+        "https://varkala-react-2.vercel.app/img/product/detail-1-gray.jpg",
+        "https://varkala-react-2.vercel.app/img/product/detail-2-gray.jpg",
+        "https://varkala-react-2.vercel.app/img/product/detail-4-gray.jpg"
+      ],
+      "reviews": 10
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Trousers",
+      "description": "",
+      "icon": "",
+      "mainImage": "https://cdn.cliqueinc.com/posts/281351/loose-pants-for-women-281351-1563512196601-main.700x0c.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Jackets",
+      "description": "",
+      "icon": "",
+      "mainImage": "https://n.nordstrommedia.com/id/sr3/6afba3a9-aa0b-4a3e-be77-423659ba6438.jpeg?h=365&w=240&dpr=2"
+    },
+    {
+      "id": 3,
+      "name": "T-Shirts",
+      "description": "",
+      "icon": "",
+      "mainImage": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/white-tee-1623337322.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Shirts",
+      "description": "",
+      "icon": "",
+      "mainImage": "https://images.bewakoof.com/uploads/grid/app/types-of-shirts-for-men-bewakoof-blog-1-1610963787.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Pullovers",
+      "description": "",
+      "icon": "",
+      "mainImage": "https://cdn.shopify.com/s/files/1/0204/8934/products/BluetickQuarterZipOatmeal2_1024x1024.jpg?v=1643746698"
+    },
+    {
+      "id": 6,
+      "name": "Scarfs",
+      "description": "",
+      "icon": "",
+      "mainImage": "https://images.accentuate.io/?image=https%3A%2F%2Fcdn.accentuate.io%2F6757871255716%2F1628676645452%2FAW21_NPA000033B_OLV_3.jpg%3Fv%3D0&c_options=w_504,h_576"
+    },
+    {
+      "id": 7,
+      "name": "Shorts",
+      "description": "",
+      "icon": "",
+      "mainImage": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw86e4e147/images/hi-res/57185_NENA_MK1.jpg?sw=800&sh=800&sfrm=png&q=95&bgcolor=f5f5f5"
+    },
+    {
+      "id": 8,
+      "name": "Underwear",
+      "description": "",
+      "icon": "",
+      "mainImage": "https://media.gq-magazine.co.uk/photos/60f93dc9c0e76ffbb9889499/master/w_1920,h_1280,c_limit/underwear_0004_Tom%20Ford.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Watches",
+      "description": "",
+      "icon": "",
+      "mainImage": "https://media.istockphoto.com/photos/premium-mens-watch-on-hand-close-up-picture-id1065329058?k=20&m=1065329058&s=612x612&w=0&h=W2ibh4AmHRZO-T6TDgVmL79ql1iRbA1DsLka6mVX4Oc="
+    },
+    {
+      "id": 10,
+      "name": "Bags",
+      "description": "",
+      "icon": "",
+      "mainImage": "https://images.unsplash.com/photo-1544511196-1646449a253b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHw%3D&w=1000&q=80"
+    },
+    {
+      "id": 11,
+      "name": "Caps",
+      "description": "",
+      "icon": "",
+      "mainImage": "https://images.unsplash.com/photo-1592367630397-65872fe016e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FwfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+    },
+    {
+      "id": 12,
+      "name": "Accessories",
+      "description": "",
+      "icon": "",
+      "mainImage": "https://myrepublica.nagariknetwork.com/uploads/media/5b69706d6655d_20191125082831.jpg"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "user",
+      "password": "12345678",
+      "token": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NDQ3NDIzNTEsImV4cCI6MTY0NzMzNDM1MSwic3ViIjoiMTQ2NDQzIn0.ZYleEQVVG7A4p1iGqXOyiF6XF3J7xuBbX8-DlrYy6THlDBeA51IwK-NOE3K9Js6wFQXIpR31LER7xQ-GAmFV9g"
+    },
+    {
+      "id": 2,
+      "username": "taha",
+      "password": "12345678",
+      "token": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NDQ3NDIzNTEsImV4cCI6MTY0NzMzNDM1wic3ViIjoiMTQ2NDQzIn0.ZYleEQVVG7A4p1iGqXOyiF6XF3J7xuBbX8-DlrYy6THlDBeA51IwK-NOE3K9Js6wFQXIpR31LER7xQ-GAmFV9g"
+    }
+  ]
+}

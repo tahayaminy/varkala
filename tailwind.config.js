@@ -28,6 +28,11 @@ module.exports = {
         addComponents({
           '.container-fluid':{
             width:'100%',
+            paddingInline:'15px',
+            '@screen cxl':{
+              maxWidth:'100%',
+              paddingInline:'8rem'
+            },
           }
         })
       }

@@ -1,14 +1,14 @@
-<nav class="w-full" style="position: relative;height: 95vh;min-height: 600px;">
+<nav class="w-full">
     <section
       [class.upper-navbar-bg]="!index"
-      class="upper-navbar sm:columns-2 md:columns-3 px-4 lg:px-12 fs-14 flex align-items"
+      class="upper-navbar columns-1 sm:columns-2 md:columns-3 px-4 lg:px-12 flex align-items"
     >
       <div class="hidden md:inline-flex items-center w-full">
         <i class="fab fa-facebook-f mr-1 inline-block"></i>
         <i class="fab fa-twitter mx-1 inline-block"></i>
         <span class="ml-5 mr-6 inline-block relative"
           ><i
-            style="transform: translateY(-10%)"
+            style="transform: translateY(-1%)"
             class="absolute bi bi-telephone text-lg"
           ></i>
           <span class="pl-7">020-800-456-747</span></span
@@ -17,11 +17,11 @@
       <div class="md:justify-center inline-flex items-center w-full">
         Free in-store delivery
       </div>
-      <div class="justify-end inline-flex items-center w-full">
+      <div class="hidden justify-end sm:inline-flex items-center w-full">
         <button
           mat-button
           [matMenuTriggerFor]="lang"
-          class="hidden sm:inline-block mx-4"
+          class="mx-4"
         >
           English <i class="fas fa-caret-down"></i>
         </button>
@@ -34,7 +34,7 @@
         <button
           mat-button
           [matMenuTriggerFor]="usd"
-          class="hidden sm:inline-block pl-4"
+          class="pl-4"
           style="border-left: 1px solid #dee2e6"
         >
           USD <i class="fas fa-caret-down"></i>
@@ -52,8 +52,8 @@
         </mat-menu>
       </div>
     </section>
-    <section [class.main-navbar-shadow]="!index" class="lg:py-5 py-2 lg:px-12 px-2 main-navbar">
-      <section class="flex items-center">
+    <section  [ngClass]="[!index ? 'main-navbar-shadow' : '', Menu ? 'bg-white' : '']" class="lg:py-5 py-2 lg:px-12 main-navbar">
+      <section class="flex items-center px-2">
         <span class="text-black w-full py-2 lg:w-auto lg:mr-4">Varkala</span>
         <!-- LARGE SCREEN MENU -->
         <ul class="hidden lg:block menu-cont">
@@ -373,21 +373,19 @@
           </li>
         </ul>
         <!-- NAVBAR IN SMALL SCREEN -->
-        <div class="lg:hidden w-full pl-4 ml-1 text-center">
+        <div class="lg:hidden w-full flex flex-nowrap pl-4 ml-1 justify-center">
           <i class="far text-2xl mr-2 fa-user"></i>
           <span matBadge="1" class="far text-2xl ml-3 fa-heart"></span>
           <span matBadge="6" class="bi text-2xl ml-3 bi-bag"></span>
         </div>
         <div class="lg:hidden w-full text-right">
-          <i tabindex="0"
-            (focus)="responsiveMenu()"
-            (blur)="responsiveMenu()"
+          <i tabindex="0" (click)="responsiveMenu()"
             class="fas text-2xl ml-3 fa-align-left cursor-pointer"
           ></i>
         </div>
       </section>
       <!-- RESPONSIVE MENU OPEN -->
-      <section #contMenu id="responsiveMenu">
+      <section #contMenu class="px-2" id="responsiveMenu">
         <ul class="mt-5 menu-cont">
           <li
             tabindex="0"

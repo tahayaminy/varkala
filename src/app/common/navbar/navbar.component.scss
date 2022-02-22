@@ -39,6 +39,8 @@ nav{
   color: $black;
   padding-top: 17px;
   padding-bottom: 17px;
+  font-size: 14px;
+  font-family: "book" !important;
   .fab {
     color: $fab;
   }
@@ -59,7 +61,9 @@ nav{
 }
 .main-navbar {
   color: $black-o;
-  
+  padding-top: 19.2px;
+  padding-bottom: 19.2px;
+  transition: .2s;
 }
 .mat-submenu-item {
   padding: 0 24px !important;
@@ -188,6 +192,8 @@ nav{
   transition: 0.2s;
 }
 #responsiveMenu {
+  background-color: white;
+  transition: .2s;
   height: 0;
   overflow-y: hidden;
   .mat-item{

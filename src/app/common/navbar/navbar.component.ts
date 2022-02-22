@@ -15,11 +15,13 @@ export class NavbarComponent implements OnInit {
   @ViewChild('contMenu') menuCont!:ElementRef;
   responsiveMenu(){
     this.Menu=!this.Menu;
-    console.log('run')
+    console.log('responsiveMenu');
     if(this.Menu){
-      this.menuCont.nativeElement.style.height='auto';
+      this.menuCont.nativeElement.style='height:auto;background-color:white;';
+      console.log('opened');
     }else{
-      this.menuCont.nativeElement.style.height=0;
+      this.menuCont.nativeElement.style='height:0;background-color:transparent;';
+      console.log('closed');
     }
   }
 }

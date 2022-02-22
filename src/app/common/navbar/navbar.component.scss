@@ -61,8 +61,10 @@ nav{
 }
 .main-navbar {
   color: $black-o;
-  padding-top: 19.2px;
-  padding-bottom: 19.2px;
+  @media only screen and (min-width:1024px){
+    padding-top: 19.2px;
+    padding-bottom: 19.2px;
+  }
   transition: .2s;
 }
 .mat-submenu-item {
@@ -328,14 +330,14 @@ nav{
 .sidenav {
   width: 500px;
   pointer-events: all;
+  font-family: 'regular';
   h5 {
     margin-bottom: 48px;
     font-size: 20px;
-    font-weight: 900;
+    font-family: 'bold';
   }
   ul > li {
-    font-weight: 700;
-    color:$black-o;
+    color:$gray;
     cursor:default;
     &:hover{
       &:not(.disabled){
@@ -354,6 +356,8 @@ nav{
     transform: rotateZ(90deg);
   }
   div>p{
-    color: $black-o;
+    color: $gray;
+    line-height: 1.6;
+    font-family: 'book';
   }
 }

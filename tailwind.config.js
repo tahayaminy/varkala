@@ -3,7 +3,11 @@ module.exports = {
       "./src/**/*.{html,ts}",
     ],
     theme: {
-      extend: {},
+      extend: {
+        screens: {
+          'cxl': '1350px',
+        },
+      },
     },
     corePlugins: {
       container: false
@@ -13,19 +17,8 @@ module.exports = {
         addComponents({
           '.container':{
             maxWidth:'100%',
-            '@screen sm':{
-              maxWidth:'540px',
-            },
-            '@screen md':{
-              maxWidth:'720px',
-            },
-            '@screen lg':{
-              maxWidth:'992px',
-            },
-            '@screen xl':{
-              maxWidth:'1140px',
-            },
-            '@screen 2xl':{
+            paddingInline:'15px',
+            '@screen cxl':{
               maxWidth:'1320px',
             },
           }

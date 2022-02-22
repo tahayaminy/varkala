@@ -7,6 +7,11 @@ $crem:#bcac76;
 .myHomeSlider {
     width: 100%;
     height: 100%;
+    @media only screen and (max-width:1024px){
+      .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: 5vh;
+      }
+    }
 }
 .swiper-button-prev,.swiper-button-next{
   display: none;

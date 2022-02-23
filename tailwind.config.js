@@ -6,6 +6,7 @@ module.exports = {
       extend: {
         screens: {
           'cxl': '1350px',
+          'clg': '992px',
         },
       },
     },
@@ -29,7 +30,7 @@ module.exports = {
           '.container-fluid':{
             width:'100%',
             paddingInline:'15px',
-            '@screen cxl':{
+            '@screen clg':{
               maxWidth:'100%',
               paddingInline:'8rem'
             },

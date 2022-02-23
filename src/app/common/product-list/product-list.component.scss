@@ -4,13 +4,76 @@ $crem: #bcac76;
 .mute {
   color: $gray;
 }
+.muted {
+  color: #adb5bd;
+}
+.crem {
+  color: $crem;
+}
 .product-list {
   .nav {
     & > span:last-child {
       color: $crem;
-      font-family: 'regular';
+      font-family: "regular";
       font-size: 12.8px;
-      letter-spacing: .3em;
+      letter-spacing: 0.3em;
     }
+  }
+  .main {
+    .muted {
+      font-size: 14px;
+    }
+    b {
+      font-family: "regular";
+    }
+    .badge {
+      background-color: #877f64;
+      color: white;
+      padding: 2px 8px 0 8px;
+      font-size: 12px;
+      border-radius: 5px;
+      top: 15px;
+      left: 15px;
+    }
+    .imgs {
+      .label {
+          transition: .5s;
+          opacity: 0;
+          pointer-events: none;
+        transform: translateY(100%);
+        background-color: #ffffffeb;
+        height: 3rem;
+        display: flex;
+        padding: 0px 16px;
+        align-items: center;
+        span:first-child {
+          font-size: 14px;
+        }
+        span:not(span:first-child) {
+          font-size: 18px;
+        }
+      }
+    }
+    .stars {
+        transition: .5s;
+        opacity: 0;
+        pointer-events: none;
+      font-size: 11px;
+      color: $gray;
+      transform: translateY(100%);
+    }
+    
+    & > section:hover {
+        .label {
+          transform: translateY(0);
+          pointer-events: all;
+          opacity: 1;
+        }
+        .stars {
+          transform: translateY(0);
+          pointer-events: all;
+          opacity: 1;
+        }
+      }
   }
 }

@@ -178,3 +178,21 @@ $crem: #bcac76;
     bottom: 0;
   }
 }
+.tstcont{
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  min-height: 591px;
+  width: 100%;
+  .tst{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    object-fit: cover;
+    object-position: right;
+    height: 100%;
+
+  }
+}

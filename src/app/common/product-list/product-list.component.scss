@@ -1,0 +1,16 @@
+$gray: #868e96;
+$black: #212529;
+$crem: #bcac76;
+.mute {
+  color: $gray;
+}
+.product-list {
+  .nav {
+    & > span:last-child {
+      color: $crem;
+      font-family: 'regular';
+      font-size: 12.8px;
+      letter-spacing: .3em;
+    }
+  }
+}

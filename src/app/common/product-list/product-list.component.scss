@@ -40,10 +40,7 @@ $crem: #bcac76;
     }
     .imgs {
       .label {
-          transition: .5s;
-          opacity: 0;
-          pointer-events: none;
-        transform: translateY(100%);
+        transform: translateY(5%);
         background-color: #ffffffeb;
         height: 3rem;
         display: flex;
@@ -57,27 +54,32 @@ $crem: #bcac76;
         }
       }
     }
-    .stars {
-        transition: .5s;
-        opacity: 0;
-        pointer-events: none;
+    .stars {  
+      transform: translateY(5%);     
       font-size: 11px;
       color: $gray;
-      transform: translateY(100%);
     }
-    
-    & > section:hover {
-        cursor: pointer;
-        .label {
-          transform: translateY(0);
-          pointer-events: all;
-          opacity: 1;
-        }
-        .stars {
-          transform: translateY(0);
-          pointer-events: all;
-          opacity: 1;
-        }
+    @media only screen and (min-width:768px){
+      .stars,.imgs>.label{
+        transition: .5s;
+          opacity: 0;
+          pointer-events: none;
+          
+        transform: translateY(100%);
       }
+      & > section:hover {
+          cursor: pointer;
+          .label {
+            transform: translateY(0);
+            pointer-events: all;
+            opacity: 1;
+          }
+          .stars {
+            transform: translateY(0);
+            pointer-events: all;
+            opacity: 1;
+          }
+        }
+    }
   }
 }

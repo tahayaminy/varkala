@@ -178,56 +178,95 @@ $crem: #bcac76;
     bottom: 0;
   }
 }
-$danger:#dc3545;
-.product-offer{
+:root {
+  --height: 718px;
+}
+@media only screen and (min-width: 375px) {
+  :root {
+    --height: 685px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  :root {
+    --height: 585px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  :root {
+    --height: 591px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  :root {
+    --height: 595px;
+  }
+}
+$danger: #dc3545;
+.product-offer {
   position: relative;
   overflow: hidden;
-  min-height: 592px;
-  max-height: 592px;
+  min-height: var(--height);
+  max-height: var(--height);
   width: 100%;
-  .img>img{
-    max-height: 592px;
-    min-height: 592px;
+  .img > img {
+    max-height: var(--height);
+    min-height: var(--height);
     object-fit: cover;
     object-position: right;
     width: 100%;
   }
-  .content-cont{
-    top: 0;left: 0;right: 0;
+  .content-cont {
+    top: 0;
+    left: 0;
+    right: 0;
     position: absolute;
     width: 100%;
     height: 100%;
-    .content{
-      .title1{
+    .content {
+      .title1 {
         color: $danger;
+        letter-spacing: 0.2em;
+        font-family: "medium";
+        margin-bottom: 30px;
       }
-      .title2{
-        font-size: calc(1.375rem + 1.5vw);
+      .title2 {
+        font-size: calc(1.375rem + 3vw);
+        @media only screen and (min-width: 1024px) {
+          font-size: 1.5rem;
+        }
+        margin-bottom: 20px;
       }
-      .price{
+      .price {
         color: $gray;
       }
-      .off{
+      .off {
         display: inline-block;
         color: white;
         background-color: $danger;
         font-size: 12px;
-        padding: 16px;
+        padding: 11.5px 16px;
       }
-      .text-center{
-        &>div:first-child{
-          font-size: calc(1.275rem + .3vw);
-          font-family: 'medium';
+      .dates {
+        & > div:first-child {
+          font-size: calc(1.275rem + 0.3vw);
+          font-family: "medium";
+        }
+        & > div:last-child {
+          color: $gray;
         }
       }
-      button{
-        letter-spacing: .3em;
+      button {
+        letter-spacing: 0.3em;
         border: 1px solid $black;
         font-size: 12.8px;
-        font-family: 'regular';
+        font-family: "regular";
         padding: 8.4px 12px;
+        &:hover {
+          background-color: $black;
+          color: white;
+        }
       }
-      
     }
   }
 }

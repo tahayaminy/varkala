@@ -1,115 +1,169 @@
-<section style="min-height: 600px;height: 95vh;position: relative;">
+<section style="min-height: 600px; height: 95vh; position: relative">
   <swiper
-  [pagination]="{
-    dynamicBullets: true
-  }" 
-  [parallax]="true"
-  [speed]="1500"
-  [navigation]="true"
-  class="myHomeSlider"
->
-  <ng-template swiperSlide
-    ><div
-    class="lg:p-32"
-      style="
-        width: 100%;
-        height: 100vh;
-        min-height: 600px;
-        background-image: url('../../assets/img/slider1.jpg');
-        background-position: right top;
-        background-size: cover;
-        background-repeat: no-repeat;
-      "
-    >
-      <div class="pt-10 sm:-mt-5 slide-cont flex lg:flex-row items-center" data-swiper-parallax="-500">
-        <div class="lg:basis-6/12">
-          <p class="p-thin pb-4">OUR ALL-TIME FAVOURITES</p>
-          <h1 class="pb-4">Blouses & Tops</h1>
-          <p class="text-mute">
-            The bedding was hardly able to cover it and seemed ready to slide
-            off any moment. His many legs, pit
-          </p>
-          <button class="mt-8">DISCOVER MORE</button>
-        </div>
-      </div>
-    </div></ng-template
+    [pagination]="{
+      dynamicBullets: true
+    }"
+    [parallax]="true"
+    [speed]="1500"
+    [navigation]="true"
+    class="myHomeSlider"
   >
-  <ng-template swiperSlide
-    ><div
-    class="lg:p-32"
-      style="
-        width: 100%;
-        height: 100vh;
-        min-height: 600px;
-        background-image: url('../../assets/img/slider2.jpg');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-      "
-    >
-      <div class="slide-cont second flex lg:flex-row items-center" data-swiper-parallax="-500">
-        <div class="lg:basis-6/12 lg:px-1">
-          <p class="p-thin pb-4">BLUE & WHITE</p>
-          <h1>Linen and denim</h1>
-          <button class="mt-5">START SHOPPING</button>
+    <ng-template swiperSlide
+      ><div
+        class="lg:p-32"
+        style="
+          width: 100%;
+          height: 100vh;
+          min-height: 600px;
+          background-image: url('../../assets/img/slider1.jpg');
+          background-position: right top;
+          background-size: cover;
+          background-repeat: no-repeat;
+        "
+      >
+        <div
+          class="pt-10 sm:-mt-5 slide-cont flex lg:flex-row items-center"
+          data-swiper-parallax="-500"
+        >
+          <div class="lg:basis-6/12">
+            <p class="p-thin pb-4">OUR ALL-TIME FAVOURITES</p>
+            <h1 class="pb-4">Blouses & Tops</h1>
+            <p class="text-mute">
+              The bedding was hardly able to cover it and seemed ready to slide
+              off any moment. His many legs, pit
+            </p>
+            <button class="mt-8">DISCOVER MORE</button>
+          </div>
         </div>
-      </div>
-    </div></ng-template
-  >
-  <ng-template swiperSlide
-    ><div
-    class="lg:p-32"
-      style="
-        width: 100%;
-        height: 100vh;
-        min-height: 600px;
-        background-image: url('../../assets/img/slider3.jpg');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-      "
+      </div></ng-template
     >
-      <div class="lg:-mt-5 slide-cont flex lg:flex-row items-center" data-swiper-parallax="-500">
-        <div class="lg:basis-6/12"></div>
-        <div class="lg:basis-6/12">
-          <p class="p-thin third pb-6">SNEAKERS</p>
-          <h1>For every occassion</h1>
-          <button class="mt-12">START SHOPPING</button>
+    <ng-template swiperSlide
+      ><div
+        class="lg:p-32"
+        style="
+          width: 100%;
+          height: 100vh;
+          min-height: 600px;
+          background-image: url('../../assets/img/slider2.jpg');
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        "
+      >
+        <div
+          class="slide-cont second flex lg:flex-row items-center"
+          data-swiper-parallax="-500"
+        >
+          <div class="lg:basis-6/12 lg:px-1">
+            <p class="p-thin pb-4">BLUE & WHITE</p>
+            <h1>Linen and denim</h1>
+            <button class="mt-5">START SHOPPING</button>
+          </div>
         </div>
-      </div>
-    </div></ng-template
-  >
+      </div></ng-template
+    >
+    <ng-template swiperSlide
+      ><div
+        class="lg:p-32"
+        style="
+          width: 100%;
+          height: 100vh;
+          min-height: 600px;
+          background-image: url('../../assets/img/slider3.jpg');
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        "
+      >
+        <div
+          class="lg:-mt-5 slide-cont flex lg:flex-row items-center"
+          data-swiper-parallax="-500"
+        >
+          <div class="lg:basis-6/12"></div>
+          <div class="lg:basis-6/12">
+            <p class="p-thin third pb-6">SNEAKERS</p>
+            <h1>For every occassion</h1>
+            <button class="mt-12">START SHOPPING</button>
+          </div>
+        </div>
+      </div></ng-template
+    >
   </swiper>
 </section>
-<section style="background-color: #f8f9fa;">
+<section style="background-color: #f8f9fa">
   <section class="flex sm:flex-row flex-col py-24 container mx-auto">
     <section class="mx-auto sm:mr-4 sm:mb-0 mb-11 relative category rounded">
-      <img src="../../assets/img/category-women.jpg" alt="">
+      <img src="../../assets/img/category-women.jpg" alt="" />
       <div class="absolute">Women</div>
     </section>
     <section class="mx-auto sm:ml-4 sm:mb-0 mb-11 relative category rounded">
-      <img src="../../assets/img/category-men.jpg" alt="">
+      <img src="../../assets/img/category-men.jpg" alt="" />
       <div class="absolute">Men</div>
     </section>
   </section>
 </section>
 <section class="mt-28 container-fluid lg:flex lg:flex-row">
-  <section class="lg:basis-10/12 xl:basis-8/12 text-center lg:mx-auto px-4 new-arrival">
+  <section
+    class="lg:basis-10/12 xl:basis-8/12 text-center lg:mx-auto px-4 new-arrival"
+  >
     <h1>New Arrivals</h1>
-  <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections</p>
+    <p>
+      One morning, when Gregor Samsa woke from troubled dreams, he found himself
+      transformed in his bed into a horrible vermin. He lay on his armour-like
+      back, and if he lifted his head a little he could see his brown belly,
+      slightly domed and divided by arches into stiff sections
+    </p>
   </section>
 </section>
 <app-product-list></app-product-list>
-<section class="relative">
-  <div class="tstcont">
-    x
-    <img class="tst" src="../../assets/deal-plain.jpg" alt="">
+<section class="my-24 product-offer">
+  <div class="img">
+    <img src="../../assets/deal-plain.jpg" alt="" />
+    <div class="content-cont flex items-center container mx-auto">
+      <div class="content basis-full">
+        <p class="title1">DEAL OF THE WEAK</p>
+        <h3 class="title2">Oversized denim jacket</h3>
+        <div class="price">
+          <del>$129.00</del><span>$79.00</span>
+        </div>
+        <span class="off">$50 off</span>
+        <div class="grid grid-cols-4 w-full bg-white shadow-lg px-12 gap-x-4 py-6">
+          <div class="text-center">
+            <div class="mb-5">14</div>
+            <div>days</div>
+          </div>
+          <div class="text-center">
+            <div class="mb-5">23</div>
+            <div>hours</div>
+          </div>
+          <div class="text-center">
+            <div class="mb-5">35</div>
+            <div>minutes</div>
+          </div>
+          <div class="text-center">
+            <div class="mb-5">40</div>
+            <div>seconds</div>
+          </div>
+        </div>
+        <button>SHOP NOW</button>
+      </div>
+    </div>
+    
   </div>
 </section>
-<section class="my-28 history container mx-auto mb-36">
+<section class="history container mx-auto mb-36">
   <h1 class="mb-4">OUR HISTORY</h1>
-  <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections</p>
-  <p>He must have tried it a hundred times, shut his eyes so that he wouldn't have to look at the floundering legs, and only stopped when he began to feel a mild, dull pain there that he had never felt before.</p>
+  <p>
+    One morning, when Gregor Samsa woke from troubled dreams, he found himself
+    transformed in his bed into a horrible vermin. He lay on his armour-like
+    back, and if he lifted his head a little he could see his brown belly,
+    slightly domed and divided by arches into stiff sections
+  </p>
+  <p>
+    He must have tried it a hundred times, shut his eyes so that he wouldn't
+    have to look at the floundering legs, and only stopped when he began to feel
+    a mild, dull pain there that he had never felt before.
+  </p>
 </section>
 <swiper
   class="history-slider flex flex-row pb-5 px-4 mb-24 mx-auto pb-12 mySwiper container mx-auto"
@@ -129,32 +183,32 @@
 >
   <ng-template swiperSlide>
     <div class="cont">
-      <img src="../../assets/img/history/1.svg" alt="">
+      <img src="../../assets/img/history/1.svg" alt="" />
     </div>
   </ng-template>
   <ng-template swiperSlide>
     <div class="cont">
-      <img src="../../assets/img/history/2.svg" alt="">
+      <img src="../../assets/img/history/2.svg" alt="" />
     </div>
   </ng-template>
   <ng-template swiperSlide>
     <div class="cont">
-      <img src="../../assets/img/history/3.svg" alt="">
+      <img src="../../assets/img/history/3.svg" alt="" />
     </div>
   </ng-template>
   <ng-template swiperSlide>
     <div class="cont">
-      <img src="../../assets/img/history/4.svg" alt="">
+      <img src="../../assets/img/history/4.svg" alt="" />
     </div>
   </ng-template>
   <ng-template swiperSlide>
     <div class="cont">
-      <img src="../../assets/img/history/5.svg" alt="">
+      <img src="../../assets/img/history/5.svg" alt="" />
     </div>
   </ng-template>
   <ng-template swiperSlide>
     <div class="cont">
-      <img src="../../assets/img/history/6.svg" alt="">
+      <img src="../../assets/img/history/6.svg" alt="" />
     </div>
   </ng-template>
 </swiper>

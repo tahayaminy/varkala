@@ -9,30 +9,30 @@ $newbg: #f5f3ea;
 $newcolor: #bcac76;
 @mixin icons {
   text-align: center;
-      padding: 5px 15px 5px 0;
-      margin-bottom: 48px;
-      cursor: pointer;
-      &:hover{
-        h6{
-          text-decoration: underline;
-        }
-      }
-      & > img {
-        margin: auto auto 8px auto;
-      }
-      h6 {
-        font-size: 16px;
-        margin: auto auto 8px auto;
-        font-weight: bold;
-      }
+  padding: 5px 15px 5px 0;
+  margin-bottom: 48px;
+  cursor: pointer;
+  &:hover {
+    h6 {
+      text-decoration: underline;
+    }
+  }
+  & > img {
+    margin: auto auto 8px auto;
+  }
+  h6 {
+    font-size: 16px;
+    margin: auto auto 8px auto;
+    font-weight: bold;
+  }
 }
-nav{
+nav {
   position: -webkit-sticky; /* Safari */
   position: fixed;
   top: 0;
   z-index: 9999;
 }
-.upper-navbar-bg{  
+.upper-navbar-bg {
   background-color: #e9ecef;
 }
 .upper-navbar {
@@ -55,17 +55,17 @@ nav{
     max-width: none !important;
   }
 }
-.main-navbar-shadow{
+.main-navbar-shadow {
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.04),
     0 4px 6px -4px rgb(0 0 0 / 0.04);
 }
 .main-navbar {
   color: $black-o;
-  @media only screen and (min-width:1024px){
+  @media only screen and (min-width: 1024px) {
     padding-top: 19.2px;
     padding-bottom: 19.2px;
   }
-  transition: .2s;
+  transition: 0.2s;
 }
 .mat-submenu-item {
   padding: 0 24px !important;
@@ -93,8 +93,7 @@ nav{
     align-items: center;
   }
 }
-#res
-.mat-shop {
+#res .mat-shop {
   display: flex;
 }
 .mat-shop-item {
@@ -195,73 +194,72 @@ nav{
 }
 #responsiveMenu {
   background-color: white;
-  transition: .2s;
+  transition: 0.2s;
   height: 0;
   overflow-y: hidden;
-  .mat-item{
+  .mat-item {
     font-size: 14px;
-    padding:6.4px 24px;
+    padding: 6.4px 24px;
   }
-  .mat-title{
+  .mat-title {
     color: $black-0;
     font-size: 14px;
     padding: 7px 24px;
     margin-bottom: 0;
     font-weight: bold;
   }
-  .pages-flexible{
-    .mat-title{
+  .pages-flexible {
+    .mat-title {
       font-size: 16px;
     }
   }
-  .menu-cont{
-    &>li>i{
+  .menu-cont {
+    & > li > i {
       transform: rotate(0deg);
-      transition: .7s;
-    }    
-    &>ul{
+      transition: 0.7s;
+    }
+    & > ul {
       height: 0;
       overflow: hidden;
-
     }
-    &>li:focus{
-      &+ul{
+    & > li:focus {
+      & + ul {
         height: auto;
         padding-top: 8px;
         padding-bottom: 8px;
       }
       color: $black-0;
-      &>i{
+      & > i {
         transform: rotate(180deg);
       }
     }
   }
-  @media only screen and (min-width:576px){
-    .flexible{
+  @media only screen and (min-width: 576px) {
+    .flexible {
       display: flex;
-      div{
+      div {
         margin-top: -12px;
       }
     }
   }
-  .custom-columns{
+  .custom-columns {
     display: grid;
-    div{
+    div {
       @include icons;
       color: $black-0;
     }
-    @media only screen and (max-width:576px){
-      &{
+    @media only screen and (max-width: 576px) {
+      & {
         grid-template-columns: auto auto;
       }
     }
-    @media only screen and (max-width:768px){
-      &{
+    @media only screen and (max-width: 768px) {
+      & {
         grid-template-columns: auto auto auto auto;
       }
     }
-    @media only screen and (min-width:768px){
-      &{
+    @media only screen and (min-width: 768px) {
+      & {
         grid-template-columns: auto auto auto auto auto auto;
       }
     }
@@ -331,20 +329,42 @@ nav{
   width: 500px;
   max-width: 100%;
   pointer-events: all;
-  font-family: 'regular';
-  h5 {
-    margin-bottom: 48px;
-    font-size: 20px;
-    font-family: 'bold';
-  }
-  ul > li {
-    color:$gray;
-    cursor:default;
-    &:hover{
-      &:not(.disabled){
-        color:#bcac76a8;
-        cursor: pointer;
+  font-family: "regular";
+  .info {
+    h5 {
+      margin-bottom: 48px;
+      font-size: 20px;
+      font-family: "bold";
+    }
+    ul > li {
+      color: $gray;
+      cursor: default;
+      &:hover {
+        &:not(.disabled) {
+          color: #bcac76a8;
+          cursor: pointer;
+        }
       }
+    }
+    p {
+      color: $gray;
+      line-height: 1.6;
+      font-family: "book";
+    }
+  }
+  .bag{
+    .main{
+      background-color: aqua;
+      width: 100%;
+      height: calc(100vh - 190px);
+    }
+    .footer{
+      width: 100%;
+      height: 190px;
+      background-color: #bcac76;
+      position: absolute;
+      bottom: 0;
+      left: 0;
     }
   }
   .fa-times {
@@ -355,10 +375,5 @@ nav{
   }
   .fa-times:hover {
     transform: rotateZ(90deg);
-  }
-  div>p{
-    color: $gray;
-    line-height: 1.6;
-    font-family: 'book';
   }
 }

@@ -361,7 +361,8 @@
             <span
               matBadge="6"
               style="font-size: 27px"
-              class="bi ml-3 bi-bag"
+              class="bi ml-3 bi-bag"              
+              (click)="drawer2.toggle()"
             ></span>
           </li>
           <li class="inline-block">
@@ -376,7 +377,7 @@
         <div class="lg:hidden w-full flex flex-nowrap pl-4 ml-1 justify-center">
           <i class="far text-2xl mr-2 fa-user"></i>
           <span matBadge="1" class="far text-2xl ml-3 fa-heart"></span>
-          <span matBadge="6" class="bi text-2xl ml-3 bi-bag"></span>
+          <span matBadge="6" class="bi text-2xl ml-3 bi-bag" (click)="drawer2.toggle()"></span>
         </div>
         <div class="lg:hidden w-full text-right">
           <i tabindex="0" (click)="responsiveMenu()"
@@ -609,7 +610,7 @@
       <div class="flex justify-end p-4">
         <i (click)="drawer.toggle()" class="fas text-3xl px-2 fa-times"></i>
       </div>
-      <div class="p-12 pt-4">
+      <div class="p-12 pt-4 info">
         <h5 class="font-bold">Varkala</h5>
         <ul class="mb-12">
           <li class="py-3">Home</li>
@@ -629,6 +630,18 @@
           he had recently cut out of an illustrated magazine and housed in a nice,
           gilded frame.
         </p>
+      </div>
+    </mat-drawer>
+  </mat-drawer-container>
+
+  <mat-drawer-container class="sidenav-container" autosize [hasBackdrop]="true">
+    <mat-drawer #drawer2 class="sidenav" mode="side" position="end">
+      <div class="flex justify-end p-4">
+        <i (click)="drawer2.toggle()" class="fas text-3xl px-2 fa-times"></i>
+      </div>
+      <div class="pt-4 bag">
+        <div class="main">s</div>
+        <div class="footer"></div>
       </div>
     </mat-drawer>
   </mat-drawer-container>

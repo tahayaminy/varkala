@@ -26,6 +26,18 @@ $newcolor: #bcac76;
     font-weight: bold;
   }
 }
+@mixin hidescroll($el){
+  /* Hide scrollbar for Chrome, Safari and Opera */
+#{$el}::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#{$el}{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+}
 nav {
   position: -webkit-sticky; /* Safari */
   position: fixed;
@@ -327,7 +339,7 @@ nav {
 }
 .sidenav {
   border: none;
-  width: 500px;
+  width: 485px;
   max-width: 100%;
   pointer-events: all;
   font-family: "regular";
@@ -355,17 +367,28 @@ nav {
   }
   .bag{
     .main{
+      overflow-y: auto;
+      box-sizing: border-box;
+      @include hidescroll('&');
       width: 100%;
-      height: calc(100vh - 190px - 68px - 15px);
+      height: calc(100vh - 190px - 68px - 25px);
       .product{
-        .head,.price{
-          color: $fab;
-        }
-        .qunt{
-          color:$gray;
-        }
-        .price{
-          display: block;
+        width: 100%;
+        .product-content{
+          .head,.price{
+            color: $fab;
+            font-family: 'regular';
+          }
+          .qunt,.price{
+            font-size: 14px;
+          }
+          .qunt{
+            color:$gray;
+            font-family: 'book';
+          }
+          .price{
+            display: block;
+          }
         }
       }
     }
@@ -373,7 +396,7 @@ nav {
       width: 100%;
       height: 190px;
       position: absolute;
-      bottom: 0;
+      bottom: 12px;
       left: 0;
       div{
         b{

@@ -326,6 +326,7 @@ nav {
   background-color: transparent;
 }
 .sidenav {
+  border: none;
   width: 500px;
   max-width: 100%;
   pointer-events: all;
@@ -354,17 +355,50 @@ nav {
   }
   .bag{
     .main{
-      background-color: aqua;
       width: 100%;
-      height: calc(100vh - 190px);
+      height: calc(100vh - 190px - 68px - 15px);
+      .product{
+        .head,.price{
+          color: $fab;
+        }
+        .qunt{
+          color:$gray;
+        }
+        .price{
+          display: block;
+        }
+      }
     }
     .footer{
       width: 100%;
       height: 190px;
-      background-color: #bcac76;
       position: absolute;
       bottom: 0;
       left: 0;
+      div{
+        b{
+          font-family: 'medium';
+          font-size: 20px;
+        }
+      }
+      button{
+        padding: 8.4px 12px;
+        font-size: 12.8px;
+        font-family: 'medium';
+        letter-spacing: .3em;
+      }
+      .viewcart{
+        border: 1px solid $fab;
+        transition: .25s;
+        &:hover{
+          background-color: $fab;
+          color: white;
+        }
+      }
+      .checkout{
+        background-color: $fab;
+        color: white;
+      }
     }
   }
   .fa-times {

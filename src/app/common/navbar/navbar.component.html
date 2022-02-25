@@ -640,8 +640,28 @@
         <i (click)="drawer2.toggle()" class="fas text-3xl px-2 fa-times"></i>
       </div>
       <div class="pt-4 bag">
-        <div class="main">s</div>
-        <div class="footer"></div>
+        <div class="main px-12 py-4">
+          <section class="pb-8 flex product">
+            <div style="width: 67px;">
+              <img src="../../../assets/product/4.jpg" alt="">
+            </div>
+            <div class="pl-4 flex content-around grid content-around">
+              <div class="flex head">
+                <b>White Tee</b><i class="bi bi-x ml-auto"></i>
+              </div>
+              <span class="qunt">Quantity: 1</span>
+              <span class="price">$40</span>
+            </div>
+          </section>
+        </div>
+        <div class="footer px-12 py-3">
+          <div class="flex mb-6">
+            <b>Subtotal:</b>
+            <b class="ml-auto">$465.32</b>
+          </div>
+          <button class="w-full viewcart mb-4">VIEW CART</button>
+          <button class="w-full checkout">CHECKOUT</button>
+        </div>
       </div>
     </mat-drawer>
   </mat-drawer-container>

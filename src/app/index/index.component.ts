@@ -29,8 +29,8 @@ export class IndexComponent implements OnInit {
       var today=new Date().getTime();
       var distant=this.timestamp-today;
       this.day=Math.floor(distant/(24*60*60*1000));
-      this.hour=Math.floor(distant%(24*60*60*1000)/(60*60*1000));      
-      this.min=Math.floor(distant%(24*60*60*1000)/(60*60*1000));      
+      this.hour=Math.floor((distant%(24*60*60*1000))/(60*60*1000));      
+      this.min=Math.floor((distant%(60*60*1000))/(60*1000));      
       this.sec=Math.floor(distant%(60*1000)/(1000));
       this.checkTracker();
     })

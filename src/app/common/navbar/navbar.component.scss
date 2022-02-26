@@ -7,6 +7,9 @@ $hov: #16181b;
 
 $newbg: #f5f3ea;
 $newcolor: #bcac76;
+ul>li{
+  cursor: pointer;
+}
 @mixin icons {
   text-align: center;
   padding: 5px 15px 5px 0;

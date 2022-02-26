@@ -347,7 +347,7 @@
           </div>
         </form>
         <ul class="hidden lg:block">
-          <li class="inline-block">
+          <li routerLink="/security" class="inline-block ">
             <i style="font-size: 27px" class="far mr-2 fa-user"></i>
           </li>
           <li class="inline-block">
@@ -375,9 +375,9 @@
         </ul>
         <!-- NAVBAR IN SMALL SCREEN -->
         <div class="lg:hidden w-full flex flex-nowrap pl-4 ml-1 justify-center">
-          <i class="far text-2xl mr-2 fa-user"></i>
-          <span matBadge="1" class="far text-2xl ml-3 fa-heart"></span>
-          <span matBadge="6" class="bi text-2xl ml-3 bi-bag" (click)="drawer2.toggle()"></span>
+          <i routerLink="/security" class="far text-2xl mr-2 fa-user cursor-pointer"></i>
+          <span matBadge="1" class="far text-2xl ml-3 fa-heart cursor-pointer"></span>
+          <span matBadge="6" class="bi text-2xl ml-3 bi-bag cursor-pointer" (click)="drawer2.toggle()"></span>
         </div>
         <div class="lg:hidden w-full text-right">
           <i tabindex="0" (click)="responsiveMenu()"

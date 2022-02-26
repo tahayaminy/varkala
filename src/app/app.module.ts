@@ -18,6 +18,7 @@ import { FooterComponent } from './common/footer/footer.component';
 import { ProductListComponent } from './common/product-list/product-list.component';
 import { SecurityComponent } from './security/security.component';
 import {MatCardModule} from '@angular/material/card';
+import { CategoryComponent } from './category/category.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import {MatCardModule} from '@angular/material/card';
     FooterComponent,
     ProductListComponent,
     SecurityComponent,
+    CategoryComponent,
   ],
   imports: [
     BrowserModule,

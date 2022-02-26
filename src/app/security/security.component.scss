@@ -27,15 +27,53 @@ header {
   
 }
 main{
+    @media only screen and (min-width:1024px) {
+        .custom-width{
+            width: 81%;
+        }
+    }
     &>section{
         padding-right: 15px;
+        &>div{
+            box-shadow: 0px 2px 1rem rgb(0 0 0 / 10%)
+        }
     }
     .header{
         background-color: #00000008;
+        b{
+            font-family: 'regular';
+            font-size: 1.25rem;
+            height: 26px;display: block;
+        }
     }
     .body{
+        .gold{
+            color: $crem;
+        }
+        .hr{background-color: $black;
+            height: .2px;
+            opacity: .3;
+        }
         input,label{
             display: block;
+        }
+        input{
+            border: 1px solid #ced4da;
+            padding: 6px 12px;
+            height: 42px;
+        }
+        .title{
+            font-size: 1.25rem;
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+        p:not(.title){line-height: 1.7;color: $gray;font-size: 14.5px;}
+        button{
+            font-size: 11.8px;
+            padding: 8.4px 15px 12px 15px;
+            color: white;
+            background-color: $black;
+            letter-spacing: .35em;
         }
     }
 }

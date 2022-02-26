@@ -16,6 +16,7 @@ import { IndexComponent } from './index/index.component';
 import { SwiperModule } from 'swiper/angular';
 import { FooterComponent } from './common/footer/footer.component';
 import { ProductListComponent } from './common/product-list/product-list.component';
+import { SecurityComponent } from './security/security.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ProductListComponent } from './common/product-list/product-list.compone
     IndexComponent,
     FooterComponent,
     ProductListComponent,
+    SecurityComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,48 @@
 <app-navbar [index]="false"></app-navbar>
-<p class="pt-28 lg:pt-36"></p>
-security works!
+<p class="pt-24 lg:pt-32"></p>
+<header class="py-24 container mx-auto">
+    <div class="mb-5">
+        <span>Home  </span>
+        <span class="bi bi-dash-lg"></span>
+        <span>  Customer zone</span>
+    </div>
+    <h1>Customer zone</h1>
+    <p>You can use the navbar-modal link or this page for customers' sign in.</p>
+</header>
+<main class="flex flex-wrap container mx-auto pb-12">
+    <section class="lg:basis-5/12">
+        <div class="shadow-lg">
+            <div class="header px-12 py-6">
+                Simple card one
+            </div>
+            <div class="body p-12">
+                <p>Already our customer?</p>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet.</p>
+                <hr>
+                <label for="email">Email</label>
+                <input type="email" id="email">
+                <label for="password">Password</label>
+                <input type="password" id="password">
+            </div>
+        </div>
+    </section>
+    <section class="lg:basis-6/12">
+        <div class="shadow-lg lg:ml-auto lg:w-5/6">
+            <div class="header px-12 py-6">
+                Simple card tow
+            </div>
+            <div class="body">
+                <p>Not our registered customer yet?</p>
+                <p>With registration with us new world of fashion, fantastic discounts and much more opens to you! The whole process will not take you more than a minute!</p>
+                <p>If you have any questions, please feel free to contact us, our customer service center is working for you 24/7.</p>
+                <hr>
+                <label for="name">Name</label>
+                <input type="text" id="name">
+                <label for="email">Email</label>
+                <input type="email" id="email">
+                <label for="password">Password</label>
+                <input type="password" id="password">
+            </div>
+        </div>
+    </section>
+</main>

@@ -17,6 +17,8 @@ import { SwiperModule } from 'swiper/angular';
 import { FooterComponent } from './common/footer/footer.component';
 import { ProductListComponent } from './common/product-list/product-list.component';
 import { SecurityComponent } from './security/security.component';
+import {MatCardModule} from '@angular/material/card';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { SecurityComponent } from './security/security.component';
     MatBadgeModule,
     MatExpansionModule,
     MatSidenavModule,
-    SwiperModule
+    SwiperModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

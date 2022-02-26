@@ -1,401 +1,406 @@
 <nav id="nav" class="w-full">
-    <section
-      [class.upper-navbar-bg]="!index"
-      class="upper-navbar columns-1 sm:columns-2 md:columns-3 px-4 lg:px-12 flex align-items"
-    >
-      <div class="hidden md:inline-flex items-center w-full">
-        <i class="fab fa-facebook-f mr-1 inline-block"></i>
-        <i class="fab fa-twitter mx-1 inline-block"></i>
-        <span class="ml-5 mr-6 inline-block relative"
-          ><i
-            style="transform: translateY(-1%)"
-            class="absolute bi bi-telephone text-lg"
+  <section
+    [class.upper-navbar-bg]="!index"
+    class="upper-navbar columns-1 sm:columns-2 md:columns-3 px-4 lg:px-12 flex align-items"
+  >
+    <div class="hidden md:inline-flex items-center w-full">
+      <i class="fab fa-facebook-f mr-1 inline-block"></i>
+      <i class="fab fa-twitter mx-1 inline-block"></i>
+      <span class="ml-5 mr-6 inline-block relative"
+        ><i
+          style="transform: translateY(-1%)"
+          class="absolute bi bi-telephone text-lg"
+        ></i>
+        <span class="pl-7">020-800-456-747</span></span
+      >
+    </div>
+    <div class="md:justify-center inline-flex items-center w-full">
+      Free in-store delivery
+    </div>
+    <div class="hidden justify-end sm:inline-flex items-center w-full">
+      <button mat-button [matMenuTriggerFor]="lang" class="mx-4">
+        English <i class="fas fa-caret-down"></i>
+      </button>
+      <mat-menu class="mt-4 py-2" #lang="matMenu" xPosition="before">
+        <section class="mat-upper-nav">
+          <b mat-menu-item class="mat-item font-medium">German</b>
+          <b mat-menu-item class="mat-item font-medium">French</b>
+        </section>
+      </mat-menu>
+      <button
+        mat-button
+        [matMenuTriggerFor]="usd"
+        class="pl-4"
+        style="border-left: 1px solid #dee2e6"
+      >
+        USD <i class="fas fa-caret-down"></i>
+      </button>
+      <mat-menu
+        class="mt-4 py-2"
+        #usd="matMenu"
+        xPosition="before"
+        yPosition="below"
+      >
+        <section class="mat-upper-nav">
+          <b mat-menu-item class="mat-item font-medium">EUR</b>
+          <b mat-menu-item class="mat-item font-medium">GBP</b>
+        </section>
+      </mat-menu>
+    </div>
+  </section>
+  <section
+    [ngClass]="[!index ? 'main-navbar-shadow' : '', Menu ? 'bg-white' : '']"
+    class="lg:py-5 py-2 lg:px-12 main-navbar"
+  >
+    <section class="flex items-center px-2">
+      <span class="text-black w-full py-2 lg:w-auto lg:mr-4">Varkala</span>
+      <!-- LARGE SCREEN MENU -->
+      <ul class="hidden lg:block menu-cont">
+        <li
+          #homeAngle="matMenuTrigger"
+          mat-button
+          [matMenuTriggerFor]="home"
+          class="inline-block p-2 pr-2"
+          [ngClass]="homeAngle.menuOpen ? 'text-black' : ''"
+        >
+          Home
+          <i
+            [ngClass]="homeAngle.menuOpen ? 'angle-180' : 'angle-0'"
+            class="fas text-xs fa-angle-down"
           ></i>
-          <span class="pl-7">020-800-456-747</span></span
+        </li>
+        <mat-menu class="mt-4 py-2" #home="matMenu">
+          <button mat-menu-item class="mat-item mat-submenu-item">
+            Home 1 - Fashion
+          </button>
+          <button mat-menu-item class="mat-item mat-submenu-item">
+            Home 2 - Fashion
+          </button>
+          <button mat-menu-item class="mat-item mat-submenu-item">
+            Home 3 - Design
+            <b class="new inline-block rounded ml-1 fs-10">New</b>
+          </button>
+          <button mat-menu-item class="mat-item mat-submenu-item">
+            Home 4 - Design
+            <b class="new inline-block rounded ml-1 fs-10">New</b>
+          </button>
+        </mat-menu>
+        <li
+          #shopAngle="matMenuTrigger"
+          [matMenuTriggerFor]="shop"
+          class="inline-block p-2 pr-2"
+          [ngClass]="shopAngle.menuOpen ? 'text-black' : ''"
         >
-      </div>
-      <div class="md:justify-center inline-flex items-center w-full">
-        Free in-store delivery
-      </div>
-      <div class="hidden justify-end sm:inline-flex items-center w-full">
-        <button
-          mat-button
-          [matMenuTriggerFor]="lang"
-          class="mx-4"
-        >
-          English <i class="fas fa-caret-down"></i>
-        </button>
-        <mat-menu class="mt-4 py-2" #lang="matMenu" xPosition="before">
-          <section class="mat-upper-nav">
-            <b mat-menu-item class="mat-item font-medium">German</b>
-            <b mat-menu-item class="mat-item font-medium">French</b>
+          Shop
+          <i
+            [ngClass]="shopAngle.menuOpen ? 'angle-180' : 'angle-0'"
+            class="fas text-xs fa-angle-down"
+          ></i>
+        </li>
+        <mat-menu class="mt-4 p-0" #shop="matMenu">
+          <section class="flex">
+            <div class="mat-shop-item pl-8 py-12 pr-0">
+              <b class="py-2 inline-block">Shop pages</b>
+              <span class="mat-item">Full width</span>
+              <span class="mat-item">Full width with category Menu</span>
+              <span class="mat-item">Full width with big products</span>
+              <span class="mat-item">Fixed width</span>
+              <span class="mat-item">Fixed width & sidebar</span>
+              <span class="inline-block mat-item withNew"
+                >Fixed width & masonry Layout<b
+                  class="new inline-block rounded ml-1 fs-10"
+                  >New</b
+                ></span
+              >
+              <span class="mat-item">Subcategories</span>
+            </div>
+            <div class="mat-shop-item pl-4 pr-12 py-12">
+              <b class="py-2 inline-block">Product pages</b>
+              <span class="mat-item">Product with sticky info</span>
+              <span class="mat-item">Product with background</span>
+              <span class="mat-item">product standard</span>
+            </div>
+            <div
+              style="
+                background: url('../assets/img/shop-menu.jpg') no-repeat center;
+                background-size: cover;
+                width: 249px;
+              "
+            ></div>
           </section>
         </mat-menu>
-        <button
-          mat-button
-          [matMenuTriggerFor]="usd"
-          class="pl-4"
-          style="border-left: 1px solid #dee2e6"
+        <li
+          #iconsAngle="matMenuTrigger"
+          [matMenuTriggerFor]="icons"
+          class="inline-block p-2 pr-2"
         >
-          USD <i class="fas fa-caret-down"></i>
-        </button>
-        <mat-menu
-          class="mt-4 py-2"
-          #usd="matMenu"
-          xPosition="before"
-          yPosition="below"
-        >
-          <section class="mat-upper-nav">
-            <b mat-menu-item class="mat-item font-medium">EUR</b>
-            <b mat-menu-item class="mat-item font-medium">GBP</b>
+          Icons
+          <i
+            [ngClass]="iconsAngle.menuOpen ? 'angle-180' : 'angle-0'"
+            class="fas text-xs fa-angle-down"
+          ></i>
+        </li>
+        <mat-menu class="mt-4 p-0" #icons="matMenu">
+          <section class="mat-icons">
+            <section class="main columns-6 pt-12 px-6">
+              <div routerLink="/category">
+                <img width="48px" src="../assets/icon/trousers.png" alt="" />
+                <h6>Trousers</h6>
+              </div>
+              <div>
+                <img width="48px" src="../assets/icon/shorts.png" alt="" />
+                <h6>Shorts</h6>
+              </div>
+              <div>
+                <img width="48px" src="../assets/icon/jacket.png" alt="" />
+                <h6>Jackets</h6>
+              </div>
+              <div>
+                <img width="48px" src="../assets/icon/underwear.png" alt="" />
+                <h6>Underwear</h6>
+              </div>
+              <div>
+                <img width="48px" src="../assets/icon/tshirt.png" alt="" />
+                <h6>T-Shirts</h6>
+              </div>
+              <div>
+                <img width="48px" src="../assets/icon/watches.png" alt="" />
+                <h6>Watches</h6>
+              </div>
+              <div>
+                <img width="48px" src="../assets/icon/shirt.png" alt="" />
+                <h6>Shirts</h6>
+              </div>
+              <div>
+                <img width="48px" src="../assets/icon/bags.png" alt="" />
+                <h6>Bags</h6>
+              </div>
+              <div>
+                <img width="48px" src="../assets/icon/pullover.png" alt="" />
+                <h6>Pullovers</h6>
+              </div>
+              <div>
+                <img width="48px" src="../assets/icon/cap.png" alt="" />
+                <h6>Caps</h6>
+              </div>
+              <div>
+                <img width="48px" src="../assets/icon/scarf.png" alt="" />
+                <h6>Scarfs</h6>
+              </div>
+              <div>
+                <img width="48px" src="../assets/icon/accessories.png" alt="" />
+                <h6>Accessories</h6>
+              </div>
+            </section>
+            <section class="p-4 text-center fs-14 footer">
+              <p>
+                Don't miss our biggest sales this year. Use the code 'SUMMER35'
+                at checkout until Jun. 15!
+              </p>
+            </section>
           </section>
         </mat-menu>
+        <li
+          id="togglePage"
+          tabindex="0"
+          class="text-black inline-block p-2 pr-2"
+        >
+          Pages <i class="fas text-xs fa-angle-down"></i>
+        </li>
+        <section
+          id="pageSub"
+          class="bg-white flex flex-row submenu-page shadow-xl rounded-xl p-12"
+        >
+          <section class="basis-1/4">
+            <img class="mb-7" src="../assets/img/pages-menu-1.jpg" alt="" />
+            <div class="mb-5">
+              <b class="mb-2 text-black">Homepage</b>
+              <span class="mat-item pb-1">Home 1 - Fashion</span>
+              <span class="mat-item pb-1">Home 2 - Fashion</span>
+              <span class="mat-item pb-1"
+                >Home 3 - Desing
+                <b class="new inline-block rounded">New</b></span
+              >
+              <span class="mat-item pb-1"
+                >Home 4 - Desing
+                <b class="new inline-block rounded">New</b></span
+              >
+            </div>
+            <div class="mb-5">
+              <b class="mb-2 text-black">Category</b>
+              <span class="mat-item pb-1">Full width</span>
+              <span class="mat-item pb-1">Full width with category Menu</span>
+              <span class="mat-item pb-1">Full width with big products</span>
+              <span class="mat-item pb-1">Fixed width</span>
+              <span class="mat-item pb-1">Fixed width & sidebar</span>
+              <span style="white-space: nowrap" class="pb-1 mat-item"
+                >Fixed width & masonry Layout
+                <b class="new inline-block rounded">New</b></span
+              >
+              <span class="pb-1">Subcategories</span>
+            </div>
+          </section>
+          <section class="basis-1/4">
+            <img class="mb-7" src="../assets/img/pages-menu-2.jpg" alt="" />
+            <div class="mb-5">
+              <b class="mb-2 text-black">Oreder process</b>
+              <span class="mat-item pb-1">shopping Cart</span>
+              <span class="mat-item pb-1"
+                >Checkout - Five steps
+                <b class="new inline-block rounded">New</b></span
+              >
+              <span class="mat-item pb-1">Checkout - Single-page</span>
+              <span class="mat-item pb-1">Checkout - confirmed</span>
+              <span class="mat-item pb-1">Wishlist</span>
+            </div>
+            <div class="mb-5">
+              <b class="mb-2 text-black">Product pages</b>
+              <span class="mat-item pb-1">Product with sticky info</span>
+              <span class="mat-item pb-1">Product with background</span>
+              <span class="mat-item pb-1">product standard</span>
+            </div>
+          </section>
+          <section class="basis-1/4">
+            <img class="mb-7" src="../assets/img/pages-menu-3.jpg" alt="" />
+
+            <div class="mb-5">
+              <b class="mb-2 text-black">Blog</b>
+              <span class="mat-item pb-1">Blog</span>
+              <span class="mat-item pb-1">Blog - Masonry</span>
+              <span class="mat-item pb-1">Post</span>
+            </div>
+            <div class="mb-5">
+              <b class="mb-2 text-black">Page</b>
+              <span class="mat-item pb-1"
+                >About - Company
+                <b class="new inline-block rounded">New</b></span
+              >
+
+              <span class="mat-item pb-1"
+                >About v.2 - Person
+                <b class="new inline-block rounded">New</b></span
+              >
+
+              <span class="mat-item pb-1"
+                >F.A.Q <b class="new inline-block rounded">New</b></span
+              >
+
+              <span class="mat-item pb-1">Contact</span>
+
+              <span class="mat-item pb-1"
+                >Privacy - policy
+                <b class="new inline-block rounded">New</b></span
+              >
+            </div>
+          </section>
+          <section class="basis-1/4">
+            <img class="mb-7" src="../assets/img/pages-menu-4.jpg" alt="" />
+            <div class="mb-5">
+              <b class="mb-2 text-black">Customer</b>
+              <span class="mat-item pb-1"
+                >Login/sign up <b class="new inline-block rounded">New</b></span
+              >
+
+              <span class="mat-item pb-1"
+                >Orders <b class="new inline-block rounded">New</b></span
+              >
+
+              <span class="mat-item pb-1"
+                >Order detail <b class="new inline-block rounded">New</b></span
+              >
+
+              <span class="mat-item pb-1"
+                >Order tracking
+                <b class="new inline-block rounded">New</b></span
+              >
+
+              <span class="mat-item pb-1"
+                >Addresses <b class="new inline-block rounded">New</b></span
+              >
+
+              <span class="mat-item pb-1"
+                >Profile <b class="new inline-block rounded">New</b></span
+              >
+
+              <span class="mat-item pb-1"
+                >Wishlist <b class="new inline-block rounded">New</b></span
+              >
+            </div>
+          </section>
+        </section>
+      </ul>
+      <form class="ml-auto mr-24 hidden lg:block">
+        <div id="searchBox" class="inline-flex flex-nowrap items-center">
+          <input
+            style="height: 40px"
+            placeholder="Search"
+            class="border-b inline-block py-1 pr-3 pl-4"
+            type="text"
+            [class.bg-transparent]="index"
+          />
+          <i
+            style="height: 40px"
+            class="fas fa-search border-b inline-flex items-center py-1 px-3 cursor-pointer"
+          ></i>
+        </div>
+      </form>
+      <ul class="hidden lg:block">
+        <li routerLink="/security" class="inline-block">
+          <i style="font-size: 27px" class="far mr-2 fa-user"></i>
+        </li>
+        <li class="inline-block">
+          <span
+            matBadge="1"
+            style="font-size: 27px"
+            class="far ml-3 fa-heart"
+          ></span>
+        </li>
+        <li class="inline-block">
+          <span
+            matBadge="6"
+            style="font-size: 27px"
+            class="bi ml-3 bi-bag"
+            (click)="drawer2.toggle()"
+          ></span>
+        </li>
+        <li class="inline-block">
+          <i
+            (click)="drawer.toggle()"
+            style="font-size: 27px"
+            class="fas ml-3 fa-align-left cursor-pointer"
+          ></i>
+        </li>
+      </ul>
+      <!-- NAVBAR IN SMALL SCREEN -->
+      <div class="lg:hidden w-full flex flex-nowrap pl-4 ml-1 justify-center">
+        <i
+          routerLink="/security"
+          class="far text-2xl mr-2 fa-user cursor-pointer"
+        ></i>
+        <span
+          matBadge="1"
+          class="far text-2xl ml-3 fa-heart cursor-pointer"
+        ></span>
+        <span
+          matBadge="6"
+          class="bi text-2xl ml-3 bi-bag cursor-pointer"
+          (click)="drawer2.toggle()"
+        ></span>
+      </div>
+      <div class="lg:hidden w-full text-right">
+        <i
+          tabindex="0"
+          (click)="responsiveMenu()"
+          class="fas text-2xl ml-3 fa-align-left cursor-pointer"
+        ></i>
       </div>
     </section>
-    <section  [ngClass]="[!index ? 'main-navbar-shadow' : '', Menu ? 'bg-white' : '']" class="lg:py-5 py-2 lg:px-12 main-navbar">
-      <section class="flex items-center px-2">
-        <span class="text-black w-full py-2 lg:w-auto lg:mr-4">Varkala</span>
-        <!-- LARGE SCREEN MENU -->
-        <ul class="hidden lg:block menu-cont">
-          <li
-            #homeAngle="matMenuTrigger"
-            mat-button
-            [matMenuTriggerFor]="home"
-            class="inline-block p-2 pr-2"
-            [ngClass]="homeAngle.menuOpen ? 'text-black' : ''"
-          >
-            Home
-            <i
-              [ngClass]="homeAngle.menuOpen ? 'angle-180' : 'angle-0'"
-              class="fas text-xs fa-angle-down"
-            ></i>
-          </li>
-          <mat-menu class="mt-4 py-2" #home="matMenu">
-            <button mat-menu-item class="mat-item mat-submenu-item">
-              Home 1 - Fashion
-            </button>
-            <button mat-menu-item class="mat-item mat-submenu-item">
-              Home 2 - Fashion
-            </button>
-            <button mat-menu-item class="mat-item mat-submenu-item">
-              Home 3 - Design
-              <b class="new inline-block rounded ml-1 fs-10">New</b>
-            </button>
-            <button mat-menu-item class="mat-item mat-submenu-item">
-              Home 4 - Design
-              <b class="new inline-block rounded ml-1 fs-10">New</b>
-            </button>
-          </mat-menu>
-          <li
-            #shopAngle="matMenuTrigger"
-            [matMenuTriggerFor]="shop"
-            class="inline-block p-2 pr-2"
-            [ngClass]="shopAngle.menuOpen ? 'text-black' : ''"
-          >
-            Shop
-            <i
-              [ngClass]="shopAngle.menuOpen ? 'angle-180' : 'angle-0'"
-              class="fas text-xs fa-angle-down"
-            ></i>
-          </li>
-          <mat-menu class="mt-4 p-0" #shop="matMenu">
-            <section class="flex">
-              <div class="mat-shop-item pl-8 py-12 pr-0">
-                <b class="py-2 inline-block">Shop pages</b>
-                <span class="mat-item">Full width</span>
-                <span class="mat-item">Full width with category Menu</span>
-                <span class="mat-item">Full width with big products</span>
-                <span class="mat-item">Fixed width</span>
-                <span class="mat-item">Fixed width & sidebar</span>
-                <span class="inline-block mat-item withNew"
-                  >Fixed width & masonry Layout<b
-                    class="new inline-block rounded ml-1 fs-10"
-                    >New</b
-                  ></span
-                >
-                <span class="mat-item">Subcategories</span>
-              </div>
-              <div class="mat-shop-item pl-4 pr-12 py-12">
-                <b class="py-2 inline-block">Product pages</b>
-                <span class="mat-item">Product with sticky info</span>
-                <span class="mat-item">Product with background</span>
-                <span class="mat-item">product standard</span>
-              </div>
-              <div
-                style="
-                  background: url('../assets/img/shop-menu.jpg') no-repeat center;
-                  background-size: cover;
-                  width: 249px;
-                "
-              ></div>
-            </section>
-          </mat-menu>
-          <li
-            #iconsAngle="matMenuTrigger"
-            [matMenuTriggerFor]="icons"
-            class="inline-block p-2 pr-2"
-          >
-            Icons
-            <i
-              [ngClass]="iconsAngle.menuOpen ? 'angle-180' : 'angle-0'"
-              class="fas text-xs fa-angle-down"
-            ></i>
-          </li>
-          <mat-menu class="mt-4 p-0" #icons="matMenu">
-            <section class="mat-icons">
-              <section class="main columns-6 pt-12 px-6">
-                <div routerLink="/category">
-                  <img width="48px" src="../assets/icon/trousers.png" alt="" />
-                  <h6>Trousers</h6>
-                </div>
-                <div>
-                  <img width="48px" src="../assets/icon/shorts.png" alt="" />
-                  <h6>Shorts</h6>
-                </div>
-                <div>
-                  <img width="48px" src="../assets/icon/jacket.png" alt="" />
-                  <h6>Jackets</h6>
-                </div>
-                <div>
-                  <img width="48px" src="../assets/icon/underwear.png" alt="" />
-                  <h6>Underwear</h6>
-                </div>
-                <div>
-                  <img width="48px" src="../assets/icon/tshirt.png" alt="" />
-                  <h6>T-Shirts</h6>
-                </div>
-                <div>
-                  <img width="48px" src="../assets/icon/watches.png" alt="" />
-                  <h6>Watches</h6>
-                </div>
-                <div>
-                  <img width="48px" src="../assets/icon/shirt.png" alt="" />
-                  <h6>Shirts</h6>
-                </div>
-                <div>
-                  <img width="48px" src="../assets/icon/bags.png" alt="" />
-                  <h6>Bags</h6>
-                </div>
-                <div>
-                  <img width="48px" src="../assets/icon/pullover.png" alt="" />
-                  <h6>Pullovers</h6>
-                </div>
-                <div>
-                  <img width="48px" src="../assets/icon/cap.png" alt="" />
-                  <h6>Caps</h6>
-                </div>
-                <div>
-                  <img width="48px" src="../assets/icon/scarf.png" alt="" />
-                  <h6>Scarfs</h6>
-                </div>
-                <div>
-                  <img width="48px" src="../assets/icon/accessories.png" alt="" />
-                  <h6>Accessories</h6>
-                </div>
-              </section>
-              <section class="p-4 text-center fs-14 footer">
-                <p>
-                  Don't miss our biggest sales this year. Use the code 'SUMMER35'
-                  at checkout until Jun. 15!
-                </p>
-              </section>
-            </section>
-          </mat-menu>
-          <li
-            id="togglePage"
-            tabindex="0"
-            class="text-black inline-block p-2 pr-2"
-          >
-            Pages <i class="fas text-xs fa-angle-down"></i>
-          </li>
-          <section
-            id="pageSub"
-            class="bg-white flex flex-row submenu-page shadow-xl rounded-xl p-12"
-          >
-            <section class="basis-1/4">
-              <img class="mb-7" src="../assets/img/pages-menu-1.jpg" alt="" />
-              <div class="mb-5">
-                <b class="mb-2 text-black">Homepage</b>
-                <span class="mat-item pb-1">Home 1 - Fashion</span>
-                <span class="mat-item pb-1">Home 2 - Fashion</span>
-                <span class="mat-item pb-1"
-                  >Home 3 - Desing
-                  <b class="new inline-block rounded">New</b></span
-                >
-                <span class="mat-item pb-1"
-                  >Home 4 - Desing
-                  <b class="new inline-block rounded">New</b></span
-                >
-              </div>
-              <div class="mb-5">
-                <b class="mb-2 text-black">Category</b>
-                <span class="mat-item pb-1">Full width</span>
-                <span class="mat-item pb-1">Full width with category Menu</span>
-                <span class="mat-item pb-1">Full width with big products</span>
-                <span class="mat-item pb-1">Fixed width</span>
-                <span class="mat-item pb-1">Fixed width & sidebar</span>
-                <span style="white-space: nowrap" class="pb-1 mat-item"
-                  >Fixed width & masonry Layout
-                  <b class="new inline-block rounded">New</b></span
-                >
-                <span class="pb-1">Subcategories</span>
-              </div>
-            </section>
-            <section class="basis-1/4">
-              <img class="mb-7" src="../assets/img/pages-menu-2.jpg" alt="" />
-              <div class="mb-5">
-                <b class="mb-2 text-black">Oreder process</b>
-                <span class="mat-item pb-1">shopping Cart</span>
-                <span class="mat-item pb-1"
-                  >Checkout - Five steps
-                  <b class="new inline-block rounded">New</b></span
-                >
-                <span class="mat-item pb-1">Checkout - Single-page</span>
-                <span class="mat-item pb-1">Checkout - confirmed</span>
-                <span class="mat-item pb-1">Wishlist</span>
-              </div>
-              <div class="mb-5">
-                <b class="mb-2 text-black">Product pages</b>
-                <span class="mat-item pb-1">Product with sticky info</span>
-                <span class="mat-item pb-1">Product with background</span>
-                <span class="mat-item pb-1">product standard</span>
-              </div>
-            </section>
-            <section class="basis-1/4">
-              <img class="mb-7" src="../assets/img/pages-menu-3.jpg" alt="" />
-  
-              <div class="mb-5">
-                <b class="mb-2 text-black">Blog</b>
-                <span class="mat-item pb-1">Blog</span>
-                <span class="mat-item pb-1">Blog - Masonry</span>
-                <span class="mat-item pb-1">Post</span>
-              </div>
-              <div class="mb-5">
-                <b class="mb-2 text-black">Page</b>
-                <span class="mat-item pb-1"
-                  >About - Company
-                  <b class="new inline-block rounded">New</b></span
-                >
-  
-                <span class="mat-item pb-1"
-                  >About v.2 - Person
-                  <b class="new inline-block rounded">New</b></span
-                >
-  
-                <span class="mat-item pb-1"
-                  >F.A.Q <b class="new inline-block rounded">New</b></span
-                >
-  
-                <span class="mat-item pb-1">Contact</span>
-  
-                <span class="mat-item pb-1"
-                  >Privacy - policy
-                  <b class="new inline-block rounded">New</b></span
-                >
-              </div>
-            </section>
-            <section class="basis-1/4">
-              <img class="mb-7" src="../assets/img/pages-menu-4.jpg" alt="" />
-              <div class="mb-5">
-                <b class="mb-2 text-black">Customer</b>
-                <span class="mat-item pb-1"
-                  >Login/sign up <b class="new inline-block rounded">New</b></span
-                >
-  
-                <span class="mat-item pb-1"
-                  >Orders <b class="new inline-block rounded">New</b></span
-                >
-  
-                <span class="mat-item pb-1"
-                  >Order detail <b class="new inline-block rounded">New</b></span
-                >
-  
-                <span class="mat-item pb-1"
-                  >Order tracking
-                  <b class="new inline-block rounded">New</b></span
-                >
-  
-                <span class="mat-item pb-1"
-                  >Addresses <b class="new inline-block rounded">New</b></span
-                >
-  
-                <span class="mat-item pb-1"
-                  >Profile <b class="new inline-block rounded">New</b></span
-                >
-  
-                <span class="mat-item pb-1"
-                  >Wishlist <b class="new inline-block rounded">New</b></span
-                >
-              </div>
-            </section>
-          </section>
-        </ul>
-        <form class="ml-auto mr-24 hidden lg:block">
-          <div id="searchBox" class="inline-flex flex-nowrap items-center">
-            <input
-              
-              style="height: 40px;"
-              placeholder="Search"
-              class="border-b inline-block py-1 pr-3 pl-4"
-              type="text"
-              [class.bg-transparent]="index"
-            />
-            <i
-              style="height: 40px"
-              class="fas fa-search border-b inline-flex items-center py-1 px-3 cursor-pointer"
-            ></i>
-          </div>
-        </form>
-        <ul class="hidden lg:block">
-          <li routerLink="/security" class="inline-block ">
-            <i style="font-size: 27px" class="far mr-2 fa-user"></i>
-          </li>
-          <li class="inline-block">
-            <span
-              matBadge="1"
-              style="font-size: 27px"
-              class="far ml-3 fa-heart"
-            ></span>
-          </li>
-          <li class="inline-block">
-            <span
-              matBadge="6"
-              style="font-size: 27px"
-              class="bi ml-3 bi-bag"              
-              (click)="drawer2.toggle()"
-            ></span>
-          </li>
-          <li class="inline-block">
-            <i
-              (click)="drawer.toggle()"
-              style="font-size: 27px"
-              class="fas ml-3 fa-align-left cursor-pointer"
-            ></i>
-          </li>
-        </ul>
-        <!-- NAVBAR IN SMALL SCREEN -->
-        <div class="lg:hidden w-full flex flex-nowrap pl-4 ml-1 justify-center">
-          <i routerLink="/security" class="far text-2xl mr-2 fa-user cursor-pointer"></i>
-          <span matBadge="1" class="far text-2xl ml-3 fa-heart cursor-pointer"></span>
-          <span matBadge="6" class="bi text-2xl ml-3 bi-bag cursor-pointer" (click)="drawer2.toggle()"></span>
-        </div>
-        <div class="lg:hidden w-full text-right">
-          <i tabindex="0" (click)="responsiveMenu()"
-            class="fas text-2xl ml-3 fa-align-left cursor-pointer"
-          ></i>
-        </div>
-      </section>
-      <!-- RESPONSIVE MENU OPEN -->
-      <section #contMenu class="px-2" id="responsiveMenu">
-        <ul class="mt-5 menu-cont">
-          <li
-            tabindex="0"
-            style="height: 42px"
-            class="flex py-2 pb-2 items-center"
-          >
-            Home <i class="fas ml-auto mr-2 text-xs fa-angle-down"></i>
-          </li>
-          <ul class="menu-cont">
+    <!-- RESPONSIVE MENU OPEN -->
+    <section #contMenu class="px-2" id="responsiveMenu">
+      <ul class="mt-5 menu-cont">
+        <li tabindex="0" style="min-height: 42px" class="py-2 pb-2 flex flex-wrap">
+          Home <i class="fas ml-auto mr-2 text-xs fa-angle-down"></i>
+          <ul class="menu-cont basis-full">
             <li class="mat-item">Home 1 - Fashion</li>
             <li class="mat-item">Home 2 - Fashion</li>
             <li class="mat-item">
@@ -407,10 +412,10 @@
               <b class="new inline-block rounded ml-1 fs-10">New</b>
             </li>
           </ul>
-          <li tabindex="0" style="height: 42px" class="flex py-2 items-center">
-            Shop <i class="fas ml-auto mr-2 text-xs fa-angle-down"></i>
-          </li>
-          <ul class="menu-cont flexible">
+        </li>
+        <li tabindex="0" style="min-height: 42px" class="flex flex-wrap py-2 items-center">
+          Shop <i class="fas ml-auto mr-2 text-xs fa-angle-down"></i>
+          <ul class="menu-cont basis-full flexible">
             <div class="-mt-3">
               <b class="fs-14 inline-block mat-title">Shop pages</b>
               <li class="mat-item">Full width</li>
@@ -433,11 +438,12 @@
               <li class="mat-item">product standard</li>
             </div>
           </ul>
-  
-          <li tabindex="0" style="height: 42px" class="flex py-2 items-center">
-            Icons <i class="fas ml-auto mr-2 text-xs fa-angle-down"></i>
-          </li>
-          <ul class="menu-cont custom-columns">
+        </li>
+
+
+        <li tabindex="0" style="min-height: 42px" class="flex flex-wrap py-2 items-center">
+          Icons <i class="fas ml-auto mr-2 text-xs fa-angle-down"></i>
+          <ul class="menu-cont basis-full custom-columns">
             <div routerLink="/category">
               <img width="48px" src="../assets/icon/trousers.png" alt="" />
               <h6>Trousers</h6>
@@ -487,10 +493,11 @@
               <h6>Accessories</h6>
             </div>
           </ul>
-          <li tabindex="0" style="height: 42px" class="flex pt-2 items-center">
-            Pages <i class="fas ml-auto mr-2 text-xs fa-angle-down"></i>
-          </li>
-          <ul class="menu-cont flexible pages-flexible">
+        </li>
+
+        <li tabindex="0" style="min-height: 42px" class="flex flex-wrap pt-2 items-center">
+          Pages <i class="fas ml-auto mr-2 text-xs fa-angle-down"></i>
+          <ul class="menu-cont basis-full flexible pages-flexible">
             <div class="-mt-3">
               <b class="fs-14 inline-block mat-title">Homepage</b>
               <li class="mat-item">Home 1 - Fashion</li>
@@ -524,18 +531,18 @@
               <li class="mat-item"
                 >About - Company <b class="new inline-block rounded">New</b></li
               >
-  
+
               <li class="mat-item"
                 >About v.2 - Person
                 <b class="new inline-block rounded">New</b></li
               >
-  
+
               <li class="mat-item"
                 >F.A.Q <b class="new inline-block rounded">New</b></li
               >
-  
+
               <li class="mat-item">Contact</li>
-  
+
               <li class="mat-item"
                 >Privacy - policy
                 <b class="new inline-block rounded">New</b></li
@@ -559,170 +566,189 @@
                 <li class="mat-item"
                   >Login/sign up <b class="new inline-block rounded">New</b></li
                 >
-  
+
                 <li class="mat-item"
                   >Orders <b class="new inline-block rounded">New</b></li
                 >
-  
+
                 <li class="mat-item"
                   >Order detail <b class="new inline-block rounded">New</b></li
                 >
-  
+
                 <li class="mat-item"
                   >Order tracking
                   <b class="new inline-block rounded">New</b></li
                 >
-  
+
                 <li class="mat-item"
                   >Addresses <b class="new inline-block rounded">New</b></li
                 >
-  
+
                 <li class="mat-item"
                   >Profile <b class="new inline-block rounded">New</b></li
                 >
-  
+
                 <li class="mat-item"
                   >Wishlist <b class="new inline-block rounded">New</b></li
                 >
             </div>
           </ul>
-        </ul>
-        <form class="mt-9 mb-5">
-          <div id="searchResponsive" class="inline-flex flex-nowrap items-center">
-            <input
-              style="height: 40px"
-              placeholder="Search"
-              class="border-b inline-block py-1 pr-3 pl-4"
-              type="text"
-            />
-            <i
-              style="height: 40px"
-              class="fas fa-search border-b inline-flex items-center py-1 px-3 cursor-pointer"
-            ></i>
-          </div>
-        </form>
-      </section>
-    </section>
-  </nav>
-  
-  <mat-drawer-container class="sidenav-container" autosize [hasBackdrop]="true">
-    <mat-drawer #drawer class="sidenav" mode="side" position="end">
-      <div class="flex justify-end p-4">
-        <i (click)="drawer.toggle()" class="fas text-3xl px-2 fa-times"></i>
-      </div>
-      <div class="p-12 pt-4 info">
-        <h5 class="font-bold">Varkala</h5>
-        <ul class="mb-12">
-          <li class="py-3">Home</li>
-          <li class="py-3">Link</li>
-          <li class="py-3 disabled">Disabled</li>
-          <li class="py-3">Dropdown link <i class="fas fa-caret-down"></i></li>
-        </ul>
-        <div class="flex items-center mb-6">
-          <i class="fab mr-2 fa-facebook-f inline-block"></i>
-          <i class="fab mr-2 fa-twitter inline-block"></i>
-          <span class="inline-block"
-            ><i class="mr-2 bi bi-telephone text-lg"></i> 020-800-456-747</span
-          >
-        </div>
-        <p class="description text-sm">
-          Samsa was a travelling salesman - and above it there hung a picture that
-          he had recently cut out of an illustrated magazine and housed in a nice,
-          gilded frame.
-        </p>
-      </div>
-    </mat-drawer>
-  </mat-drawer-container>
+        </li>
 
-  <mat-drawer-container class="sidenav-container" autosize [hasBackdrop]="true">
-    <mat-drawer #drawer2 class="sidenav" mode="side" position="end">
-      <div class="flex justify-end p-4">
-        <i (click)="drawer2.toggle()" class="fas text-3xl px-2 fa-times"></i>
-      </div>
-      <div class="pt-4 bag">
-        <div class="main px-12 py-4">
-          <section class="pb-9 flex product border-b">
-            <div class="basis-1/5">
-              <img src="../../../assets/product/4.jpg" alt="">
-            </div>
-            <div class="pl-4 flex product-content content-around grid content-around w-full py-3">
-              <div class="flex head">
-                <b>White Tee</b><i style="font-size: 24px;" class="bi bi-x ml-auto"></i>
-              </div>
-              <span class="qunt">Quantity: 1</span>
-              <span class="price">$40</span>
-            </div>
-          </section>
-          <section class="pt-8 pb-9 flex product border-b">
-            <div class="basis-1/5">
-              <img src="../../../assets/product/4.jpg" alt="">
-            </div>
-            <div class="pl-4 flex product-content content-around grid content-around w-full py-3">
-              <div class="flex head">
-                <b>White Tee</b><i style="font-size: 24px;" class="bi bi-x ml-auto"></i>
-              </div>
-              <span class="qunt">Quantity: 1</span>
-              <span class="price">$40</span>
-            </div>
-          </section>
-          <section class="pt-8 pb-9 flex product border-b">
-            <div class="basis-1/5">
-              <img src="../../../assets/product/4.jpg" alt="">
-            </div>
-            <div class="pl-4 flex product-content content-around grid content-around w-full py-3">
-              <div class="flex head">
-                <b>White Tee</b><i style="font-size: 24px;" class="bi bi-x ml-auto"></i>
-              </div>
-              <span class="qunt">Quantity: 1</span>
-              <span class="price">$40</span>
-            </div>
-          </section>
-          <section class="pt-8 pb-9 flex product border-b">
-            <div class="basis-1/5">
-              <img src="../../../assets/product/4.jpg" alt="">
-            </div>
-            <div class="pl-4 flex product-content content-around grid content-around w-full py-3">
-              <div class="flex head">
-                <b>White Tee</b><i style="font-size: 24px;" class="bi bi-x ml-auto"></i>
-              </div>
-              <span class="qunt">Quantity: 1</span>
-              <span class="price">$40</span>
-            </div>
-          </section>
-          <section class="pt-8 pb-9 flex product border-b">
-            <div class="basis-1/5">
-              <img src="../../../assets/product/4.jpg" alt="">
-            </div>
-            <div class="pl-4 flex product-content content-around grid content-around w-full py-3">
-              <div class="flex head">
-                <b>White Tee</b><i style="font-size: 24px;" class="bi bi-x ml-auto"></i>
-              </div>
-              <span class="qunt">Quantity: 1</span>
-              <span class="price">$40</span>
-            </div>
-          </section>
-          <section class="pt-8 flex product">
-            <div class="basis-1/5">
-              <img src="../../../assets/product/4.jpg" alt="">
-            </div>
-            <div class="pl-4 flex product-content content-around grid content-around w-full py-3">
-              <div class="flex head">
-                <b>White Tee</b><i style="font-size: 24px;" class="bi bi-x ml-auto"></i>
-              </div>
-              <span class="qunt">Quantity: 1</span>
-              <span class="price">$40</span>
-            </div>
-          </section>
+      </ul>
+      <form class="mt-9 mb-5">
+        <div id="searchResponsive" class="inline-flex flex-nowrap items-center">
+          <input
+            style="height: 40px"
+            placeholder="Search"
+            class="border-b inline-block py-1 pr-3 pl-4"
+            type="text"
+          />
+          <i
+            style="height: 40px"
+            class="fas fa-search border-b inline-flex items-center py-1 px-3 cursor-pointer"
+          ></i>
         </div>
-        <div class="footer px-12 pt-10">
-          <div class="flex mb-7">
-            <b>Subtotal:</b>
-            <b class="ml-auto">$465.32</b>
+      </form>
+    </section>
+  </section>
+</nav>
+
+<mat-drawer-container class="sidenav-container" autosize [hasBackdrop]="true">
+  <mat-drawer #drawer class="sidenav" mode="side" position="end">
+    <div class="flex justify-end p-4">
+      <i (click)="drawer.toggle()" class="fas text-3xl px-2 fa-times"></i>
+    </div>
+    <div class="p-12 pt-4 info">
+      <h5 class="font-bold">Varkala</h5>
+      <ul class="mb-12">
+        <li class="py-3">Home</li>
+        <li class="py-3">Link</li>
+        <li class="py-3 disabled">Disabled</li>
+        <li class="py-3">Dropdown link <i class="fas fa-caret-down"></i></li>
+      </ul>
+      <div class="flex items-center mb-6">
+        <i class="fab mr-2 fa-facebook-f inline-block"></i>
+        <i class="fab mr-2 fa-twitter inline-block"></i>
+        <span class="inline-block"
+          ><i class="mr-2 bi bi-telephone text-lg"></i> 020-800-456-747</span
+        >
+      </div>
+      <p class="description text-sm">
+        Samsa was a travelling salesman - and above it there hung a picture that
+        he had recently cut out of an illustrated magazine and housed in a nice,
+        gilded frame.
+      </p>
+    </div>
+  </mat-drawer>
+</mat-drawer-container>
+
+<mat-drawer-container class="sidenav-container" autosize [hasBackdrop]="true">
+  <mat-drawer #drawer2 class="sidenav" mode="side" position="end">
+    <div class="flex justify-end p-4">
+      <i (click)="drawer2.toggle()" class="fas text-3xl px-2 fa-times"></i>
+    </div>
+    <div class="pt-4 bag">
+      <div class="main px-12 py-4">
+        <section class="pb-9 flex product border-b">
+          <div class="basis-1/5">
+            <img src="../../../assets/product/4.jpg" alt="" />
           </div>
-          <button class="w-full viewcart mb-4">VIEW CART</button>
-          <button class="w-full checkout">CHECKOUT</button>
-        </div>
+          <div
+            class="pl-4 flex product-content content-around grid content-around w-full py-3"
+          >
+            <div class="flex head">
+              <b>White Tee</b
+              ><i style="font-size: 24px" class="bi bi-x ml-auto"></i>
+            </div>
+            <span class="qunt">Quantity: 1</span>
+            <span class="price">$40</span>
+          </div>
+        </section>
+        <section class="pt-8 pb-9 flex product border-b">
+          <div class="basis-1/5">
+            <img src="../../../assets/product/4.jpg" alt="" />
+          </div>
+          <div
+            class="pl-4 flex product-content content-around grid content-around w-full py-3"
+          >
+            <div class="flex head">
+              <b>White Tee</b
+              ><i style="font-size: 24px" class="bi bi-x ml-auto"></i>
+            </div>
+            <span class="qunt">Quantity: 1</span>
+            <span class="price">$40</span>
+          </div>
+        </section>
+        <section class="pt-8 pb-9 flex product border-b">
+          <div class="basis-1/5">
+            <img src="../../../assets/product/4.jpg" alt="" />
+          </div>
+          <div
+            class="pl-4 flex product-content content-around grid content-around w-full py-3"
+          >
+            <div class="flex head">
+              <b>White Tee</b
+              ><i style="font-size: 24px" class="bi bi-x ml-auto"></i>
+            </div>
+            <span class="qunt">Quantity: 1</span>
+            <span class="price">$40</span>
+          </div>
+        </section>
+        <section class="pt-8 pb-9 flex product border-b">
+          <div class="basis-1/5">
+            <img src="../../../assets/product/4.jpg" alt="" />
+          </div>
+          <div
+            class="pl-4 flex product-content content-around grid content-around w-full py-3"
+          >
+            <div class="flex head">
+              <b>White Tee</b
+              ><i style="font-size: 24px" class="bi bi-x ml-auto"></i>
+            </div>
+            <span class="qunt">Quantity: 1</span>
+            <span class="price">$40</span>
+          </div>
+        </section>
+        <section class="pt-8 pb-9 flex product border-b">
+          <div class="basis-1/5">
+            <img src="../../../assets/product/4.jpg" alt="" />
+          </div>
+          <div
+            class="pl-4 flex product-content content-around grid content-around w-full py-3"
+          >
+            <div class="flex head">
+              <b>White Tee</b
+              ><i style="font-size: 24px" class="bi bi-x ml-auto"></i>
+            </div>
+            <span class="qunt">Quantity: 1</span>
+            <span class="price">$40</span>
+          </div>
+        </section>
+        <section class="pt-8 flex product">
+          <div class="basis-1/5">
+            <img src="../../../assets/product/4.jpg" alt="" />
+          </div>
+          <div
+            class="pl-4 flex product-content content-around grid content-around w-full py-3"
+          >
+            <div class="flex head">
+              <b>White Tee</b
+              ><i style="font-size: 24px" class="bi bi-x ml-auto"></i>
+            </div>
+            <span class="qunt">Quantity: 1</span>
+            <span class="price">$40</span>
+          </div>
+        </section>
       </div>
-    </mat-drawer>
-  </mat-drawer-container>
-  
+      <div class="footer px-12 pt-10">
+        <div class="flex mb-7">
+          <b>Subtotal:</b>
+          <b class="ml-auto">$465.32</b>
+        </div>
+        <button class="w-full viewcart mb-4">VIEW CART</button>
+        <button class="w-full checkout">CHECKOUT</button>
+      </div>
+    </div>
+  </mat-drawer>
+</mat-drawer-container>

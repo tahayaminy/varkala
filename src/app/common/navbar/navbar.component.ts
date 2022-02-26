@@ -17,7 +17,7 @@ export class NavbarComponent implements OnInit {
     this.Menu=!this.Menu;
     console.log('responsiveMenu');
     if(this.Menu){
-      this.menuCont.nativeElement.style='height:auto;background-color:white;';
+      this.menuCont.nativeElement.style='height:auto;background-color:white;overflow-y:auto';
       console.log('opened');
     }else{
       this.menuCont.nativeElement.style='height:0;background-color:transparent;';

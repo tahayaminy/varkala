@@ -377,11 +377,21 @@ nav {
       width: 100%;
       height: calc(100vh - 190px - 68px - 25px);
       .product{
+        cursor: pointer;
+        &:hover .product-content .border-c{
+          width: 100%;
+        }
         width: 100%;
         .product-content{
+          .border-c{
+            width: 0%;
+            height: 2px;
+            background-color: #968a5e;
+            transition: .2s;
+          }
           .head,.price{
             color: $fab;
-            font-family: 'regular';
+            font-family: 'regular';            
           }
           .qunt,.price{
             font-size: 14px;

@@ -20,6 +20,7 @@ import { SecurityComponent } from './security/security.component';
 import {MatCardModule} from '@angular/material/card';
 import { CategoryComponent } from './category/category.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
+import { ShoppingModule } from './shopping/shopping.module';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { WishlistComponent } from './wishlist/wishlist.component';
     MatExpansionModule,
     MatSidenavModule,
     SwiperModule,
-    MatCardModule
+    MatCardModule,
+    ShoppingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

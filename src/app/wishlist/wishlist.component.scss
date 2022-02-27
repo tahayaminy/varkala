@@ -4,6 +4,9 @@ $crem: #bcac76;
 .crem {
   color: $crem;
 }
+.gray{
+  color: $gray;
+}
 .bg-red{
   background-color: #dc3545;
 }
@@ -42,6 +45,9 @@ header {
 main {
   .product {
     .first {
+      .img{
+        width: 80px;
+      }
       .info {
         * {
           line-height: 1.6;
@@ -80,6 +86,31 @@ main {
         color: $gray;
         padding: 0 15px;
         transform: translateX(20%);
+      }
+    }
+    .third {
+      div:nth-child(2) {
+        span:last-child {
+          color: white;
+          padding: 2px 8.4px;
+          border-radius: 5px;
+          font-size: 12px;
+          font-family: 'medium';
+        }
+      }
+      .gray{
+        line-height: 1.6;
+      }
+      div:nth-child(3) {
+        span {
+          border: 1px solid $black;
+          display: block;
+          padding: 8.4px 12px;
+          font-size: 12.8px;
+          font-family: "medium";
+          letter-spacing: 0.3em;
+          text-align: center;
+        }
       }
     }
   }

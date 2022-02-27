@@ -73,10 +73,6 @@ nav {
     max-width: none !important;
   }
 }
-.main-navbar-shadow {
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.04),
-    0 4px 6px -4px rgb(0 0 0 / 0.04);
-}
 .main-navbar {
   color: $black-o;
   @media only screen and (min-width: 1024px) {

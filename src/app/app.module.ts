@@ -20,6 +20,7 @@ import { SecurityComponent } from './security/security.component';
 import {MatCardModule} from '@angular/material/card';
 import { CategoryComponent } from './category/category.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
+import { ShoppingComponent } from './shopping/shopping.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { WishlistComponent } from './wishlist/wishlist.component';
     SecurityComponent,
     CategoryComponent,
     WishlistComponent,
+    ShoppingComponent,
   ],
   imports: [
     BrowserModule,

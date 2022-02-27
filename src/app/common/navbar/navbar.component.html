@@ -348,7 +348,7 @@
         <li routerLink="/security" class="inline-block">
           <i style="font-size: 27px" class="far mr-2 fa-user"></i>
         </li>
-        <li class="inline-block">
+        <li routerLink="/wishlist" class="inline-block">
           <span
             matBadge="1"
             style="font-size: 27px"
@@ -381,7 +381,7 @@
           matBadge="1"
           class="far text-2xl ml-3 fa-heart cursor-pointer"
         ></span>
-        <span
+        <span routerLink="wishlist"
           matBadge="6"
           class="bi text-2xl ml-3 bi-bag cursor-pointer"
           (click)="drawer2.toggle()"

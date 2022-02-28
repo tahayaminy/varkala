@@ -21,12 +21,12 @@ import {MatCardModule} from '@angular/material/card';
 import { CategoryComponent } from './category/category.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { ShoppingModule } from './shopping/shopping.module';
+import { ShareModule } from './share/share.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     IndexComponent,
     FooterComponent,
     ProductListComponent,
@@ -38,16 +38,8 @@ import { ShoppingModule } from './shopping/shopping.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatMenuModule,
-    MatFormFieldModule,
-    MatIconModule,
-    MatInputModule,
-    MatBadgeModule,
-    MatExpansionModule,
-    MatSidenavModule,
     SwiperModule,
-    MatCardModule,
-    ShoppingModule
+    ShareModule
   ],
   providers: [],
   bootstrap: [AppComponent]

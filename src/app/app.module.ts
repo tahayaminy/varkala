@@ -11,6 +11,7 @@ import { CategoryModule } from './category/category.module';
 import { SecurityModule } from './security/security.module';
 import { WishlistModule } from './wishlist/wishlist.module';
 import { CommonModule } from '@angular/common';
+import { ShoppingModule } from './shopping/shopping.module';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { CommonModule } from '@angular/common';
     IndexModule,
     CategoryModule,
     SecurityModule,
-    WishlistModule
+    WishlistModule,
+    ShoppingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

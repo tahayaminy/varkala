@@ -13,6 +13,9 @@ const routes: Routes = [
   {path:'wishlist',
     loadChildren:()=> import('./wishlist/wishlist.module').then(m=>m.WishlistModule)
   },
+  {path:'shopping',
+  loadChildren:()=> import('./shopping/shopping.module').then(m=>m.ShoppingModule)
+  },
   {
     path: '**', redirectTo: '', pathMatch: 'full'
   }

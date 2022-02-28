@@ -10,6 +10,7 @@ import { IndexModule } from './index/index.module';
 import { CategoryModule } from './category/category.module';
 import { SecurityModule } from './security/security.module';
 import { WishlistModule } from './wishlist/wishlist.module';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { WishlistModule } from './wishlist/wishlist.module';
     FooterComponent,
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

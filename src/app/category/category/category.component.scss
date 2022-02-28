@@ -32,6 +32,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-flow: column;
     cursor: pointer;
     overflow-x: hidden;
     overflow-y: hidden;

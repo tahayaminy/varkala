@@ -12,6 +12,7 @@ import { SecurityModule } from './security/security.module';
 import { WishlistModule } from './wishlist/wishlist.module';
 import { CommonModule } from '@angular/common';
 import { ShoppingModule } from './shopping/shopping.module';
+import { ShopFormModule } from './shopping/shop-form/shop-form.module';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { ShoppingModule } from './shopping/shopping.module';
     CategoryModule,
     SecurityModule,
     WishlistModule,
-    ShoppingModule
+    ShoppingModule,
+    ShopFormModule
   ],
   providers: [],
   bootstrap: [AppComponent]

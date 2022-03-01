@@ -5,7 +5,11 @@ import { ShoppingComponent } from './shopping/shopping.component';
 const routes: Routes = [
   {
     path:'',
-    component:ShoppingComponent
+    component:ShoppingComponent,
+  },
+  {
+    path:'form',
+    loadChildren:()=> import('./shop-form/shop-form.module').then(m=>m.ShopFormModule)
   }
 ];
 

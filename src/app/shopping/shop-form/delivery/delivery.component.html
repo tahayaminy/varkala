@@ -4,10 +4,93 @@
   <div class="mb-3">
     <span>Home </span>
     <span class="bi bi-dash-lg"></span>
-    <span> Shopping cart</span>
+    <span> Checkout</span>
   </div>
-  <h1>Shopping cart</h1>
-  <p>You have 6 items in your cart.</p>
-  <p class="pt-1">For the checkout, you can use either a <span class="crem">Multiple pages checkout</span> or have everything on a <span class="crem">single page</span>.</p>
+  <h1>Checkout</h1>
+  <p>Choose your delivery method.</p>
 </header>
-<p>delivery works!</p>
+<main class="container flex flex-wrap mx-auto pb-10">
+  <section class="basis-full lg:basis-8/12 pr-4">
+    <section>
+      <section class="cards grid md:grid-cols-2 grid-cols-1 gap-x-8">
+        <div>
+          <div>
+            <div class="p-4 header">Upse next day</div>
+            <div class="body px-4 py-3">
+              <h1>$10.00</h1>
+            <p>
+              One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections
+            </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="p-4 header">DHL</div>
+            <div class="body px-4 py-3">
+              <h1>$15.00</h1>
+            <p>
+              Get it right on next day - fastest option possible.
+            </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="p-4 header">PPL</div>
+            <div class="body px-4 py-3">
+              <h1>$8.00</h1>
+            <p>
+              Get it right on next day - fastest option possible.
+            </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="p-4 header">UPS</div>
+            <div class="body px-4 py-3">
+              <h1>$20.00</h1>
+            <p>
+              Get it right on next day - fastest option possible.
+            </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <div
+      class="options flex flex-wrap lg:flex-nowrap justify-center mt-8 lg:mt-12 lg:mb-0 mb-12"
+    >
+      <span routerLink=".." class="basis-full text-center mb-5 lg:mb-0 lg:basis-auto"
+        ><i class="fas fa-angle-left"></i> BACK TO THE ADDRESS</span
+      ><span routerLink="delivery" class="ml-auto text-center basis-full lg:basis-auto"
+        >CHOOSE PAYMENT METHOD <i class="fas fa-angle-right"></i
+      ></span>
+    </div>
+  </section>
+  <section class="basis-full lg:basis-4/12 lg:pl-4">
+    <section class="order-summery rounded">
+      <div class="p-4 header rounded-t"><b>Order summery</b></div>
+      <div class="body px-4 pt-6 pb-5">
+        <p>
+          Shipping and additional costs are calculated based on values you have
+          entered.
+        </p>
+        <div class="flex py-6 px-2 border-b">
+          <span>Order Subtotal</span><span class="ml-auto gray">$560.00</span>
+        </div>
+        <div class="flex py-6 px-2 border-b">
+          <span>Shipping and handling</span
+          ><span class="ml-auto gray">$10.00</span>
+        </div>
+        <div class="flex py-6 px-2 border-b">
+          <span>Tax</span><span class="ml-auto gray">$0.00</span>
+        </div>
+        <div class="flex py-6 px-2">
+          <span>Total</span><span class="ml-auto total mt-3">$570.00</span>
+        </div>
+      </div>
+    </section>
+  </section>
+</main>

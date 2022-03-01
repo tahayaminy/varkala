@@ -1,0 +1,119 @@
+$gray: #868e96;
+$black: #212529;
+$crem: #bcac76;
+.crem {
+  color: $crem !important;
+}
+.gray {
+  color: $gray;
+}
+.bg-red {
+  background-color: #dc3545;
+}
+.bg-black {
+  background-color: $black;
+}
+.bg-crem {
+  background-color: $crem;
+}
+header {
+  padding-left: 15px;
+  div > span {
+    font-size: 14px;
+    letter-spacing: 0.01em;
+  }
+  span:first-child {
+    color: $crem;
+  }
+  span:nth-child(3) {
+    color: $gray;
+  }
+  span:nth-child(2),
+  p {
+    color: $gray;
+    font-size: 1.25rem;
+    line-height: 1.6;
+  }
+  h1 {
+    font-size: 3.5em;
+    line-height: 1;
+    margin-bottom: 40px;
+    @media only screen and (max-width: 992px) {
+      font-size: 1.25em;
+    }
+  }
+}
+.order-summery {
+  box-shadow: 0 2px 1rem rgb(0, 0, 0, 0.15);
+  .header {
+    background-color: #00000008;
+    b {
+      font-family: regular;
+    }
+  }
+  .body {
+    letter-spacing: 0.01rem;
+    p {
+      font-size: 0.875rem;
+      color: $gray;
+      margin-bottom: 16px;
+    }
+    div > span:first-child {
+      font-family: "medium";
+      flex-basis: 50%;
+      line-height: 1.6;
+    }
+    .total {
+      font-size: calc(1.3rem + 0.6vw);
+    }
+  }
+}
+main {
+  .cards {
+    & > div>div {
+        box-shadow: 0 2px 1rem rgb(0, 0, 0 ,.15);
+        margin-bottom: 1.5rem;
+      .header {
+        background-color: #00000008;
+        b {
+          font-family: regular;
+          font-size: 1rem;
+        }
+      }
+      .body{
+        h1{ 
+            font-family: regular !important;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        p{
+            color: $gray;
+            font-size: .875rem;
+            margin-bottom: 6px;
+        }
+      }
+    }
+  }
+  .options {
+    letter-spacing: 0.25rem;
+    font-size: 0.8rem;
+    padding: 8.4px 12px;
+    span {
+      cursor: pointer;
+    }
+    span:first-child {
+      color: $gray;
+    }
+    span:last-child {
+      color: white;
+      background-color: $black;
+      padding: 8.4px 12px;
+    }
+  }
+  &:first-child {
+    padding-right: 15px;
+  }
+  &:last-child {
+    padding-left: 15px;
+  }
+}

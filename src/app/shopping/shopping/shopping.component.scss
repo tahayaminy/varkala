@@ -44,6 +44,17 @@ header {
   }
 }
 main {
+    .options{
+      letter-spacing: .25rem;
+      font-size: .8rem;
+      padding:8.4px 12px;
+      span:first-child{
+        color:$gray;
+      }
+      span:last-child{
+        color:$crem;
+      }
+    }
     &:first-child{
       padding-right:15px;
     }

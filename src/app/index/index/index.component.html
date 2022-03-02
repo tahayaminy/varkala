@@ -93,11 +93,11 @@
 </section>
 <section style="background-color: #f8f9fa">
   <section class="flex sm:flex-row flex-col py-24 container mx-auto">
-    <section class="mx-auto sm:mr-4 sm:mb-0 mb-11 relative category rounded">
+    <section routerLink="/category-full" class="mx-auto sm:mr-4 sm:mb-0 mb-11 relative category rounded">
       <img src="../../../assets/img/category-women.jpg" alt="" />
       <div class="absolute">Women</div>
     </section>
-    <section class="mx-auto sm:ml-4 sm:mb-0 mb-11 relative category rounded">
+    <section routerLink="/category-full" class="mx-auto sm:ml-4 sm:mb-0 mb-11 relative category rounded">
       <img src="../../../assets/img/category-men.jpg" alt="" />
       <div class="absolute">Men</div>
     </section>
@@ -116,7 +116,7 @@
     </p>
   </section>
 </section>
-<app-product-list></app-product-list>
+<app-product-list [index]="true"></app-product-list>
 <section *ngIf="trackerShow" class="my-24 product-offer">
   <div class="img">
     <img src="../../../assets/deal-plain.jpg" alt="" />

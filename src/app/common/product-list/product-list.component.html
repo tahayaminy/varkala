@@ -1,11 +1,23 @@
-<article class="container-fluid mt-28 product-list">
-    <section class="flex flex-wrap sm:justify-start justify-center nav mb-9">
+<article  [ngClass]="{'mt-28': index, 'container-fluid' : index }" class="product-list">
+    <section *ngIf="index" class="flex flex-wrap sm:justify-start justify-center nav mb-9">
         <span class="mr-2">All Products</span>
         <span class="mr-2 mute">Clothing</span>
         <span class="mr-2 mute">Bags</span>
         <span class="mr-2 mute">Shoes</span>
         <span class="mr-2 mute">Accessories</span>
         <span class="block sm:inline sm:basis-auto basis-full text-center sm:mt-0 mt-7 sm:ml-auto">ALL PRODUCTS</span>
+    </section>
+    <section *ngIf="!index" class="flex flex-wrap nav-full mb-9">
+        <div>Showing 1-12 of 158 products</div>
+            <div>
+                <span>Show</span>
+                <span>12</span>
+                <span>24</span>
+                <span>All</span>
+            </div>
+            <div>
+                Sort by <select></select>
+            </div>
     </section>
     <section class="main grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-x-8 gap-y-5">
         <section data-aos="zoom-in" data-aos-duration="1000" data-aos-duration="1000" data-aos-duration="1000">

@@ -6,23 +6,12 @@
         <h1>Jackets and tops</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
     </header>
-    <section class="list-cont container">
-        <section class="breadcrump mb-3">
+    <section class="list-cont container mx-auto">
+        <section class="breadcrump mb-5">
             <span>Home  </span>
             <span class="bi bi-dash-lg"></span>
             <span>  Shop</span>
         </section>
-        <section class="filters">
-            <div>Showing 1-12 of 158 products</div>
-            <div>
-                <span>Show</span>
-                <span>12</span>
-                <span>24</span>
-                <span>All</span>
-            </div>
-            <div>
-                Sort by <select></select>
-            </div>
-        </section>
+        <app-product-list [index]="false"></app-product-list>
     </section>
 </main>

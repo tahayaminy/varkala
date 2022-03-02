@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import AOS from 'aos';
 
 @Component({
@@ -9,7 +9,7 @@ import AOS from 'aos';
 export class ProductListComponent implements OnInit {
 
   constructor() { }
-
+@Input() index!:boolean;
   ngOnInit(): void {
     AOS.init();
   }

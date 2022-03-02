@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddressComponent } from './address/address.component';
+import { ConfirmComponent } from './confirm/confirm.component';
 import { DeliveryComponent } from './delivery/delivery.component';
 
 const routes: Routes = [
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path:'delivery',
     component:DeliveryComponent
+  },
+  {
+    path:'confirm',
+    component:ConfirmComponent
   }
   
 ];

@@ -1,0 +1,33 @@
+$gray: #868e96;
+$black: #212529;
+$crem: #bcac76;
+
+header {
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+  p {
+    color: $gray;
+    font-size: 1.25rem;
+  }
+}
+.list-cont {
+  .breadcrump {
+    span {
+      font-size: 14px;
+      letter-spacing: 0.01em;
+    }
+    span:first-child {
+      color: $crem;
+    }
+    span:nth-child(3) {
+      color: $gray;
+    }
+    span:nth-child(2),
+    p {
+      color: $gray;
+    }
+  }
+}

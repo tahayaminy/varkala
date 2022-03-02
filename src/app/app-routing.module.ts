@@ -17,6 +17,10 @@ const routes: Routes = [
   loadChildren:()=> import('./shopping/shopping.module').then(m=>m.ShoppingModule)
   },
   {
+    path:'category-full',
+    loadChildren:()=>import('./category-full/category-full.module').then(m=>m.CategoryFullModule)
+  },
+  {
     path: '**', redirectTo: '', pathMatch: 'full'
   }
 ];

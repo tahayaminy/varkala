@@ -13,6 +13,7 @@ import { WishlistModule } from './wishlist/wishlist.module';
 import { CommonModule } from '@angular/common';
 import { ShoppingModule } from './shopping/shopping.module';
 import { ShopFormModule } from './shopping/shop-form/shop-form.module';
+import { CategoryFullModule } from './category-full/category-full.module';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { ShopFormModule } from './shopping/shop-form/shop-form.module';
     SecurityModule,
     WishlistModule,
     ShoppingModule,
-    ShopFormModule
+    ShopFormModule,
+    CategoryFullModule
   ],
   providers: [],
   bootstrap: [AppComponent]

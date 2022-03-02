@@ -23,8 +23,23 @@ $crem: #bcac76;
     }
   }
   .nav-full{
-    
+    color: $gray;
+    $dark-1:#333333;
+    $dark-2:#495057;
+    .dark-2{
+      color:$dark-2;
+      font-family: medium;
+    }
+    .dark-1{
+      color:$dark-1;
+      font-family: medium;
   }
+  .count-num{
+    span:not(span:first-child){
+      padding: 4.8px;
+    }
+  }
+}
   .main {
     .muted {
       font-size: 14px;

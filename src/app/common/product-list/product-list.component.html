@@ -1,300 +1,411 @@
-<article  [ngClass]="{'mt-28': index, 'container-fluid' : index }" class="product-list">
-    <section *ngIf="index" class="flex flex-wrap sm:justify-start justify-center nav mb-9">
-        <span class="mr-2">All Products</span>
-        <span class="mr-2 mute">Clothing</span>
-        <span class="mr-2 mute">Bags</span>
-        <span class="mr-2 mute">Shoes</span>
-        <span class="mr-2 mute">Accessories</span>
-        <span class="block sm:inline sm:basis-auto basis-full text-center sm:mt-0 mt-7 sm:ml-auto">ALL PRODUCTS</span>
+<article
+  [ngClass]="{ 'mt-28': index, 'container-fluid': index }"
+  class="product-list"
+>
+  <section
+    *ngIf="index"
+    class="flex flex-wrap sm:justify-start justify-center nav mb-9"
+  >
+    <span class="mr-2">All Products</span>
+    <span class="mr-2 mute">Clothing</span>
+    <span class="mr-2 mute">Bags</span>
+    <span class="mr-2 mute">Shoes</span>
+    <span class="mr-2 mute">Accessories</span>
+    <span
+      class="block sm:inline sm:basis-auto basis-full text-center sm:mt-0 mt-7 sm:ml-auto"
+      >ALL PRODUCTS</span
+    >
+  </section>
+  <section *ngIf="!index" class="flex flex-wrap nav-full mb-9">
+    <div>
+      Showing <span class="dark-2">1-12</span> of
+      <span class="dark-2">158</span> products
+    </div>
+    <div class="ml-auto mb-4 count-num mr-4">
+      <span class="mr-2">Show</span>
+      <span class="dark-1 mr-2">12</span>
+      <span class="mr-2">24</span>
+      <span class="mr-2">All</span>
+    </div>
+    <div class="basis-full">
+      Sort by
+      <select></select>
+    </div>
+  </section>
+  <section
+    class="main grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-x-8 gap-y-5"
+  >
+    <section
+      data-aos="zoom-in"
+      data-aos-duration="1000"
+      data-aos-duration="1000"
+      data-aos-duration="1000"
+    >
+      <div class="relative mb-4 imgs">
+        <img
+          src="../../../assets/product/4.jpg"
+          class="absolute hover:opacity-0 duration-500 top-0 left-0 z-0"
+        />
+        <img src="../../../assets/product/42.jpg" class="w-full h-full" />
+        <span class="absolute badge">Fresh</span>
+        <div class="absolute bottom-0 left-0 w-full label">
+          <span class="hover:underline">Add to cart</span>
+          <span class="bi bi-heart ml-auto"></span>
+          <span class="bi bi-arrows-fullscreen ml-2"></span>
+        </div>
+      </div>
+      <div class="relative">
+        <b class="mb-2 block">Carrot-fit jeans</b>
+        <span class="muted block">$40.00</span>
+        <div class="absolute bottom-0 right-0 stars">
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
     </section>
-    <section *ngIf="!index" class="flex flex-wrap nav-full mb-9">
-        <div>Showing 1-12 of 158 products</div>
-            <div>
-                <span>Show</span>
-                <span>12</span>
-                <span>24</span>
-                <span>All</span>
-            </div>
-            <div>
-                Sort by <select></select>
-            </div>
+    <section
+      data-aos="zoom-in"
+      data-aos-duration="1000"
+      data-aos-duration="1000"
+      data-aos-duration="1000"
+    >
+      <div class="relative mb-4 imgs">
+        <img
+          src="../../../assets/product/3.jpg"
+          class="absolute hover:opacity-0 duration-500 top-0 left-0 z-0"
+        />
+        <img src="../../../assets/product/32.jpg" class="w-full h-full" />
+        <span class="absolute badge">Fresh</span>
+        <div class="absolute bottom-0 left-0 w-full label">
+          <span class="hover:underline">Add to cart</span>
+          <span class="bi bi-heart ml-auto"></span>
+          <span class="bi bi-arrows-fullscreen ml-2"></span>
+        </div>
+      </div>
+      <div class="relative">
+        <b class="mb-2 block">Carrot-fit jeans</b>
+        <span class="muted block">$40.00</span>
+        <div class="absolute bottom-0 right-0 stars">
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
     </section>
-    <section class="main grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-x-8 gap-y-5">
-        <section data-aos="zoom-in" data-aos-duration="1000" data-aos-duration="1000" data-aos-duration="1000">
-            <div class="relative mb-4 imgs">
-                <img src="../../../assets/product/4.jpg" class="absolute hover:opacity-0 duration-500 top-0 left-0 z-0">
-                <img src="../../../assets/product/42.jpg" class="w-full h-full">
-                <span class="absolute badge">Fresh</span>
-                <div class="absolute bottom-0 left-0 w-full label">
-                    <span class="hover:underline">Add to cart</span>
-                    <span class="bi bi-heart ml-auto"></span>
-                    <span class="bi bi-arrows-fullscreen ml-2"></span>
-                </div>
-            </div>
-            <div class="relative">
-                <b class="mb-2 block">Carrot-fit jeans</b>
-                <span class="muted block">$40.00</span>
-                <div class="absolute bottom-0 right-0 stars">
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-        </section>
-        <section data-aos="zoom-in" data-aos-duration="1000" data-aos-duration="1000" data-aos-duration="1000">
-            <div class="relative mb-4 imgs">
-                <img src="../../../assets/product/3.jpg" class="absolute hover:opacity-0 duration-500 top-0 left-0 z-0">
-                <img src="../../../assets/product/32.jpg" class="w-full h-full">
-                <span class="absolute badge">Fresh</span>
-                <div class="absolute bottom-0 left-0 w-full label">
-                    <span class="hover:underline">Add to cart</span>
-                    <span class="bi bi-heart ml-auto"></span>
-                    <span class="bi bi-arrows-fullscreen ml-2"></span>
-                </div>
-            </div>
-            <div class="relative">
-                <b class="mb-2 block">Carrot-fit jeans</b>
-                <span class="muted block">$40.00</span>
-                <div class="absolute bottom-0 right-0 stars">
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-        </section>
-        <section data-aos="zoom-in" data-aos-duration="1000" data-aos-duration="1000" data-aos-duration="1000">
-            <div class="relative mb-4 imgs">
-                <img src="../../../assets/product/2.jpg" class="absolute hover:opacity-0 duration-500 top-0 left-0 z-0">
-                <img src="../../../assets/product/22.jpg" class="w-full h-full">
-                <span class="absolute badge">Fresh</span>
-                <div class="absolute bottom-0 left-0 w-full label">
-                    <span class="hover:underline">Add to cart</span>
-                    <span class="bi bi-heart ml-auto"></span>
-                    <span class="bi bi-arrows-fullscreen ml-2"></span>
-                </div>
-            </div>
-            <div class="relative">
-                <b class="mb-2 block">Carrot-fit jeans</b>
-                <span class="muted block">$40.00</span>
-                <div class="absolute bottom-0 right-0 stars">
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-        </section>
-        <section data-aos="zoom-in" data-aos-duration="1000" data-aos-duration="1000" data-aos-duration="1000">
-            <div class="relative mb-4 imgs">
-                <img src="../../../assets/product/1.jpg" class="absolute hover:opacity-0 duration-500 top-0 left-0 z-0">
-                <img src="../../../assets/product/12.jpg" class="w-full h-full">
-                <span class="absolute badge">Fresh</span>
-                <div class="absolute bottom-0 left-0 w-full label">
-                    <span class="hover:underline">Add to cart</span>
-                    <span class="bi bi-heart ml-auto"></span>
-                    <span class="bi bi-arrows-fullscreen ml-2"></span>
-                </div>
-            </div>
-            <div class="relative">
-                <b class="mb-2 block">Carrot-fit jeans</b>
-                <span class="muted block">$40.00</span>
-                <div class="absolute bottom-0 right-0 stars">
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-        </section>
-        <section data-aos="zoom-in" data-aos-duration="1000" data-aos-duration="1000" data-aos-duration="1000">
-            <div class="relative mb-4 imgs">
-                <img src="../../../assets/product/1.jpg" class="absolute hover:opacity-0 duration-500 top-0 left-0 z-0">
-                <img src="../../../assets/product/12.jpg" class="w-full h-full">
-                <span class="absolute badge">Fresh</span>
-                <div class="absolute bottom-0 left-0 w-full label">
-                    <span class="hover:underline">Add to cart</span>
-                    <span class="bi bi-heart ml-auto"></span>
-                    <span class="bi bi-arrows-fullscreen ml-2"></span>
-                </div>
-            </div>
-            <div class="relative">
-                <b class="mb-2 block">Carrot-fit jeans</b>
-                <span class="muted block">$40.00</span>
-                <div class="absolute bottom-0 right-0 stars">
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-        </section>
-        <section data-aos="zoom-in" data-aos-duration="1000" data-aos-duration="1000" data-aos-duration="1000">
-            <div class="relative mb-4 imgs">
-                <img src="../../../assets/product/2.jpg" class="absolute hover:opacity-0 duration-500 top-0 left-0 z-0">
-                <img src="../../../assets/product/22.jpg" class="w-full h-full">
-                <span class="absolute badge">Fresh</span>
-                <div class="absolute bottom-0 left-0 w-full label">
-                    <span class="hover:underline">Add to cart</span>
-                    <span class="bi bi-heart ml-auto"></span>
-                    <span class="bi bi-arrows-fullscreen ml-2"></span>
-                </div>
-            </div>
-            <div class="relative">
-                <b class="mb-2 block">Carrot-fit jeans</b>
-                <span class="muted block">$40.00</span>
-                <div class="absolute bottom-0 right-0 stars">
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-        </section>
-        <section data-aos="zoom-in" data-aos-duration="1000" data-aos-duration="1000" data-aos-duration="1000">
-            <div class="relative mb-4 imgs">
-                <img src="../../../assets/product/3.jpg" class="absolute hover:opacity-0 duration-500 top-0 left-0 z-0">
-                <img src="../../../assets/product/32.jpg" class="w-full h-full">
-                <span class="absolute badge">Fresh</span>
-                <div class="absolute bottom-0 left-0 w-full label">
-                    <span class="hover:underline">Add to cart</span>
-                    <span class="bi bi-heart ml-auto"></span>
-                    <span class="bi bi-arrows-fullscreen ml-2"></span>
-                </div>
-            </div>
-            <div class="relative">
-                <b class="mb-2 block">Carrot-fit jeans</b>
-                <span class="muted block">$40.00</span>
-                <div class="absolute bottom-0 right-0 stars">
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-        </section>
-        <section data-aos="zoom-in" data-aos-duration="1000" data-aos-duration="1000" data-aos-duration="1000">
-            <div class="relative mb-4 imgs">
-                <img src="../../../assets/product/4.jpg" class="absolute hover:opacity-0 duration-500 top-0 left-0 z-0">
-                <img src="../../../assets/product/42.jpg" class="w-full h-full">
-                <span class="absolute badge">Fresh</span>
-                <div class="absolute bottom-0 left-0 w-full label">
-                    <span class="hover:underline">Add to cart</span>
-                    <span class="bi bi-heart ml-auto"></span>
-                    <span class="bi bi-arrows-fullscreen ml-2"></span>
-                </div>
-            </div>
-            <div class="relative">
-                <b class="mb-2 block">Carrot-fit jeans</b>
-                <span class="muted block">$40.00</span>
-                <div class="absolute bottom-0 right-0 stars">
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-        </section>
-        <section data-aos="zoom-in" data-aos-duration="1000" data-aos-duration="1000" data-aos-duration="1000">
-            <div class="relative mb-4 imgs">
-                <img src="../../../assets/product/4.jpg" class="absolute hover:opacity-0 duration-500 top-0 left-0 z-0">
-                <img src="../../../assets/product/42.jpg" class="w-full h-full">
-                <span class="absolute badge">Fresh</span>
-                <div class="absolute bottom-0 left-0 w-full label">
-                    <span class="hover:underline">Add to cart</span>
-                    <span class="bi bi-heart ml-auto"></span>
-                    <span class="bi bi-arrows-fullscreen ml-2"></span>
-                </div>
-            </div>
-            <div class="relative">
-                <b class="mb-2 block">Carrot-fit jeans</b>
-                <span class="muted block">$40.00</span>
-                <div class="absolute bottom-0 right-0 stars">
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-        </section>
-        <section data-aos="zoom-in" data-aos-duration="1000" data-aos-duration="1000" data-aos-duration="1000">
-            <div class="relative mb-4 imgs">
-                <img src="../../../assets/product/3.jpg" class="absolute hover:opacity-0 duration-500 top-0 left-0 z-0">
-                <img src="../../../assets/product/32.jpg" class="w-full h-full">
-                <span class="absolute badge">Fresh</span>
-                <div class="absolute bottom-0 left-0 w-full label">
-                    <span class="hover:underline">Add to cart</span>
-                    <span class="bi bi-heart ml-auto"></span>
-                    <span class="bi bi-arrows-fullscreen ml-2"></span>
-                </div>
-            </div>
-            <div class="relative">
-                <b class="mb-2 block">Carrot-fit jeans</b>
-                <span class="muted block">$40.00</span>
-                <div class="absolute bottom-0 right-0 stars">
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-        </section>
-        <section data-aos="zoom-in" data-aos-duration="1000" data-aos-duration="1000" data-aos-duration="1000">
-            <div class="relative mb-4 imgs">
-                <img src="../../../assets/product/2.jpg" class="absolute hover:opacity-0 duration-500 top-0 left-0 z-0">
-                <img src="../../../assets/product/22.jpg" class="w-full h-full">
-                <span class="absolute badge">Fresh</span>
-                <div class="absolute bottom-0 left-0 w-full label">
-                    <span class="hover:underline">Add to cart</span>
-                    <span class="bi bi-heart ml-auto"></span>
-                    <span class="bi bi-arrows-fullscreen ml-2"></span>
-                </div>
-            </div>
-            <div class="relative">
-                <b class="mb-2 block">Carrot-fit jeans</b>
-                <span class="muted block">$40.00</span>
-                <div class="absolute bottom-0 right-0 stars">
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-        </section>
-        <section data-aos="zoom-in" data-aos-duration="1000" data-aos-duration="1000" data-aos-duration="1000">
-            <div class="relative mb-4 imgs">
-                <img src="../../../assets/product/1.jpg" class="absolute hover:opacity-0 duration-500 top-0 left-0 z-0">
-                <img src="../../../assets/product/12.jpg" class="w-full h-full">
-                <span class="absolute badge">Fresh</span>
-                <div class="absolute bottom-0 left-0 w-full label">
-                    <span class="hover:underline">Add to cart</span>
-                    <span class="bi bi-heart ml-auto"></span>
-                    <span class="bi bi-arrows-fullscreen ml-2"></span>
-                </div>
-            </div>
-            <div class="relative">
-                <b class="mb-2 block">Carrot-fit jeans</b>
-                <span class="muted block">$40.00</span>
-                <div class="absolute bottom-0 right-0 stars">
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star crem"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-        </section>
+    <section
+      data-aos="zoom-in"
+      data-aos-duration="1000"
+      data-aos-duration="1000"
+      data-aos-duration="1000"
+    >
+      <div class="relative mb-4 imgs">
+        <img
+          src="../../../assets/product/2.jpg"
+          class="absolute hover:opacity-0 duration-500 top-0 left-0 z-0"
+        />
+        <img src="../../../assets/product/22.jpg" class="w-full h-full" />
+        <span class="absolute badge">Fresh</span>
+        <div class="absolute bottom-0 left-0 w-full label">
+          <span class="hover:underline">Add to cart</span>
+          <span class="bi bi-heart ml-auto"></span>
+          <span class="bi bi-arrows-fullscreen ml-2"></span>
+        </div>
+      </div>
+      <div class="relative">
+        <b class="mb-2 block">Carrot-fit jeans</b>
+        <span class="muted block">$40.00</span>
+        <div class="absolute bottom-0 right-0 stars">
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
     </section>
+    <section
+      data-aos="zoom-in"
+      data-aos-duration="1000"
+      data-aos-duration="1000"
+      data-aos-duration="1000"
+    >
+      <div class="relative mb-4 imgs">
+        <img
+          src="../../../assets/product/1.jpg"
+          class="absolute hover:opacity-0 duration-500 top-0 left-0 z-0"
+        />
+        <img src="../../../assets/product/12.jpg" class="w-full h-full" />
+        <span class="absolute badge">Fresh</span>
+        <div class="absolute bottom-0 left-0 w-full label">
+          <span class="hover:underline">Add to cart</span>
+          <span class="bi bi-heart ml-auto"></span>
+          <span class="bi bi-arrows-fullscreen ml-2"></span>
+        </div>
+      </div>
+      <div class="relative">
+        <b class="mb-2 block">Carrot-fit jeans</b>
+        <span class="muted block">$40.00</span>
+        <div class="absolute bottom-0 right-0 stars">
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+    </section>
+    <section
+      data-aos="zoom-in"
+      data-aos-duration="1000"
+      data-aos-duration="1000"
+      data-aos-duration="1000"
+    >
+      <div class="relative mb-4 imgs">
+        <img
+          src="../../../assets/product/1.jpg"
+          class="absolute hover:opacity-0 duration-500 top-0 left-0 z-0"
+        />
+        <img src="../../../assets/product/12.jpg" class="w-full h-full" />
+        <span class="absolute badge">Fresh</span>
+        <div class="absolute bottom-0 left-0 w-full label">
+          <span class="hover:underline">Add to cart</span>
+          <span class="bi bi-heart ml-auto"></span>
+          <span class="bi bi-arrows-fullscreen ml-2"></span>
+        </div>
+      </div>
+      <div class="relative">
+        <b class="mb-2 block">Carrot-fit jeans</b>
+        <span class="muted block">$40.00</span>
+        <div class="absolute bottom-0 right-0 stars">
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+    </section>
+    <section
+      data-aos="zoom-in"
+      data-aos-duration="1000"
+      data-aos-duration="1000"
+      data-aos-duration="1000"
+    >
+      <div class="relative mb-4 imgs">
+        <img
+          src="../../../assets/product/2.jpg"
+          class="absolute hover:opacity-0 duration-500 top-0 left-0 z-0"
+        />
+        <img src="../../../assets/product/22.jpg" class="w-full h-full" />
+        <span class="absolute badge">Fresh</span>
+        <div class="absolute bottom-0 left-0 w-full label">
+          <span class="hover:underline">Add to cart</span>
+          <span class="bi bi-heart ml-auto"></span>
+          <span class="bi bi-arrows-fullscreen ml-2"></span>
+        </div>
+      </div>
+      <div class="relative">
+        <b class="mb-2 block">Carrot-fit jeans</b>
+        <span class="muted block">$40.00</span>
+        <div class="absolute bottom-0 right-0 stars">
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+    </section>
+    <section
+      data-aos="zoom-in"
+      data-aos-duration="1000"
+      data-aos-duration="1000"
+      data-aos-duration="1000"
+    >
+      <div class="relative mb-4 imgs">
+        <img
+          src="../../../assets/product/3.jpg"
+          class="absolute hover:opacity-0 duration-500 top-0 left-0 z-0"
+        />
+        <img src="../../../assets/product/32.jpg" class="w-full h-full" />
+        <span class="absolute badge">Fresh</span>
+        <div class="absolute bottom-0 left-0 w-full label">
+          <span class="hover:underline">Add to cart</span>
+          <span class="bi bi-heart ml-auto"></span>
+          <span class="bi bi-arrows-fullscreen ml-2"></span>
+        </div>
+      </div>
+      <div class="relative">
+        <b class="mb-2 block">Carrot-fit jeans</b>
+        <span class="muted block">$40.00</span>
+        <div class="absolute bottom-0 right-0 stars">
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+    </section>
+    <section
+      data-aos="zoom-in"
+      data-aos-duration="1000"
+      data-aos-duration="1000"
+      data-aos-duration="1000"
+    >
+      <div class="relative mb-4 imgs">
+        <img
+          src="../../../assets/product/4.jpg"
+          class="absolute hover:opacity-0 duration-500 top-0 left-0 z-0"
+        />
+        <img src="../../../assets/product/42.jpg" class="w-full h-full" />
+        <span class="absolute badge">Fresh</span>
+        <div class="absolute bottom-0 left-0 w-full label">
+          <span class="hover:underline">Add to cart</span>
+          <span class="bi bi-heart ml-auto"></span>
+          <span class="bi bi-arrows-fullscreen ml-2"></span>
+        </div>
+      </div>
+      <div class="relative">
+        <b class="mb-2 block">Carrot-fit jeans</b>
+        <span class="muted block">$40.00</span>
+        <div class="absolute bottom-0 right-0 stars">
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+    </section>
+    <section
+      data-aos="zoom-in"
+      data-aos-duration="1000"
+      data-aos-duration="1000"
+      data-aos-duration="1000"
+    >
+      <div class="relative mb-4 imgs">
+        <img
+          src="../../../assets/product/4.jpg"
+          class="absolute hover:opacity-0 duration-500 top-0 left-0 z-0"
+        />
+        <img src="../../../assets/product/42.jpg" class="w-full h-full" />
+        <span class="absolute badge">Fresh</span>
+        <div class="absolute bottom-0 left-0 w-full label">
+          <span class="hover:underline">Add to cart</span>
+          <span class="bi bi-heart ml-auto"></span>
+          <span class="bi bi-arrows-fullscreen ml-2"></span>
+        </div>
+      </div>
+      <div class="relative">
+        <b class="mb-2 block">Carrot-fit jeans</b>
+        <span class="muted block">$40.00</span>
+        <div class="absolute bottom-0 right-0 stars">
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+    </section>
+    <section
+      data-aos="zoom-in"
+      data-aos-duration="1000"
+      data-aos-duration="1000"
+      data-aos-duration="1000"
+    >
+      <div class="relative mb-4 imgs">
+        <img
+          src="../../../assets/product/3.jpg"
+          class="absolute hover:opacity-0 duration-500 top-0 left-0 z-0"
+        />
+        <img src="../../../assets/product/32.jpg" class="w-full h-full" />
+        <span class="absolute badge">Fresh</span>
+        <div class="absolute bottom-0 left-0 w-full label">
+          <span class="hover:underline">Add to cart</span>
+          <span class="bi bi-heart ml-auto"></span>
+          <span class="bi bi-arrows-fullscreen ml-2"></span>
+        </div>
+      </div>
+      <div class="relative">
+        <b class="mb-2 block">Carrot-fit jeans</b>
+        <span class="muted block">$40.00</span>
+        <div class="absolute bottom-0 right-0 stars">
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+    </section>
+    <section
+      data-aos="zoom-in"
+      data-aos-duration="1000"
+      data-aos-duration="1000"
+      data-aos-duration="1000"
+    >
+      <div class="relative mb-4 imgs">
+        <img
+          src="../../../assets/product/2.jpg"
+          class="absolute hover:opacity-0 duration-500 top-0 left-0 z-0"
+        />
+        <img src="../../../assets/product/22.jpg" class="w-full h-full" />
+        <span class="absolute badge">Fresh</span>
+        <div class="absolute bottom-0 left-0 w-full label">
+          <span class="hover:underline">Add to cart</span>
+          <span class="bi bi-heart ml-auto"></span>
+          <span class="bi bi-arrows-fullscreen ml-2"></span>
+        </div>
+      </div>
+      <div class="relative">
+        <b class="mb-2 block">Carrot-fit jeans</b>
+        <span class="muted block">$40.00</span>
+        <div class="absolute bottom-0 right-0 stars">
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+    </section>
+    <section
+      data-aos="zoom-in"
+      data-aos-duration="1000"
+      data-aos-duration="1000"
+      data-aos-duration="1000"
+    >
+      <div class="relative mb-4 imgs">
+        <img
+          src="../../../assets/product/1.jpg"
+          class="absolute hover:opacity-0 duration-500 top-0 left-0 z-0"
+        />
+        <img src="../../../assets/product/12.jpg" class="w-full h-full" />
+        <span class="absolute badge">Fresh</span>
+        <div class="absolute bottom-0 left-0 w-full label">
+          <span class="hover:underline">Add to cart</span>
+          <span class="bi bi-heart ml-auto"></span>
+          <span class="bi bi-arrows-fullscreen ml-2"></span>
+        </div>
+      </div>
+      <div class="relative">
+        <b class="mb-2 block">Carrot-fit jeans</b>
+        <span class="muted block">$40.00</span>
+        <div class="absolute bottom-0 right-0 stars">
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+    </section>
+  </section>
 </article>

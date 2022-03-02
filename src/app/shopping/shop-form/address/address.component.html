@@ -1,6 +1,6 @@
 <app-navbar [index]="false"></app-navbar>
 <p class="pt-24 lg:pt-32"></p>
-<header class="pt-24 pb-28 container mx-auto">
+<header class="pt-24 pb-24 container mx-auto">
   <div class="mb-3">
     <span>Home </span>
     <span class="bi bi-dash-lg"></span>
@@ -11,6 +11,17 @@
 </header>
 <main class="container flex flex-wrap mx-auto pb-10">
   <section class="basis-full lg:basis-8/12 pr-4">
+    <section class="grid tabbar grid-cols-1 lg:grid-cols-3 mb-14 rounded">
+      <div class="active py-5 lg:rounded-l">
+        <div class="text-center">Address</div>
+      </div>
+      <div class="py-5">
+        <div class="text-center lg:border-l">Delivery Method</div>
+      </div>
+      <div class="py-5">
+        <div class="text-center lg:border-l">Compelete Order</div>
+      </div>
+    </section>
     <section>
       <h1>Invoice address</h1>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8">

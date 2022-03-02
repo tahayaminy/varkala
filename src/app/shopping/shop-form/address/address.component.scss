@@ -69,6 +69,31 @@ header {
   }
 }
 main {
+  .tabbar{
+    box-shadow: 0 2px 1rem rgb(0, 0, 0, 0.15);
+    color: #adb5bd;
+    font-size: .875rem;
+    letter-spacing: .01em;
+    background-color: #f8f9fa;
+    .active{
+      color: white;
+      background-color: $crem;
+    }
+    @media only screen and (max-width:1024px){
+      .active{
+        border-top-right-radius: .25rem;
+      border-top-left-radius: .25rem;
+      }
+      &>div:last-child{
+        border-bottom-left-radius: .25rem;
+        border-bottom-right-radius: .25rem;
+      }
+      &>div{
+        border-bottom: 5px solid white;
+      }
+    }
+    
+  }
   h1{
     font-size: 1.75rem;
     margin-bottom: 1.5rem;

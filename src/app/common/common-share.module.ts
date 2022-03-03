@@ -10,8 +10,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { ProductListComponent } from './product-list/product-list.component';
 import { RouterModule } from '@angular/router';
-
-
+import { MatSelectModule } from '@angular/material/select';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [NavbarComponent,ProductListComponent],
@@ -24,7 +24,9 @@ import { RouterModule } from '@angular/router';
     MatBadgeModule,
     MatExpansionModule,
     MatSidenavModule,
-    RouterModule
+    RouterModule,
+    MatSelectModule,
+    FormsModule
   ],
   exports:[NavbarComponent,ProductListComponent]
 })

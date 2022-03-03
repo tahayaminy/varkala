@@ -10,6 +10,34 @@ $crem: #bcac76;
 .crem {
   color: $crem;
 }
+
+.mat-form-field-label-wrappe{
+  display: none;
+}
+.drop-down{
+  position: absolute !important;
+  top: 36px !important;
+  min-width: 200px !important;
+  left: 8px;
+  border-radius: 0 !important;
+}
+.mat-select-panel{
+  padding: 3px 0 !important;
+}
+.mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
+  background-color: $crem;
+  color: white;
+}
+.mat-option {
+  line-height: 3em;
+  height: 2.5em !important;
+  color: $black;
+  letter-spacing: .01em;
+}
+.mat-option-text{
+  font-size: .85em;
+  font-family: regular;
+}
 .product-list {
   .nav {
     & > span:last-child {
@@ -39,7 +67,80 @@ $crem: #bcac76;
       padding: 4.8px;
     }
   }
+  .select {
+    //REMOVE ITS DESIGN
+    .mat-form-field-appearance-fill .mat-form-field-flex{
+      padding: 0;
+    }
+    .mat-select-arrow{
+      display: none;
+    }
+    .mat-select-arrow-wrapper{
+      display: block;
+      &:hover{
+        &::after{
+          color: hsl(0, 0%, 60%);
+        }
+      }
+      &::after{
+        transition: .15s;
+        content: '\f107';
+        font-weight: 900;
+        padding: 8px;
+        font-family: "Font Awesome 5 Free";
+        color: hsl(0, 0%, 80%);
+      }
+    }
+    .mat-form-field-underline{
+      display: none;
+    }
+    .mat-select-value{
+      text-transform: uppercase;
+      padding-left: 2px;
+    }
+    .mat-form-field-appearance-fill .mat-select-arrow-wrapper{
+      transform: translateY(10%);
+    }
+    .mat-form-field-wrapper{
+      padding: 0;
+    }
+    .mat-form-field-appearance-fill{
+      padding: 0;
+    }
+    .mat-form-field-infix{
+      flex: none;
+      border-top: none;
+      //ADD CUSTOME DESIGN
+      width: 200px;
+      padding: 8px 4px 8px 8px;
+      min-height: 38px;
+    }
+    .mat-form-field-wrapper{
+      border: 1px solid hsl(0, 0%, 80%);
+      border-radius: 1px;
+      transition: .15s;
+      &:hover{
+        border: 1px solid hsl(0, 0%, 60%);
+      }
+      &:focus-within{
+        border: 1px solid $crem;
+        outline: 5px solid rgba($color: $crem, $alpha: .2);
+        border-radius: 0;
+      }
+    }
+    .mat-form-field-flex{
+      background-color: transparent;
+    }
+    .mat-select-min-line{
+      font-size: 12.8px;
+      font-family: 'medium';
+      letter-spacing: .3em;
+    }
+  }
+  
+  
 }
+
   .main {
     .muted {
       font-size: 14px;

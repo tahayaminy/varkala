@@ -2,24 +2,31 @@
 <p class="pt-24 lg:pt-32"></p>
 
 <main>
-    <header class="pt-28 pb-14 container mx-auto">
-        <h1>Jackets and tops</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-    </header>
-    <section class="list-cont container mx-auto">
-        <section class="breadcrump mb-5">
-            <span>Home  </span>
-            <span class="bi bi-dash-lg"></span>
-            <span>  Shop</span>
+    <div class="pt-28">
+    </div>
+    <section class="list-cont flex container-fluid mx-auto">
+        <section class="bg-sky-100 hidden lg:block basis-1/4 pr-4 lg:pr-12">
+            some text
         </section>
-        <app-product-list [index]="false"></app-product-list>
-        <section class="flex justify-center mt-8 mb-12 pagination items-center">
-            <i tabindex="0" class="bi bi-chevron-left"></i>
-            <span tabindex="0" class="active">1</span>
-            <span tabindex="0">2</span>
-            <span tabindex="0">3</span>
-            <span tabindex="0">4</span>
-            <i tabindex="0" class="bi bi-chevron-right"></i>
+        <section class="basis-auto lg:px-4 lg:basis-3/4">
+            <header class="pb-14">
+                <h1>Jackets and tops</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+            </header>
+            <section class="breadcrump mb-5">
+                <span>Home  </span>
+                <span class="bi bi-dash-lg"></span>
+                <span>  Shop</span>
+            </section>
+            <app-product-list [index]="false"></app-product-list>
+            <section class="flex justify-center mt-8 mb-12 pagination items-center">
+                <i tabindex="0" class="bi bi-chevron-left"></i>
+                <span tabindex="0" class="active">1</span>
+                <span tabindex="0">2</span>
+                <span tabindex="0">3</span>
+                <span tabindex="0">4</span>
+                <i tabindex="0" class="bi bi-chevron-right"></i>
+            </section>
         </section>
     </section>
 </main>

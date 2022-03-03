@@ -31,3 +31,39 @@ header {
     }
   }
 }
+.pagination{
+  color: $gray;
+  line-height: 1.6;
+  span:focus,i:focus{
+    background-color: #e9ecef;
+    color: #968a5e;
+    box-shadow: 0 0 0 0.25rem rgb(188 172 118 / 25%);
+    &:hover{
+      color: #968a5e;
+    }
+  }
+  .active{
+    color: #343a40;
+    &:hover{
+      cursor: default;
+    }
+  }
+  span:hover,i:hover{
+    color:#343a40;
+    cursor: pointer;
+    transition: .2s;
+  }
+  span{
+    margin-right: 5px;
+    padding: 12px;
+  }
+  i{
+    padding: 25px;
+    margin: 0 5px;
+    font-size: 24px;
+    &:last-child{
+      margin-left: 0;
+      margin-right: 5px;
+    }
+  }
+}

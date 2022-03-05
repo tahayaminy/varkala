@@ -1,46 +1,67 @@
-<section class="category pb-8 border-b">
+<section class="-mt-5 category pb-8 border-b">
   <h5>Category</h5>
   <section class="border-b">
-    <div class="flex items-center">
-      <img src="../../../assets/icon/trousers.png" alt="" />
-      <span class="mr-2">Trousers</span>
-      <span>120</span>
-      <i class="fas fa-angle-left ml-auto"></i>
-    </div>
-    <ul class="ml-12">
-      <li>Lorem ipsum</li>
-      <li>Dolor</li>
-      <li>Sit amet</li>
-      <li>Donec vitae</li>
-    </ul>
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false" hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <img src="../../../assets/icon/trousers.png" alt="" />
+            <span class="mr-2">Trousers</span>
+            <span class="gray">120</span>
+            <i [class.r-90]="panelOpenState" class="gray fas fa-angle-left ml-auto"></i>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ul class="ml-12">
+          <li>Lorem ipsum</li>
+          <li>Dolor</li>
+          <li>Sit amet</li>
+          <li>Donec vitae</li>
+        </ul>
+      </mat-expansion-panel>
+    </mat-accordion>   
   </section>
   <section class="border-b">
-    <div class="flex items-center">
-      <img src="../../../assets/icon/jacket.png" alt="" />
-      <span class="mr-2">Jackets</span>
-      <span>55</span>
-      <i class="fas fa-angle-left ml-auto"></i>
-    </div>
-    <ul class="ml-12 my-4">
-      <li>Lorem ipsum</li>
-      <li>Dolor</li>
-      <li>Sit amet</li>
-      <li>Donec vitae</li>
-    </ul>
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false" hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <img src="../../../assets/icon/jacket.png" alt="" />
+            <span class="mr-2">Jackets</span>
+            <span class="gray">55</span>
+            <i [class.r-90]="panelOpenState" class="gray fas fa-angle-left ml-auto"></i>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ul class="ml-12">
+          <li>Lorem ipsum</li>
+          <li>Dolor</li>
+          <li>Sit amet</li>
+          <li>Donec vitae</li>
+        </ul>
+      </mat-expansion-panel>
+    </mat-accordion>   
   </section>
   <section>
-    <div class="flex items-center">
-      <img src="../../../assets/icon/tshirt.png" alt="" />
-      <span class="mr-2">T-Shirts</span>
-      <span>33</span>
-      <i class="fas fa-angle-left ml-auto"></i>
-    </div>
-    <ul class="ml-12 my-4">
-      <li>Lorem ipsum</li>
-      <li>Dolor</li>
-      <li>Sit amet</li>
-      <li>Donec vitae</li>
-    </ul>
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false" hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <img src="../../../assets/icon/tshirt.png" alt="" />
+            <span class="mr-2">T-Shirts</span>
+            <span class="gray">33</span>
+            <i [class.r-90]="panelOpenState" class="gray fas fa-angle-left ml-auto"></i>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ul class="ml-12">
+          <li>Lorem ipsum</li>
+          <li>Dolor</li>
+          <li>Sit amet</li>
+          <li>Donec vitae</li>
+        </ul>
+      </mat-expansion-panel>
+    </mat-accordion>   
   </section>
 </section>
 <section class="price py-12 border-b">
@@ -77,7 +98,49 @@
       </label>
   </section>
 </section>
-<section>
-  <h5></h5>
-  <section></section>
+<section class="size pb-8 border-b">
+  <h5>Size</h5>
+  <section>
+    <label class="checkbox">
+      one
+      <input name="radio" type="radio" />
+      <span class="rad"></span>
+    </label>
+    <label class="checkbox">
+      one
+      <input name="radio" type="radio" />
+      <span class="rad"></span>
+    </label>
+    <label class="checkbox">
+      one
+      <input name="radio" type="radio" />
+      <span class="rad"></span>
+    </label>
+    <label class="checkbox">
+      one
+      <input name="radio" type="radio" />
+      <span class="rad"></span>
+    </label>
+  </section>
+</section>
+<section class="colour">
+  <h5>Colour</h5>
+  <section>
+    <label class="checkbox">
+      <input type="checkbox" />
+      <span class="check first"></span>
+    </label>
+    <label class="checkbox">
+      <input type="checkbox" />
+      <span class="check tow"></span>
+    </label>
+    <label class="checkbox">
+      <input type="checkbox" />
+      <span class="check three"></span>
+    </label>
+    <label class="checkbox">
+      <input type="checkbox" />
+      <span class="check four"></span>
+    </label>
+  </section>
 </section>

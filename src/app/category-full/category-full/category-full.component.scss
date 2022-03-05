@@ -14,6 +14,12 @@ header {
   }
 }
 .list-cont {
+  .sidebar{
+    flex-basis: 24%;
+  }
+  .list{
+    flex-basis: 76%;
+  }
   .breadcrump {
     span {
       font-size: 14px;

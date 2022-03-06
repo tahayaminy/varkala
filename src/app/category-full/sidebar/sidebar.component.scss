@@ -7,6 +7,7 @@ section{
         font-size: .875rem;
     }
     h5 {
+        letter-spacing: .02em;
       font-size: 1.25rem;
       margin-bottom: 1.2rem;
     }
@@ -37,9 +38,14 @@ section{
       }
   }
 }
+.price{
+    h5{
+        margin-bottom: 5px;
+    }
+}
 .brand{
     label{
-        line-height: 1.7;
+        line-height: 1.9;
         padding-left: 24px;
     }
     .check{
@@ -74,13 +80,12 @@ section{
         user-select: none;
         display: inline-block;
         padding-right: 35px;
-        margin-left: 20px;
         cursor: pointer;
     }
 }
 .size{
     label{
-        line-height: 1.7;
+        line-height: 1.9;
         padding-left: 24px;
     }
     .rad{
@@ -106,7 +111,7 @@ section{
         font-size: 8px;
         position: absolute;
         top: 50%;left: 50%;
-        transform: translate(-50%,-45%);
+        transform: translate(-50%,-40%);
         }
     }
     input[type=radio]{
@@ -118,7 +123,6 @@ section{
         user-select: none;
         display: inline-block;
         padding-right: 35px;
-        margin-left: 20px;
         cursor: pointer;
     }
 }
@@ -126,18 +130,21 @@ section{
     label{
         line-height: 1.7;
         padding-left: 24px;
-        margin: 0 5px;
+        margin-right: 12.5px;
+    }
+    h5{
+        margin-bottom: 20px;
     }
     .check{
         background-color: white;
         padding: 3px;
-        width: 28px;height: 28px;
+        width: 30px;height: 30px;
         position: absolute;
         top: 50%;transform: translateY(-50%);
         left:0;
         border-radius: 50%;
         transition: .25s;
-        border: 1px solid rgba(0,0,0,.25);
+        border: 1px solid rgba(0,0,0,.1);
     }
     input[type=checkbox] ~ .check{
         &::after{
@@ -146,26 +153,26 @@ section{
             font-size: 18px;
             position: absolute;
             top: 50%;left: 50%;
-            transform: translate(-50%,-50%);
+            transform:translate(-50%, -46.379%);
         }        
     }
     .first{
-        color: red;
+        color: #668cb9;
     }
     .tow{
-        color: blue;
+        color: #fff;
     }
     .three{
-        color: cadetblue;
+        color: #8b6ea4;
     }
-    .tow{
-        color: chartreuse;
+    .four{
+        color: #dd6265;
     }
     input[type=checkbox]:hover ~ .check{
-        border: 1px solid rgba(0,0,0,.5);  
+        border: 1px solid rgba(0,0,0,.2);  
     }
     input[type=checkbox]:checked ~ .check{
-        border: 2px solid rgba(0,0,0,.75);  
+        border: 1px solid rgba(0,0,0,.5);  
     }
     input[type=checkbox]{
         position: absolute;

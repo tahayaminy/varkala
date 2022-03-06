@@ -6,6 +6,7 @@ import { CategoryFullComponent } from './category-full/category-full.component';
 import { CommonShareModule } from '../common/common-share.module';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     CommonModule,
     CategoryFullRoutingModule,
     CommonShareModule,
-    MatExpansionModule
+    MatExpansionModule,
+    NgxSliderModule
   ],
   exports: [
     CategoryFullComponent

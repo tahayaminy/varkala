@@ -72,3 +72,43 @@ input:focus{
   color: #868e96;
   padding: 0 !important;
 }
+.ngx-slider-floor,.ngx-slider-ceil{
+  color: red !important;
+  display: none !important;
+}
+.ngx-slider-selection{
+  background-color: #222222 !important;
+  height: 1px !important;
+}
+.ngx-slider-pointer-min{
+  
+}
+.ngx-slider-pointer-max{
+}
+.ngx-slider-pointer{
+  background-color: #222222 !important;
+  border-radius: 0 !important;
+  width: 4px !important;
+  height: 15px !important;
+  transform: translateY(-50%) !important;
+  border: none !important;
+  outline: none !important;
+  &::after{
+    display: none !important;
+  }
+  &::focus,&::focus-within,&::focus-visible{
+    width: 4px !important;
+  height: 15px !important;
+  border: none !important;
+  outline: none !important;
+  }
+}
+.ngx-slider .ngx-slider-bar-wrapper{
+  padding-top: 0 !important;
+}
+.ngx-slider .ngx-slider-bar{
+  height: 1px !important;
+}
+.ngx-slider-model-value,.ngx-slider-model-high{
+  display: none !important;
+}

@@ -2,14 +2,14 @@
   <h5>Category</h5>
   <section class="border-b">
     <mat-accordion>
-      <mat-expansion-panel (opened)="panelOpenState = true"
-      (closed)="panelOpenState = false" hideToggle>
+      <mat-expansion-panel (opened)="panelOpenState1 = true"
+      (closed)="panelOpenState1 = false" hideToggle>
         <mat-expansion-panel-header>
           <mat-panel-title>
             <img src="../../../assets/icon/trousers.png" alt="" />
             <span class="mr-2">Trousers</span>
             <span class="gray">120</span>
-            <i [class.r-90]="panelOpenState" class="gray fas fa-angle-left ml-auto"></i>
+            <i [class.r-90]="panelOpenState1" class="gray fas fa-angle-left ml-auto"></i>
           </mat-panel-title>
         </mat-expansion-panel-header>
         <ul class="ml-12">
@@ -23,14 +23,14 @@
   </section>
   <section class="border-b">
     <mat-accordion>
-      <mat-expansion-panel (opened)="panelOpenState = true"
-      (closed)="panelOpenState = false" hideToggle>
+      <mat-expansion-panel (opened)="panelOpenState2 = true"
+      (closed)="panelOpenState2 = false" hideToggle>
         <mat-expansion-panel-header>
           <mat-panel-title>
             <img src="../../../assets/icon/jacket.png" alt="" />
             <span class="mr-2">Jackets</span>
             <span class="gray">55</span>
-            <i [class.r-90]="panelOpenState" class="gray fas fa-angle-left ml-auto"></i>
+            <i [class.r-90]="panelOpenState2" class="gray fas fa-angle-left ml-auto"></i>
           </mat-panel-title>
         </mat-expansion-panel-header>
         <ul class="ml-12">
@@ -44,14 +44,14 @@
   </section>
   <section>
     <mat-accordion>
-      <mat-expansion-panel (opened)="panelOpenState = true"
-      (closed)="panelOpenState = false" hideToggle>
+      <mat-expansion-panel (opened)="panelOpenState3 = true"
+      (closed)="panelOpenState3 = false" hideToggle>
         <mat-expansion-panel-header>
           <mat-panel-title>
             <img src="../../../assets/icon/tshirt.png" alt="" />
             <span class="mr-2">T-Shirts</span>
             <span class="gray">33</span>
-            <i [class.r-90]="panelOpenState" class="gray fas fa-angle-left ml-auto"></i>
+            <i [class.r-90]="panelOpenState3" class="gray fas fa-angle-left ml-auto"></i>
           </mat-panel-title>
         </mat-expansion-panel-header>
         <ul class="ml-12">
@@ -64,66 +64,79 @@
     </mat-accordion>   
   </section>
 </section>
-<section class="price py-12 border-b">
+<section class="price py-10 border-b">
   <h5>Price</h5>
-  <section></section>
+  <section>
+    <ngx-slider class="flex items-center" [(value)]="minValue"
+            [(highValue)]="maxValue"
+            [options]="options"
+            (userChangeStart)="onUserChangeStart($event)"
+            (userChange)="onUserChange($event)"
+            (userChangeEnd)="onUserChangeEnd($event)">
+</ngx-slider>
+<div class="flex gray -mt-5">
+  <span>From ${{minPrice}}</span>
+  <span class="ml-auto">To ${{maxPrice}}</span>
+</div>
+
+  </section>
 </section>
-<section class="brand pb-8 border-b">
+<section class="brand py-8 border-b">
   <h5>Brand</h5>
   <section>
     <label class="checkbox">
-      Calvin Kelin
-      <input type="checkbox" />
+      Calvin Kelin (18)
+      <input checked type="checkbox" />
       <span class="check"></span>
     </label>
     <label class="checkbox">
-        Levi Strauss
+        Levi Strauss (30)
+        <input checked type="checkbox" />
+        <span class="check"></span>
+      </label>
+      <label class="checkbox">
+        Hugo Boss (120)
         <input type="checkbox" />
         <span class="check"></span>
       </label>
       <label class="checkbox">
-        Hugo Boss
+        Tomi Hifiger (70)
         <input type="checkbox" />
         <span class="check"></span>
       </label>
       <label class="checkbox">
-        Tomi Hifiger
-        <input type="checkbox" />
-        <span class="check"></span>
-      </label>
-      <label class="checkbox">
-        Tomi Ford
+        Tomi Ford (110)
         <input type="checkbox" />
         <span class="check"></span>
       </label>
   </section>
 </section>
-<section class="size pb-8 border-b">
+<section class="size py-8 border-b">
   <h5>Size</h5>
   <section>
     <label class="checkbox">
-      one
+      Small
+      <input checked name="radio" type="radio" />
+      <span class="rad"></span>
+    </label>
+    <label class="checkbox">
+      Medium
       <input name="radio" type="radio" />
       <span class="rad"></span>
     </label>
     <label class="checkbox">
-      one
+      Large
       <input name="radio" type="radio" />
       <span class="rad"></span>
     </label>
     <label class="checkbox">
-      one
-      <input name="radio" type="radio" />
-      <span class="rad"></span>
-    </label>
-    <label class="checkbox">
-      one
+      X-Large
       <input name="radio" type="radio" />
       <span class="rad"></span>
     </label>
   </section>
 </section>
-<section class="colour">
+<section class="colour py-8">
   <h5>Colour</h5>
   <section>
     <label class="checkbox">

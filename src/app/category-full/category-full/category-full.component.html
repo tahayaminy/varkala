@@ -1,14 +1,14 @@
 <app-navbar [index]="false"></app-navbar>
 <p class="pt-24 lg:pt-32"></p>
 
-<main>
+<main class="pb-24">
     <div class="pt-28">
     </div>
-    <section class="list-cont flex container-fluid mx-auto">
-        <section class="hidden lg:block sidebar pr-4 lg:pr-12">
+    <section class="list-cont flex flex-wrap lg:flex-nowrap container-fluid mx-auto">
+        <section class="order-2 lg:order-1 sidebar lg:pr-4 xl:pr-12">
             <app-sidebar></app-sidebar>
         </section>
-        <section class="basis-auto lg:px-4 list">
+        <section class="order-1 lg:order-2 lg:px-4 list">
             <header class="pb-14">
                 <h1>Jackets and tops</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
@@ -19,7 +19,7 @@
                 <span>  Shop</span>
             </section>
             <app-product-list [index]="false"></app-product-list>
-            <section class="flex justify-center mt-8 mb-12 pagination items-center">
+            <section class="flex justify-center mt-7 mb-6 pagination items-center">
                 <i tabindex="0" class="bi bi-chevron-left"></i>
                 <span tabindex="0" class="active">1</span>
                 <span tabindex="0">2</span>

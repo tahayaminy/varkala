@@ -39,7 +39,6 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  panelOpenState1 = false;
-  panelOpenState2 = false;
-  panelOpenState3 = false;
+  subPanelOpen= [false,false,false];
+  panelOpen=[false,false,false,false,false]
 }

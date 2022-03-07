@@ -14,11 +14,17 @@ header {
   }
 }
 .list-cont {
-  .sidebar{
-    flex-basis: 24%;
+  .sidebar{    
+    flex-basis: 100%;
+    @media only screen and (min-width:1024px){
+      flex-basis: 24%;
+    }
   }
   .list{
-    flex-basis: 76%;
+    flex-basis: 100%;
+    @media only screen and (min-width:1024px){
+      flex-basis: 76%;
+    }
   }
   .breadcrump {
     span {

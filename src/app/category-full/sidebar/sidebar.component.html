@@ -1,15 +1,15 @@
-<section class="-mt-5 category pb-8 border-b">
+<section class="-mt-5 hidden lg:block category pb-8 border-b">
   <h5>Category</h5>
   <section class="border-b">
     <mat-accordion>
-      <mat-expansion-panel (opened)="panelOpenState1 = true"
-      (closed)="panelOpenState1 = false" hideToggle>
+      <mat-expansion-panel (opened)="subPanelOpen[0] = true"
+      (closed)="subPanelOpen[0] = false" hideToggle>
         <mat-expansion-panel-header>
           <mat-panel-title>
             <img src="../../../assets/icon/trousers.png" alt="" />
             <span class="mr-2">Trousers</span>
             <span class="gray">120</span>
-            <i [class.r-90]="panelOpenState1" class="gray fas fa-angle-left ml-auto"></i>
+            <i [class.r-90]="subPanelOpen[0]" class="gray fas fa-angle-left ml-auto"></i>
           </mat-panel-title>
         </mat-expansion-panel-header>
         <ul class="ml-12">
@@ -23,14 +23,14 @@
   </section>
   <section class="border-b">
     <mat-accordion>
-      <mat-expansion-panel (opened)="panelOpenState2 = true"
-      (closed)="panelOpenState2 = false" hideToggle>
+      <mat-expansion-panel (opened)="subPanelOpen[1] = true"
+      (closed)="subPanelOpen[1] = false" hideToggle>
         <mat-expansion-panel-header>
           <mat-panel-title>
             <img src="../../../assets/icon/jacket.png" alt="" />
             <span class="mr-2">Jackets</span>
             <span class="gray">55</span>
-            <i [class.r-90]="panelOpenState2" class="gray fas fa-angle-left ml-auto"></i>
+            <i [class.r-90]="subPanelOpen[1]" class="gray fas fa-angle-left ml-auto"></i>
           </mat-panel-title>
         </mat-expansion-panel-header>
         <ul class="ml-12">
@@ -44,14 +44,14 @@
   </section>
   <section>
     <mat-accordion>
-      <mat-expansion-panel (opened)="panelOpenState3 = true"
-      (closed)="panelOpenState3 = false" hideToggle>
+      <mat-expansion-panel (opened)="subPanelOpen[2] = true"
+      (closed)="subPanelOpen[2] = false" hideToggle>
         <mat-expansion-panel-header>
           <mat-panel-title>
             <img src="../../../assets/icon/tshirt.png" alt="" />
             <span class="mr-2">T-Shirts</span>
             <span class="gray">33</span>
-            <i [class.r-90]="panelOpenState3" class="gray fas fa-angle-left ml-auto"></i>
+            <i [class.r-90]="subPanelOpen[2]" class="gray fas fa-angle-left ml-auto"></i>
           </mat-panel-title>
         </mat-expansion-panel-header>
         <ul class="ml-12">
@@ -64,7 +64,89 @@
     </mat-accordion>   
   </section>
 </section>
-<section class="price py-10 border-b">
+<!-- CATEGORY RESPONSIVE -->
+<section class="category lg:hidden pb-8 border-b px-4">
+  <mat-accordion>
+    <mat-expansion-panel (opened)="panelOpen[0] = true"
+    (closed)="panelOpen[0] = false" hideToggle>
+      <mat-expansion-panel-header class="flex">
+        <mat-panel-title>
+          <h3>
+            Product Categories
+          </h3>
+          <span [class.indicator-side-active]="panelOpen[0]" class="relative indicator-side ml-auto"><i class="ver"></i><i class="hor"></i></span> 
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <section class="border-b mt-5">
+        <mat-accordion>
+          <mat-expansion-panel (opened)="subPanelOpen[0] = true"
+          (closed)="subPanelOpen[0] = false" hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <img src="../../../assets/icon/trousers.png" alt="" />
+                <span class="mr-2">Trousers</span>
+                <span class="gray">120</span>
+                <i [class.r-90]="subPanelOpen[0]" class="gray fas fa-angle-left ml-auto"></i>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul class="ml-12">
+              <li>Lorem ipsum</li>
+              <li>Dolor</li>
+              <li>Sit amet</li>
+              <li>Donec vitae</li>
+            </ul>
+          </mat-expansion-panel>
+        </mat-accordion>   
+      </section>
+      <section class="border-b">
+        <mat-accordion>
+          <mat-expansion-panel (opened)="subPanelOpen[1] = true"
+          (closed)="subPanelOpen[1] = false" hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <img src="../../../assets/icon/jacket.png" alt="" />
+                <span class="mr-2">Jackets</span>
+                <span class="gray">55</span>
+                <i [class.r-90]="subPanelOpen[1]" class="gray fas fa-angle-left ml-auto"></i>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul class="ml-12">
+              <li>Lorem ipsum</li>
+              <li>Dolor</li>
+              <li>Sit amet</li>
+              <li>Donec vitae</li>
+            </ul>
+          </mat-expansion-panel>
+        </mat-accordion>   
+      </section>
+      <section>
+        <mat-accordion>
+          <mat-expansion-panel (opened)="subPanelOpen[2] = true"
+          (closed)="subPanelOpen[2] = false" hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <img src="../../../assets/icon/tshirt.png" alt="" />
+                <span class="mr-2">T-Shirts</span>
+                <span class="gray">33</span>
+                <i [class.r-90]="subPanelOpen[2]" class="gray fas fa-angle-left ml-auto"></i>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul class="ml-12">
+              <li>Lorem ipsum</li>
+              <li>Dolor</li>
+              <li>Sit amet</li>
+              <li>Donec vitae</li>
+            </ul>
+          </mat-expansion-panel>
+        </mat-accordion>   
+      </section>
+    </mat-expansion-panel>
+  </mat-accordion>
+</section>
+<!-- END CATEGORY RESPONSIVE -->
+
+
+<section class="hidden lg:block price py-10 border-b">
   <h5>Price</h5>
   <section>
     <ngx-slider class="flex items-center" [(value)]="minValue"
@@ -81,7 +163,38 @@
 
   </section>
 </section>
-<section class="brand py-8 border-b">
+<!-- PRICE RESPONSIVE -->
+  <section class="lg:hidden  price py-8 px-4 border-b">
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpen[1] = true"
+      (closed)="panelOpen[1] = false" hideToggle>
+        <mat-expansion-panel-header class="flex">
+          <mat-panel-title>
+            <h3>
+              Filter by price
+            </h3> 
+            <span [class.indicator-side-active]="panelOpen[1]" class="relative indicator-side ml-auto"><i class="ver"></i><i class="hor"></i></span>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <section>
+          <ngx-slider class="flex items-center" [(value)]="minValue"
+                  [(highValue)]="maxValue"
+                  [options]="options"
+                  (userChangeStart)="onUserChangeStart($event)"
+                  (userChange)="onUserChange($event)"
+                  (userChangeEnd)="onUserChangeEnd($event)">
+      </ngx-slider>
+      <div class="flex gray -mt-5">
+        <span>From ${{minPrice}}</span>
+        <span class="ml-auto">To ${{maxPrice}}</span>
+      </div>
+      
+        </section>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </section>
+<!-- END PRICE RESPONSIVE -->
+<section class="brand hidden lg:block py-8 border-b">
   <h5>Brand</h5>
   <section>
     <label class="checkbox">
@@ -111,7 +224,51 @@
       </label>
   </section>
 </section>
-<section class="size py-8 border-b">
+<!-- BRAND RESPONSIVE -->
+<section class="brand py-8 border-b px-4 lg:hidden">
+  <mat-accordion>
+    <mat-expansion-panel (opened)="panelOpen[2] = true"
+    (closed)="panelOpen[2] = false" hideToggle>
+      <mat-expansion-panel-header class="flex">
+        <mat-panel-title>
+          <h3>
+            Filter by brand
+          </h3> 
+        </mat-panel-title>
+        <span [class.indicator-side-active]="panelOpen[2]" class="relative indicator-side ml-auto"><i class="ver"></i><i class="hor"></i></span>
+      </mat-expansion-panel-header>
+      <section class="mt-5">
+        <label class="checkbox">
+          Calvin Kelin (18)
+          <input checked type="checkbox" />
+          <span class="check"></span>
+        </label>
+        <label class="checkbox">
+            Levi Strauss (30)
+            <input checked type="checkbox" />
+            <span class="check"></span>
+          </label>
+          <label class="checkbox">
+            Hugo Boss (120)
+            <input type="checkbox" />
+            <span class="check"></span>
+          </label>
+          <label class="checkbox">
+            Tomi Hifiger (70)
+            <input type="checkbox" />
+            <span class="check"></span>
+          </label>
+          <label class="checkbox">
+            Tomi Ford (110)
+            <input type="checkbox" />
+            <span class="check"></span>
+          </label>
+      </section>
+    </mat-expansion-panel>
+  </mat-accordion>
+</section>
+<!-- END BRAND RESPONSIVE -->
+<section class="hidden lg:block size py-8 border-b">
   <h5>Size</h5>
   <section>
     <label class="checkbox">
@@ -136,7 +293,46 @@
     </label>
   </section>
 </section>
-<section class="colour py-8">
+<!-- SIZE RESPONSIVE -->
+<section class="lg:hidden size py-8 px-4 border-b">
+  <mat-accordion>
+    <mat-expansion-panel (opened)="panelOpen[3] = true"
+    (closed)="panelOpen[3] = false" hideToggle>
+      <mat-expansion-panel-header class="flex">
+        <mat-panel-title>
+          <h3>
+            Filter by size
+          </h3>
+        </mat-panel-title>
+        <span [class.indicator-side-active]="panelOpen[3]" class="relative indicator-side ml-auto"><i class="ver"></i><i class="hor"></i></span>
+      </mat-expansion-panel-header>
+      <section class="mt-5">
+        <label class="checkbox">
+          Small
+          <input checked name="radio" type="radio" />
+          <span class="rad"></span>
+        </label>
+        <label class="checkbox">
+          Medium
+          <input name="radio" type="radio" />
+          <span class="rad"></span>
+        </label>
+        <label class="checkbox">
+          Large
+          <input name="radio" type="radio" />
+          <span class="rad"></span>
+        </label>
+        <label class="checkbox">
+          X-Large
+          <input name="radio" type="radio" />
+          <span class="rad"></span>
+        </label>
+      </section>
+    </mat-expansion-panel>
+  </mat-accordion>
+</section>
+<!-- END SIZE RESPONSIVE -->
+<section class="hidden lg:block colour py-8">
   <h5>Colour</h5>
   <section>
     <label class="checkbox">
@@ -157,3 +353,38 @@
     </label>
   </section>
 </section>
+<!-- COLOUR RESPONSIVE -->
+<section class="colour py-8 px-4 lg:hidden">
+  <mat-accordion>
+    <mat-expansion-panel (opened)="panelOpen[4] = true"
+    (closed)="panelOpen[4] = false" hideToggle>
+      <mat-expansion-panel-header class="flex">
+        <mat-panel-title>
+          <h3>
+            Filter by colour
+          </h3> 
+        </mat-panel-title>
+        <span [class.indicator-side-active]="panelOpen[4]" class="relative indicator-side ml-auto"><i class="ver"></i><i class="hor"></i></span>
+      </mat-expansion-panel-header>
+      <section class="pb-8 mt-6">
+        <label class="checkbox">
+          <input type="checkbox" />
+          <span class="check first"></span>
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" />
+          <span class="check tow"></span>
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" />
+          <span class="check three"></span>
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" />
+          <span class="check four"></span>
+        </label>
+      </section>
+    </mat-expansion-panel>
+  </mat-accordion>
+</section>
+<!-- END COLOUR RESPONSIVE -->

@@ -11,6 +11,9 @@ section{
       font-size: 1.25rem;
       margin-bottom: 1.2rem;
     }
+    h3{
+        margin-bottom: 0;
+    }
 }
 .category {
     .fa-angle-left{
@@ -47,6 +50,12 @@ section{
     label{
         line-height: 1.9;
         padding-left: 24px;
+        @media only screen and (max-width:1024px){
+            line-height: 2;
+            font-size: 16px;
+            color: #212529;
+            font-family: book;
+        }
     }
     .check{
         background-color: white;
@@ -78,8 +87,7 @@ section{
     .checkbox{
         position: relative;
         user-select: none;
-        display: inline-block;
-        padding-right: 35px;
+        display: block;
         cursor: pointer;
     }
 }
@@ -87,6 +95,12 @@ section{
     label{
         line-height: 1.9;
         padding-left: 24px;
+        @media only screen and (max-width:1024px){
+            line-height: 2;
+            font-size: 16px;
+            color: #212529;
+            font-family: book;
+        }
     }
     .rad{
         border-radius: 50%;
@@ -108,7 +122,7 @@ section{
         font-family: "Font Awesome 5 Free"; font-weight: 900;
         content: '\f111';
         color: white;
-        font-size: 8px;
+        font-size: 5px;
         position: absolute;
         top: 50%;left: 50%;
         transform: translate(-50%,-40%);
@@ -121,8 +135,7 @@ section{
     .checkbox{
         position: relative;
         user-select: none;
-        display: inline-block;
-        padding-right: 35px;
+        display: block;
         cursor: pointer;
     }
 }
@@ -153,7 +166,7 @@ section{
             font-size: 18px;
             position: absolute;
             top: 50%;left: 50%;
-            transform:translate(-50%, -46.379%);
+            transform:translate(-50%, -50%);
         }        
     }
     .first{
@@ -208,4 +221,35 @@ section{
 }
 .mat-expansion-panel-header {
     height: auto;
+}
+.indicator-side{
+    transform: translateX(-12px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .hor,
+        .ver {
+          position: absolute;
+          background-color: #212529;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          transition: 0.5s;
+        }
+        .hor {
+            width: 24px;
+            height: 2px;
+          }
+          .ver {
+            width: 2px;
+            height: 24px;
+          }
+}
+.indicator-side-active{
+    .hor {
+        transform: translate(-50%, -50%) rotate(180deg) !important;
+      }
+      .ver {
+        transform: translate(-50%, -50%) rotate(90deg) !important;
+      }
 }

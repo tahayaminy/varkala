@@ -80,11 +80,6 @@ input:focus{
   background-color: #222222 !important;
   height: 1px !important;
 }
-.ngx-slider-pointer-min{
-  
-}
-.ngx-slider-pointer-max{
-}
 .ngx-slider-pointer{
   background-color: #222222 !important;
   border-radius: 0 !important;
@@ -112,6 +107,24 @@ input:focus{
 .ngx-slider-model-value,.ngx-slider-model-high{
   display: none !important;
 }
-.dialog > .mat-dialog-container{
-  background-color: red;
+.dialog{
+  width: calc(100% - 1rem);
+  .mat-dialog-container{
+    padding: 1rem;
+  }
+  @media only screen and (min-width:640px){
+    width: 600px !important;    
+    min-width: 600px !important;
+    max-width: 600px !important;
+  }
+  @media only screen and (min-width:1024px){
+    width: 880px !important;
+    min-width: 880px !important;
+    max-width: 880px !important;
+  }
+  @media only screen and (min-width:1200px){
+    width: 1140px !important;
+    min-width: 1140px !important;
+    max-width: 1140px !important;
+  }
 }

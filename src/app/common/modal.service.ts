@@ -11,7 +11,7 @@ export class ModalService {
   constructor(public dialog: MatDialog) { }
 
   openTempDialog(param) {
-    const myTempDialog = this.dialog.open(DialogComponent, { data: param,panelClass:'dialog' });
+    const myTempDialog = this.dialog.open(DialogComponent, { data: param,panelClass:'dialog',position:{top:'1.75rem'}});
     myTempDialog.afterClosed().subscribe((res) => {
 
       // Data back from dialog

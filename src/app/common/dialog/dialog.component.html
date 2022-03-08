@@ -1,5 +1,53 @@
-<h5>Hi I am Component Dialog following Foo list:</h5>
-<ul *ngIf="data">
-  <li *ngFor="let item of data">{{item}}</li>
-</ul>
-<button mat-button (click)="closeDialog()">Close</button>
+<article class="grid lg:grid-cols-2 grid-cols-1">
+  <section class="px-4">one</section>
+  <section class="relative details p-12">
+    <i style="font-size: 27px;" class="absolute fas fa-times right-5 top-3"></i>
+    <h2>Black blouse</h2>
+    <p>
+      <span>
+        <span>$40.00</span><span>$90.00</span>
+      </span>
+      <span class="stars">
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star crem"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+      </span>
+      <span>25 REVIEWS</span>
+    </p>
+    <p>
+      Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.
+    </p>
+    <div class="select">
+      <b>Size</b><span>(required)</span>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-select disableOptionCentering panelClass="drop-down" [(ngModel)]="selectedSort">
+          <mat-option *ngFor="let sort of sorts" [value]="sort.index">
+            {{sort.value}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div>
+      <b>Type</b><span>(required)</span>
+      <div>
+        <span>HOODIE</span>
+        <span>COLLEGE</span>
+      </div>
+    </div>
+    <div>
+      <input type="number" name="" id="">
+      <button><i class="fas fa-shopping-cart"></i> ADD TO CART</button>
+    </div>
+    <div>
+      <div><i class="far fa-heart"></i> Add to wishlist</div>
+      <div><i class="fab fa-facebook-f"></i><i class="fab fa-twitter"></i></div>
+    </div>
+    <div>
+      <b>Category:</b><span> Tops & blouses</span><br>
+      <b>Tags:</b><span>  Leisure,Elegant</span>
+    </div>
+  </section>
+</article>

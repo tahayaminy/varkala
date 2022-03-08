@@ -11,6 +11,7 @@ export class ProductPreviewComponent implements OnInit {
   constructor(public modal:ModalService) { }
 
   ngOnInit(): void {
+    this.modal.openTempDialog(this.myFooList);
   }
   myFooList = ['1 Item', '2 Second', '3 In Row', '4 to write', '5 To Do']
   modalOpen(){

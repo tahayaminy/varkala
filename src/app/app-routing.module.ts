@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ProductPreviewComponent } from './common/product-preview/product-preview.component';
 
 const routes: Routes = [
   {path:'',
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path:'category-full',
     loadChildren:()=>import('./category-full/category-full.module').then(m=>m.CategoryFullModule)
+  },
+  {
+    path:'tst',
+    component: ProductPreviewComponent
   },
   {
     path: '**', redirectTo: '', pathMatch: 'full'

@@ -12,9 +12,12 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { RouterModule } from '@angular/router';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ProductPreviewComponent } from './product-preview/product-preview.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 @NgModule({
-  declarations: [NavbarComponent,ProductListComponent],
+  declarations: [NavbarComponent,ProductListComponent, ProductPreviewComponent, DialogComponent],
   imports: [
     CommonModule,
     MatMenuModule,
@@ -26,7 +29,8 @@ import { FormsModule } from '@angular/forms';
     MatSidenavModule,
     RouterModule,
     MatSelectModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ],
   exports:[NavbarComponent,ProductListComponent]
 })

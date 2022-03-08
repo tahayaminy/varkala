@@ -112,3 +112,6 @@ input:focus{
 .ngx-slider-model-value,.ngx-slider-model-high{
   display: none !important;
 }
+.dialog > .mat-dialog-container{
+  background-color: red;
+}

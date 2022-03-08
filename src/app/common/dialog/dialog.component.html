@@ -3,51 +3,61 @@
   <section class="relative details p-12">
     <i style="font-size: 27px;" class="absolute fas fa-times right-5 top-3"></i>
     <h2>Black blouse</h2>
-    <p>
-      <span>
-        <span>$40.00</span><span>$90.00</span>
+    <p class="flex pb-3 flex-wrap">
+      <span class="price basis-full sm:mb-0 mb-2 sm:basis-auto">
+        <span class="mr-2">$40.00</span><span>$90.00</span>
       </span>
-      <span class="stars">
+      <span class="basis-full sm:basis-auto ml-auto">
+        <span class="stars pr-2">
           <i class="fas fa-star crem"></i>
           <i class="fas fa-star crem"></i>
           <i class="fas fa-star crem"></i>
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
       </span>
-      <span>25 REVIEWS</span>
+      <span class="review">25 REVIEWS</span>
+      </span>
     </p>
-    <p>
+    <p class="mute pb-3">
       Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.
     </p>
-    <div class="select">
-      <b>Size</b><span>(required)</span>
-      <br>
-      <mat-form-field appearance="fill">
-        <mat-select disableOptionCentering panelClass="drop-down" [(ngModel)]="selectedSort">
-          <mat-option *ngFor="let sort of sorts" [value]="sort.index">
-            {{sort.value}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-    </div>
-    <div>
-      <b>Type</b><span>(required)</span>
-      <div>
-        <span>HOODIE</span>
-        <span>COLLEGE</span>
+    <div class="flex flex-wrap">
+      <div class="select lg:basis-full basis-full sm:basis-auto mb-6">
+        <div class="mb-2">
+          <b>Size </b><span class="light"> (required)</span>
+        </div>
+        
+        <mat-form-field appearance="fill">
+          <mat-select disableOptionCentering panelClass="drop-down" [(ngModel)]="selectedSort">
+            <mat-option *ngFor="let sort of sorts" [value]="sort.index">
+              {{sort.value}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="lg:basis-full basis-full ml-auto sm:basis-auto">
+        <b>Type </b><span class="light"> (required)</span>
+        <div class="mt-3 pb-12 type">
+          <span>HOODIE</span>
+          <span>COLLEGE</span>
+        </div>
       </div>
     </div>
-    <div>
-      <input type="number" name="" id="">
-      <button><i class="fas fa-shopping-cart"></i> ADD TO CART</button>
+    <div class="flex shop mb-6">
+      <input class="basis-2/12" value="1" type="number" name="" id="">
+      <button class="basis-10/12"><i class="fas fa-shopping-cart"></i> ADD TO CART</button>
     </div>
-    <div>
-      <div><i class="far fa-heart"></i> Add to wishlist</div>
-      <div><i class="fab fa-facebook-f"></i><i class="fab fa-twitter"></i></div>
+    <div class="flex mb-6">
+      <div class="crem"><i class="far fa-heart"></i> Add to wishlist</div>
+      <div class="ml-auto whitespace-nowrap"><i class="fab fa-facebook-f"></i><i class="fab fa-twitter ml-2"></i></div>
     </div>
-    <div>
-      <b>Category:</b><span> Tops & blouses</span><br>
-      <b>Tags:</b><span>  Leisure,Elegant</span>
+    <div class="footer">
+      <div>
+        <b>Category:</b><span class="mute"> Tops & blouses</span>
+      </div>
+      <div>
+        <b>Tags:</b><span class="mute">  Leisure,Elegant</span>
+      </div>
     </div>
   </section>
 </article>

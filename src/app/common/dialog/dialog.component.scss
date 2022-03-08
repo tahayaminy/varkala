@@ -1,6 +1,8 @@
 $gray: #868e96;
 $black: #212529;
 $crem: #bcac76;
+$light: #adb5bd;
+
 .mat-form-field-label-wrappe {
   display: none;
 }
@@ -38,6 +40,11 @@ $crem: #bcac76;
 }
 .crem {
   color: $crem;
+  opacity: 1 !important;
+}
+.mute{
+  color:$gray;
+  line-height: 1.6;
 }
 article {
   .details {
@@ -46,11 +53,44 @@ article {
       @media only screen and (min-width: 1200px) {
         font-size: 2rem !important;
       }
+      margin-top: 4px;
+      margin-bottom: 38px;
     }
     .stars {
-      font-size: 11px;
+      font-size: 13px;
       color: $gray;
+      .fa-star{
+        opacity: .3;
+      }
     }
+    .price{
+      span{
+        &:first-child{
+          font-size: calc(1.275rem + .3vw);
+          @media only screen and (min-width:1200px){
+            font-size: 1.5rem;
+          }
+        }
+        &:last-child{
+          color:$gray;
+          text-decoration: line-through;
+        }
+      }
+    }
+    .review{
+      letter-spacing: .15em;
+      font-size: .875rem;
+      color:$gray;
+    }
+    
+    b{
+      font-family: regular;
+    }
+    .light{
+      color:$light;
+      font-size: .8rem;
+    }
+    //ABOUT SELECT
     .select {
       //REMOVE ITS DESIGN
       .mat-form-field-appearance-fill .mat-form-field-flex {
@@ -120,6 +160,42 @@ article {
         font-family: "medium";
         letter-spacing: 0.3em;
       }
+    }
+    .type{
+      span{
+        padding: .5rem .6rem;
+        font-size: .7rem;
+        letter-spacing: .3em;
+        margin-bottom: 48px;
+        &:first-child{
+          background-color: $crem;
+          color: #000;
+          margin-right: 4px;
+        }
+        &:last-child{
+          border: 2px solid $crem;
+          color: $crem;
+        }
+      }
+    }
+    .shop{
+      button{
+        color: white;
+        background-color: $black;
+        padding: .375rem .75rem;
+        line-height: 3;
+        font-size: .75rem;
+        letter-spacing: .3em;
+      }
+      input{
+        border: 1px solid rgb(206, 212, 218);
+        min-width: 0;
+        padding: .5rem 1rem;
+        color: $black;
+      }
+    }
+    .footer{
+      line-height: 1.6;
     }
   }
 }

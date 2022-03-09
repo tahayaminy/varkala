@@ -29,7 +29,7 @@ export class DialogComponent implements OnInit {
     this.fromDialog = "I am from dialog land...";
   }
 
-  closeDialog() { this.dialogRef.close({ event: 'close', data: this.fromDialog }); }
+  closeDialog() { this.dialogRef.close({ event: 'close'}); }
   sorts: Sort[] = [
     {index: 1,value: 'Small'},
     {index: 2,value: 'Medium'},

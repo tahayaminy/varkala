@@ -1,0 +1,232 @@
+$gray: #868e96;
+$black: #212529;
+$crem: #bcac76;
+$light: #adb5bd;
+.mat-form-field-label-wrappe {
+  display: none;
+}
+.drop-down {
+  position: absolute !important;
+  top: 36px !important;
+  left: 8px;
+  border-radius: 0 !important;
+  max-width: none !important;
+  width: 100%;
+  @media only screen and (min-width: 1024px) {
+    width: 300px;
+  }
+  @media only screen and (min-width: 1200px) {
+    width: 450px;
+  }
+}
+.mat-select-panel {
+  padding: 3px 0 !important;
+}
+.mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
+  background-color: $crem;
+  color: white;
+}
+.mat-option {
+  line-height: 3em;
+  height: 2.5em !important;
+  color: $black;
+  letter-spacing: 0.01em;
+  width: 100%;
+}
+.mat-option-text {
+  font-size: 0.85em;
+  font-family: regular;
+}
+.crem {
+  color: $crem;
+  opacity: 1 !important;
+}
+.gray{
+  color: $gray;
+}
+.bg-red{
+  background-color: #dc3545;
+}
+.bg-black{
+  background-color: $black;
+}
+.bg-crem{
+  background-color: $crem;
+}
+.mute{
+  color: $gray;
+}
+header {
+  div > span {
+    font-size: 14px;
+    letter-spacing: 0.01em;
+  }
+  span:first-child {
+    color: $crem;
+  }
+  span:nth-child(3) {
+    color: $crem;
+  }
+  span:nth-child(2),span:nth-child(4){
+      color: $black;
+  }
+  span:nth-child(5) {
+    color: $gray;
+    font-size: 1.25rem;
+  }
+}
+.details {
+  width: 100%;
+    position: sticky;
+    top: 150px;
+    h2 {
+      font-size: calc(1.325rem + 0.9vw);
+      @media only screen and (min-width: 1200px) {
+        font-size: 2rem !important;
+      }
+      margin-top: 4px;
+      margin-bottom: 38px;
+    }
+    .stars {
+      font-size: 13px;
+      color: $gray;
+      .fa-star{
+        opacity: .3;
+      }
+    }
+    .price{
+      span{
+        &:first-child{
+          font-size: calc(1.275rem + .3vw);
+          @media only screen and (min-width:1200px){
+            font-size: 1.5rem;
+          }
+        }
+        &:last-child{
+          color:$gray;
+          text-decoration: line-through;
+        }
+      }
+    }
+    .review{
+      letter-spacing: .15em;
+      font-size: .875rem;
+      color:$gray;
+    }
+    
+    b{
+      font-family: regular;
+    }
+    .light{
+      color:$light;
+      font-size: .8rem;
+    }
+    //ABOUT SELECT
+    .select {
+      //REMOVE ITS DESIGN
+      .mat-form-field-appearance-fill .mat-form-field-flex {
+        padding: 0;
+      }
+      .mat-select-arrow {
+        display: none;
+      }
+      .mat-select-arrow-wrapper {
+        display: block;
+        &:hover {
+          &::after {
+            color: hsl(0, 0%, 60%);
+          }
+        }
+        &::after {
+          transition: 0.15s;
+          content: "\f107";
+          font-weight: 900;
+          padding: 8px;
+          font-family: "Font Awesome 5 Free";
+          color: hsl(0, 0%, 80%);
+        }
+      }
+      .mat-form-field-underline {
+        display: none;
+      }
+      .mat-select-value {
+        text-transform: uppercase;
+        padding-left: 2px;
+      }
+      .mat-form-field-appearance-fill .mat-select-arrow-wrapper {
+        transform: translateY(10%);
+      }
+      .mat-form-field-wrapper {
+        padding: 0;
+      }
+      .mat-form-field-appearance-fill {
+        padding: 0;
+      }
+      .mat-form-field-infix {
+        flex: none;
+        border-top: none;
+        //ADD CUSTOME DESIGN
+        width: 200px;
+        padding: 8px 4px 8px 8px;
+        min-height: 38px;
+      }
+      .mat-form-field-wrapper {
+        border: 1px solid hsl(0, 0%, 80%);
+        border-radius: 1px;
+        transition: 0.15s;
+        &:hover {
+          border: 1px solid hsl(0, 0%, 60%);
+        }
+        &:focus-within {
+          border: 1px solid $crem;
+          outline: 5px solid rgba($color: $crem, $alpha: 0.2);
+          border-radius: 0;
+        }
+      }
+      .mat-form-field-flex {
+        background-color: transparent;
+      }
+      .mat-select-min-line {
+        font-size: 12.8px;
+        font-family: "medium";
+        letter-spacing: 0.3em;
+      }
+    }
+    .type{
+      span{
+        padding: .5rem .6rem;
+        font-size: .7rem;
+        letter-spacing: .3em;
+        margin-bottom: 48px;
+        &:first-child{
+          background-color: $crem;
+          color: #000;
+          margin-right: 4px;
+        }
+        &:last-child{
+          border: 2px solid $crem;
+          color: $crem;
+        }
+      }
+    }
+    .shop{
+      button{
+        color: white;
+        background-color: $black;
+        padding: .375rem .75rem;
+        line-height: 3;
+        font-size: .75rem;
+        letter-spacing: .3em;
+      }
+      input{
+        border: 1px solid rgb(206, 212, 218);
+        min-width: 0 !important;
+        max-width: 5rem;
+        padding: .5rem 1rem .5rem 1.5rem;
+        color: $black;
+      }
+    }
+    .footer{
+      line-height: 1.6;
+    }
+  }

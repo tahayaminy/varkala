@@ -5,6 +5,8 @@ import { ProductDetailRoutingModule } from './product-detail-routing.module';
 import { ProductComponent } from './product/product.component';
 import { CommonShareModule } from '../common/common-share.module';
 
+import { MatSelectModule } from '@angular/material/select';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,12 @@ import { CommonShareModule } from '../common/common-share.module';
   imports: [
     CommonModule,
     CommonShareModule,
-    ProductDetailRoutingModule
+    ProductDetailRoutingModule,
+    MatSelectModule,
+    FormsModule
+  ],
+  exports: [
+    ProductComponent
   ]
 })
 export class ProductDetailModule { }

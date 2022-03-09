@@ -22,6 +22,10 @@ const routes: Routes = [
     loadChildren:()=>import('./category-full/category-full.module').then(m=>m.CategoryFullModule)
   },
   {
+    path:'product',
+    loadChildren:()=>import('./product-detail/product-detail.module').then(m=>m.ProductDetailModule)
+  },
+  {
     path:'tst',
     component: ProductPreviewComponent
   },

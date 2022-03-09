@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
 import { ShoppingModule } from './shopping/shopping.module';
 import { ShopFormModule } from './shopping/shop-form/shop-form.module';
 import { CategoryFullModule } from './category-full/category-full.module';
+import { ProductDetailModule } from './product-detail/product-detail.module';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { CategoryFullModule } from './category-full/category-full.module';
     WishlistModule,
     ShoppingModule,
     ShopFormModule,
-    CategoryFullModule
+    CategoryFullModule,
+    ProductDetailModule
   ],
   providers: [],
   bootstrap: [AppComponent]

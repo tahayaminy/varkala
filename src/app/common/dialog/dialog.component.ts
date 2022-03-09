@@ -24,8 +24,9 @@ export class DialogComponent implements OnInit {
 
   closeDialog() { this.dialogRef.close({ event: 'close', data: this.fromDialog }); }
   sorts: Sort[] = [
-    {index: 1,value: 'Default'},
-    {index: 2,value: 'Rating'}
+    {index: 1,value: 'Small'},
+    {index: 2,value: 'Medium'},
+    {index: 3,value: 'Large'}
   ];
   selectedSort=1;
 }

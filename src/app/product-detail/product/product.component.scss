@@ -2,6 +2,7 @@ $gray: #868e96;
 $black: #212529;
 $crem: #bcac76;
 $light: #adb5bd;
+
 .mat-form-field-label-wrappe {
   display: none;
 }
@@ -228,5 +229,40 @@ header {
     }
     .footer{
       line-height: 1.6;
+    }
+  }
+  .intro-tab{
+    border-bottom: 1px solid #dee2e6;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(222, 226, 230);
+    span{
+      color:$black;
+      padding: 16px 24px;
+      display: inline-block;
+      letter-spacing: .1em;
+      font-size: 0.8rem;
+      border-bottom: 1px solid $black;
+    }
+}
+  .intro{
+    h5{
+      font-size: 1.25rem;
+    }
+    p,li{
+      color: $gray;
+      letter-spacing: .01em;
+      line-height: 1.6;
+    }
+    p{
+      margin-bottom: 16px;
+    }
+    li{
+      list-style-type: disc;
+      list-style-position: inside;
+      margin-left: 10px;
+    }
+    div{
+      padding: 0 15px;
     }
   }

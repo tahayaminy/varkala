@@ -1,6 +1,13 @@
 import { Component, OnInit, Inject, Optional,ViewEncapsulation } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
+
+// import Swiper core and required modules
+import SwiperCore, { FreeMode, Navigation, Thumbs } from "swiper";
+
+// install Swiper modules
+SwiperCore.use([FreeMode, Navigation, Thumbs]);
+
 interface Sort{
   index:number
   value:string
@@ -29,4 +36,6 @@ export class DialogComponent implements OnInit {
     {index: 3,value: 'Large'}
   ];
   selectedSort=1;
+  //thumbs
+  thumbsSwiper: any;
 }

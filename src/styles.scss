@@ -120,9 +120,28 @@ input:focus{
 .ngx-slider-model-value,.ngx-slider-model-high{
   display: none !important;
 }
+.cdk-global-overlay-wrapper{
+  display: block !important;
+  justify-content: unset !important;
+  align-items: unset !important;
+  height: 94vh !important;
+}
 .dialog{
+  .badge {
+    background-color: #bcac76;
+    color: white;
+    padding: 0px 8px 2px 8px;
+    font-size: 12px;
+    border-radius: 5px;
+    top: 15px;
+    left: 15px;
+    z-index: 50;
+  }
+  margin-left: auto;
+  margin-right: auto;
   width: calc(100% - 1rem);
   @include hideScroll('&');
+  overflow-y: auto;
   .mat-dialog-container{
     padding: 1rem;
   }

@@ -15,7 +15,7 @@ import { FormsModule } from '@angular/forms';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ProductPreviewComponent } from './product-preview/product-preview.component';
 import { DialogComponent } from './dialog/dialog.component';
-
+import { SwiperModule } from 'swiper/angular';
 @NgModule({
   declarations: [NavbarComponent,ProductListComponent, ProductPreviewComponent, DialogComponent],
   imports: [
@@ -30,7 +30,8 @@ import { DialogComponent } from './dialog/dialog.component';
     RouterModule,
     MatSelectModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    SwiperModule
   ],
   exports:[NavbarComponent,ProductListComponent]
 })

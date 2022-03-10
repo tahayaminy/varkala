@@ -7,6 +7,7 @@ import { CommonShareModule } from '../common/common-share.module';
 
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
+import { SwiperModule } from 'swiper/angular';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     CommonShareModule,
     ProductDetailRoutingModule,
     MatSelectModule,
-    FormsModule
+    FormsModule,
+    SwiperModule
   ],
   exports: [
     ProductComponent

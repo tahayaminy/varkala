@@ -17,6 +17,7 @@ import { CategoryFullModule } from './category-full/category-full.module';
 import { ProductDetailModule } from './product-detail/product-detail.module';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

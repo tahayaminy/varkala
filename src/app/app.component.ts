@@ -5,5 +5,5 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'varkala';  
+  title = 'Varkala';  
 }

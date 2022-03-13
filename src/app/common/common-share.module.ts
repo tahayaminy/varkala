@@ -16,6 +16,15 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { ProductPreviewComponent } from './product-preview/product-preview.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { SwiperModule } from 'swiper/angular';
+
+import { TranslateModule,TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClientModule,HttpClient } from '@angular/common/http';
+
+export function HttpLoaderFactory(http:HttpClient){
+  return new TranslateHttpLoader(http);
+}
+
 @NgModule({
   declarations: [NavbarComponent,ProductListComponent, ProductPreviewComponent, DialogComponent],
   imports: [
@@ -31,7 +40,15 @@ import { SwiperModule } from 'swiper/angular';
     MatSelectModule,
     FormsModule,
     MatDialogModule,
-    SwiperModule
+    SwiperModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader:{
+        provide:TranslateLoader,
+        useFactory:HttpLoaderFactory,
+        deps:[HttpClient]
+      }
+    })
   ],
   exports:[NavbarComponent,ProductListComponent]
 })

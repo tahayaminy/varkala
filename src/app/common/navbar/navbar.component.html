@@ -15,7 +15,7 @@
       >
     </div>
     <div class="md:justify-center inline-flex items-center w-full">
-      Free in-store delivery
+      {{'navbar.title' | translate}}
     </div>
     <div class="hidden justify-end sm:inline-flex items-center w-full">
       <button mat-button [matMenuTriggerFor]="lang" class="mx-4">
@@ -23,8 +23,8 @@
       </button>
       <mat-menu class="mt-4 py-2" #lang="matMenu" xPosition="before">
         <section class="mat-upper-nav">
-          <b mat-menu-item class="mat-item font-medium">German</b>
-          <b mat-menu-item class="mat-item font-medium">French</b>
+          <b (click)="translate.use('deu')" mat-menu-item class="mat-item font-medium">German</b>
+          <b (click)="translate.use('fr')" mat-menu-item class="mat-item font-medium">French</b>
         </section>
       </mat-menu>
       <button

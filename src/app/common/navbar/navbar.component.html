@@ -19,12 +19,12 @@
     </div>
     <div class="hidden justify-end sm:inline-flex items-center w-full">
       <button mat-button [matMenuTriggerFor]="lang" class="mx-4">
-        English <i class="fas fa-caret-down"></i>
+        {{ ('navbar.lang' | translate)[0] }} <i class="fas fa-caret-down"></i>
       </button>
       <mat-menu class="mt-4 py-2" #lang="matMenu" xPosition="before">
         <section class="mat-upper-nav">
-          <b (click)="translate.use('deu')" mat-menu-item class="mat-item font-medium">German</b>
-          <b (click)="translate.use('fr')" mat-menu-item class="mat-item font-medium">French</b>
+          <b (click)="translate.use('deu')" mat-menu-item class="mat-item font-medium">{{('navbar.lang' | translate)[1]}}</b>
+          <b (click)="translate.use('fr')" mat-menu-item class="mat-item font-medium">{{('navbar.lang' | translate)[2]}}</b>
         </section>
       </mat-menu>
       <button
@@ -33,7 +33,7 @@
         class="pl-4"
         style="border-left: 1px solid #dee2e6"
       >
-        USD <i class="fas fa-caret-down"></i>
+      {{ ('navbar.money' | translate)[0] }} <i class="fas fa-caret-down"></i>
       </button>
       <mat-menu
         class="mt-4 py-2"
@@ -42,8 +42,8 @@
         yPosition="below"
       >
         <section class="mat-upper-nav">
-          <b mat-menu-item class="mat-item font-medium">EUR</b>
-          <b mat-menu-item class="mat-item font-medium">GBP</b>
+          <b mat-menu-item class="mat-item font-medium">{{ ('navbar.money' | translate)[1] }}</b>
+          <b mat-menu-item class="mat-item font-medium">{{ ('navbar.money' | translate)[2] }}</b>
         </section>
       </mat-menu>
     </div>
@@ -53,7 +53,7 @@
     class="lg:py-5 py-2 lg:px-12 main-navbar"
   >
     <section class="flex items-center lg:px-0 px-2">
-      <span class="text-black w-full py-2 lg:w-auto lg:mr-4">Varkala</span>
+      <span class="text-black w-full py-2 lg:w-auto lg:mr-4">{{ 'navbar.brand' | translate }}</span>
       <!-- LARGE SCREEN MENU -->
       <ul class="hidden lg:block menu-cont">
         <li
@@ -63,26 +63,16 @@
           class="inline-block p-2 pr-2"
           [ngClass]="homeAngle.menuOpen ? 'text-black' : ''"
         >
-          Home
+        {{ ('navbar.menu.home.name' | translate) }} 
           <i
             [ngClass]="homeAngle.menuOpen ? 'angle-180' : 'angle-0'"
             class="fas text-xs fa-angle-down"
           ></i>
         </li>
         <mat-menu class="mt-4 py-2" #home="matMenu">
-          <button mat-menu-item class="mat-item mat-submenu-item">
-            Home 1 - Fashion
-          </button>
-          <button mat-menu-item class="mat-item mat-submenu-item">
-            Home 2 - Fashion
-          </button>
-          <button mat-menu-item class="mat-item mat-submenu-item">
-            Home 3 - Design
-            <b class="new inline-block rounded ml-1 fs-10">New</b>
-          </button>
-          <button mat-menu-item class="mat-item mat-submenu-item">
-            Home 4 - Design
-            <b class="new inline-block rounded ml-1 fs-10">New</b>
+          <button *ngFor="let item of 'navbar.menu.home.submenu' | translate " mat-menu-item class="mat-item mat-submenu-item">
+            {{ item[0] }}
+            <b *ngIf="item[1]" class="new inline-block rounded ml-1 fs-10">New</b>
           </button>
         </mat-menu>
         <li
@@ -91,7 +81,7 @@
           class="inline-block p-2 pr-2"
           [ngClass]="shopAngle.menuOpen ? 'text-black' : ''"
         >
-          Shop
+        {{ ('navbar.menu.shop.name' | translate) }} 
           <i
             [ngClass]="shopAngle.menuOpen ? 'angle-180' : 'angle-0'"
             class="fas text-xs fa-angle-down"
@@ -100,25 +90,19 @@
         <mat-menu class="mt-4 p-0" #shop="matMenu">
           <section class="flex">
             <div class="mat-shop-item pl-8 py-12 pr-0">
-              <b class="py-2 inline-block">Shop pages</b>
-              <span class="mat-item">Full width</span>
-              <span class="mat-item">Full width with category Menu</span>
-              <span class="mat-item">Full width with big products</span>
-              <span class="mat-item">Fixed width</span>
-              <span class="mat-item">Fixed width & sidebar</span>
-              <span class="inline-block mat-item withNew"
-                >Fixed width & masonry Layout<b
-                  class="new inline-block rounded ml-1 fs-10"
-                  >New</b
-                ></span
-              >
-              <span class="mat-item">Subcategories</span>
+              <b class="py-2 inline-block">{{('navbar.menu.shop.menus' | translate)[0]?.b}}</b>
+              <span *ngFor="let item of ('navbar.menu.shop.menus' | translate)[0]?.span" [ngClass]="[item[1] ? 'inline-block withNew': '']" class="mat-item">
+                {{item[0]}}
+                <b *ngIf="item[1]" class="new inline-block rounded ml-1 fs-10">New</b>
+              </span>
+              
             </div>
-            <div class="mat-shop-item pl-4 pr-12 py-12">
-              <b class="py-2 inline-block">Product pages</b>
-              <span class="mat-item">Product with sticky info</span>
-              <span class="mat-item">Product with background</span>
-              <span class="mat-item">product standard</span>
+            <div class="mat-shop-item pl-4 py-12 pr-12 ">
+              <b class="py-2 inline-block">{{('navbar.menu.shop.menus' | translate)[1]?.b}}</b>
+              <span *ngFor="let item of ('navbar.menu.shop.menus' | translate)[1]?.span" [ngClass]="[item[1] ? 'inline-block withNew': '']" class="mat-item">
+                {{item[0]}}
+                <b *ngIf="item[1]" class="new inline-block rounded ml-1 fs-10">New</b>
+              </span>
             </div>
             <div
               style="
@@ -205,7 +189,7 @@
           tabindex="0"
           class="text-black inline-block p-2 pr-2"
         >
-          Pages <i class="fas text-xs fa-angle-down"></i>
+        {{('navbar.menu.page.name' | translate)}} <i class="fas text-xs fa-angle-down"></i>
         </li>
         <section
           id="pageSub"
@@ -214,117 +198,63 @@
           <section class="basis-1/4">
             <img class="mb-7" src="../assets/img/pages-menu-1.jpg" alt="" />
             <div class="mb-5">
-              <b class="mb-2 text-black">Homepage</b>
-              <span class="mat-item pb-1">Home 1 - Fashion</span>
-              <span class="mat-item pb-1">Home 2 - Fashion</span>
-              <span class="mat-item pb-1"
-                >Home 3 - Desing
-                <b class="new inline-block rounded">New</b></span
-              >
-              <span class="mat-item pb-1"
-                >Home 4 - Desing
-                <b class="new inline-block rounded">New</b></span
-              >
+              <b class="mb-2 text-black">{{('navbar.menu.page.cols' | translate)[0][0]?.b}}</b>
+              <span *ngFor="let item of ('navbar.menu.page.cols' | translate)[0][0]?.span" class="mat-item pb-1">
+                {{item[0]}}
+                <b *ngIf="item[1]" class="new inline-block rounded">New</b>
+              </span>
             </div>
             <div class="mb-5">
-              <b class="mb-2 text-black">Category</b>
-              <span class="mat-item pb-1">Full width</span>
-              <span class="mat-item pb-1">Full width with category Menu</span>
-              <span class="mat-item pb-1">Full width with big products</span>
-              <span class="mat-item pb-1">Fixed width</span>
-              <span class="mat-item pb-1">Fixed width & sidebar</span>
-              <span style="white-space: nowrap" class="pb-1 mat-item"
-                >Fixed width & masonry Layout
-                <b class="new inline-block rounded">New</b></span
-              >
-              <span class="pb-1">Subcategories</span>
+              <b class="mb-2 text-black">{{('navbar.menu.page.cols' | translate)[0][1]?.b}}</b>
+              <span style="white-space: nowrap;" *ngFor="let item of ('navbar.menu.page.cols' | translate)[0][1]?.span" class="mat-item pb-1">
+                {{item[0]}}
+                <b *ngIf="item[1]" class="new inline-block rounded">New</b>
+              </span>
             </div>
           </section>
           <section class="basis-1/4">
             <img class="mb-7" src="../assets/img/pages-menu-2.jpg" alt="" />
             <div class="mb-5">
-              <b class="mb-2 text-black">Oreder process</b>
-              <span class="mat-item pb-1">shopping Cart</span>
-              <span class="mat-item pb-1"
-                >Checkout - Five steps
-                <b class="new inline-block rounded">New</b></span
-              >
-              <span class="mat-item pb-1">Checkout - Single-page</span>
-              <span class="mat-item pb-1">Checkout - confirmed</span>
-              <span class="mat-item pb-1">Wishlist</span>
+              <b class="mb-2 text-black">{{('navbar.menu.page.cols' | translate)[1][0]?.b}}</b>
+              <span *ngFor="let item of ('navbar.menu.page.cols' | translate)[1][0]?.span" class="mat-item pb-1">
+                {{item[0]}}
+                <b *ngIf="item[1]" class="new inline-block rounded">New</b>
+              </span>
             </div>
             <div class="mb-5">
-              <b class="mb-2 text-black">Product pages</b>
-              <span class="mat-item pb-1">Product with sticky info</span>
-              <span class="mat-item pb-1">Product with background</span>
-              <span class="mat-item pb-1">product standard</span>
+              <b class="mb-2 text-black">{{('navbar.menu.page.cols' | translate)[1][1]?.b}}</b>
+              <span *ngFor="let item of ('navbar.menu.page.cols' | translate)[1][1]?.span" class="mat-item pb-1">
+                {{item[0]}}
+                <b *ngIf="item[1]" class="new inline-block rounded">New</b>
+              </span>
             </div>
           </section>
           <section class="basis-1/4">
             <img class="mb-7" src="../assets/img/pages-menu-3.jpg" alt="" />
 
             <div class="mb-5">
-              <b class="mb-2 text-black">Blog</b>
-              <span class="mat-item pb-1">Blog</span>
-              <span class="mat-item pb-1">Blog - Masonry</span>
-              <span class="mat-item pb-1">Post</span>
+              <b class="mb-2 text-black">{{('navbar.menu.page.cols' | translate)[2][0]?.b}}</b>
+              <span *ngFor="let item of ('navbar.menu.page.cols' | translate)[2][0]?.span" class="mat-item pb-1">
+                {{item[0]}}
+                <b *ngIf="item[1]" class="new inline-block rounded">New</b>
+              </span>
             </div>
             <div class="mb-5">
-              <b class="mb-2 text-black">Page</b>
-              <span class="mat-item pb-1"
-                >About - Company
-                <b class="new inline-block rounded">New</b></span
-              >
-
-              <span class="mat-item pb-1"
-                >About v.2 - Person
-                <b class="new inline-block rounded">New</b></span
-              >
-
-              <span class="mat-item pb-1"
-                >F.A.Q <b class="new inline-block rounded">New</b></span
-              >
-
-              <span class="mat-item pb-1">Contact</span>
-
-              <span class="mat-item pb-1"
-                >Privacy - policy
-                <b class="new inline-block rounded">New</b></span
-              >
+              <b class="mb-2 text-black">{{('navbar.menu.page.cols' | translate)[2][1]?.b}}</b>
+              <span *ngFor="let item of ('navbar.menu.page.cols' | translate)[2][1]?.span" class="mat-item pb-1">
+                {{item[0]}}
+                <b *ngIf="item[1]" class="new inline-block rounded">New</b>
+              </span>
             </div>
           </section>
           <section class="basis-1/4">
             <img class="mb-7" src="../assets/img/pages-menu-4.jpg" alt="" />
             <div class="mb-5">
-              <b class="mb-2 text-black">Customer</b>
-              <span class="mat-item pb-1"
-                >Login/sign up <b class="new inline-block rounded">New</b></span
-              >
-
-              <span class="mat-item pb-1"
-                >Orders <b class="new inline-block rounded">New</b></span
-              >
-
-              <span class="mat-item pb-1"
-                >Order detail <b class="new inline-block rounded">New</b></span
-              >
-
-              <span class="mat-item pb-1"
-                >Order tracking
-                <b class="new inline-block rounded">New</b></span
-              >
-
-              <span class="mat-item pb-1"
-                >Addresses <b class="new inline-block rounded">New</b></span
-              >
-
-              <span class="mat-item pb-1"
-                >Profile <b class="new inline-block rounded">New</b></span
-              >
-
-              <span class="mat-item pb-1"
-                >Wishlist <b class="new inline-block rounded">New</b></span
-              >
+              <b class="mb-2 text-black">{{('navbar.menu.page.cols' | translate)[3][0]?.b}}</b>
+              <span *ngFor="let item of ('navbar.menu.page.cols' | translate)[3][0]?.span" class="mat-item pb-1">
+                {{item[0]}}
+                <b *ngIf="item[1]" class="new inline-block rounded">New</b>
+              </span>
             </div>
           </section>
         </section>
@@ -333,7 +263,7 @@
         <div id="searchBox" class="inline-flex flex-nowrap items-center">
           <input
             style="height: 40px"
-            placeholder="Search"
+            [placeholder]="'navbar.search' | translate"
             class="border-b inline-block py-1 pr-3 pl-4"
             type="text"
             [class.bg-transparent]="index"
@@ -399,24 +329,18 @@
     <section #contMenu class="px-2" id="responsiveMenu">
       <ul class="mt-5 menu-cont">
         <li tabindex="0" style="min-height: 42px" class="py-2 pb-2 flex flex-wrap">
-          Home <i class="fas ml-auto mr-2 text-xs fa-angle-down"></i>
+          {{ ('navbar.menu.home.name' | translate) }} <i class="fas ml-auto mr-2 text-xs fa-angle-down"></i>
           <ul class="menu-cont basis-full">
-            <li class="mat-item">Home 1 - Fashion</li>
-            <li class="mat-item">Home 2 - Fashion</li>
-            <li class="mat-item">
-              Home 3 - Design
-              <b class="new inline-block rounded ml-1 fs-10">New</b>
-            </li>
-            <li class="mat-item">
-              Home 4 - Design
-              <b class="new inline-block rounded ml-1 fs-10">New</b>
+            <li *ngFor="let item of 'navbar.menu.home.submenu' | translate " class="mat-item">
+              {{ item[0] }}
+              <b *ngIf="item[1]" class="new inline-block rounded ml-1 fs-10">New</b>
             </li>
           </ul>
         </li>
-        <li tabindex="0" style="min-height: 42px" class="flex flex-wrap py-2 items-center">
+        <li tabindex="0" style="min-height: 42px" class="flex flex-wrap pt-2 items-center">
           Shop <i class="fas ml-auto mr-2 text-xs fa-angle-down"></i>
           <ul class="menu-cont basis-full flexible">
-            <div class="-mt-3">
+            <div>
               <b class="fs-14 inline-block mat-title">Shop pages</b>
               <li class="mat-item">Full width</li>
               <li class="mat-item">Full width with category Menu</li>
@@ -431,7 +355,7 @@
               </li>
               <li class="mat-item">Subcategories</li>
             </div>
-            <div>
+            <div class="ml-12">
               <b class="fs-14 inline-block mat-title">Product pages</b>
               <li class="mat-item">Product with sticky info</li>
               <li class="mat-item">Product with background</li>
@@ -612,8 +536,8 @@
       </form>
     </section>
   </section>
+  
 </nav>
-
 <mat-drawer-container class="sidenav-container" autosize [hasBackdrop]="true">
   <mat-drawer #drawer class="sidenav" mode="side" position="end">
     <div class="flex justify-end p-4">

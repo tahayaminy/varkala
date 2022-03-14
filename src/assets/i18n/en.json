@@ -1,7 +1,127 @@
 {
   "navbar": {
-    "upper":{
-      "title": "Free in-store delivery"
+    "title": "Free in-store delivery",
+    "lang": ["English", "German", "French"],
+    "money": ["USD", "EUR", "GBP"],
+    "brand": "Varkala",
+    "search": "Search",
+    "menu": {
+      "home": {
+        "name": "Home",
+        "submenu": [
+          ["Home 1 - Fashion", false],
+          ["Home 2 - Fashion", false],
+          ["Home 3 - Fashion", true],
+          ["Home 4 - Fashion", true]
+        ]
+      },
+      "shop": {
+        "name": "Shop",
+        "menus": [
+          {
+            "b": "Shop pages",
+            "span": [
+              ["Full width", false],
+              ["Full width with category Menu", false],
+              ["Full width with big products", false],
+              ["Fixed width", false],
+              ["Fixed width & sidebar", false],
+              ["Fixed width & masonry Layout", true],
+              ["Subcategories", false]
+            ]
+          },
+          {
+            "b": "Product pages",
+            "span": [
+              ["Product with sticky info", false],
+              ["Product with background", false],
+              ["product standard", false]
+            ]
+          }
+        ]
+      },
+      "page": {
+        "name": "Pages",
+        "cols": [
+          [
+            {
+              "b": "Homepage",
+              "span": [
+                ["Home 1 - Fashion", false],
+                ["Home 2 - Fashion", false],
+                ["Home 3 - Fashion", true],
+                ["Home 4 - Fashion", true]
+              ]
+            },
+            {
+              "b": "Category",
+              "span": [
+                ["Full width", false],
+                ["Full width with category Menu", false],
+                ["Full width with big products", false],
+                ["Fixed width", false],
+                ["Fixed width & sidebar", false],
+                ["Fixed width & masonry Layout", true],
+                ["Subcategories", false]
+              ]
+            }
+          ],
+          [
+            {
+              "b": "Oreder process",
+              "span": [
+                ["shopping Cart", false],
+                ["Checkout - Five steps", true],
+                ["Checkout - Single-page", false],
+                ["Checkout - confirmed", false],
+                ["Wishlist", false]
+              ]
+            },
+            {
+              "b": "Product pages",
+              "span": [
+                ["Product with sticky info", false],
+                ["Product with background", false],
+                ["product standard", false]
+              ]
+            }
+          ],
+          [
+            {
+              "b":"Blog",
+              "span":[
+                ["Blog",false],
+                ["Blogtst - Masonry",false],
+                ["Post",false]
+              ]
+            },
+            {
+              "b":"Page",
+              "span":[
+                ["About - Company",true],
+                ["About v.2 - Person",true],
+                ["F.A.Q",true],
+                ["Contact",false],
+                ["Privacy - policy",true]
+              ]
+            }
+          ],
+          [
+            {
+              "b":"Customer",
+              "span":[
+                ["Login/sign up",true],
+                ["Orders",true],
+                ["Order detail",true],
+                ["Order tracking",true],
+                ["Addresses",true],
+                ["Profile",true],
+                ["Wishlist",true]
+              ]
+            }
+          ]
+        ]
+      }
     }
   }
 }

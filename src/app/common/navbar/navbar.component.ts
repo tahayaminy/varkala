@@ -15,11 +15,16 @@ export class NavbarComponent implements OnInit {
     translate.setDefaultLang('en');
     const browserLang=translate.getBrowserLang();
     translate.use(browserLang?.match(/en|deu|fr/) ? browserLang : 'en');
-    this.translate.get('navbar').subscribe(val=>{this.navbar=val;console.log(this.navbar)});
   }
   
   navbar:any;
   ngOnInit(): void {
+    
+    this.translate.get('navbar').subscribe(val=>{this.navbar=val;console.log(this.navbar)});
+  }
+  translator(lang){
+    this.translate.use(lang);
+    this.translate.get('navbar').subscribe(val=>{this.navbar=val;console.log(this.navbar)});
   }
 
   Menu=false;

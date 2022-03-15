@@ -23,8 +23,8 @@
       </button>
       <mat-menu class="mt-4 py-2" #lang="matMenu" xPosition="before">
         <section class="mat-upper-nav">
-          <b (click)="translate.use('deu')" mat-menu-item class="mat-item font-medium">{{('navbar.lang' | translate)[1]}}</b>
-          <b (click)="translate.use('fr')" mat-menu-item class="mat-item font-medium">{{('navbar.lang' | translate)[2]}}</b>
+          <b (click)="translator('deu')" mat-menu-item class="mat-item font-medium">{{('navbar.lang' | translate)[1]}}</b>
+          <b (click)="translator('fr')" mat-menu-item class="mat-item font-medium">{{('navbar.lang' | translate)[2]}}</b>
         </section>
       </mat-menu>
       <button
@@ -178,8 +178,7 @@
             </section>
             <section class="p-4 text-center fs-14 footer">
               <p>
-                Don't miss our biggest sales this year. Use the code 'SUMMER35'
-                at checkout until Jun. 15!
+                {{'navbar.menu.iconTxt' | translate}}
               </p>
             </section>
           </section>

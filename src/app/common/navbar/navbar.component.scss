@@ -13,7 +13,10 @@ ul>li{
 @mixin icons {
   text-align: center;
   padding: 5px 15px 5px 0;
-  margin-bottom: 48px;
+  margin-bottom: 0px;
+  @media only screen and (min-width:1024px){
+    margin-bottom: 48px;
+  }
   cursor: pointer;
   &:hover {
     h6 {
@@ -84,7 +87,6 @@ nav {
     padding-top: 19.2px;
     padding-bottom: 19.2px;
   }
-  transition: 0.2s;
 }
 .mat-submenu-item {
   padding: 0 24px !important;
@@ -213,10 +215,11 @@ nav {
 }
 #responsiveMenu {
   background-color: white;
-  transition: 0.2s;
   overflow-y: hidden;
   height: 0;
+  max-height: 80vh;
   position: relative;
+  @include hidescroll('&');
   .mat-item {
     font-size: 14px;
     padding: 8px 24px;
@@ -235,6 +238,10 @@ nav {
     .mat-title {
       font-size: 16px;
     }
+    .mat-item{
+      padding-top:2.5px;padding-bottom: 5px;
+      font-size: 12.8px;
+    }
   }
   .menu-cont {
     & > li > i {
@@ -249,7 +256,6 @@ nav {
       & > ul {
         height: auto;
         padding-top: 8px;
-        padding-bottom: 8px;
         margin-top: 1rem;
       }
       color: $black-0;

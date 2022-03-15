@@ -1,7 +1,296 @@
 {
   "navbar": {
-    "upper": {
-      "title": "Kostenlose Lieferung ins Geschäft"
+    "title": "Kostenlose Lieferung ins Geschäft",
+    "lang": [
+      "Englisch",
+      "Deutsch",
+      "Französisch"
+    ],
+    "money": [
+      "USD",
+      "EUR",
+      "GBP"
+    ],
+    "brand": "Varkala",
+    "search": "Suchen",
+    "new":"Neu",
+    "menu": {
+      "home": {
+        "name": "Startseite",
+        "submenu": [
+          [
+            "Startseite 1 - Mode",
+            false
+          ],
+          [
+            "Startseite 2 - Mode",
+            false
+          ],
+          [
+            "Startseite 3 - Mode",
+            true
+          ],
+          [
+            "Startseite 4 - Mode",
+            true
+          ]
+        ]
+      },
+      "shop": {
+        "name": "Einkaufen",
+        "menus": [
+          {
+            "b": "Shopseiten",
+            "span": [
+              [
+                "Volle Breite",
+                false
+              ],
+              [
+                "Volle Breite mit Kategoriemenü",
+                false
+              ],
+              [
+                "Volle Breite mit großen Produkten",
+                false
+              ],
+              [
+                "Feste Breite",
+                false
+              ],
+              [
+                "Feste Breite & Seitenleiste",
+                false
+              ],
+              [
+                "Feste Breite & Mauerwerk-Layout",
+                true
+              ],
+              [
+                "Unterkategorien",
+                false
+              ]
+            ]
+          },
+          {
+            "b": "Produktseiten",
+            "span": [
+              [
+                "Produkt mit Sticky-Info",
+                false
+              ],
+              [
+                "Produkt mit Hintergrund",
+                false
+              ],
+              [
+                "Produktstandard",
+                false
+              ]
+            ]
+          }
+        ]
+      },
+      "icon":"Symbole",
+      "page": {
+        "name": "Seiten",
+        "cols": [
+          [
+            {
+              "b": "Startseite",
+              "span": [
+                [
+                  "Startseite 1 - Mode",
+                  false
+                ],
+                [
+                  "Startseite 2 - Mode",
+                  false
+                ],
+                [
+                  "Startseite 3 - Mode",
+                  true
+                ],
+                [
+                  "Startseite 4 - Mode",
+                  true
+                ]
+              ]
+            },
+            {
+              "b": "Kategorie",
+              "span": [
+                [
+                  "Volle Breite",
+                  false
+                ],
+                [
+                  "Volle Breite mit Kategoriemenü",
+                  false
+                ],
+                [
+                  "Volle Breite mit großen Produkten",
+                  false
+                ],
+                [
+                  "Feste Breite",
+                  false
+                ],
+                [
+                  "Feste Breite & Seitenleiste",
+                  false
+                ],
+                [
+                  "Feste Breite & Mauerwerk-Layout",
+                  true
+                ],
+                [
+                  "Unterkategorien",
+                  false
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "b": "Bestellvorgang",
+              "span": [
+                [
+                  "Warenkorb",
+                  false
+                ],
+                [
+                  "Zur Kasse – Fünf Schritte",
+                  true
+                ],
+                [
+                  "Zur Kasse – Einzelseite",
+                  false
+                ],
+                [
+                  "Zur Kasse – bestätigt",
+                  false
+                ],
+                [
+                  "Wunschliste",
+                  false
+                ]
+              ]
+            },
+            {
+              "b": "Produktseiten",
+              "product": "Produkt",
+              "span": [
+                [
+                  "Produkt mit Haftinfo",
+                  false
+                ],
+                [
+                  "Produkt mit Hintergrund",
+                  false
+                ],
+                [
+                  "Produktstandard",
+                  false
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "b": "Blog",
+              "span": [
+                [
+                  "Blog",
+                  false
+                ],
+                [
+                  "Blogtst - Mauerwerk",
+                  false
+                ],
+                [
+                  "Beitrag",
+                  false
+                ]
+              ]
+            },
+            {
+              "b": "Seite",
+              "span": [
+                [
+                  "Über - Unternehmen",
+                  true
+                ],
+                [
+                  "Über v.2 - Person",
+                  true
+                ],
+                [
+                  "F.A.Q",
+                  true
+                ],
+                [
+                  "Kontakt",
+                  false
+                ],
+                [
+                  "Datenschutz - Richtlinie",
+                  true
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "b": "Kunde",
+              "span": [
+                [
+                  "Anmelden/Registrieren",
+                  true
+                ],
+                [
+                  "Bestellungen",
+                  true
+                ],
+                [
+                  "Bestelldetails",
+                  true
+                ],
+                [
+                  "Auftragsverfolgung",
+                  true
+                ],
+                [
+                  "Adressen",
+                  true
+                ],
+                [
+                  "Profil",
+                  true
+                ],
+                [
+                  "Wunschliste",
+                  true
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    },
+    "sidebar": {
+      "varkala": "Varkala",
+      "home": "Startseite",
+      "link": "Link",
+      "disable": "Deaktiviert",
+      "dropdown": "Dropdown-Link",
+      "text": "Samsa war Handelsreisender - und darüber hing ein Bild, das er kürzlich aus einer illustrierten Zeitschrift ausgeschnitten und in einen hübschen, vergoldeten Rahmen gesteckt hatte."
+    },
+    "bag": {
+      "quantity": "Menge",
+      "subtotal": "Zwischensumme",
+      "cart": "WAGEN ANZEIGEN",
+      "check": "KASSE"
     }
   }
 }

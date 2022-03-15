@@ -1,8 +1,296 @@
 {
   "navbar": {
-    "upper": {
-      "title": "Livraison gratuite en magasin",
-      
+    "title": "Livraison gratuite en magasin",
+    "lang": [
+      "Anglais",
+      "Allemand",
+      "Français"
+    ],
+    "money": [
+      "USD",
+      "EUR",
+      "GBP"
+    ],
+    "brand": "Varkala",
+    "search": "Rechercher",
+    "new": "Nouveau",
+    "menu": {
+      "home": {
+        "name": "Accueil",
+        "submenu": [
+          [
+            "Accueil 1 - Mode",
+            false
+          ],
+          [
+            "Accueil 2 - Mode",
+            false
+          ],
+          [
+            "Accueil 3 - Mode",
+            true
+          ],
+          [
+            "Accueil 4 - Mode",
+            true
+          ]
+        ]
+      },
+      "shop": {
+        "name": "Boutique",
+        "menus": [
+          {
+            "b": "Pages de la boutique",
+            "span": [
+              [
+                "Pleine largeur",
+                false
+              ],
+              [
+                "Pleine largeur avec menu catégorie",
+                false
+              ],
+              [
+                "Pleine largeur avec gros produits",
+                false
+              ],
+              [
+                "Largeur fixe",
+                false
+              ],
+              [
+                "Largeur fixe et barre latérale",
+                false
+              ],
+              [
+                "Largeur fixe et mise en page maçonnerie",
+                true
+              ],
+              [
+                "Sous-catégories",
+                false
+              ]
+            ]
+          },
+          {
+            "b": "Pages produits",
+            "span": [
+              [
+                "Produit avec info autocollante",
+                false
+              ],
+              [
+                "Produit avec arrière-plan",
+                false
+              ],
+              [
+                "norme produit",
+                false
+              ]
+            ]
+          }
+        ]
+      },
+      "icon":"Icônes",
+      "page": {
+        "name": "Pages",
+        "cols": [
+          [
+            {
+              "b": "Accueil",
+              "span": [
+                [
+                  "Accueil 1 - Mode",
+                  false
+                ],
+                [
+                  "Accueil 2 - Mode",
+                  false
+                ],
+                [
+                  "Accueil 3 - Mode",
+                  true
+                ],
+                [
+                  "Accueil 4 - Mode",
+                  true
+                ]
+              ]
+            },
+            {
+              "b": "Catégorie",
+              "span": [
+                [
+                  "Pleine largeur",
+                  false
+                ],
+                [
+                  "Pleine largeur avec menu catégorie",
+                  false
+                ],
+                [
+                  "Pleine largeur avec gros produits",
+                  false
+                ],
+                [
+                  "Largeur fixe",
+                  false
+                ],
+                [
+                  "Largeur fixe et barre latérale",
+                  false
+                ],
+                [
+                  "Largeur fixe et mise en page maçonnerie",
+                  true
+                ],
+                [
+                  "Sous-catégories",
+                  false
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "b": "Processus de commande",
+              "span": [
+                [
+                  "Panier",
+                  false
+                ],
+                [
+                  "Commande - Cinq étapes",
+                  true
+                ],
+                [
+                  "Commande - Page unique",
+                  false
+                ],
+                [
+                  "Commande - confirmée",
+                  false
+                ],
+                [
+                  "Liste de souhaits",
+                  false
+                ]
+              ]
+            },
+            {
+              "b": "Pages produits",
+              "product": "Produit",
+              "span": [
+                [
+                  "Produit avec info collante",
+                  false
+                ],
+                [
+                  "Produit avec arrière-plan",
+                  false
+                ],
+                [
+                  "norme produit",
+                  false
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "b": "Blog",
+              "span": [
+                [
+                  "Blog",
+                  false
+                ],
+                [
+                  "Blogtst - Maçonnerie",
+                  false
+                ],
+                [
+                  "Article",
+                  false
+                ]
+              ]
+            },
+            {
+              "b": "Page",
+              "span": [
+                [
+                  "À propos - Entreprise",
+                  true
+                ],
+                [
+                  "À propos v.2 - Personne",
+                  true
+                ],
+                [
+                  "F.A.Q",
+                  true
+                ],
+                [
+                  "Contact",
+                  false
+                ],
+                [
+                  "Confidentialité - politique",
+                  true
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "b": "Client",
+              "span": [
+                [
+                  "Se connecter/s'inscrire",
+                  true
+                ],
+                [
+                  "Commandes",
+                  true
+                ],
+                [
+                  "Détail de la commande",
+                  true
+                ],
+                [
+                  "Suivi de commande",
+                  true
+                ],
+                [
+                  "Adresses",
+                  true
+                ],
+                [
+                  "Profil",
+                  true
+                ],
+                [
+                  "Liste de souhaits",
+                  true
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    },
+    "sidebar": {
+      "varkala": "Varkala",
+      "home": "Accueil",
+      "link": "Lien",
+      "disable": "Désactivé",
+      "dropdown": "Lien déroulant",
+      "text": "Samsa était un vendeur ambulant - et au-dessus était accrochée une photo qu'il avait récemment découpée dans un magazine illustré et logée dans un joli cadre doré."
+    },
+    "bag": {
+      "quantity": "Quantité",
+      "subtotal": "Sous-total",
+      "cart": "VOIR PANIER",
+      "check": "CHECKOUT"
     }
   }
 }

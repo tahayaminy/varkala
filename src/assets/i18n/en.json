@@ -5,6 +5,7 @@
     "money": ["USD", "EUR", "GBP"],
     "brand": "Varkala",
     "search": "Search",
+    "new": "New",
     "menu": {
       "home": {
         "name": "Home",

@@ -72,7 +72,7 @@
         <mat-menu class="mt-4 py-2" #home="matMenu">
           <button *ngFor="let item of 'navbar.menu.home.submenu' | translate " mat-menu-item class="mat-item mat-submenu-item">
             {{ item[0] }}
-            <b *ngIf="item[1]" class="new inline-block rounded ml-1 fs-10">New</b>
+            <b *ngIf="item[1]" class="new inline-block rounded ml-1 fs-10">{{'navbar.new' | translate}}</b>
           </button>
         </mat-menu>
         <li
@@ -93,7 +93,7 @@
               <b class="py-2 inline-block">{{('navbar.menu.shop.menus' | translate)[0]?.b}}</b>
               <span *ngFor="let item of ('navbar.menu.shop.menus' | translate)[0]?.span" [ngClass]="[item[1] ? 'inline-block withNew': '']" class="mat-item">
                 {{item[0]}}
-                <b *ngIf="item[1]" class="new inline-block rounded ml-1 fs-10">New</b>
+                <b *ngIf="item[1]" class="new inline-block rounded ml-1 fs-10">{{'navbar.new' | translate}}</b>
               </span>
               
             </div>
@@ -101,7 +101,7 @@
               <b class="py-2 inline-block">{{('navbar.menu.shop.menus' | translate)[1]?.b}}</b>
               <span *ngFor="let item of ('navbar.menu.shop.menus' | translate)[1]?.span" [ngClass]="[item[1] ? 'inline-block withNew': '']" class="mat-item">
                 {{item[0]}}
-                <b *ngIf="item[1]" class="new inline-block rounded ml-1 fs-10">New</b>
+                <b *ngIf="item[1]" class="new inline-block rounded ml-1 fs-10">{{'navbar.new' | translate}}</b>
               </span>
             </div>
             <div
@@ -201,14 +201,14 @@
               <b class="mb-2 text-black">{{('navbar.menu.page.cols' | translate)[0][0]?.b}}</b>
               <span *ngFor="let item of ('navbar.menu.page.cols' | translate)[0][0]?.span" class="mat-item pb-1">
                 {{item[0]}}
-                <b  class="new inline-block rounded">New</b>
+                <b  class="new inline-block rounded">{{'navbar.new' | translate}}</b>
               </span>
             </div>
             <div class="mb-5">
               <b class="mb-2 text-black">{{('navbar.menu.page.cols' | translate)[0][1]?.b}}</b>
               <span style="white-space: nowrap;" *ngFor="let item of ('navbar.menu.page.cols' | translate)[0][1]?.span" class="mat-item pb-1">
                 {{item[0]}}
-                <b *ngIf="item[1]" class="new inline-block rounded">New</b>
+                <b *ngIf="item[1]" class="new inline-block rounded">{{'navbar.new' | translate}}</b>
               </span>
             </div>
           </section>
@@ -218,14 +218,14 @@
               <b class="mb-2 text-black">{{('navbar.menu.page.cols' | translate)[1][0]?.b}}</b>
               <span *ngFor="let item of ('navbar.menu.page.cols' | translate)[1][0]?.span" class="mat-item pb-1">
                 {{item[0]}}
-                <b *ngIf="item[1]" class="new inline-block rounded">New</b>
+                <b *ngIf="item[1]" class="new inline-block rounded">{{'navbar.new' | translate}}</b>
               </span>
             </div>
             <div class="mb-5">
               <b class="mb-2 text-black">{{('navbar.menu.page.cols' | translate)[1][1]?.b}}</b>
               <span *ngFor="let item of ('navbar.menu.page.cols' | translate)[1][1]?.span" class="mat-item pb-1">
                 {{item[0]}}
-                <b *ngIf="item[1]" class="new inline-block rounded">New</b>
+                <b *ngIf="item[1]" class="new inline-block rounded">{{'navbar.new' | translate}}</b>
               </span>
             </div>
           </section>
@@ -236,14 +236,14 @@
               <b class="mb-2 text-black">{{('navbar.menu.page.cols' | translate)[2][0]?.b}}</b>
               <span *ngFor="let item of ('navbar.menu.page.cols' | translate)[2][0]?.span" class="mat-item pb-1">
                 {{item[0]}}
-                <b *ngIf="item[1]" class="new inline-block rounded">New</b>
+                <b *ngIf="item[1]" class="new inline-block rounded">{{'navbar.new' | translate}}</b>
               </span>
             </div>
             <div class="mb-5">
               <b class="mb-2 text-black">{{('navbar.menu.page.cols' | translate)[2][1]?.b}}</b>
               <span *ngFor="let item of ('navbar.menu.page.cols' | translate)[2][1]?.span" class="mat-item pb-1">
                 {{item[0]}}
-                <b *ngIf="item[1]" class="new inline-block rounded">New</b>
+                <b *ngIf="item[1]" class="new inline-block rounded">{{'navbar.new' | translate}}</b>
               </span>
             </div>
           </section>
@@ -253,7 +253,7 @@
               <b class="mb-2 text-black">{{('navbar.menu.page.cols' | translate)[3][0]?.b}}</b>
               <span *ngFor="let item of ('navbar.menu.page.cols' | translate)[3][0]?.span" class="mat-item pb-1">
                 {{item[0]}}
-                <b *ngIf="item[1]" class="new inline-block rounded">New</b>
+                <b *ngIf="item[1]" class="new inline-block rounded">{{'navbar.new' | translate}}</b>
               </span>
             </div>
           </section>
@@ -333,7 +333,7 @@
           {{'navbar.menu.home.name' | translate}} <i class="fas ml-auto mr-2 text-xs fa-angle-down"></i>
           <ul class="menu-cont basis-full">
             <li *ngFor="let item of 'navbar.menu.home.submenu' | translate" class="mat-item">{{item[0]}}
-              <b *ngIf="item[1]" class="new inline-block rounded ml-1 fs-10">New</b>
+              <b *ngIf="item[1]" class="new inline-block rounded ml-1 fs-10">{{'navbar.new' | translate}}</b>
             </li>
           </ul>
         </li>
@@ -343,13 +343,13 @@
             <div class="-mt-3">
               <b class="fs-14 inline-block mat-title">{{('navbar.menu.shop.menus' | translate)[0]?.b}}</b>
               <li *ngFor="let item of ('navbar.menu.shop.menus' | translate)[0]?.span" [ngClass]="[item[1] ? 'inline-block withNew': '']"  class="mat-item">{{item[0]}}
-                <b *ngIf="item[1]" class="new inline-block rounded ml-1 fs-10">New</b>
+                <b *ngIf="item[1]" class="new inline-block rounded ml-1 fs-10">{{'navbar.new' | translate}}</b>
               </li>
             </div>
             <div class="ml-12">
               <b class="fs-14 inline-block mat-title">{{('navbar.menu.shop.menus' | translate)[1]?.b}}</b>
               <li *ngFor="let item of ('navbar.menu.shop.menus' | translate)[1]?.span" [ngClass]="[item[1] ? 'inline-block withNew': '']"  class="mat-item">{{item[0]}}
-                <b *ngIf="item[1]" class="new inline-block rounded ml-1 fs-10">New</b>
+                <b *ngIf="item[1]" class="new inline-block rounded ml-1 fs-10">{{'navbar.new' | translate}}</b>
               </li>
             </div>
           </ul>
@@ -416,14 +416,14 @@
             <div class="-mt-3">
               <b class="fs-14 inline-block mat-title">{{('navbar.menu.page.cols' | translate)[0][0].b}}</b>
               <li *ngFor="let item of ('navbar.menu.page.cols' | translate)[0][0]?.span" class="mat-item">{{item[0]}}
-                <b *ngIf="item[1]" class="new inline-block rounded ml-1 fs-10">New</b>
+                <b *ngIf="item[1]" class="new inline-block rounded ml-1 fs-10">{{'navbar.new' | translate}}</b>
               </li>
               <!-- <br> -->
               <b class="fs-14 mt-3 inline-block mat-title">{{('navbar.menu.page.cols' | translate)[0][1]?.b}}</b>
               <li *ngFor="let item of ('navbar.menu.page.cols' | translate)[0][1]?.span" [ngClass]="[item[1] ? 'inline-block withNew': '']" class="mat-item">
                 {{item[0]}}<b *ngIf="item[1]"
                   class="new inline-block rounded ml-1 fs-10"
-                  >New</b
+                  >{{'navbar.new' | translate}}</b
                 >
               </li>
               <!-- <br> -->
@@ -432,7 +432,7 @@
               <!-- <br> -->
               <b class="fs-14 mt-3 inline-block mat-title">{{('navbar.menu.page.cols' | translate)[2][1]?.b}}</b>
               <li *ngFor="let item of ('navbar.menu.page.cols' | translate)[2][1]?.span" class="mat-item"
-                >{{item[0]}} <b *ngIf="item[1]" class="new inline-block rounded">New</b></li
+                >{{item[0]}} <b *ngIf="item[1]" class="new inline-block rounded">{{'navbar.new' | translate}}</b></li
               >
             </div>
 
@@ -440,7 +440,7 @@
               <b class="fs-14 inline-block mat-title">{{('navbar.menu.page.cols' | translate)[1][0]?.b}}</b>
                 <li *ngFor="let item of ('navbar.menu.page.cols' | translate)[1][0]?.span" class="mat-item"
                   >{{item[0]}}
-                  <b *ngIf="item[1]" class="new inline-block rounded">New</b></li
+                  <b *ngIf="item[1]" class="new inline-block rounded">{{'navbar.new' | translate}}</b></li
                 >
                 <!-- <br> -->
               <b class="fs-14 mt-3 inline-block mat-title">{{('navbar.menu.page.cols' | translate)[1][1]?.product}}</b>
@@ -448,7 +448,7 @@
               <!-- <br> -->
               <b class="fs-14 inline-block mt-24 mat-title">{{('navbar.menu.page.cols' | translate)[3][0]?.b}}</b>
                 <li *ngFor="let item of ('navbar.menu.page.cols' | translate)[3][0]?.span" class="mat-item"
-                  >{{item[0]}} <b *ngIf="item[1]" class="new inline-block rounded">New</b></li
+                  >{{item[0]}} <b *ngIf="item[1]" class="new inline-block rounded">{{'navbar.new' | translate}}</b></li
                 >
             </div>
           </ul>

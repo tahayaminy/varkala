@@ -23,13 +23,16 @@ ul>li{
       text-decoration: underline;
     }
   }
-  & > img {
+  img {
     margin: auto auto 8px auto;
+    min-height: 48px;
+    max-height: 48px;
   }
   h6 {
     font-size: 16px;
     margin: auto auto 8px auto;
     font-weight: bold;
+
   }
 }
 @mixin hidescroll($el){

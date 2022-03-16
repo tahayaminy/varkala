@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild,Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { ServerService } from 'src/app/server.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,7 +11,7 @@ export class NavbarComponent implements OnInit {
 
   @Input() index!:boolean;
   
-  constructor(public translate:TranslateService) { 
+  constructor(public translate:TranslateService,public server:ServerService) { 
     translate.addLangs(['en','deu','fr']);
     translate.setDefaultLang('en');
     const browserLang=translate.getBrowserLang();
@@ -18,9 +19,12 @@ export class NavbarComponent implements OnInit {
   }
   
   navbar:any;
+  categories:any;
   ngOnInit(): void {    
-    this.translate.get('navbar').subscribe(val=>{this.navbar=val;console.log(this.navbar)});
+    this.translate.get('navbar').subscribe(val=>{this.navbar=val;});
+    this.server.getDb().subscribe(val=>{this.categories=val["categories"];console.log(this.categories)});
   }
+
   translator(lang){
     this.translate.use(lang);
     this.translate.get('navbar').subscribe(val=>{this.navbar=val;console.log(this.navbar)});

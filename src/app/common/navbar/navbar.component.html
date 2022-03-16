@@ -126,54 +126,10 @@
         </li>
         <mat-menu class="mt-4 p-0" #icons="matMenu">
           <section class="mat-icons">
-            <section class="main columns-6 pt-12 px-6">
-              <div routerLink="/category">
-                <img width="48px" src="../assets/icon/trousers.png" alt="" />
-                <h6>Trousers</h6>
-              </div>
-              <div>
-                <img width="48px" src="../assets/icon/shorts.png" alt="" />
-                <h6>Shorts</h6>
-              </div>
-              <div>
-                <img width="48px" src="../assets/icon/jacket.png" alt="" />
-                <h6>Jackets</h6>
-              </div>
-              <div>
-                <img width="48px" src="../assets/icon/underwear.png" alt="" />
-                <h6>Underwear</h6>
-              </div>
-              <div>
-                <img width="48px" src="../assets/icon/tshirt.png" alt="" />
-                <h6>T-Shirts</h6>
-              </div>
-              <div>
-                <img width="48px" src="../assets/icon/watches.png" alt="" />
-                <h6>Watches</h6>
-              </div>
-              <div>
-                <img width="48px" src="../assets/icon/shirt.png" alt="" />
-                <h6>Shirts</h6>
-              </div>
-              <div>
-                <img width="48px" src="../assets/icon/bags.png" alt="" />
-                <h6>Bags</h6>
-              </div>
-              <div>
-                <img width="48px" src="../assets/icon/pullover.png" alt="" />
-                <h6>Pullovers</h6>
-              </div>
-              <div>
-                <img width="48px" src="../assets/icon/cap.png" alt="" />
-                <h6>Caps</h6>
-              </div>
-              <div>
-                <img width="48px" src="../assets/icon/scarf.png" alt="" />
-                <h6>Scarfs</h6>
-              </div>
-              <div>
-                <img width="48px" src="../assets/icon/accessories.png" alt="" />
-                <h6>Accessories</h6>
+            <section *ngIf="categories" class="main grid grid-cols-6 pt-12 px-6">
+              <div  *ngFor="let category of categories" routerLink="/category">
+                <div><img width="48px" [src]="category.mainImage" alt="" /></div>
+                <div><h6>{{category.name}}</h6></div>
               </div>
             </section>
             <section class="p-4 text-center fs-14 footer">

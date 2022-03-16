@@ -18,8 +18,7 @@ export class NavbarComponent implements OnInit {
   }
   
   navbar:any;
-  ngOnInit(): void {
-    
+  ngOnInit(): void {    
     this.translate.get('navbar').subscribe(val=>{this.navbar=val;console.log(this.navbar)});
   }
   translator(lang){

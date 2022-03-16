@@ -20,10 +20,12 @@ export class IndexComponent implements OnInit {
   hour:number=0;
   min:number=0;
   sec:number=0;
-  timestamp=1647248285155;
+  timestamp=1647790406000;
   tracker!:Subscription;
   trackerShow:boolean=true;
   ngOnInit(): void {
+    var tst=new Date(this.timestamp);
+    console.log(tst);
     var obs=interval(1000);  
     this.tracker=obs.subscribe(()=>{
       var today=new Date().getTime();

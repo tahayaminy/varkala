@@ -141,5 +141,85 @@
       "cart":"VIEW CART",
       "check":"CHECKOUT"
     }
-  }
+  },
+  "footer":{
+    "term":{
+      "deliver":{
+        "title":"Free shipping & return",
+        "txt":"Free Shipping over $30"
+      },
+      "money":{
+        "title":"Money back guarantee",
+        "txt":"30 Days Money Back Guarantee"
+      },
+      "discount":{
+        "title":"Best prices",
+        "txt":"Always the best prices"
+      },
+      "support":{
+        "txt":"24/7 Available Support"
+      }
+    },
+    "main":{
+      "contact":{
+        "h":"Be in touch",
+        "p":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque temporibus.",
+        "holder":"Your Email Address"
+      },
+      "shop":{
+        "h":"Shop",
+        "li":["For Women","For Men","Stores","Our Blog","Shop"]
+      },
+      "company":{
+        "h":"Company",
+        "li":["Login","Register","Wishlist","Our Product","Checkouts"]
+      },
+      "account":{
+        "h":"Your Account",
+        "li":["Login","Register","Wishlist","Our Product","Checkouts"]
+      }
+    },
+    "copy":"2022 Your company. All rights reserved.",
+    "links":["Terms & Conditions","Privacy & cookies","Accessibility","Customer Data Promise"]
+  },
+  "index":{
+    "header":{
+      "slider1":{
+        "light":"OUR ALL-TIME FAVOURITES",
+        "h":"Blouses & Tops",
+        "p":"The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pit",
+        "btn":"DISCOVER MORE"
+      },
+      "slider2":{
+        "light":"BLUE & WHITE",
+        "h":"Linen and denim",
+        "btn":"START SHOPPING"
+      },
+      "slider3":{
+        "light":"SNEAKERS",
+        "h":"For every occassion",
+        "btn":"START SHOPPING"
+      }
+    },
+    "Women":"Women",
+    "Men":"Men",
+    "Arrival":{
+      "h":"New Arrivals",
+      "p":"One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections"
+    },
+    "offer":{
+      "danger":"DEAL OF THE WEAK",
+      "h":"Oversized denim jacket",
+      "day":"days",
+      "hour":"hours",
+      "min":"minutes",
+      "sec":"seconds",
+      "btn":"SHOP NOW"
+    },
+    "history":{
+      "h":"OUR HISTORY",
+      "p1":"One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections",
+      "p2":"He must have tried it a hundred times, shut his eyes so that he wouldn't have to look at the floundering legs, and only stopped when he began to feel a mild, dull pain there that he had never felt before."
+    }
+  }  
 }

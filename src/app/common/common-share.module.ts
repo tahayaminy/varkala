@@ -20,13 +20,14 @@ import { SwiperModule } from 'swiper/angular';
 import { TranslateModule,TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule,HttpClient } from '@angular/common/http';
+import { ItemComponent } from './item/item.component';
 
 export function HttpLoaderFactory(http:HttpClient){
   return new TranslateHttpLoader(http);
 }
 
 @NgModule({
-  declarations: [NavbarComponent,ProductListComponent, ProductPreviewComponent, DialogComponent],
+  declarations: [NavbarComponent,ProductListComponent, ProductPreviewComponent, DialogComponent, ItemComponent],
   imports: [
     CommonModule,
     MatMenuModule,

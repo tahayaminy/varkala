@@ -8,7 +8,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { ProductListComponent } from './product-list/product-list.component';
 import { RouterModule } from '@angular/router';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
@@ -27,7 +26,7 @@ export function HttpLoaderFactory(http:HttpClient){
 }
 
 @NgModule({
-  declarations: [NavbarComponent,ProductListComponent, ProductPreviewComponent, DialogComponent, ItemComponent],
+  declarations: [NavbarComponent, ProductPreviewComponent, DialogComponent, ItemComponent],
   imports: [
     CommonModule,
     MatMenuModule,
@@ -51,6 +50,6 @@ export function HttpLoaderFactory(http:HttpClient){
       }
     })
   ],
-  exports:[NavbarComponent,ProductListComponent]
+  exports:[NavbarComponent,ItemComponent]
 })
 export class CommonShareModule { }

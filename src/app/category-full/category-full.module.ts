@@ -7,22 +7,30 @@ import { CommonShareModule } from '../common/common-share.module';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { ListComponent } from './list/list.component';
+
+
+import { MatSelectModule } from '@angular/material/select';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     CategoryFullComponent,
-    SidebarComponent
+    SidebarComponent,
+    ListComponent
   ],
   imports: [
     CommonModule,
     CategoryFullRoutingModule,
     CommonShareModule,
     MatExpansionModule,
-    NgxSliderModule
+    NgxSliderModule,
+    MatSelectModule,
+    FormsModule
   ],
   exports: [
-    CategoryFullComponent
+    CategoryFullComponent,ListComponent
   ]
 })
 export class CategoryFullModule { }

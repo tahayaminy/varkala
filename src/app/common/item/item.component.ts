@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ServerService } from 'src/app/server.service';
 
 @Component({
@@ -9,9 +9,9 @@ import { ServerService } from 'src/app/server.service';
 export class ItemComponent implements OnInit {
 
   constructor(public item:ServerService) { }
-
+  @Input() data!:object;
   ngOnInit(): void {
-    //this.item.getDb().subscribe(val=>console.log(val["products"]));
+    console.log(this.data)
   }
 
 }

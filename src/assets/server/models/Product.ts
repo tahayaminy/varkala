@@ -1,6 +1,5 @@
 import {BaseEntity} from "./BaseEntity";
 import {Discount} from "./Discount";
-import {Category} from "./Category";
 
 export interface Product extends BaseEntity {
 
@@ -12,9 +11,9 @@ export interface Product extends BaseEntity {
 
     discount?: Discount;
 
-    category: Category;
+    category: number;
 
-    images?: string[]; // This is for out list of uri for images
+    image?: string[];
 
     reviews?: number;
 

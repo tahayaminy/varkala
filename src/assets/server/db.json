@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 1,
-      "name": "Trucker jacket",
+      "name": "Carrot-fit jeans",
       "description": "Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.",
       "status": "FRESH",
       "price": 40,
@@ -11,15 +11,53 @@
         "isAvailable": true,
         "percent": 5
       },
-      "category": {
-        "id": 2
+      "category":1,
+      "image":["../assets/product/1.jpg","../assets/product/12.jpg"],
+      "reviews": 10
+    },
+    {
+      "id": 2,
+      "name": "College jacket",
+      "description": "Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.",
+      "status": "FRESH",
+      "price": 40,
+      "gender": "WOMEN",
+      "discount": {
+        "isAvailable": true,
+        "percent": 5
       },
-      "images": [
-        "https://varkala-react-2.vercel.app/img/product/detail-3-gray.jpg",
-        "https://varkala-react-2.vercel.app/img/product/detail-1-gray.jpg",
-        "https://varkala-react-2.vercel.app/img/product/detail-2-gray.jpg",
-        "https://varkala-react-2.vercel.app/img/product/detail-4-gray.jpg"
-      ],
+      "category":2,
+      "image":["../assets/product/2.jpg","../assets/product/22.jpg"],
+      "reviews": 10
+    },
+    {
+      "id": 3,
+      "name": "Black blouse",
+      "description": "Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.",
+      "status": "FRESH",
+      "price": 40,
+      "gender": "WOMEN",
+      "discount": {
+        "isAvailable": true,
+        "percent": 5
+      },
+      "category":4,
+      "image":["../assets/product/3.jpg","../assets/product/32.jpg"],
+      "reviews": 10
+    },
+    {
+      "id": 4,
+      "name": "White Tee",
+      "description": "Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.",
+      "status": "FRESH",
+      "price": 40,
+      "gender": "WOMEN",
+      "discount": {
+        "isAvailable": true,
+        "percent": 5
+      },
+      "category":3,
+      "image":["../assets/product/4.jpg","../assets/product/42.jpg"],
       "reviews": 10
     }
   ],

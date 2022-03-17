@@ -21,13 +21,13 @@ export class NavbarComponent implements OnInit {
   navbar:any;
   categories:any;
   ngOnInit(): void {    
-    this.translate.get('navbar').subscribe(val=>{this.navbar=val;});
-    this.server.getDb().subscribe(val=>{this.categories=val["categories"];console.log(this.categories)});
+    this.translate.get('navbar').subscribe(val=>this.navbar=val);
+    this.server.getDb().subscribe(val=>this.categories=val["categories"]);
   }
 
   translator(lang){
     this.translate.use(lang);
-    this.translate.get('navbar').subscribe(val=>{this.navbar=val;console.log(this.navbar)});
+    this.translate.get('navbar').subscribe(val=>this.navbar=val);
   }
 
   Menu=false;

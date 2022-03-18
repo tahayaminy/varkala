@@ -9,6 +9,8 @@ export interface Product extends BaseEntity {
 
     price?: number;
 
+    status?: Status;
+
     discount?: Discount;
 
     category: number;
@@ -24,4 +26,8 @@ export interface Product extends BaseEntity {
 export enum Gender {
     MEN = "MEN",
     WOMEN = "WOMEN"
+}
+export enum Status {
+    FRESH = "FRESH",
+    NEW = "NEW"
 }

@@ -5,11 +5,11 @@
 >
   <div class="relative mb-4 imgs">
     <img
-      [src]="data['image'][0]"
+      [src]="data.image?.[0]"
       class="absolute hover:opacity-0 duration-500 top-0 left-0 z-0"
     />
-    <img [src]="data['image'][1]" class="w-full h-full" />
-    <span class="absolute badge">{{data['status']}}</span>
+    <img [src]="data.image?.[1]" class="w-full h-full" />
+    <span class="absolute badge">{{data.status}}</span>
     <div class="absolute bottom-0 left-0 w-full label">
       <span class="hover:underline">Add to cart</span>
       <span class="bi bi-heart ml-auto"></span>
@@ -17,8 +17,8 @@
     </div>
   </div>
   <div class="relative">
-    <b class="mb-2 block">{{data['name']}}</b>
-    <span class="muted block">${{data['price']}}.00</span>
+    <b class="mb-2 block">{{data.name}}</b>
+    <span class="muted block">${{data.price}}.00</span>
     <div class="absolute bottom-0 right-0 stars">
       <i class="fas fa-star crem"></i>
       <i class="fas fa-star crem"></i>

@@ -16,14 +16,8 @@ import { ProductPreviewComponent } from './product-preview/product-preview.compo
 import { DialogComponent } from './dialog/dialog.component';
 import { SwiperModule } from 'swiper/angular';
 
-import { TranslateModule,TranslateLoader } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { HttpClientModule,HttpClient } from '@angular/common/http';
 import { ItemComponent } from './item/item.component';
-
-export function HttpLoaderFactory(http:HttpClient){
-  return new TranslateHttpLoader(http);
-}
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [NavbarComponent, ProductPreviewComponent, DialogComponent, ItemComponent],
@@ -41,14 +35,7 @@ export function HttpLoaderFactory(http:HttpClient){
     FormsModule,
     MatDialogModule,
     SwiperModule,
-    HttpClientModule,
-    TranslateModule.forRoot({
-      loader:{
-        provide:TranslateLoader,
-        useFactory:HttpLoaderFactory,
-        deps:[HttpClient]
-      }
-    })
+    TranslateModule
   ],
   exports:[NavbarComponent,ItemComponent]
 })

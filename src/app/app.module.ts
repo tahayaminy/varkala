@@ -16,12 +16,18 @@ import { ShopFormModule } from './shopping/shop-form/shop-form.module';
 import { CategoryFullModule } from './category-full/category-full.module';
 import { ProductDetailModule } from './product-detail/product-detail.module';
 
+import { TranslateModule,TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClientModule,HttpClient } from '@angular/common/http';
 
+export function HttpLoaderFactory(http:HttpClient){
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -36,7 +42,15 @@ import { ProductDetailModule } from './product-detail/product-detail.module';
     ShoppingModule,
     ShopFormModule,
     CategoryFullModule,
-    ProductDetailModule
+    ProductDetailModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader:{
+        provide:TranslateLoader,
+        useFactory:HttpLoaderFactory,
+        deps:[HttpClient]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

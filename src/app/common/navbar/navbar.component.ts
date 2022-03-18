@@ -11,11 +11,7 @@ export class NavbarComponent implements OnInit {
 
   @Input() index!:boolean;
   
-  constructor(public translate:TranslateService,public server:ServerService) { 
-    translate.addLangs(['en','deu','fr']);
-    translate.setDefaultLang('en');
-    const browserLang=translate.getBrowserLang();
-    translate.use(browserLang?.match(/en|deu|fr/) ? browserLang : 'en');
+  constructor(public translate:TranslateService,public server:ServerService) {    
   }
   
   navbar:any;

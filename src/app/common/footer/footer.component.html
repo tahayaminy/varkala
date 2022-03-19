@@ -5,8 +5,8 @@
         <img width="100%" src="../../assets/icon/fast-delivery.png" alt="">
       </div>
       <div class="cont-text">
-        <b>Free shipping & return</b>
-        <span>Free Shipping over $300</span>
+        <b>{{'footer.term.deliver.title' | translate}}</b>
+        <span>{{'footer.term.deliver.txt' | translate}}</span>
       </div>
     </div>
     <div class="basis-full md:basis-2/4  lg:basis-1/4 ">
@@ -14,8 +14,8 @@
         <img width="100%" src="../../assets/icon/money-back.png" alt="">
       </div>
       <div class="cont-text">
-        <b>Money back guarantee</b>
-        <span>30 Days Money Back Guarantee</span>
+        <b>{{'footer.term.money.title' | translate}}</b>
+        <span>{{'footer.term.money.txt' | translate}}</span>
       </div>
     </div>
     <div class="basis-full md:basis-2/4  lg:basis-1/4 ">
@@ -23,8 +23,8 @@
         <img width="100%" src="../../assets/icon/discount.png" alt="">
       </div>
       <div class="cont-text">
-        <b>Best prices</b>
-        <span>Always the best prices</span>
+        <b>{{'footer.term.discount.title' | translate}}</b>
+        <span>{{'footer.term.discount.txt' | translate}}</span>
       </div>
     </div>
     <div class="basis-full md:basis-2/4  lg:basis-1/4 ">
@@ -33,7 +33,7 @@
       </div>
       <div class="cont-text">
         <b>020-800-456-747</b>
-        <span>24/7 Available Support</span>
+        <span>{{'footer.term.support.txt' | translate}}</span>
       </div>
     </div>
   </section>
@@ -41,16 +41,15 @@
 <footer class="mx-auto container pt-24">
   <section class="flex flex-col lg:flex-row">
     <section class="basis-6/12 footer-cont-items lg:pr-12 xl:pr-24 lg:mb-0 mb-12">
-      <b style="letter-spacing: .1em;" class="mb-6">Be in touch</b>
+      <b style="letter-spacing: .1em;" class="mb-6">{{'footer.main.contact.h' | translate}}</b>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque
-        temporibus.
+        {{'footer.main.contact.p' | translate}}
       </p>
       <form class="w-full lg:mb-0 mb-4">
         <div id="emailBox" class="inline-flex flex-nowrap items-center">
           <input
             style="height: 40px"
-            placeholder="Your Email Address"
+            [placeholder]="'footer.main.contact.holder' | translate"
             class="border-b inline-block py-1 pr-3"
             type="text"
           />
@@ -63,56 +62,41 @@
     </section>
     <section class="pr-4 basis-1/4 footer-cont-items">
       <b tabindex="0" class="lg:mb-6 my-5 lg:my-0"
-        >Shop
+        >{{'footer.main.shop.h' | translate}}
         <span class="relative ml-auto"
           ><i class="ver"></i><i class="hor"></i></span
       ></b>
       <ul>
-        <li class="mb-2">For Women</li>
-        <li class="mb-2">For Men</li>
-        <li class="mb-2">Stores</li>
-        <li class="mb-2">Our Blog</li>
-        <li class="mb-2">Shop</li>
+        <li *ngFor="let item of ('footer.main.shop.li' | translate)" class="mb-2">{{item}}</li>
       </ul>
     </section>
     <section class="pr-4 basis-1/4 footer-cont-items">
       <b tabindex="0" class="lg:mb-6 my-5 lg:my-0"
-        >company
+        >{{'footer.main.company.h' | translate}}
         <span class="relative ml-auto"
           ><i class="ver"></i><i class="hor"></i></span
       ></b>
       <ul>
-        <li class="mb-2">Login</li>
-        <li class="mb-2">Register</li>
-        <li class="mb-2">Wishlist</li>
-        <li class="mb-2">Our Product</li>
-        <li class="mb-2">Checkouts</li>
+        <li *ngFor="let item of ('footer.main.company.li' | translate)" class="mb-2">{{item}}</li>
       </ul>
     </section>
     <section class="pr-4 basis-1/4 footer-cont-items">
       <b tabindex="0" class="lg:mb-6 my-5 lg:my-0"
-        >Your account
+        >{{'footer.main.account.h' | translate}}
         <span class="relative ml-auto"
           ><i class="ver"></i><i class="hor"></i></span
       ></b>
       <ul>
-        <li class="mb-2">Login</li>
-        <li class="mb-2">Register</li>
-        <li class="mb-2">Wishlist</li>
-        <li class="mb-2">Our Product</li>
-        <li class="mb-2">Checkouts</li>
+        <li *ngFor="let item of ('footer.main.account.li' | translate)" class="mb-2">{{item}}</li>
       </ul>
     </section>
   </section>
   <section class="pt-6 pb-6 lg:pb-3 mt-28 lg:flex footer">
     <span style="line-height: 2;" class="text-center lg:text-left block mb-4"
-      >&copy; 2022 Your company. All rights reserved.</span
+      >&copy; {{'footer.copy' | translate}}</span
     >
     <span class="flex justify-center flex-wrap lg:ml-auto">
-      <span style="line-height: 1.6;" class="inline-block mx-1">Terms & Conditions</span>
-      <span style="line-height: 1.6;" class="inline-block mx-1">Privacy & cookies</span>
-      <span style="line-height: 1.6;" class="inline-block mx-1">Accessibility</span>
-      <span style="line-height: 1.6;" class="inline-block mx-1">Customer Data Promise</span>
+      <span *ngFor="let item of ('footer.links' | translate)" style="line-height: 1.6;" class="inline-block mx-1">{{item}}</span>
     </span>
   </section>
 </footer>

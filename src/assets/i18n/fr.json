@@ -293,5 +293,110 @@
       "cart": "VOIR PANIER",
       "check": "CHECKOUT"
     }
-  }
+  },
+  "footer":{
+    "term":{
+      "deliver": {
+        "title": "Livraison et retour gratuits",
+        "txt": "Livraison gratuite à partir de 30 $"
+      },
+      "money": {
+        "title": "Garantie de remboursement",
+        "txt": "Garantie de remboursement de 30 jours"
+      },
+      "discount": {
+        "title": "Meilleurs prix",
+        "txt": "Toujours les meilleurs prix"
+      },
+      "support": {
+        "txt": "Assistance disponible 24h/24 et 7j/7"
+      }
+    },
+    "main":{
+      "contact":{
+        "h": "Soyez en contact",
+        "p": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque temporibus.",
+        "holder": "Votre adresse e-mail"
+      },
+      "shop":{
+        "h": "Boutique",
+        "li": [
+          "Pour Femme",
+          "Pour Homme",
+          "Magasins",
+          "Notre Blog",
+          "Boutique"
+        ]
+      },
+      "company":{
+        "h": "Entreprise",
+        "li": [
+          "Connexion",
+          "S'inscrire",
+          "Liste de souhaits",
+          "Notre produit",
+          "Commandes"
+        ]
+      },
+      "account":{
+        "h": "Votre compte",
+        "li": [
+          "Connexion",
+          "S'inscrire",
+          "Liste de souhaits",
+          "Notre produit",
+          "Commandes"
+        ]
+      }
+    },
+    "copy": "2022 Votre entreprise. Tous droits réservés.",
+  "links": [
+    "Conditions générales",
+    "Confidentialité et cookies",
+    "Accessibilité",
+    "Promesse relative aux données client"
+  ]
+  },
+  "index":{
+    "header":{
+      "slider1": {
+        "light": "NOS FAVORIS DE TOUS LES TEMPS",
+        "h": "Blouses & Tops",
+        "p": "La literie était à peine capable de le couvrir et semblait prête à glisser à tout moment. Ses nombreuses jambes, pit",
+        "btn": "EN DÉCOUVRIR PLUS"
+      },
+      "slider2": {
+        "light": "BLEU ET BLANC",
+        "h": "Lin et denim",
+        "btn": "COMMENCEZ À FAIRE DES ACHATS"
+      },
+      "slider3": {
+        "light": "SNEAKERS",
+        "h": "Pour chaque occasion",
+        "btn": "COMMENCEZ À FAIRE DES ACHATS"
+      }
+    },
+    "Women": "Femme homme",
+    "Men": "Due2385AE_1",
+    "Arrival":{
+      "h": "Nouveautés",
+      "p": "Un matin, lorsque Gregor Samsa s'est réveillé de rêves troublés, il s'est retrouvé transformé dans son lit en une horrible vermine. Il était allongé sur son dos en forme d'armure, et s'il levait un peu la tête, il pouvait voir son ventre brun, légèrement bombé et divisé par des arcs en sections rigides"
+    },
+    "offer":{
+      "danger": "OFFRE DES FAIBLES",
+      "h": "Veste en jean surdimensionnée",
+      "off":"désactivé",
+      "day": "jours",
+      "hour": "heures",
+      "min": "minutes",
+      "sec": "secondes",
+      "btn": "ACHETEZ MAINTENANT"
+    },
+    "history":{
+      "h": "NOTRE HISTOIRE",
+      "p1": "Un matin, lorsque Gregor Samsa s'est réveillé de rêves troublés, il s'est retrouvé transformé dans son lit en une horrible vermine. Il était allongé sur son dos en forme d'armure, et s'il levait un peu la tête, il pouvait voir son ventre brun, légèrement bombé et divisé par des arcs en sections raides",
+      "p2": "Il a dû l'essayer cent fois, ferma les yeux pour qu'il n'aurait pas eu à regarder les jambes pataugeantes, et ne s'est arrêté que lorsqu'il a commencé à ressentir une douleur légère et sourde qu'il n'avait jamais ressentie auparavant."
+    }
+  } 
+  
 }

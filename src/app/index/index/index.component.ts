@@ -2,7 +2,7 @@ import { Component, ElementRef, OnInit,ViewChild,ViewEncapsulation } from '@angu
 import { SwiperComponent } from 'swiper/angular';
 import SwiperCore,{Autoplay,Navigation,Pagination, Parallax, Swiper} from 'swiper';
 import {interval, Observable, Subscription} from 'rxjs';
-
+import { TranslateService } from '@ngx-translate/core';
 SwiperCore.use([Parallax,Navigation,Pagination]);
 
 @Component({
@@ -14,7 +14,12 @@ SwiperCore.use([Parallax,Navigation,Pagination]);
 
 export class IndexComponent implements OnInit {
   
-  constructor() { }  
+  constructor(public translate:TranslateService) {
+    translate.addLangs(['en','deu','fr']);
+    translate.setDefaultLang('en');
+    const browserLang=translate.getBrowserLang();
+    translate.use(browserLang?.match(/en|deu|fr/) ? browserLang : 'en');
+  }  
   data:number=0;
   day:number=0;
   hour:number=0;

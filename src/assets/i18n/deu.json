@@ -293,5 +293,109 @@
       "cart": "WAGEN ANZEIGEN",
       "check": "KASSE"
     }
-  }
+  },
+  "footer":{
+    "term":{
+      "deliver": {
+        "title": "Kostenloser Versand und Rücksendung",
+        "txt": "Kostenloser Versand über 30 $"
+      },
+      "money": {
+        "title": "Geld-zurück-Garantie",
+        "txt": "30 Tage Geld-zurück-Garantie"
+      },
+      "discount": {
+        "title": "Beste Preise",
+        "txt": "Immer die besten Preise"
+      },
+      "support": {
+        "txt": "Rund um die Uhr verfügbarer Support"
+      }
+    },
+    "main":{
+      "contact":{
+        "h": "In Verbindung bleiben",
+        "p": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Bei itaque temporibus.",
+        "holder": "Ihre E-Mail-Adresse"
+      },
+      "shop":{
+        "h": "Shop",
+        "li": [
+          "Für Frauen",
+          "Für Männer",
+          "Geschäfte",
+          "Unser Blog",
+          "Shop"
+        ]
+      },
+      "company":{
+        "h": "Unternehmen",
+        "li": [
+          "Login",
+          "Registrieren",
+          "Wunschliste",
+          "Unser Produkt",
+          "Zur Kasse"
+        ]
+      },
+      "account":{
+        "h": "Ihr Konto",
+        "li": [
+          "Login",
+          "Registrieren",
+          "Wunschliste",
+          "Unser Produkt",
+          "Zur Kasse"
+        ]
+      }
+    },
+    "copy": "2022 Ihr Unternehmen. Alle Rechte vorbehalten.",
+    "links": [
+      "Allgemeine Geschäftsbedingungen",
+      "Datenschutz & Cookies",
+      "Zugänglichkeit",
+      "Versprechen der Kundendaten"
+    ]
+  },
+  "index":{
+    "header":{
+      "slider1": {
+        "light": "UNSERE ALLZEITFAVORITEN",
+        "h": "Blusen & Tops",
+        "p": "Die Bettwäsche konnte es kaum bedecken und schien jeden Moment abzurutschen. Seine vielen Beine, Grube",
+        "btn": "MEHR ENTDECKEN"
+      },
+      "slider2": {
+        "light": "BLAU & WEISS",
+        "h": "Leinen und Denim",
+        "btn": "EINKAUF BEGINNEN"
+      },
+      "slider3": {
+        "light": "SNEAKERS",
+        "h": "Für jede Gelegenheit",
+        "btn": "EINKAUF BEGINNEN"
+      }
+    },
+    "Women": "Frauen Männer",
+    "Men": "Due2385AE_1",
+    "Arrival":{
+      "h": "Neuankömmlinge",
+      "p": "Eines Morgens, als Gregor Samsa aus unruhigen Träumen erwachte, fand er sich in seinem Bett in ein schreckliches Ungeziefer verwandelt. Er lag auf seinem panzerartigen Rücken, und wenn er den Kopf ein wenig hob, konnte er seinen braunen Bauch sehen, leicht gewölbt und durch Wölbungen in steife Abschnitte unterteilt"
+    },
+    "offer":{
+      "danger": "DEAL OF THE WEAK",
+      "h": "Übergroße Jeansjacke",
+      "off":"aus",
+      "day": "Tage",
+      "hour": "Stunden",
+      "min": "Minuten",
+      "sec": "Sekunden",
+      "btn": "JETZT SHOPPEN"
+    },
+    "history":{
+      "h": "UNSERE GESCHICHTE",
+      "p1": "Eines Morgens, als Gregor Samsa aus unruhigen Träumen erwachte, fand er sich in seinem Bett in ein schreckliches Ungeziefer verwandelt. Er lag auf seinem panzerartigen Rücken, und wenn er den Kopf ein wenig hob, konnte er seinen braunen Bauch sehen, leicht gewölbt und durch Wölbungen in steife Abschnitte geteilt",
+      "p2": "Er muss es hundertmal versucht haben, schloss die Augen, damit er würde nicht auf die zappelnden Beine schauen müssen und hörte erst auf, als er dort einen leichten, dumpfen Schmerz zu spüren begann, den er noch nie zuvor gefühlt hatte."
+    }
+  }  
 }

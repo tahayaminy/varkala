@@ -27,13 +27,12 @@
           data-swiper-parallax="-500"
         >
           <div class="lg:basis-6/12">
-            <p class="p-thin pb-4">OUR ALL-TIME FAVOURITES</p>
-            <h1 class="pb-4">Blouses & Tops</h1>
+            <p class="p-thin pb-4">{{'index.header.slider1.light' | translate}}</p>
+            <h1 class="pb-4">{{'index.header.slider1.h' | translate}}</h1>
             <p class="text-mute">
-              The bedding was hardly able to cover it and seemed ready to slide
-              off any moment. His many legs, pit
+              {{'index.header.slider1.p' | translate}}
             </p>
-            <button class="mt-8">DISCOVER MORE</button>
+            <button class="mt-8">{{'index.header.slider1.btn' | translate}}</button>
           </div>
         </div>
       </div></ng-template
@@ -56,9 +55,9 @@
           data-swiper-parallax="-500"
         >
           <div class="lg:basis-6/12 lg:px-1">
-            <p class="p-thin pb-4">BLUE & WHITE</p>
-            <h1>Linen and denim</h1>
-            <button class="mt-5">START SHOPPING</button>
+            <p class="p-thin pb-4">{{'index.header.slider2.light' | translate}}</p>
+            <h1>{{'index.header.slider2.h' | translate}}</h1>
+            <button class="mt-5">{{'index.header.slider2.btn' | translate}}</button>
           </div>
         </div>
       </div></ng-template
@@ -82,9 +81,9 @@
         >
           <div class="lg:basis-6/12"></div>
           <div class="lg:basis-6/12">
-            <p class="p-thin third pb-6">SNEAKERS</p>
-            <h1>For every occassion</h1>
-            <button class="mt-12">START SHOPPING</button>
+            <p class="p-thin third pb-6">{{'index.header.slider3.light' | translate}}</p>
+            <h1>{{'index.header.slider3.h' | translate}}</h1>
+            <button class="mt-12">{{'index.header.slider3.btn' | translate}}</button>
           </div>
         </div>
       </div></ng-template
@@ -95,11 +94,11 @@
   <section class="flex sm:flex-row flex-col py-24 container mx-auto">
     <section routerLink="/category-full" class="mx-auto sm:mr-4 sm:mb-0 mb-11 relative category rounded">
       <img src="../../../assets/img/category-women.jpg" alt="" />
-      <div class="absolute">Women</div>
+      <div class="absolute">{{'index.Women' | translate}}</div>
     </section>
     <section routerLink="/category-full" class="mx-auto sm:ml-4 sm:mb-0 mb-11 relative category rounded">
       <img src="../../../assets/img/category-men.jpg" alt="" />
-      <div class="absolute">Men</div>
+      <div class="absolute">{{'index.Men' | translate}}</div>
     </section>
   </section>
 </section>
@@ -107,12 +106,9 @@
   <section
     class="lg:basis-10/12 xl:basis-8/12 text-center lg:mx-auto px-4 new-arrival"
   >
-    <h1>New Arrivals</h1>
+    <h1>{{'index.Arrival.h' | translate}}</h1>
     <p>
-      One morning, when Gregor Samsa woke from troubled dreams, he found himself
-      transformed in his bed into a horrible vermin. He lay on his armour-like
-      back, and if he lifted his head a little he could see his brown belly,
-      slightly domed and divided by arches into stiff sections
+      {{'index.Arrival.p' | translate}}
     </p>
   </section>
 </section>
@@ -122,48 +118,43 @@
     <img src="../../../assets/deal-plain.jpg" alt="" />
     <div class="content-cont flex items-center container mx-auto">
       <div class="content basis-full">
-        <p class="title1">DEAL OF THE WEAK</p>
-        <h3 class="title2">Oversized denim jacket</h3>
+        <p class="title1">{{'index.offer.danger' | translate}}</p>
+        <h3 class="title2">{{'index.offer.h' | translate}}</h3>
         <div class="price mb-4">
           <del class="mr-4">$129.00</del><span>$79.00</span>
         </div>
-        <span class="off mb-6 rounded">$50 off</span>
+        <span class="off mb-6 rounded">$50 {{'index.offer.off' | translate}}</span>
         <div class="mb-6 grid grid-cols-2 sm:grid-cols-4 xl:w-1/2 lg:w-5/6 bg-white shadow-lg px-12 gap-x-5 py-7">
           <div class="text-center dates sm:mb-0 mb-6">
             <div class="mb-5">{{day}}</div>
-            <div>days</div>
+            <div>{{'index.offer.day' | translate}}</div>
           </div>
           <div class="text-center dates sm:mb-0 mb-6">
             <div class="mb-5">{{hour}}</div>
-            <div>hours</div>
+            <div>{{'index.offer.hour' | translate}}</div>
           </div>
           <div class="text-center dates sm:mb-0 mb-6">
             <div class="mb-5">{{min}}</div>
-            <div>minutes</div>
+            <div>{{'index.offer.min' | translate}}</div>
           </div>
           <div class="text-center dates sm:mb-0 mb-6">
             <div class="mb-5">{{sec}}</div>
-            <div>seconds</div>
+            <div>{{'index.offer.sec' | translate}}</div>
           </div>
         </div>
-        <button>SHOP NOW</button>
+        <button>{{'index.offer.btn' | translate}}</button>
       </div>
     </div>
     
   </div>
 </section>
 <section [class.mt-24]="!trackerShow" class="history container mx-auto mb-36">
-  <h1 class="mb-4">OUR HISTORY</h1>
+  <h1 class="mb-4">{{'index.history.h' | translate}}</h1>
   <p>
-    One morning, when Gregor Samsa woke from troubled dreams, he found himself
-    transformed in his bed into a horrible vermin. He lay on his armour-like
-    back, and if he lifted his head a little he could see his brown belly,
-    slightly domed and divided by arches into stiff sections
+    {{'index.history.p1' | translate}}
   </p>
   <p>
-    He must have tried it a hundred times, shut his eyes so that he wouldn't
-    have to look at the floundering legs, and only stopped when he began to feel
-    a mild, dull pain there that he had never felt before.
+    {{'index.history.p2' | translate}}
   </p>
 </section>
 <swiper

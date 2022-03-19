@@ -8,6 +8,7 @@ import { ListComponent } from './list/list.component';
 
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { FormsModule } from '@angular/forms';
     SwiperModule,
     IndexRoutingModule,
     MatSelectModule,
-    FormsModule
+    FormsModule,TranslateModule
   ],
   exports:[IndexComponent,ListComponent]
 })

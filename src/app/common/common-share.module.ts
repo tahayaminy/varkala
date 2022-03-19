@@ -37,6 +37,6 @@ import { TranslateModule } from '@ngx-translate/core';
     SwiperModule,
     TranslateModule
   ],
-  exports:[NavbarComponent,ItemComponent]
+  exports:[NavbarComponent,ItemComponent,TranslateModule]
 })
 export class CommonShareModule { }

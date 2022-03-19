@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
-
+import { Category } from 'src/assets/server/models/Category';
+import { Observable } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable({
   providedIn: 'root',
 })
 export class ItemService {
-  constructor() {}
+  constructor(private http:HttpClient) {}
 
   Wishlist: number[] = [];
   Cart: number[] = [];
@@ -25,5 +27,9 @@ export class ItemService {
     } else {
       this.Cart.push(id);
     }
+  }
+  url="http://localhost:3000/categories";
+  fetchCategory():Observable<Category[]>{
+    return this.http.get<Category[]>(this.url)
   }
 }

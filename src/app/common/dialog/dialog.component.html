@@ -1,6 +1,6 @@
 <article class="grid lg:grid-cols-2 grid-cols-1 relative">
   <i (click)="closeDialog()" style="font-size: 27px;" class="absolute z-50 hover:rotate-90 cursor-pointer duration-300 fas fa-times right-5 top-3"></i>
-  <span class="absolute badge">Sale</span>
+  <span class="absolute badge">{{data.status}}</span>
   <section class="lg:pr-4 pb-5 lg:pb-0">
     <swiper
       style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff"
@@ -9,10 +9,10 @@
       class="mySwiper2"
     >
       <ng-template swiperSlide>
-        <img src="../../../assets/product-detail/1.jpg" />
+        <img [src]="data.image[0]" />
       </ng-template>
       <ng-template swiperSlide>
-        <img src="../../../assets/product-detail/2.jpg" />
+        <img [src]="data.image[1]" />
       </ng-template>
       <ng-template swiperSlide>
         <img src="../../../assets/product-detail/3.jpg" />
@@ -36,10 +36,10 @@
       class="mySwiper grid grid-cols-6"
     >
     <ng-template swiperSlide>
-      <img src="../../../assets/product-detail/1.jpg" />
+      <img [src]="data.image[0]" />
     </ng-template>
     <ng-template swiperSlide>
-      <img src="../../../assets/product-detail/2.jpg" />
+      <img [src]="data.image[1]" />
     </ng-template>
     <ng-template swiperSlide>
       <img src="../../../assets/product-detail/3.jpg" />
@@ -56,10 +56,10 @@
     </swiper>
   </section>
   <section class="details lg:p-12">
-    <h2>Black blouse</h2>
+    <h2>{{data.name}}</h2>
     <p class="flex pb-3 flex-wrap">
       <span class="price basis-full sm:mb-0 mb-2 sm:basis-auto">
-        <span class="mr-2">$40.00</span><span>$90.00</span>
+        <span class="mr-2">${{(data.price)-(((data.price)*(data.discount.percent))/100)}}</span><span>${{data.price}}</span>
       </span>
       <span class="basis-full sm:basis-auto ml-auto">
         <span class="stars pr-2">
@@ -69,11 +69,11 @@
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
       </span>
-      <span class="review">25 REVIEWS</span>
+      <span class="review">{{data.reviews}} REVIEWS</span>
       </span>
     </p>
     <p class="mute pb-3">
-      Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.
+      {{data.description}}
     </p>
     <div class="flex flex-wrap">
       <div class="select lg:basis-full basis-full sm:basis-auto mb-6">
@@ -107,7 +107,7 @@
     </div>
     <div class="footer">
       <div>
-        <b>Category:</b><span class="mute"> Tops & blouses</span>
+        <b>Category:</b><span class="mute"> {{category}}</span>
       </div>
       <div>
         <b>Tags:</b><span class="mute">  Leisure,Elegant</span>

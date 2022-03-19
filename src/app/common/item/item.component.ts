@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ServerService } from 'src/app/server.service';
 import { Product } from 'src/assets/server/models/Product';
 import { ItemService } from '../item.service';
+import { ModalService } from '../modal.service';
 
 @Component({
   selector: 'app-item',
@@ -10,7 +11,7 @@ import { ItemService } from '../item.service';
 })
 export class ItemComponent implements OnInit {
 
-  constructor(public item:ServerService,public itemService:ItemService) { }
+  constructor(public item:ServerService,public itemService:ItemService,public modal:ModalService) { }
   @Input() data!:Product;
   ngOnInit(): void {
   }
@@ -21,6 +22,9 @@ export class ItemComponent implements OnInit {
   }
   addCart(id:number){
     this.itemService.addToCart(id);
-  }  
+  } 
+  modalOpen(){
+    this.modal.openTempDialog(this.data);
+  } 
 
 }

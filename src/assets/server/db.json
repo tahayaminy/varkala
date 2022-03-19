@@ -54,7 +54,7 @@
       "gender": "WOMEN",
       "discount": {
         "isAvailable": true,
-        "percent": 5
+        "percent": 50
       },
       "category":3,
       "image":["../assets/product/4.jpg","../assets/product/42.jpg"],

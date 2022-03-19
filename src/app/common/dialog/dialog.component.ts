@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject, Optional,ViewEncapsulation } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-
+import { ItemService } from '../item.service';
 
 // import Swiper core and required modules
 import SwiperCore, { FreeMode, Navigation, Thumbs } from "swiper";
@@ -15,18 +15,24 @@ interface Sort{
 @Component({
   selector: 'app-dialog',
   templateUrl: './dialog.component.html',
-  styleUrls: ['./dialog.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./dialog.component.scss']
 })
 export class DialogComponent implements OnInit {
   
   fromPage!:string;
   fromDialog!:string;
 
-  constructor(public dialogRef:MatDialogRef<DialogComponent>,@Optional() @Inject(MAT_DIALOG_DATA) public data:any) { }
-
+  constructor(public dialogRef:MatDialogRef<DialogComponent>,@Optional() @Inject(MAT_DIALOG_DATA) public data:any,public item:ItemService) { }
+  category;
   ngOnInit(): void {
     this.fromDialog = "I am from dialog land...";
+    this.item.fetchCategory().subscribe(val=>{
+      val.map(obj=>{
+        if(obj.id==this.data.category){
+          this.category=obj.name;
+        }
+      })
+    });
   }
 
   closeDialog() { this.dialogRef.close({ event: 'close'}); }

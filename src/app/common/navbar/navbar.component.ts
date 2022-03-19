@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild,Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { ServerService } from 'src/app/server.service';
+import { ItemService } from '../item.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,9 +12,10 @@ export class NavbarComponent implements OnInit {
 
   @Input() index!:boolean;
   
-  constructor(public translate:TranslateService,public server:ServerService) {    
+  constructor(public translate:TranslateService,public server:ServerService,public itemService:ItemService) {    
   }
-  
+  Wishlist=this.itemService.Wishlist;
+  Cart=this.itemService.Cart;
   navbar:any;
   categories:any;
   ngOnInit(): void {    

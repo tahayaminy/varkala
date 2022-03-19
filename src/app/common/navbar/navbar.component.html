@@ -235,16 +235,16 @@
         </li>
         <li routerLink="/wishlist" class="inline-block">
           <span
-            matBadge="1"
+            [matBadge]="Wishlist.length"
             style="font-size: 27px"
             class="far ml-3 fa-heart"
           ></span>
         </li>
         <li class="inline-block">
           <span
-            matBadge="6"
+            [matBadge]="Cart.length"
             style="font-size: 27px"
-            class="bi ml-3 bi-bag"
+            class="fas ml-3 fa-shopping-bag"
             (click)="drawer2.toggle()"
           ></span>
         </li>
@@ -264,12 +264,12 @@
         ></i>
         <span
           routerLink="/wishlist"
-          matBadge="1"
+          [matBadge]="Wishlist.length"
           class="far text-2xl ml-3 fa-heart cursor-pointer"
         ></span>
         <span 
-          matBadge="6"
-          class="bi text-2xl ml-3 bi-bag cursor-pointer"
+          [matBadge]="Cart.length"
+          class="fas text-2xl ml-3 fa-shopping-bag cursor-pointer"
           (click)="drawer2.toggle()"
         ></span>
       </div>

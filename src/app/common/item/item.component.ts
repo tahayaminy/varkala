@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ServerService } from 'src/app/server.service';
 import { Product } from 'src/assets/server/models/Product';
+import { ItemService } from '../item.service';
 
 @Component({
   selector: 'app-item',
@@ -9,10 +10,17 @@ import { Product } from 'src/assets/server/models/Product';
 })
 export class ItemComponent implements OnInit {
 
-  constructor(public item:ServerService) { }
+  constructor(public item:ServerService,public itemService:ItemService) { }
   @Input() data!:Product;
   ngOnInit(): void {
-    console.log(this.data)
   }
+  heart=false;
+  addWishlist(id:number){
+    this.heart=!this.heart;
+    this.itemService.addToWishlist(id);
+  }
+  addCart(id:number){
+    this.itemService.addToCart(id);
+  }  
 
 }

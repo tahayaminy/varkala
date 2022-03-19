@@ -46,12 +46,20 @@ $crem: #bcac76;
         span:not(span:first-child) {
           font-size: 18px;
         }
+        .fa-heart{
+          color:$gray
+        }
       }
     }
     .stars {  
       transform: translateY(5%);     
       font-size: 11px;
       color: $gray;
+    }
+    .label{
+      span:hover{
+        cursor: pointer;
+      }
     }
     @media only screen and (min-width:768px){
       .stars,.imgs > .label{

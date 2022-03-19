@@ -11,8 +11,9 @@
     <img [src]="data.image?.[1]" class="w-full h-full" />
     <span class="absolute badge">{{data.status}}</span>
     <div class="absolute bottom-0 left-0 w-full label">
-      <span class="hover:underline">Add to cart</span>
-      <span class="bi bi-heart ml-auto"></span>
+      <span (click)="addCart(data.id)" class="hover:underline">Add to cart</span>
+      <span *ngIf="!heart" (click)="addWishlist(data.id)" class="bi bi-heart ml-auto"></span>
+      <span *ngIf="heart" (click)="addWishlist(data.id)" class="fas fa-heart ml-auto"></span>
       <span class="bi bi-arrows-fullscreen ml-2"></span>
     </div>
   </div>

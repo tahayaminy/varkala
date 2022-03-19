@@ -12,7 +12,6 @@ import { RouterModule } from '@angular/router';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import {MatDialogModule} from '@angular/material/dialog';
-import { ProductPreviewComponent } from './product-preview/product-preview.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { SwiperModule } from 'swiper/angular';
 
@@ -20,7 +19,7 @@ import { ItemComponent } from './item/item.component';
 import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
-  declarations: [NavbarComponent, ProductPreviewComponent, DialogComponent, ItemComponent],
+  declarations: [NavbarComponent, DialogComponent, ItemComponent],
   imports: [
     CommonModule,
     MatMenuModule,

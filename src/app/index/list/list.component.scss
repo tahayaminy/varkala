@@ -40,6 +40,9 @@ $crem: #bcac76;
 }
 .product-list {
   .nav {
+    span{
+      cursor: pointer;
+    }
     & > span:last-child {
       color: $crem;
       font-family: "regular";

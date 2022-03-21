@@ -1,34 +1,20 @@
 <article
-  [ngClass]="{ 'mt-28': index, 'container-fluid': index }"
+  [class.mb-36]="!paginatorShow"
   class="product-list"
->fuck that
-  <section
-    *ngIf="index"
-    class="flex flex-wrap sm:justify-start justify-center nav mb-9"
-  >
-    <span class="mr-2">All Products</span>
-    <span class="mr-2 mute">Clothing</span>
-    <span class="mr-2 mute">Bags</span>
-    <span class="mr-2 mute">Shoes</span>
-    <span class="mr-2 mute">Accessories</span>
-    <span
-      class="block sm:inline sm:basis-auto basis-full text-center sm:mt-0 mt-7 sm:ml-auto"
-      >ALL PRODUCTS</span
-    >
-  </section>
-  <section *ngIf="!index" class="flex flex-wrap nav-full mb-9">
+>
+  <section class="flex flex-wrap nav-full mb-9">
     <div class=" mb-6 mr-4">
-      Showing <span class="dark-2">1-12</span> of
-      <span class="dark-2">158</span> products
+      Showing <span class="dark-2">{{firstIndex}}-{{lastIndex}}</span> of
+      <span class="dark-2">{{srcProduct?.length}}</span> products
     </div>
     <div class="basis-full sm:basis-auto ml-auto md:mr-auto mb-4 count-num mr-4">
       <span class="mr-2">Show</span>
-      <span class="dark-1 mr-2">12</span>
-      <span class="mr-2">24</span>
-      <span class="mr-2">All</span>
+      <span class="mr-2" [class.dark-1]="itemInPage==1" (click)="itemPerPage(1)">2</span>
+      <span class="mr-2" [class.dark-1]="itemInPage==3" (click)="itemPerPage(3)">4</span>
+      <span #all class="mr-2 dark-1">All</span>
     </div>
     <div class="basis-full md:basis-auto md:-mt-2 select">
-      <span class="mr-2">Sort by</span>
+      <span class="mr-2 inline-block translate-y-1/2">Sort by</span>
       <mat-form-field appearance="fill">
         <mat-select disableOptionCentering panelClass="drop-down" [(ngModel)]="selectedSort">
           <mat-option *ngFor="let sort of sorts" [value]="sort.index">
@@ -39,9 +25,22 @@
     </div>
   </section>
   <section
-    [ngClass]="[index ? 'xl:grid-cols-6' : 'xl:grid-cols-4', index ? 'md:grid-cols-3' : 'sm:grid-cols-3']"
-    class="grid grid-cols-2 gap-x-8 gap-y-5"
+    class="grid grid-cols-2 gap-x-8 gap-y-5 xl:grid-cols-4 sm:grid-cols-3"
   >
-  <app-item *ngFor="let item of products" [data]="item"></app-item>   
+  <ng-container *ngIf="!paginatorShow">
+    <app-item *ngFor="let item of products" [data]="item"></app-item> 
+  </ng-container> 
+  <ng-container *ngIf="paginatorShow">
+    <app-item *ngFor="let item of products[page]" [data]="item"></app-item> 
+  </ng-container>  
   </section>
 </article>
+
+<section *ngIf="paginatorShow" class="flex justify-center mt-7 mb-6 pagination items-center">
+  <i tabindex="0" class="bi bi-chevron-left"></i>
+  <span tabindex="0" class="active">1</span>
+  <span tabindex="0">2</span>
+  <span tabindex="0">3</span>
+  <span tabindex="0">4</span>
+  <i tabindex="0" class="bi bi-chevron-right"></i>
+</section>

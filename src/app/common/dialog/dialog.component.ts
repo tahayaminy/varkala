@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject, Optional,ViewEncapsulation } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { ItemService } from '../item.service';
+import { ServerService } from 'src/app/server.service';
 
 // import Swiper core and required modules
 import SwiperCore, { FreeMode, Navigation, Thumbs } from "swiper";
@@ -15,19 +15,20 @@ interface Sort{
 @Component({
   selector: 'app-dialog',
   templateUrl: './dialog.component.html',
-  styleUrls: ['./dialog.component.scss']
+  styleUrls: ['./dialog.component.scss'],
+  encapsulation:ViewEncapsulation.None
 })
 export class DialogComponent implements OnInit {
   
   fromPage!:string;
   fromDialog!:string;
 
-  constructor(public dialogRef:MatDialogRef<DialogComponent>,@Optional() @Inject(MAT_DIALOG_DATA) public data:any,public item:ItemService) { }
+  constructor(public dialogRef:MatDialogRef<DialogComponent>,@Optional() @Inject(MAT_DIALOG_DATA) public data:any,public server:ServerService) { }
   category;
   ngOnInit(): void {
     this.fromDialog = "I am from dialog land...";
-    this.item.fetchCategory().subscribe(val=>{
-      val.map(obj=>{
+    this.server.getDb().subscribe(val=>{
+      val["categories"].map(obj=>{
         if(obj.id==this.data.category){
           this.category=obj.name;
         }

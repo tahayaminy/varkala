@@ -1,46 +1,21 @@
 <article
-  [ngClass]="{ 'mt-28': index, 'container-fluid': index }"
-  class="product-list"
+  class="product-list mt-28 container-fluid"
 >
   <section
-    *ngIf="index"
     class="flex flex-wrap sm:justify-start justify-center nav mb-9"
   >
-    <span class="mr-2">All Products</span>
-    <span class="mr-2 mute">Clothing</span>
-    <span class="mr-2 mute">Bags</span>
-    <span class="mr-2 mute">Shoes</span>
-    <span class="mr-2 mute">Accessories</span>
-    <span
+    <span class="mr-2" (click)="productFilter('all')">All Products</span>
+    <span class="mr-2 mute" (click)="productFilter('cloth')">Clothing</span>
+    <span class="mr-2 mute" (click)="productFilter('bag')">Bags</span>
+    <span class="mr-2 mute" (click)="productFilter('underwear')">Underwear</span>
+    <span class="mr-2 mute" (click)="productFilter('ex')">Accessories</span>
+    <span routerLink="/category-full"
       class="block sm:inline sm:basis-auto basis-full text-center sm:mt-0 mt-7 sm:ml-auto"
       >ALL PRODUCTS</span
     >
   </section>
-  <section *ngIf="!index" class="flex flex-wrap nav-full mb-9">
-    <div class=" mb-6 mr-4">
-      Showing <span class="dark-2">1-12</span> of
-      <span class="dark-2">158</span> products
-    </div>
-    <div class="basis-full sm:basis-auto ml-auto md:mr-auto mb-4 count-num mr-4">
-      <span class="mr-2">Show</span>
-      <span class="dark-1 mr-2">12</span>
-      <span class="mr-2">24</span>
-      <span class="mr-2">All</span>
-    </div>
-    <div class="basis-full md:basis-auto md:-mt-2 select">
-      <span class="mr-2">Sort by</span>
-      <mat-form-field appearance="fill">
-        <mat-select disableOptionCentering panelClass="drop-down" [(ngModel)]="selectedSort">
-          <mat-option *ngFor="let sort of sorts" [value]="sort.index">
-            {{sort.value}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-    </div>
-  </section>
   <section
-    [ngClass]="[index ? 'xl:grid-cols-6' : 'xl:grid-cols-4', index ? 'md:grid-cols-3' : 'sm:grid-cols-3']"
-    class="grid grid-cols-2 gap-x-8 gap-y-5"
+    class="grid xl:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-x-8 gap-y-5"
   >
   <app-item *ngFor="let item of products" [data]="item"></app-item>   
   </section>

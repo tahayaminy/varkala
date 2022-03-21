@@ -21,8 +21,7 @@ interface Sort {
 })
 export class ListComponent implements OnInit {
   constructor(public server: ServerService) {}
-  @Input() index!: boolean;
-  products: any;
+  products: any[] = [];
   ngOnInit(): void {
     AOS.init();
     this.server.getDb().subscribe((val) => (this.products = val['products']));
@@ -32,4 +31,61 @@ export class ListComponent implements OnInit {
     { index: 2, value: 'Rating' },
   ];
   selectedSort = 1;
+  productFilter(filter) {
+    switch (filter) {
+      case 'all':
+        this.server
+          .getDb()
+          .subscribe((val) => (this.products = val['products']));
+        break;
+      case 'cloth':
+        this.products = [];
+        this.server.getDb().subscribe((val) => {
+          val['products'].map((obj) => {
+            if (
+              !(
+                obj.category == 12 ||
+                obj.category == 11 ||
+                obj.category == 10 ||
+                obj.category == 9 ||
+                obj.category == 6
+              )
+            ) {
+              this.products.push(obj);
+            }
+          });
+        });
+        break;
+      case 'bag':
+        this.products = [];
+        this.server.getDb().subscribe((val) => {
+          val['products'].map((obj) => {
+            if (obj.category == 10) {
+              this.products.push(obj);
+            }
+          });
+        });
+        break;
+        case 'underwear':
+        this.products = [];
+        this.server.getDb().subscribe((val) => {
+          val['products'].map((obj) => {
+            if (obj.category == 8) {
+              this.products.push(obj);
+            }
+          });
+        });
+        break;
+        case 'ex':
+        this.products = [];
+        this.server.getDb().subscribe((val) => {
+          val['products'].map((obj) => {
+            if (obj.category == 12 || obj.category == 6 || obj.category == 9 || obj.category == 10 || obj.category == 11) {
+              this.products.push(obj);
+            }
+          });
+        });
+        break;
+    }
+  }
 }

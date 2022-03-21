@@ -20,9 +20,10 @@ export class ListComponent implements OnInit {
   firstIndex=1;
   lastIndex!:number;
   paginatorShow=false;
-  page=1;
+  page=0;
   itemInPage?:number;
-
+  limitUp=4;
+  limitDown=0;
   ngOnInit(): void {
     AOS.init();
     this.server.getDb().subscribe((val) => {this.srcProduct = val['products'];this.products = val['products'];this.lastIndex=this.products.length;});
@@ -48,13 +49,30 @@ export class ListComponent implements OnInit {
       for(index;index<this.srcProduct.length;index+=(per+1)){
         for(let i=0;i<=per;i++){
           arr.push(this.srcProduct[i+index])
-          console.log(i+index)
         }
         this.products.push(arr);
         arr=[];
       }
       this.lastIndex=(per+1)*this.page;
       this.paginatorShow=true;
+      console.log(this.products.length);
+      this.pagination(0);
+      this.limitDown=0;
+      this.limitUp=4;
+    }
+    pagination(page){
+      console.log(page);
+      this.lastIndex=((this.itemInPage!)+1)*(page+1);
+      this.firstIndex=(this.lastIndex)-(this.itemInPage!);
+      this.page=page;
+      console.log(this.products.length)
+      if(page==(this.limitUp-1) && page!=(this.products.length-1)){
+        this.limitUp++;
+        this.limitDown++;
+      }else if(page==(this.limitDown) && page!=0){
+        this.limitUp--;
+        this.limitDown--;
+      }
     }
 
 }

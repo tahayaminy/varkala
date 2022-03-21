@@ -38,9 +38,8 @@
 
 <section *ngIf="paginatorShow" class="flex justify-center mt-7 mb-6 pagination items-center">
   <i tabindex="0" class="bi bi-chevron-left"></i>
-  <span tabindex="0" class="active">1</span>
-  <span tabindex="0">2</span>
-  <span tabindex="0">3</span>
-  <span tabindex="0">4</span>
+  <ng-container *ngFor="let item of products;let index=index">
+    <span *ngIf="index<limitUp && index>=limitDown" tabindex="0" [class.active]="index==page" (click)="pagination(index)">{{index+1}}</span>
+  </ng-container>
   <i tabindex="0" class="bi bi-chevron-right"></i>
 </section>

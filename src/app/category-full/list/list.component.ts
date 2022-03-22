@@ -74,5 +74,30 @@ export class ListComponent implements OnInit {
         this.limitDown--;
       }
     }
+    nextPage(){
+      if((this.page+1)<this.products.length){
+        console.log('isrun')
+        this.page++;
+        this.lastIndex=((this.itemInPage!)+1)*(this.page+1);
+        this.firstIndex=(this.lastIndex)-(this.itemInPage!);
+        
+      if(this.page==(this.limitUp-1) && this.page!=(this.products.length-1)){
+        this.limitUp++;
+        this.limitDown++;
+      }
+      }
+    }
+    prevPage(){
+      if((this.page-1)>=0){
+        console.log('isrun')
+        this.page--;
+        this.lastIndex=((this.itemInPage!)+1)*(this.page+1);
+        this.firstIndex=(this.lastIndex)-(this.itemInPage!);
+       if(this.page==(this.limitDown) && this.page!=0){
+        this.limitUp--;
+        this.limitDown--;
+      }
+      }
+    }
 
 }

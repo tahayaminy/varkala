@@ -1,4 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ServerService } from 'src/app/server.service';
+import { ActivatedRoute } from '@angular/router';
+
 interface Sort{
   index:number
   value:string
@@ -10,10 +13,31 @@ interface Sort{
   encapsulation: ViewEncapsulation.None
 })
 export class ProductComponent implements OnInit {
+  
+  
+  
+  constructor(public server:ServerService,private router:ActivatedRoute) { }
 
-  constructor() { }
-
+  notif=true;
+  productId;
+  product;
+  category;
   ngOnInit(): void {
+    this.router.paramMap.subscribe(params=>this.productId=Number(params.get('id')));
+    this.server.getDb().subscribe(val=>{
+      val["products"].map(obj=>{
+        if(obj.id==this.productId){
+          this.product=obj;
+        }
+      })
+    });
+    this.server.getDb().subscribe(val=>{
+      val["categories"].map(obj=>{
+        if(obj.id==this.product.category){
+          this.category=obj.name;
+        }
+      })
+    });
   }
   sorts: Sort[] = [
     {index: 1,value: 'Small'},
@@ -21,4 +45,6 @@ export class ProductComponent implements OnInit {
     {index: 3,value: 'Large'}
   ];
   selectedSort=1;
+
+  
 }

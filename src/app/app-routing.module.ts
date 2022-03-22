@@ -21,7 +21,7 @@ const routes: Routes = [
     loadChildren:()=>import('./category-full/category-full.module').then(m=>m.CategoryFullModule)
   },
   {
-    path:'product',
+    path:'product/:id',
     loadChildren:()=>import('./product-detail/product-detail.module').then(m=>m.ProductDetailModule)
   },
   {

@@ -1,13 +1,13 @@
 <app-navbar [index]="false"></app-navbar>
 <p class="pt-24 lg:pt-32"></p>
 <header class="pt-12 pb-6 container-fluid mx-auto">
-  <p class="flex items-center notif"><span class="far fa-check-circle mr-4"></span> White Tee have been added to your cart. <span class="underline ml-3">View Cart</span><i style="font-size: 27px;" class="hover:rotate-90 cursor-pointer duration-300 fas fa-times ml-auto"></i></p>
+  <p class="flex items-center notif" *ngIf="notif" (click)="notif=!notif"><span class="far fa-check-circle mr-4"></span> White Tee have been added to your cart. <span class="underline ml-3">View Cart</span><i style="font-size: 27px;" class="hover:rotate-90 cursor-pointer duration-300 fas fa-times ml-auto"></i></p>
   <div class="bread-crumb mb-3">
     <span>Home </span>
     <span class="bi bi-dash-lg"></span>
-    <span> Top & blouses </span>
+    <span> {{category}} </span>
     <span class="bi bi-dash-lg"></span>
-    <span> White Tee</span>
+    <span> {{product?.name}}</span>
   </div>
 </header>
 <main class="container-fluid mx-auto pb-24"> 
@@ -34,10 +34,10 @@
       </section>
       <section class="xl:ml-auto pl-5 order-1 mb-6 lg:mb-0 basis-full lg:order-2 lg:basis-5/12 xl:basis-4/12">
         <section class="details">
-          <h2>Black blouse</h2>
+          <h2>{{product?.name}}</h2>
           <p class="flex pb-3 flex-wrap">
             <span class="price basis-full mb-2 sm:basis-auto">
-              <span class="mr-2">$40.00</span><span>$90.00</span>
+              <span class="mr-2">${{(product?.price)-(((product?.price)*(product?.discount.percent))/100)}}</span><span>${{product?.price}}</span>
             </span>
             <span class="basis-full sm:basis-auto lg:basis-full xl:basis-auto ml-auto">
               <span class="stars pr-2">
@@ -47,11 +47,11 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
             </span>
-            <span class="review">25 REVIEWS</span>
+            <span class="review">{{product?.reviews}} REVIEWS</span>
             </span>
           </p>
           <p class="mute pb-3">
-            Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.
+            {{product?.description}}  
           </p>
           <div class="flex flex-wrap">
             <div class="select lg:basis-full basis-full sm:basis-auto mb-6">
@@ -85,7 +85,7 @@
           </div>
           <div class="footer">
             <div>
-              <b>Category:</b><span class="mute"> Tops & blouses</span>
+              <b>Category:</b><span class="mute"> {{category}}</span>
             </div>
             <div>
               <b>Tags:</b><span class="mute">  Leisure,Elegant</span>
@@ -103,9 +103,7 @@
   <section class="flex flex-wrap md:flex-nowrap intro">
     <div class="basis-full md:basis-7/12">
       <h5>About</h5>
-      <p>
-        Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.
-      </p>
+      <p>{{product?.description}}</p>
       <p>
         He must have tried it a hundred times, shut his eyes so that he wouldn't have to look at the floundering legs, and only stopped when he began to feel a mild, dull pain there that he had never felt before.
       </p>
@@ -117,7 +115,7 @@
       </ul>
     </div>
     <div class="basis-full sm:basis-11/12 mt-4 md:mt-0 md:basis-5/12">
-      <img src="../../../assets/product-detail/1.jpg" alt="">
+      <img [src]="product?.image[0]" alt="">
     </div>
   </section>
   <p class="offer-head">You might also like these</p>

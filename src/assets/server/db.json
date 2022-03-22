@@ -13,7 +13,7 @@
       },
       "category":1,
       "image":["../assets/product/1.jpg","../assets/product/12.jpg"],
-      "reviews": 10
+      "reviews": 1
     },
     {
       "id": 2,
@@ -28,7 +28,7 @@
       },
       "category":2,
       "image":["../assets/product/2.jpg","../assets/product/22.jpg"],
-      "reviews": 10
+      "reviews": 2
     },
     {
       "id": 3,
@@ -43,7 +43,7 @@
       },
       "category":4,
       "image":["../assets/product/3.jpg","../assets/product/32.jpg"],
-      "reviews": 10
+      "reviews": 3
     },
     {
       "id": 4,
@@ -58,7 +58,7 @@
       },
       "category":3,
       "image":["../assets/product/4.jpg","../assets/product/42.jpg"],
-      "reviews": 10
+      "reviews": 65
     },
     {
       "id": 5,
@@ -73,7 +73,7 @@
       },
       "category":1,
       "image":["../assets/product/pantsmen.jpg","../assets/product/pantsmen2.jpg"],
-      "reviews": 10
+      "reviews": 30
     },
     {
       "id": 6,
@@ -88,7 +88,7 @@
       },
       "category":4,
       "image":["../assets/product/shirtmen.jpg","../assets/product/shirtmen2.jpg"],
-      "reviews": 10
+      "reviews": 35
     },
     {
       "id": 7,
@@ -103,7 +103,7 @@
       },
       "category":3,
       "image":["../assets/product/tshirtmen.jpg","../assets/product/tshirtmen2.jpg"],
-      "reviews": 10
+      "reviews": 40
     },
     {
       "id": 8,
@@ -118,7 +118,7 @@
       },
       "category":2,
       "image":["../assets/product/jacketmen.jpg","../assets/product/jacketmen2.jpg"],
-      "reviews": 10
+      "reviews": 45
     },
     {
       "id": 9,
@@ -133,7 +133,7 @@
       },
       "category":10,
       "image":["../assets/product/bagmen.jpg","../assets/product/bagmen2.jpg"],
-      "reviews": 10
+      "reviews": 50
     },
     {
       "id": 10,
@@ -148,7 +148,7 @@
       },
       "category":10,
       "image":["../assets/product/bagwomen.jpg","../assets/product/bagwomen2.jpg"],
-      "reviews": 10
+      "reviews": 60
     },
     {
       "id": 11,
@@ -163,7 +163,7 @@
       },
       "category":11,
       "image":["../assets/product/capmen.jpg","../assets/product/capmen2.jpg"],
-      "reviews": 10
+      "reviews": 65
     },
     {
       "id": 12,
@@ -178,7 +178,7 @@
       },
       "category":11,
       "image":["../assets/product/capwomen.jpg","../assets/product/capwomen2.jpg"],
-      "reviews": 10
+      "reviews": 76
     },
     {
       "id": 13,
@@ -193,7 +193,7 @@
       },
       "category":9,
       "image":["../assets/product/watchwomen.jpg","../assets/product/watchwomen2.jpg"],
-      "reviews": 10
+      "reviews": 5
     },
     {
       "id": 14,
@@ -208,7 +208,7 @@
       },
       "category":9,
       "image":["../assets/product/watchmen.jpg","../assets/product/watchmen2.jpg"],
-      "reviews": 10
+      "reviews": 80
     },
     {
       "id": 15,
@@ -223,7 +223,7 @@
       },
       "category":8,
       "image":["../assets/product/underwearwomen.jpg","../assets/product/underwearwomen2.jpg"],
-      "reviews": 10
+      "reviews": 85
     },
     {
       "id": 16,
@@ -238,7 +238,7 @@
       },
       "category":8,
       "image":["../assets/product/underwearmen.jpg","../assets/product/underwearmen2.jpg"],
-      "reviews": 10
+      "reviews": 80
     },
     {
       "id": 17,
@@ -253,7 +253,7 @@
       },
       "category":7,
       "image":["../assets/product/shortmen.jpg","../assets/product/shortmen2.jpg"],
-      "reviews": 10
+      "reviews": 70
     },
     {
       "id": 18,
@@ -268,7 +268,7 @@
       },
       "category":7,
       "image":["../assets/product/shortwomen.jpg","../assets/product/shortwomen2.jpg"],
-      "reviews": 10
+      "reviews": 92
     },
     {
       "id": 19,
@@ -298,7 +298,7 @@
       },
       "category":6,
       "image":["../assets/product/scarfmen.jpg","../assets/product/scarfmen2.jpg"],
-      "reviews": 10
+      "reviews": 20
     },
     {
       "id": 21,
@@ -313,7 +313,7 @@
       },
       "category":5,
       "image":["../assets/product/pulloverwomen.jpg","../assets/product/pulloverwomen2.jpg"],
-      "reviews": 10
+      "reviews": 30
     },
     {
       "id": 22,
@@ -328,7 +328,7 @@
       },
       "category":5,
       "image":["../assets/product/pullovermen.jpg","../assets/product/pullovermen2.jpg"],
-      "reviews": 10
+      "reviews": 40
     },
     {
       "id": 23,
@@ -343,7 +343,7 @@
       },
       "category":12,
       "image":["../assets/product/exmen.jpg","../assets/product/exmen2.jpg"],
-      "reviews": 10
+      "reviews": 45
     },
     {
       "id": 24,
@@ -358,7 +358,7 @@
       },
       "category":12,
       "image":["../assets/product/exwomen.jpg","../assets/product/exwomen2.jpg"],
-      "reviews": 10
+      "reviews": 50
     }
   ],
   "categories": [

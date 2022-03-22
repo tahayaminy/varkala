@@ -11,14 +11,17 @@
       <span class="mr-2">Show</span>
       <span class="mr-2" [class.dark-1]="itemInPage==1" (click)="itemPerPage(1)">2</span>
       <span class="mr-2" [class.dark-1]="itemInPage==3" (click)="itemPerPage(3)">4</span>
-      <span #all class="mr-2 dark-1">All</span>
+      <span #all class="mr-2 dark-1" (click)="allItem()">All</span>
     </div>
     <div class="basis-full md:basis-auto md:-mt-2 select">
       <span class="mr-2 inline-block translate-y-1/2">Sort by</span>
       <mat-form-field appearance="fill">
-        <mat-select disableOptionCentering panelClass="drop-down" [(ngModel)]="selectedSort">
-          <mat-option *ngFor="let sort of sorts" [value]="sort.index">
-            {{sort.value}}
+        <mat-select disableOptionCentering panelClass="drop-down" value="1">
+          <mat-option (click)="sortBaseDefault()" value="1">
+            Default
+          </mat-option>
+          <mat-option (click)="sortBaseRate()" value="2">
+            Rating
           </mat-option>
         </mat-select>
       </mat-form-field>

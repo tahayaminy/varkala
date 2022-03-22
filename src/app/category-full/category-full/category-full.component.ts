@@ -11,5 +11,9 @@ export class CategoryFullComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  public addItem(el){
+    console.log('recive')
+    console.log(el)
+  }
 
 }

@@ -5,6 +5,8 @@ import {
   OnInit,
   ViewChild,
   ViewEncapsulation,
+  Output,
+  EventEmitter
 } from '@angular/core';
 import AOS from 'aos';
 import { ServerService } from 'src/app/server.service';
@@ -19,6 +21,10 @@ export class ListComponent implements OnInit {
   constructor(public server: ServerService) {}
 
   @Input() input?:any;
+  @Output() public sort= new EventEmitter();
+  setSort(sort){
+    this.sort.emit(sort);
+  }
 
   products: any;
   srcProduct: any;
@@ -40,11 +46,6 @@ export class ListComponent implements OnInit {
     });
     
   }
-  ngOnChanges() {
-        
-    this.products=this.input;
-    
-}
   sortBaseDefault() {
     this.server.getDb().subscribe((val) => {
       this.srcProduct = val['products'];
@@ -54,6 +55,7 @@ export class ListComponent implements OnInit {
     this.allItem();
   }
   sortBaseRate() {
+    this.setSort('rate');
     this.allItem();
     for (let loop = 0; loop < this.products.length; loop++) {
       for (let index = 0; index < this.products.length; index++) {
@@ -90,11 +92,11 @@ export class ListComponent implements OnInit {
     this.limitUp = 4;
   }
   allItem() {
-    this.all.nativeElement.classList.add('dark-1');
+    this.all?.nativeElement.classList.add('dark-1');
     this.itemInPage = undefined;
     this.products = this.srcProduct;
 
-    this.lastIndex = this.products.length;
+    this.lastIndex = this.products?.length;
     this.paginatorShow = false;
   }
 
@@ -136,4 +138,9 @@ export class ListComponent implements OnInit {
       }
     }
   }
+  
+  ngOnChanges() {  
+    this.allItem();
+    this.products=this.input;
+}
 }

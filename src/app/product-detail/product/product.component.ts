@@ -41,7 +41,7 @@ export class ProductComponent implements OnInit {
       var arr=val["products"];
       var i=11;
       while(i>=0){
-      var x=Math.floor(Math.random() * (i+1));
+      var x=Math.floor(Math.random() * arr.length);
       this.randomProducts?.push(arr[x]);
       arr.splice(x,1);
       i--;

@@ -18,7 +18,7 @@
                 <span class="bi bi-dash-lg"></span>
                 <span>  Shop</span>
             </section>
-            <app-list [input]="srcProduct"></app-list>
+            <app-list [input]="srcProduct" (sort)="changeSort($event)"></app-list>
         </section>
     </section>
 </main>

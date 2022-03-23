@@ -7,7 +7,7 @@ import { Options, ChangeContext, PointerType } from '@angular-slider/ngx-slider'
 })
 export class SidebarComponent implements OnInit {
 
-  @Output() public filters= new EventEmitter();;
+  @Output() public filters= new EventEmitter();
   constructor() {
     
    }

@@ -13,14 +13,13 @@ interface Sort{
   encapsulation: ViewEncapsulation.None
 })
 export class ProductComponent implements OnInit {
-  
-  
-  
+    
   constructor(public server:ServerService,private router:ActivatedRoute) { }
 
   notif=true;
   productId;
   product;
+  randomProducts:any[]=[];
   category;
   ngOnInit(): void {
     this.router.paramMap.subscribe(params=>this.productId=Number(params.get('id')));
@@ -33,11 +32,22 @@ export class ProductComponent implements OnInit {
     });
     this.server.getDb().subscribe(val=>{
       val["categories"].map(obj=>{
-        if(obj.id==this.product.category){
+        if(obj.id==this.product?.category){
           this.category=obj.name;
         }
       })
     });
+    this.server.getDb().subscribe(val=>{
+      var arr=val["products"];
+      var i=11;
+      while(i>=0){
+      var x=Math.floor(Math.random() * (i+1));
+      this.randomProducts?.push(arr[x]);
+      arr.splice(x,1);
+      i--;
+    }
+    console.log(this.randomProducts);
+    });    
   }
   sorts: Sort[] = [
     {index: 1,value: 'Small'},

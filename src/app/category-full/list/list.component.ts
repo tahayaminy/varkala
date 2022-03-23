@@ -1,6 +1,7 @@
 import {
   Component,
   ElementRef,
+  Input,
   OnInit,
   ViewChild,
   ViewEncapsulation,
@@ -16,6 +17,8 @@ import { ServerService } from 'src/app/server.service';
 })
 export class ListComponent implements OnInit {
   constructor(public server: ServerService) {}
+
+  @Input() input?:any;
 
   products: any;
   srcProduct: any;
@@ -35,8 +38,13 @@ export class ListComponent implements OnInit {
       this.products = val['products'];
       this.lastIndex = this.products.length;
     });
+    
   }
-
+  ngOnChanges() {
+        
+    this.products=this.input;
+    
+}
   sortBaseDefault() {
     this.server.getDb().subscribe((val) => {
       this.srcProduct = val['products'];

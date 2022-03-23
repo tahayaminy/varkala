@@ -6,7 +6,7 @@
     </div>
     <section class="list-cont flex flex-wrap lg:flex-nowrap container-fluid mx-auto">
         <section class="order-2 lg:order-1 sidebar lg:pr-4 xl:pr-12">
-            <app-sidebar></app-sidebar>
+            <app-sidebar (filters)="changeFilter($event)"></app-sidebar>
         </section>
         <section class="order-1 lg:order-2 lg:px-4 list">
             <header class="pb-14">
@@ -18,7 +18,7 @@
                 <span class="bi bi-dash-lg"></span>
                 <span>  Shop</span>
             </section>
-            <app-list (newItemEvent)="addItem($event)"></app-list>
+            <app-list [input]="srcProduct"></app-list>
         </section>
     </section>
 </main>

@@ -9,6 +9,10 @@ import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { SwiperModule } from 'swiper/angular';
 
+
+import { NgxImageZoomModule } from 'ngx-image-zoom';
+
+
 @NgModule({
   declarations: [
     ProductComponent
@@ -19,7 +23,8 @@ import { SwiperModule } from 'swiper/angular';
     ProductDetailRoutingModule,
     MatSelectModule,
     FormsModule,
-    SwiperModule
+    SwiperModule,
+    NgxImageZoomModule
   ],
   exports: [
     ProductComponent

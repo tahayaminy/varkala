@@ -7,10 +7,13 @@ import { Options, ChangeContext, PointerType } from '@angular-slider/ngx-slider'
 })
 export class SidebarComponent implements OnInit {
 
-  @Output() public newItemEvent;
+  @Output() public filters= new EventEmitter();;
   constructor() {
-    this.newItemEvent= new EventEmitter();
+    
    }
+   setCategory(category){
+    this.filters.emit(category);
+  }
    
   minValue: number = 40;
   maxValue: number = 110;
@@ -48,8 +51,5 @@ export class SidebarComponent implements OnInit {
   panelOpen=[false,false,false,false,false];
   
   
-  addNewItem(category:string){
-    this.newItemEvent.emit(category);
-    console.log('is change');
-  }
+  
 }

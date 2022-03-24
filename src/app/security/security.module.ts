@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SecurityComponent } from './security/security.component';
 import { CommonShareModule } from '../common/common-share.module';
 import { SecurityRoutingModule } from './security-routing.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -13,7 +14,8 @@ import { SecurityRoutingModule } from './security-routing.module';
   imports: [
     CommonModule,
     CommonShareModule,
-    SecurityRoutingModule
+    SecurityRoutingModule,
+    FormsModule
   ],
   exports: [
     SecurityComponent

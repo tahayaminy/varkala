@@ -80,6 +80,7 @@ input:focus{
 }
 .mat-menu-panel{
   max-width: none !important;
+  min-height: 0 !important;
 }
 .mat-menu-content{
   padding: 0 !important;

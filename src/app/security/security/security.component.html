@@ -19,10 +19,10 @@
                 <p class="title">Already our customer?</p>
                 <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet.</p>
                 <div class="hr mt-6 mb-7"></div>
-                <label for="email" class="mb-2">Email</label>
-                <input class="w-full mb-6" type="email" id="email">
-                <label for="password" class="mb-2">Password</label>
-                <input class="w-full mb-6" type="password" id="password">
+                <label for="Email" class="mb-2">Email</label>
+                <input class="w-full mb-6" type="email" id="Email">
+                <label for="Password" class="mb-2">Password</label>
+                <input class="w-full mb-6" type="password" id="Password">
                 <button><i class="fas fa-sign-in-alt mr-3"></i>LOG IN</button>
             </div>
         </div>
@@ -37,13 +37,25 @@
                 <p>With registration with us new world of fashion, fantastic discounts and much more opens to you! The whole process will not take you more than a minute!</p>
                 <p>If you have any questions, please feel free to <span class="gold">contact us</span>, our customer service center is working for you 24/7.</p>
                 <div class="hr mt-6 mb-7"></div>
-                <label class="mb-2" for="name">Name</label>
-                <input class="mb-6 w-full" type="text" id="name">
-                <label class="mb-2" for="email">Email</label>
-                <input class="mb-6 w-full" type="email" id="email">
-                <label class="mb-2" for="password">Password</label>
-                <input class="mb-6 w-full" type="password" id="password">
-                <button><i class="far fa-user mr-3"></i>REGISTER</button>
+                <form #registerForm="ngForm">
+                    {{register.name}}
+                    <label class="mb-2" for="name">Name</label>
+                    <input [(ngModel)]="register.name" minlength="5" required class="mb-6 w-full" type="text" name="name" id="name">
+                    <p>at least 4 character</p>
+                    <label class="mb-2" for="email">Email</label>
+                    <input email [(ngModel)]="register.email" name="email" required class="mb-6 w-full" type="email" id="email">
+                    <p>this email is Already taken</p>
+                    <label class="mb-2" for="password">Password</label>
+                    <input [(ngModel)]="register.password" name="password" required class="mb-6 w-full" type="password" id="password">
+                    <p class="passwarn" style="display: block;">
+                        <span class="passcheck">length at least 6</span>
+                        <span class="passcheck">numbers</span>
+                        <span class="passcheck">LETTERS</span>
+                        <span class="passcheck">letters</span>
+                        <span class="passcheck">symbols</span>
+                      </p>
+                    <button [disabled]="!registerForm.form.valid"><i class="far fa-user mr-3"></i>REGISTER</button>
+                </form>
             </div>
         </div>
     </section>

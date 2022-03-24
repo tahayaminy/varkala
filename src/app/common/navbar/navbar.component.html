@@ -230,9 +230,17 @@
         </div>
       </form>
       <ul class="hidden lg:block">
-        <li routerLink="/security" class="inline-block">
+        <li mat-button [matMenuTriggerFor]="account" routerLink="/security" class="inline-block">
           <i style="font-size: 27px" class="far mr-2 fa-user"></i>
         </li>
+        <mat-menu class="mt-4 py-2" #account="matMenu" xPosition="before">
+          <section class="mat-upper-nav">
+            <b class="item">
+              <span>Hello Arya!</span>
+              <i style="font-size: 27px;" class="ml-auto bi bi-box-arrow-in-right cursor-pointer"></i>
+            </b> 
+          </section>
+        </mat-menu>
         <li routerLink="/wishlist" class="inline-block">
           <span
             [matBadge]="Wishlist.length"

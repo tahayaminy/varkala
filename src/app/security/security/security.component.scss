@@ -77,3 +77,16 @@ main{
         }
     }
 }
+.passwarn{
+  &{
+    color: #E0C097;
+    font-size: 90%;
+    margin-bottom: 40px;
+}
+&>span{
+    display: none;
+    color: #E0C097;
+    font-size: 90%;
+    margin-bottom: 5px;
+}
+}

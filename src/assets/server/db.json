@@ -11,8 +11,11 @@
         "isAvailable": true,
         "percent": 5
       },
-      "category":1,
-      "image":["../assets/product/1.jpg","../assets/product/12.jpg"],
+      "category": 1,
+      "image": [
+        "../assets/product/1.jpg",
+        "../assets/product/12.jpg"
+      ],
       "reviews": 1
     },
     {
@@ -26,8 +29,11 @@
         "isAvailable": true,
         "percent": 5
       },
-      "category":2,
-      "image":["../assets/product/2.jpg","../assets/product/22.jpg"],
+      "category": 2,
+      "image": [
+        "../assets/product/2.jpg",
+        "../assets/product/22.jpg"
+      ],
       "reviews": 2
     },
     {
@@ -41,8 +47,11 @@
         "isAvailable": true,
         "percent": 5
       },
-      "category":4,
-      "image":["../assets/product/3.jpg","../assets/product/32.jpg"],
+      "category": 4,
+      "image": [
+        "../assets/product/3.jpg",
+        "../assets/product/32.jpg"
+      ],
       "reviews": 3
     },
     {
@@ -56,8 +65,11 @@
         "isAvailable": true,
         "percent": 50
       },
-      "category":3,
-      "image":["../assets/product/4.jpg","../assets/product/42.jpg"],
+      "category": 3,
+      "image": [
+        "../assets/product/4.jpg",
+        "../assets/product/42.jpg"
+      ],
       "reviews": 65
     },
     {
@@ -71,8 +83,11 @@
         "isAvailable": true,
         "percent": 5
       },
-      "category":1,
-      "image":["../assets/product/pantsmen.jpg","../assets/product/pantsmen2.jpg"],
+      "category": 1,
+      "image": [
+        "../assets/product/pantsmen.jpg",
+        "../assets/product/pantsmen2.jpg"
+      ],
       "reviews": 30
     },
     {
@@ -86,8 +101,11 @@
         "isAvailable": true,
         "percent": 5
       },
-      "category":4,
-      "image":["../assets/product/shirtmen.jpg","../assets/product/shirtmen2.jpg"],
+      "category": 4,
+      "image": [
+        "../assets/product/shirtmen.jpg",
+        "../assets/product/shirtmen2.jpg"
+      ],
       "reviews": 35
     },
     {
@@ -101,8 +119,11 @@
         "isAvailable": true,
         "percent": 5
       },
-      "category":3,
-      "image":["../assets/product/tshirtmen.jpg","../assets/product/tshirtmen2.jpg"],
+      "category": 3,
+      "image": [
+        "../assets/product/tshirtmen.jpg",
+        "../assets/product/tshirtmen2.jpg"
+      ],
       "reviews": 40
     },
     {
@@ -116,8 +137,11 @@
         "isAvailable": true,
         "percent": 5
       },
-      "category":2,
-      "image":["../assets/product/jacketmen.jpg","../assets/product/jacketmen2.jpg"],
+      "category": 2,
+      "image": [
+        "../assets/product/jacketmen.jpg",
+        "../assets/product/jacketmen2.jpg"
+      ],
       "reviews": 45
     },
     {
@@ -131,8 +155,11 @@
         "isAvailable": true,
         "percent": 5
       },
-      "category":10,
-      "image":["../assets/product/bagmen.jpg","../assets/product/bagmen2.jpg"],
+      "category": 10,
+      "image": [
+        "../assets/product/bagmen.jpg",
+        "../assets/product/bagmen2.jpg"
+      ],
       "reviews": 50
     },
     {
@@ -146,8 +173,11 @@
         "isAvailable": true,
         "percent": 5
       },
-      "category":10,
-      "image":["../assets/product/bagwomen.jpg","../assets/product/bagwomen2.jpg"],
+      "category": 10,
+      "image": [
+        "../assets/product/bagwomen.jpg",
+        "../assets/product/bagwomen2.jpg"
+      ],
       "reviews": 60
     },
     {
@@ -161,8 +191,11 @@
         "isAvailable": true,
         "percent": 5
       },
-      "category":11,
-      "image":["../assets/product/capmen.jpg","../assets/product/capmen2.jpg"],
+      "category": 11,
+      "image": [
+        "../assets/product/capmen.jpg",
+        "../assets/product/capmen2.jpg"
+      ],
       "reviews": 65
     },
     {
@@ -176,8 +209,11 @@
         "isAvailable": true,
         "percent": 5
       },
-      "category":11,
-      "image":["../assets/product/capwomen.jpg","../assets/product/capwomen2.jpg"],
+      "category": 11,
+      "image": [
+        "../assets/product/capwomen.jpg",
+        "../assets/product/capwomen2.jpg"
+      ],
       "reviews": 76
     },
     {
@@ -191,8 +227,11 @@
         "isAvailable": true,
         "percent": 5
       },
-      "category":9,
-      "image":["../assets/product/watchwomen.jpg","../assets/product/watchwomen2.jpg"],
+      "category": 9,
+      "image": [
+        "../assets/product/watchwomen.jpg",
+        "../assets/product/watchwomen2.jpg"
+      ],
       "reviews": 5
     },
     {
@@ -206,8 +245,11 @@
         "isAvailable": true,
         "percent": 5
       },
-      "category":9,
-      "image":["../assets/product/watchmen.jpg","../assets/product/watchmen2.jpg"],
+      "category": 9,
+      "image": [
+        "../assets/product/watchmen.jpg",
+        "../assets/product/watchmen2.jpg"
+      ],
       "reviews": 80
     },
     {
@@ -221,8 +263,11 @@
         "isAvailable": true,
         "percent": 5
       },
-      "category":8,
-      "image":["../assets/product/underwearwomen.jpg","../assets/product/underwearwomen2.jpg"],
+      "category": 8,
+      "image": [
+        "../assets/product/underwearwomen.jpg",
+        "../assets/product/underwearwomen2.jpg"
+      ],
       "reviews": 85
     },
     {
@@ -236,8 +281,11 @@
         "isAvailable": true,
         "percent": 5
       },
-      "category":8,
-      "image":["../assets/product/underwearmen.jpg","../assets/product/underwearmen2.jpg"],
+      "category": 8,
+      "image": [
+        "../assets/product/underwearmen.jpg",
+        "../assets/product/underwearmen2.jpg"
+      ],
       "reviews": 80
     },
     {
@@ -251,8 +299,11 @@
         "isAvailable": true,
         "percent": 5
       },
-      "category":7,
-      "image":["../assets/product/shortmen.jpg","../assets/product/shortmen2.jpg"],
+      "category": 7,
+      "image": [
+        "../assets/product/shortmen.jpg",
+        "../assets/product/shortmen2.jpg"
+      ],
       "reviews": 70
     },
     {
@@ -266,8 +317,11 @@
         "isAvailable": true,
         "percent": 5
       },
-      "category":7,
-      "image":["../assets/product/shortwomen.jpg","../assets/product/shortwomen2.jpg"],
+      "category": 7,
+      "image": [
+        "../assets/product/shortwomen.jpg",
+        "../assets/product/shortwomen2.jpg"
+      ],
       "reviews": 92
     },
     {
@@ -281,8 +335,11 @@
         "isAvailable": true,
         "percent": 5
       },
-      "category":6,
-      "image":["../assets/product/scarfwomen.jpg","../assets/product/scarfwomen2.jpg"],
+      "category": 6,
+      "image": [
+        "../assets/product/scarfwomen.jpg",
+        "../assets/product/scarfwomen2.jpg"
+      ],
       "reviews": 10
     },
     {
@@ -296,8 +353,11 @@
         "isAvailable": true,
         "percent": 5
       },
-      "category":6,
-      "image":["../assets/product/scarfmen.jpg","../assets/product/scarfmen2.jpg"],
+      "category": 6,
+      "image": [
+        "../assets/product/scarfmen.jpg",
+        "../assets/product/scarfmen2.jpg"
+      ],
       "reviews": 20
     },
     {
@@ -311,8 +371,11 @@
         "isAvailable": true,
         "percent": 5
       },
-      "category":5,
-      "image":["../assets/product/pulloverwomen.jpg","../assets/product/pulloverwomen2.jpg"],
+      "category": 5,
+      "image": [
+        "../assets/product/pulloverwomen.jpg",
+        "../assets/product/pulloverwomen2.jpg"
+      ],
       "reviews": 30
     },
     {
@@ -326,8 +389,11 @@
         "isAvailable": true,
         "percent": 5
       },
-      "category":5,
-      "image":["../assets/product/pullovermen.jpg","../assets/product/pullovermen2.jpg"],
+      "category": 5,
+      "image": [
+        "../assets/product/pullovermen.jpg",
+        "../assets/product/pullovermen2.jpg"
+      ],
       "reviews": 40
     },
     {
@@ -341,8 +407,11 @@
         "isAvailable": true,
         "percent": 5
       },
-      "category":12,
-      "image":["../assets/product/exmen.jpg","../assets/product/exmen2.jpg"],
+      "category": 12,
+      "image": [
+        "../assets/product/exmen.jpg",
+        "../assets/product/exmen2.jpg"
+      ],
       "reviews": 45
     },
     {
@@ -356,8 +425,11 @@
         "isAvailable": true,
         "percent": 5
       },
-      "category":12,
-      "image":["../assets/product/exwomen.jpg","../assets/product/exwomen2.jpg"],
+      "category": 12,
+      "image": [
+        "../assets/product/exwomen.jpg",
+        "../assets/product/exwomen2.jpg"
+      ],
       "reviews": 50
     }
   ],
@@ -451,14 +523,38 @@
     {
       "id": 1,
       "username": "user",
-      "password": "12345678",
-      "token": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NDQ3NDIzNTEsImV4cCI6MTY0NzMzNDM1MSwic3ViIjoiMTQ2NDQzIn0.ZYleEQVVG7A4p1iGqXOyiF6XF3J7xuBbX8-DlrYy6THlDBeA51IwK-NOE3K9Js6wFQXIpR31LER7xQ-GAmFV9g"
+      "email": "tst@gmail.com",
+      "password": "12345678"
     },
     {
       "id": 2,
       "username": "taha",
-      "password": "12345678",
-      "token": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NDQ3NDIzNTEsImV4cCI6MTY0NzMzNDM1wic3ViIjoiMTQ2NDQzIn0.ZYleEQVVG7A4p1iGqXOyiF6XF3J7xuBbX8-DlrYy6THlDBeA51IwK-NOE3K9Js6wFQXIpR31LER7xQ-GAmFV9g"
+      "email": "010arya010@gmail.com",
+      "password": "12345678"
+    },
+    {
+      "id": 3,
+      "username": "arya",
+      "email": "arya@gmail.com",
+      "password": "1Aa@"
+    },
+    {
+      "id": 4,
+      "username": "xxxx",
+      "email": "xxx@gmail.com",
+      "password": "2Ss#"
+    },
+    {
+      "id": 5,
+      "username": "tamam",
+      "email": "tamam@gamil.com",
+      "password": "Tamam@1"
+    },
+    {
+      "id": 6,
+      "username": "ending",
+      "email": "ending@gmail.com",
+      "password": "3@aaA"
     }
   ]
 }

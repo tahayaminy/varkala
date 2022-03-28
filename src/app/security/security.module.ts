@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { SecurityComponent } from './security/security.component';
 import { CommonShareModule } from '../common/common-share.module';
 import { SecurityRoutingModule } from './security-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -15,7 +16,9 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     CommonShareModule,
     SecurityRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   exports: [
     SecurityComponent

@@ -1,62 +1,121 @@
 <app-navbar [index]="false"></app-navbar>
 <p class="pt-24 lg:pt-32"></p>
 <header class="pt-20 pb-24 container mx-auto">
-    <div class="mb-3">
-        <span>Home  </span>
-        <span class="bi bi-dash-lg"></span>
-        <span>  Customer zone</span>
-    </div>
-    <h1>Customer zone</h1>
-    <p>You can use the navbar-modal link or this page for customers' sign in.</p>
+  <div class="mb-3">
+    <span>Home </span>
+    <span class="bi bi-dash-lg"></span>
+    <span> Customer zone</span>
+  </div>
+  <h1>Customer zone</h1>
+  <p>You can use the navbar-modal link or this page for customers' sign in.</p>
 </header>
 <main class="flex flex-wrap container mx-auto pb-12">
-    <section class="lg:basis-5/12">
-        <div >
-            <div class="header px-12 py-6">
-                <b>Login</b>
-            </div>
-            <div class="body p-12">
-                <p class="title">Already our customer?</p>
-                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet.</p>
-                <div class="hr mt-6 mb-7"></div>
-                <label for="Email" class="mb-2">Email</label>
-                <input class="w-full mb-6" type="email" id="Email">
-                <label for="Password" class="mb-2">Password</label>
-                <input class="w-full mb-6" type="password" id="Password">
-                <button><i class="fas fa-sign-in-alt mr-3"></i>LOG IN</button>
-            </div>
-        </div>
-    </section>
-    <section class="lg:basis-6/12">
-        <div class="lg:ml-auto custom-width">
-            <div class="header px-12 py-6">
-                <b>New account</b>
-            </div>
-            <div class="body p-12">
-                <p class="title">Not our registered customer yet?</p>
-                <p>With registration with us new world of fashion, fantastic discounts and much more opens to you! The whole process will not take you more than a minute!</p>
-                <p>If you have any questions, please feel free to <span class="gold">contact us</span>, our customer service center is working for you 24/7.</p>
-                <div class="hr mt-6 mb-7"></div>
-                <form #registerForm="ngForm">
-                    {{register.name}}
-                    <label class="mb-2" for="name">Name</label>
-                    <input [(ngModel)]="register.name" minlength="5" required class="mb-6 w-full" type="text" name="name" id="name">
-                    <p>at least 4 character</p>
-                    <label class="mb-2" for="email">Email</label>
-                    <input email [(ngModel)]="register.email" name="email" required class="mb-6 w-full" type="email" id="email">
-                    <p>this email is Already taken</p>
-                    <label class="mb-2" for="password">Password</label>
-                    <input [(ngModel)]="register.password" name="password" required class="mb-6 w-full" type="password" id="password">
-                    <p class="passwarn" style="display: block;">
-                        <span class="passcheck">length at least 6</span>
-                        <span class="passcheck">numbers</span>
-                        <span class="passcheck">LETTERS</span>
-                        <span class="passcheck">letters</span>
-                        <span class="passcheck">symbols</span>
-                      </p>
-                    <button [disabled]="!registerForm.form.valid"><i class="far fa-user mr-3"></i>REGISTER</button>
-                </form>
-            </div>
-        </div>
-    </section>
+  <section class="lg:basis-5/12">
+    <div>
+      <div class="header px-12 py-6">
+        <b>Login</b>
+      </div>
+      <div class="body p-12">
+        <p class="title">Already our customer?</p>
+        <p>
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+          ultricies eget, tempor sit amet.
+        </p>
+        <div class="hr mt-6 mb-7"></div>
+        <form
+            (ngSubmit)="logIn(loginEmail.value,loginPassword.value)"
+          [formGroup]="LoginForm"
+        >
+          <label for="Email" class="mb-2">Email</label>
+          <input
+            
+            formControlName="email"
+            class="w-full mb-6"
+            type="email"
+            id="Email"
+            #loginEmail
+            required
+          />
+          <label for="Password" class="mb-2">Password</label>
+          <input
+            
+            formControlName="password"
+            class="w-full mb-6"
+            type="password"
+            id="Password"
+            #loginPassword
+            required
+          />
+          <button [disabled]="!LoginForm.valid" type="submit">
+            <i class="fas fa-sign-in-alt mr-3"></i>LOG IN
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="lg:basis-6/12">
+    <div class="lg:ml-auto custom-width">
+      <div class="header px-12 py-6">
+        <b>New account</b>
+      </div>
+      <div class="body p-12">
+        <p class="title">Not our registered customer yet?</p>
+        <p>
+          With registration with us new world of fashion, fantastic discounts
+          and much more opens to you! The whole process will not take you more
+          than a minute!
+        </p>
+        <p>
+          If you have any questions, please feel free to
+          <span class="gold">contact us</span>, our customer service center is
+          working for you 24/7.
+        </p>
+        <div class="hr mt-6 mb-7"></div>
+        <form (ngSubmit)="registery(registerName.value,registerEmail.value,registerPassword.value)" [formGroup]="registerForm">
+          <label class="mb-2" for="name">Name</label>
+          <input
+            type="text"
+            formControlName="name"
+            id="name"
+            #registerName
+            class="mb-3 w-full"
+            required
+          />
+          <p [hidden]="registerForm.controls['name'].status=='VALID'">at least 4 character</p>
+          <label class="mb-2 mt-5" for="email">Email</label>
+          <input
+            required
+            [ngClass]="emailCheck ? 'mb-6' : 'mb-3'"
+            class="w-full"
+            type="email"
+            id="email"
+            #registerEmail
+            (blur)="newEmail(registerEmail.value)"
+            formControlName="email"
+          />
+          <p class="mb-3" [hidden]="emailCheck">this email is Already taken</p>
+          <label class="mb-2" for="password">Password</label>
+          <input
+            formControlName="password"
+            required
+            class="mb-6 w-full"
+            type="password"
+            id="password"
+            #registerPassword
+          />
+          <p class="passwarn">
+            <span *ngIf="registerForm.get('password')?.errors?.['passLength']">length at least 4</span>
+            <span *ngIf="registerForm.get('password')?.errors?.['number']">numbers</span>
+            <span *ngIf="registerForm.get('password')?.errors?.['upper']">LETTERS</span>
+            <span *ngIf="registerForm.get('password')?.errors?.['lower']">letters</span>
+            <span *ngIf="registerForm.get('password')?.errors?.['symbol']">symbols</span>
+          </p>
+          <button type="submit" [disabled]="!registerForm.valid">
+            <i class="far fa-user mr-3"></i>REGISTER
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
 </main>

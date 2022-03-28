@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild,Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { ServerService } from 'src/app/server.service';
 import { ItemService } from '../item.service';
+import { User } from 'src/assets/server/models/User';
 
 @Component({
   selector: 'app-navbar',
@@ -18,10 +19,33 @@ export class NavbarComponent implements OnInit {
   Cart=this.itemService.Cart;
   navbar:any;
   categories:any;
+  
+  logged=false;
+  dashboard?:User;
   ngOnInit(): void {    
     this.translate.get('navbar').subscribe(val=>this.navbar=val);
     this.server.getDb().subscribe(val=>this.categories=val["categories"]);
+    var profile=sessionStorage.getItem("userId");
+    if(profile){
+      let data=Number(profile);
+      console.log(profile)
+      console.log(data);
+      this.logged=true;
+      this.server.getDb().subscribe(val=>{
+        val["users"].map(user=>{
+          if(user.id==data){
+            this.dashboard=user;
+          }
+        })
+      });
+    }
   }
+  exit(){
+    sessionStorage.removeItem("userId");
+    this.logged=false;
+  }
+
+
 
   translator(lang){
     this.translate.use(lang);

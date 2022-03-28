@@ -230,17 +230,24 @@
         </div>
       </form>
       <ul class="hidden lg:block">
-        <li mat-button [matMenuTriggerFor]="account" routerLink="/security" class="inline-block">
-          <i style="font-size: 27px" class="far mr-2 fa-user"></i>
-        </li>
-        <mat-menu class="mt-4 py-2" #account="matMenu" xPosition="before">
-          <section class="mat-upper-nav">
-            <b class="item">
-              <span>Hello Arya!</span>
-              <i style="font-size: 27px;" class="ml-auto bi bi-box-arrow-in-right cursor-pointer"></i>
-            </b> 
-          </section>
-        </mat-menu>
+        <ng-container *ngIf="logged">
+          <li mat-button [matMenuTriggerFor]="account" class="inline-block">
+            <i style="font-size: 27px" class="far mr-2 fa-user"></i>
+          </li>
+          <mat-menu class="mt-4 py-2" #account="matMenu" xPosition="before">
+            <section class="mat-upper-nav">
+              <b class="item">
+                <span>Hello {{dashboard?.username}}!</span>
+                <i (click)="exit()" style="font-size: 27px;" class="ml-auto bi bi-box-arrow-in-right cursor-pointer"></i>
+              </b> 
+            </section>
+          </mat-menu>
+        </ng-container>
+        <ng-container *ngIf="!logged">
+          <li routerLink="/security" class="inline-block">
+            <i style="font-size: 27px" class="far mr-2 fa-user"></i>
+          </li>
+        </ng-container>
         <li routerLink="/wishlist" class="inline-block">
           <span
             [matBadge]="Wishlist.length"
@@ -266,10 +273,20 @@
       </ul>
       <!-- NAVBAR IN SMALL SCREEN -->
       <div class="lg:hidden w-full flex flex-nowrap pl-4 ml-1 justify-center">
-        <i
-          routerLink="/security"
-          class="far text-2xl mr-2 fa-user cursor-pointer"
-        ></i>
+        <ng-container *ngIf="logged">
+            <i mat-button [matMenuTriggerFor]="account" style="font-size: 27px" class="far mr-2 fa-user cursor-pointer"></i>
+          <mat-menu class="mt-4 py-2" #account="matMenu" xPosition="before">
+            <section class="mat-upper-nav">
+              <b class="item">
+                <span>Hello {{dashboard?.username}}!</span>
+                <i (click)="exit()" style="font-size: 27px;" class="ml-auto bi bi-box-arrow-in-right cursor-pointer"></i>
+              </b> 
+            </section>
+          </mat-menu>
+        </ng-container>
+        <ng-container *ngIf="!logged">
+            <i routerLink="/security" style="font-size: 27px" class="far mr-2 fa-user cursor-pointer"></i>
+        </ng-container>
         <span
           routerLink="/wishlist"
           [matBadge]="Wishlist.length"

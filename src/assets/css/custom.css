@@ -79,6 +79,15 @@
   box-shadow: 5px 0px 0px 0px #42A948;
 }
 
-.ng-invalid:not(form)  {
+.ng-invalid:not(form){
   box-shadow: -5px 0px 0px 0px #a94442;
 }
+.ng-pristine:not(form)  {
+  box-shadow: unset !important;
+}
+.ng-pristine + p{
+    display: none;
+  }
+  /* .ng-invalid + p{
+    display: block;
+  } */

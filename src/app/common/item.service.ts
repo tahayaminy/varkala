@@ -29,4 +29,23 @@ export class ItemService {
       this.Cart.push(id);
     }
   }
+
+  wishCart(id){
+    let wish = this.Wishlist.indexOf(id);
+    let wishExist;
+    if (wish > -1) {
+      wishExist=true;
+    } else {
+      wishExist=false;
+    }
+
+    let cart = this.Cart.indexOf(id);
+    let cartExist;
+    if (cart > -1) {
+      cartExist=true;
+    } else {
+      cartExist=false;
+    }
+    return {wish:wishExist,cart:cartExist};
+  }
 }

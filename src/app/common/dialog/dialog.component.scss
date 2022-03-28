@@ -8,136 +8,137 @@ $light: #adb5bd;
 @import "~swiper/css/free-mode";
 @import "~swiper/css/navigation";
 @import "~swiper/css/thumbs";
-.swiper {
-  width: 100%;
-  height: 100%;
-}
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.swiper {
-  width: 100%;
-  height: 300px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.swiper-slide {
-  background-size: cover;
-  background-position: center;
-}
-
-.mySwiper2 {
-  width: 100%;
-  height: 80%;
-  @media only screen and (min-width:1024px){
-    height: 58%;
-  }
-  @media only screen and (min-width:1200px){
-    height: 80%;
-  }
-}
-
-.mySwiper {
-  box-sizing: border-box;
-  padding: 20px 0;
-  min-height: 25px;
-  height: 18%;
-  @media only screen and (min-width:1024px){
-    height: 13%;
-  }
-  @media only screen and (min-width:1200px){
-    height: 15%;
-  }
-}
-
-.mySwiper .swiper-slide {
-  width: 25%;
-  height: 100%;
-  opacity: 0.4;
-}
-
-.mySwiper .swiper-slide-thumb-active {
-  opacity: 1;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-//SWIPER END
-
-.mat-form-field-label-wrappe {
-  display: none;
-}
-.drop-down {
-  position: absolute !important;
-  top: 36px !important;
-  left: 8px;
-  border-radius: 0 !important;
-  max-width: none !important;
-  width: 100%;
-  @media only screen and (min-width: 1024px) {
-    width: 300px;
-  }
-  @media only screen and (min-width: 1200px) {
-    width: 450px;
-  }
-}
-.mat-select-panel {
-  padding: 3px 0 !important;
-}
-.mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
-  background-color: $crem;
-  color: white;
-}
-.mat-option {
-  line-height: 3em;
-  height: 2.5em !important;
-  color: $black;
-  letter-spacing: 0.01em;
-  width: 100%;
-}
-.mat-option-text {
-  font-size: 0.85em;
-  font-family: regular;
-}
-.crem {
-  color: $crem;
-  opacity: 1 !important;
-}
-.mute{
-  color:$gray;
-  line-height: 1.6;
-}
 article {
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .swiper {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .swiper-slide {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .mySwiper2 {
+    width: 100%;
+    height: 80%;
+    @media only screen and (min-width:1024px){
+      height: 58%;
+    }
+    @media only screen and (min-width:1200px){
+      height: 80%;
+    }
+  }
+  
+  .mySwiper {
+    box-sizing: border-box;
+    padding: 20px 0;
+    min-height: 25px;
+    height: 18%;
+    @media only screen and (min-width:1024px){
+      height: 13%;
+    }
+    @media only screen and (min-width:1200px){
+      height: 15%;
+    }
+  }
+  
+  .mySwiper .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+  }
+  
+  .mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  //SWIPER END
+  
+  .mat-form-field-label-wrappe {
+    display: none;
+  }
+  .drop-down {
+    position: absolute !important;
+    top: 36px !important;
+    left: 8px;
+    border-radius: 0 !important;
+    max-width: none !important;
+    width: 100%;
+    @media only screen and (min-width: 1024px) {
+      width: 300px;
+    }
+    @media only screen and (min-width: 1200px) {
+      width: 450px;
+    }
+  }
+  .mat-select-panel {
+    padding: 3px 0 !important;
+  }
+  .mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
+    background-color: $crem;
+    color: white;
+  }
+  .mat-option {
+    line-height: 3em;
+    height: 2.5em !important;
+    color: $black;
+    letter-spacing: 0.01em;
+    width: 100%;
+  }
+  .mat-option-text {
+    font-size: 0.85em;
+    font-family: regular;
+  }
+  .crem {
+    color: $crem;
+    opacity: 1 !important;
+  }
+  .mute{
+    color:$gray;
+    line-height: 1.6;
+  }
   .details {
     h2 {
       font-size: calc(1.325rem + 0.9vw);

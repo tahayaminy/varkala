@@ -1,13 +1,14 @@
-<section routerLink="/product/{{data.id}}" class="item">
+<section class="item">
   <div class="relative mb-4 imgs">
     <img
+      routerLink="/product/{{data.id}}"
       [src]="data.image?.[0]"
       class="absolute hover:opacity-0 duration-500 top-0 left-0 z-0"
     />
     <img [src]="data.image?.[1]" class="w-full h-full" />
     <span class="absolute badge">{{data.status}}</span>
     <div class="absolute bottom-0 left-0 w-full label">
-      <span (click)="addCart(data.id)" class="hover:underline">Add to cart</span>
+      <span *ngIf="!cart" (click)="addCart(data.id)" class="cartitem hover:underline">Add to cart</span>
       <span *ngIf="!heart" (click)="addWishlist(data.id)" class="bi bi-heart ml-auto"></span>
       <span *ngIf="heart" (click)="addWishlist(data.id)" class="fas fa-heart ml-auto"></span>
       <span (click)="modalOpen()" class="bi bi-arrows-fullscreen ml-2"></span>

@@ -18,9 +18,9 @@ export class ItemComponent implements OnInit {
   cart=false;
   cartList=this.itemService.Cart;
   ngOnInit(): void {
-    let status=this.itemService.wishCart(this.data.id);
-    this.heart=status.wish;
-    this.cart=status.cart;
+    this.itemService.tst.subscribe(data=>{
+      this.cart=data
+    })
   }
   addWishlist(data){
     this.heart=!this.heart;

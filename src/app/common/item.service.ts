@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { Category } from 'src/assets/server/models/Category';
 import { Product } from 'src/assets/server/models/Product';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable({
   providedIn: 'root',
@@ -12,6 +12,8 @@ export class ItemService {
   Wishlist: any[] = [];
   Cart: any[] = [];
   price:number=0;
+
+  tst=new Subject<boolean>();
 
   addToWishlist(data) {
     var index = this.Wishlist.indexOf(data);
@@ -38,6 +40,7 @@ export class ItemService {
   removeCart(data){
     var index = this.Cart.indexOf(data);
     this.Cart.splice(index, 1);
+    this.tst.next(false);
   }
 
   wishCart(id){

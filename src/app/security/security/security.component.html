@@ -23,6 +23,7 @@
           ultricies eget, tempor sit amet.
         </p>
         <div class="hr mt-6 mb-7"></div>
+        <p style="color: red;" *ngIf="information">Information is incorrect</p>
         <form
             (ngSubmit)="logIn(loginEmail.value,loginPassword.value)"
           [formGroup]="LoginForm"

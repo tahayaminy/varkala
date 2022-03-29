@@ -12,24 +12,24 @@
   </p>
 </header>
 <main class="container mx-auto pb-24"> 
-    <section class="flex flex-wrap lg:flex-nowrap product pt-14 lg:pt-8 pb-6 border-b">
+    <section *ngFor="let item of wishlist;let first=first;let last=last" [ngClass]="{'pt-14':first,'pt-10':!first,'border-b':!last}" class="flex flex-wrap lg:flex-nowrap product lg:pt-8 pb-6 border-b">
         <span class="lg:hidden fas fa-times mb-1"></span>
         <div class="basis-full lg:basis-5/12 flex first">
             <div class="img">
-                <img src="../../../assets/product/1.jpg" alt="">
+                <img src="../../{{item.image[0]}}" alt="">
             </div>
             <div class="flex ml-4 flex-col justify-center info">
-                <b>Ethnic Sweater</b>
+                <b>{{item.name}}</b>
                 <span>Size: Large</span>
                 <span>Colour: Green</span>
             </div>
         </div>
         <div class="hidden basis-7/12 lg:flex flex-row second">
             <div class="basis-1/6 flex items-center justify-center">
-                <span>$40</span>
+                <span>${{item.price}}</span>
             </div>
             <div class="basis-1/4 flex items-center">
-                <span class="bg-crem">In stock</span>
+                <span class="bg-crem">{{item.status}}</span>
             </div>
             <div class="flex items-center justify-center">
                 <span>ADD TO CART</span>
@@ -40,10 +40,10 @@
         </div>
         <div class="third lg:hidden w-full pt-10 lg:pt-7">
             <div class="flex w-full">
-                <span class="gray">Price per time</span><span class="ml-auto">$40</span>
+                <span class="gray">Price per time</span><span class="ml-auto">${{item.price}}</span>
             </div>
             <div class="flex w-full">
-                <span class="gray">Status</span><span class="bg-crem ml-auto">In stock</span>
+                <span class="gray">Status</span><span class="bg-crem ml-auto">{{item.status}}</span>
             </div>
             <div class="flex mt-6">
                 <span>ADD TO CART</span>
@@ -51,81 +51,4 @@
         </div>
     </section>
 
-    <section class="flex flex-wrap lg:flex-nowrap product pt-10 lg:pt-8 pb-6 border-b">
-        <span class="lg:hidden fas fa-times mb-1"></span>
-        <div class="basis-full lg:basis-5/12 flex first">
-            <div class="img">
-                <img src="../../../assets/product/1.jpg" alt="">
-            </div>
-            <div class="flex ml-4 flex-col justify-center info">
-                <b>Ethnic Sweater</b>
-                <span>Size: Large</span>
-                <span>Colour: Green</span>
-            </div>
-        </div>
-        <div class="hidden basis-7/12 lg:flex flex-row second">
-            <div class="basis-1/6 flex items-center justify-center">
-                <span>$40</span>
-            </div>
-            <div class="basis-1/4 flex items-center">
-                <span class="bg-red">Out of stock</span>
-            </div>
-            <div class="flex items-center justify-center">
-                <!-- <span>ADD TO CART</span> -->
-            </div>
-            <div class="basis-1/6 flex items-center">
-                <span class="bi bi-x-lg"></span>
-            </div>
-        </div>
-        <div class="third lg:hidden w-full pt-10 lg:pt-7">
-            <div class="flex w-full">
-                <span class="gray">Price per time</span><span class="ml-auto">$40</span>
-            </div>
-            <div class="flex w-full">
-                <span class="gray">Status</span><span class="bg-red ml-auto">Out of stock</span>
-            </div>
-            <!-- <div class="flex mt-6">
-                <span>ADD TO CART</span>
-            </div> -->
-        </div>
-    </section>
-
-    <section class="flex flex-wrap lg:flex-nowrap product pt-10 lg:pt-8 pb-6">
-        <span class="lg:hidden fas fa-times mb-1"></span>
-        <div class="basis-full lg:basis-5/12 flex first">
-            <div class="img">
-                <img src="../../../assets/product/1.jpg" alt="">
-            </div>
-            <div class="flex ml-4 flex-col justify-center info">
-                <b>Ethnic Sweater</b>
-                <span>Size: Large</span>
-                <span>Colour: Green</span>
-            </div>
-        </div>
-        <div class="hidden basis-7/12 lg:flex flex-row second">
-            <div class="basis-1/6 flex items-center justify-center">
-                <span>$40</span>
-            </div>
-            <div class="basis-1/4 flex items-center">
-                <span class="bg-black">Being restocked</span>
-            </div>
-            <div class="flex items-center justify-center">
-                <!-- <span>ADD TO CART</span> -->
-            </div>
-            <div class="basis-1/6 flex items-center">
-                <span class="bi bi-x-lg"></span>
-            </div>
-        </div>
-        <div class="third lg:hidden w-full pt-10 lg:pt-7">
-            <div class="flex w-full">
-                <span class="gray">Price per time</span><span class="ml-auto">$40</span>
-            </div>
-            <div class="flex w-full">
-                <span class="gray">Status</span><span class="bg-black ml-auto">Being restocked</span>
-            </div>
-            <!-- <div class="flex mt-6">
-                <span>ADD TO CART</span>
-            </div> -->
-        </div>
-    </section>
 </main>

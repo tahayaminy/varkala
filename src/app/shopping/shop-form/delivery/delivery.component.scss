@@ -146,16 +146,20 @@ main {
     letter-spacing: 0.25rem;
     font-size: 0.8rem;
     padding: 8.4px 12px;
-    span {
+    span,button {
       cursor: pointer;
     }
-    span:first-child {
+    span{
       color: $gray;
     }
-    span:last-child {
+    button {
       color: white;
       background-color: $black;
       padding: 8.4px 12px;
+      &:disabled{
+        opacity: .5;
+        cursor: not-allowed;
+      }
     }
   }
   &:first-child {

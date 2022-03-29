@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder,Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-delivery',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeliveryComponent implements OnInit {
 
-  constructor() { }
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
   }
 
+  deliverForm=this.fb.group({
+    deliver:['',Validators.required]
+  })
 }

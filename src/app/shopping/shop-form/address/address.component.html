@@ -10,7 +10,7 @@
   <p>Please fill in your address.</p>
 </header>
 <main class="container flex flex-wrap mx-auto pb-10">
-  <section class="basis-full lg:basis-8/12 pr-4">
+  <form [formGroup]="formshop" class="basis-full lg:basis-8/12 pr-4">
     <section class="grid tabbar grid-cols-1 lg:grid-cols-3 mb-14 rounded">
       <div class="active py-5 lg:rounded-l">
         <div class="text-center">Address</div>
@@ -27,31 +27,31 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8">
         <div class="">
           <label for="fullname">Full Name</label>
-          <input type="text" id="fullname" placeholder="Joe Black" />
+          <input formControlName="name" required type="text" id="fullname" placeholder="Joe Black" />
         </div>
         <div class="">
           <label for="email">Email Address</label>
-          <input type="text" id="email" placeholder="joe.black@gmail.com" />
+          <input formControlName="email" type="text" id="email" placeholder="joe.black@gmail.com" />
         </div>
         <div class="">
           <label for="street">Street</label>
-          <input type="text" id="street" placeholder="123 Main St." />
+          <input formControlName="street" type="text" id="street" placeholder="123 Main St." />
         </div>
         <div class="">
           <label for="city">City</label>
-          <input type="text" id="city" placeholder="City" />
+          <input formControlName="city" type="text" id="city" placeholder="City" />
         </div>
         <div class="">
           <label for="zip">ZIP</label>
-          <input type="text" id="zip" placeholder="Postal code" />
+          <input formControlName="zip" type="text" id="zip" placeholder="Postal code" />
         </div>
         <div class="">
           <label for="state">State</label>
-          <input type="text" id="state" placeholder="State" />
+          <input formControlName="state" type="text" id="state" placeholder="State" />
         </div>
         <div class="">
           <label for="phone">Phone Number</label>
-          <input type="text" id="phone" placeholder="Phone Number" />
+          <input formControlName="number" type="tel" id="phone" placeholder="Phone Number" />
         </div>
       </div>
       <div class="mt-5">
@@ -63,11 +63,11 @@
     >
       <span class="basis-full text-center mb-5 lg:mb-0 lg:basis-auto"
         ><i class="fas fa-angle-left"></i> BACK</span
-      ><span routerLink="delivery" class="ml-auto text-center basis-full lg:basis-auto"
+      ><button [disabled]="!formshop.valid" routerLink="delivery" class="ml-auto text-center basis-full lg:basis-auto"
         >CHOOSE DELIVERY METHOD <i class="fas fa-angle-right"></i
-      ></span>
+      ></button>
     </div>
-  </section>
+  </form>
   <section class="basis-full lg:basis-4/12 lg:pl-4">
     <section class="order-summery rounded">
       <div class="p-4 header rounded-t"><b>Order summery</b></div>

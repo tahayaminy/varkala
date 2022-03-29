@@ -19,10 +19,11 @@ export class NavbarComponent implements OnInit {
   Cart=this.itemService.Cart;
   navbar:any;
   categories:any;
-  
+  price=localStorage.getItem("price");
   logged=false;
   dashboard?:User;
-  ngOnInit(): void {    
+  ngOnInit(): void {
+    console.log(this.price)    
     this.translate.get('navbar').subscribe(val=>this.navbar=val);
     this.server.getDb().subscribe(val=>this.categories=val["categories"]);
     var profile=sessionStorage.getItem("userId");
@@ -64,5 +65,7 @@ export class NavbarComponent implements OnInit {
       this.menuCont.nativeElement.style='height:0;background-color:transparent;';
     }
   }
-
+  removeCart(data){
+    this.itemService.removeCart(data);
+  }
 }

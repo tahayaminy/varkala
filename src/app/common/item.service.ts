@@ -9,25 +9,35 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class ItemService {
   constructor(private http:HttpClient) {}
 
-  Wishlist: number[] = [];
-  Cart: number[] = [];
+  Wishlist: any[] = [];
+  Cart: any[] = [];
+  price:number=0;
 
-  addToWishlist(id: number) {
-    var index = this.Wishlist.indexOf(id);
+  addToWishlist(data) {
+    var index = this.Wishlist.indexOf(data);
     if (index > -1) {
       this.Wishlist.splice(index, 1);
     } else {
-      this.Wishlist.push(id);
+      this.Wishlist.push(data);
     }
   }
 
-  addToCart(id: number) {
-    var index = this.Cart.indexOf(id);
+  addToCart(data) {
+    var index = this.Cart.indexOf(data);
     if (index > -1) {
       this.Cart.splice(index, 1);
     } else {
-      this.Cart.push(id);
+      this.Cart.push(data);
     }
+    this.price=0;
+    for(let item of this.Cart){
+      this.price=this.price+((item.price)-(((item.price)*(item.discount.percent))/100));
+    }
+    localStorage.setItem("price",`${this.price}`);
+  }
+  removeCart(data){
+    var index = this.Cart.indexOf(data);
+    this.Cart.splice(index, 1);
   }
 
   wishCart(id){

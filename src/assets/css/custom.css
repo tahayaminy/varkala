@@ -75,7 +75,7 @@
 }
 
 /*FORM*/
-.ng-valid[required], .ng-valid.required  {
+.ng-valid[required], .ng-valid:not(form)  {
   box-shadow: 5px 0px 0px 0px #42A948;
 }
 

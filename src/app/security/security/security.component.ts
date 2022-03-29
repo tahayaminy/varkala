@@ -45,12 +45,15 @@ export class SecurityComponent implements OnInit {
     }]
   });
 
-  
+  information=false
   logIn(email,pass){
     this.USERS.map(user=>{
         if(user.email==email && user.password==pass){
           sessionStorage.setItem("userId", user.id);
           this.router.navigate(['/']);
+        }
+        else{
+          this.information=true;
         }
       })
   }

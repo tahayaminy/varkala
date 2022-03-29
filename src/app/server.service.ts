@@ -18,10 +18,7 @@ export class ServerService {
   urlUser="http://localhost:3000/users";
   
   addUser(user:User):Observable<User>{
-    console.log(user);
-    console.log(this.urlUser)
-    return this.http.post<User>(this.url+'/users' , user , this.httpOptions);
-    
+    return this.http.post<User>(this.url+'/users' , user , this.httpOptions);    
   }
   
 }

@@ -485,114 +485,38 @@
     <div class="flex justify-end p-4">
       <i (click)="drawer2.toggle()" class="fas text-3xl px-2 fa-times"></i>
     </div>
-    <div class="pt-4 bag">
+    <div *ngIf="logged" class="pt-4 bag">
       <div class="main px-12 py-4">
         <!-- USE TRANSLATE NGX, JUST FOR ONE PRODUCT!  -->
-        <section class="pb-9 flex product border-b">
+        <section *ngFor="let item of Cart;let first=first;let last=last" [ngClass]="{'pt-8':!first,'border-b':!last}" class="pb-9 flex product ">
           <div class="basis-1/5">
-            <img src="../../../assets/product/4.jpg" alt="" />
+            <img src="../../{{item.image[0]}}" alt="" />
           </div>
           <div
             class="pl-4 flex product-content content-around grid content-around w-full py-3"
           >
             <div class="flex head">
-              <b>White Tee              
+              <b>{{item.name}}              
             <div class="border-c"></div></b
-              ><i style="font-size: 24px" class="bi bi-x ml-auto"></i>
+              ><i (click)="removeCart(item)" style="font-size: 24px" class="bi bi-x ml-auto"></i>
             </div>
             <span class="qunt">{{'navbar.bag.quantity' | translate}}: 1</span>
-            <span class="price">$40</span>
+            <span class="price">${{(item.price)-(((item.price)*(item.discount.percent))/100)}}</span>
           </div>
         </section>
-        <section class="pt-8 pb-9 flex product border-b">
-          <div class="basis-1/5">
-            <img src="../../../assets/product/4.jpg" alt="" />
-          </div>
-          <div
-            class="pl-4 flex product-content content-around grid content-around w-full py-3"
-          >
-            <div class="flex head">
-              <b>White Tee              
-                <div class="border-c"></div></b
-              ><i style="font-size: 24px" class="bi bi-x ml-auto"></i>
-            </div>
-            <span class="qunt">Quantity: 1</span>
-            <span class="price">$40</span>
-          </div>
-        </section>
-        <section class="pt-8 pb-9 flex product border-b">
-          <div class="basis-1/5">
-            <img src="../../../assets/product/4.jpg" alt="" />
-          </div>
-          <div
-            class="pl-4 flex product-content content-around grid content-around w-full py-3"
-          >
-            <div class="flex head">
-              <b>White Tee              
-                <div class="border-c"></div></b
-              ><i style="font-size: 24px" class="bi bi-x ml-auto"></i>
-            </div>
-            <span class="qunt">Quantity: 1</span>
-            <span class="price">$40</span>
-          </div>
-        </section>
-        <section class="pt-8 pb-9 flex product border-b">
-          <div class="basis-1/5">
-            <img src="../../../assets/product/4.jpg" alt="" />
-          </div>
-          <div
-            class="pl-4 flex product-content content-around grid content-around w-full py-3"
-          >
-            <div class="flex head">
-              <b>White Tee              
-                <div class="border-c"></div></b
-              ><i style="font-size: 24px" class="bi bi-x ml-auto"></i>
-            </div>
-            <span class="qunt">Quantity: 1</span>
-            <span class="price">$40</span>
-          </div>
-        </section>
-        <section class="pt-8 pb-9 flex product border-b">
-          <div class="basis-1/5">
-            <img src="../../../assets/product/4.jpg" alt="" />
-          </div>
-          <div
-            class="pl-4 flex product-content content-around grid content-around w-full py-3"
-          >
-            <div class="flex head">
-              <b>White Tee              
-                <div class="border-c"></div></b
-              ><i style="font-size: 24px" class="bi bi-x ml-auto"></i>
-            </div>
-            <span class="qunt">Quantity: 1</span>
-            <span class="price">$40</span>
-          </div>
-        </section>
-        <section class="pt-8 flex product">
-          <div class="basis-1/5">
-            <img src="../../../assets/product/4.jpg" alt="" />
-          </div>
-          <div
-            class="pl-4 flex product-content content-around grid content-around w-full py-3"
-          >
-            <div class="flex head">
-              <b>White Tee              
-                <div class="border-c"></div></b
-              ><i style="font-size: 24px" class="bi bi-x ml-auto"></i>
-            </div>
-            <span class="qunt">Quantity: 1</span>
-            <span class="price">$40</span>
-          </div>
-        </section>
-      </div>
+
+        </div>
       <div class="footer px-12 pt-10">
         <div class="flex mb-7">
           <b>{{'navbar.bag.subtotal' | translate}}:</b>
-          <b class="ml-auto">$465.32</b>
+          <b class="ml-auto">${{price}}</b>
         </div>
         <button routerLink="/shopping" class="w-full viewcart mb-4">{{'navbar.bag.cart' | translate}}</button>
         <button class="w-full checkout">{{'navbar.bag.check' | translate}}</button>
       </div>
+    </div>
+    <div class="text-center text-red-500" *ngIf="!logged">
+      FIRST LOGIN
     </div>
   </mat-drawer>
 </mat-drawer-container>

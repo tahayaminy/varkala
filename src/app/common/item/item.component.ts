@@ -3,7 +3,7 @@ import { ServerService } from 'src/app/server.service';
 import { Product } from 'src/assets/server/models/Product';
 import { ItemService } from '../item.service';
 import { ModalService } from '../modal.service';
-
+import { SimpleChanges } from '@angular/core';
 @Component({
   selector: 'app-item',
   templateUrl: './item.component.html',
@@ -16,21 +16,22 @@ export class ItemComponent implements OnInit {
   
   heart=false;
   cart=false;
+  cartList=this.itemService.Cart;
   ngOnInit(): void {
     let status=this.itemService.wishCart(this.data.id);
     this.heart=status.wish;
     this.cart=status.cart;
   }
-  addWishlist(id:number){
+  addWishlist(data){
     this.heart=!this.heart;
-    this.itemService.addToWishlist(id);
+    this.itemService.addToWishlist(data);
   }
-  addCart(id:number){
+  addCart(data){
     this.cart=true;
-    this.itemService.addToCart(id);
+    this.itemService.addToCart(data);
+    console.log(this.cartList)
   } 
   modalOpen(){
     this.modal.openTempDialog(this.data);
-  } 
-
+  }
 }

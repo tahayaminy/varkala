@@ -6,7 +6,9 @@ import { AddressComponent } from './address/address.component';
 import { CommonShareModule } from 'src/app/common/common-share.module';
 import { DeliveryComponent } from './delivery/delivery.component';
 import { ConfirmComponent } from './confirm/confirm.component';
-
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,10 @@ import { ConfirmComponent } from './confirm/confirm.component';
   imports: [
     CommonModule,
     ShopFormRoutingModule,
-    CommonShareModule
+    CommonShareModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   exports:[
     AddressComponent,

@@ -522,39 +522,9 @@
   "users": [
     {
       "id": 1,
-      "username": "user",
-      "email": "tst@gmail.com",
-      "password": "12345678"
-    },
-    {
-      "id": 2,
-      "username": "taha",
-      "email": "010arya010@gmail.com",
-      "password": "12345678"
-    },
-    {
-      "id": 3,
       "username": "arya",
       "email": "arya@gmail.com",
       "password": "1Aa@"
-    },
-    {
-      "id": 4,
-      "username": "xxxx",
-      "email": "xxx@gmail.com",
-      "password": "2Ss#"
-    },
-    {
-      "id": 5,
-      "username": "tamam",
-      "email": "tamam@gamil.com",
-      "password": "Tamam@1"
-    },
-    {
-      "id": 6,
-      "username": "ending",
-      "email": "ending@gmail.com",
-      "password": "3@aaA"
     }
   ]
 }

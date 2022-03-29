@@ -28,8 +28,6 @@ export class IndexComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    var tst = new Date(this.timestamp);
-    console.log(tst);
     var obs = interval(1000);
     this.tracker = obs.subscribe(() => {
       var today = new Date().getTime();

@@ -7,13 +7,15 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root',
 })
 export class ItemService {
-  constructor(private http:HttpClient) {}
 
   Wishlist: any[] = [];
   Cart: any[] = [];
   price:number=0;
 
   tst=new Subject<boolean>();
+
+  constructor(private http:HttpClient) {}
+
 
   addToWishlist(data) {
     var index = this.Wishlist.indexOf(data);

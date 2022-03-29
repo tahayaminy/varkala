@@ -13,14 +13,20 @@ interface Sort{
   encapsulation: ViewEncapsulation.None
 })
 export class ProductComponent implements OnInit {
-    
-  constructor(public server:ServerService,private router:ActivatedRoute) { }
-
   notif=true;
   productId;
   product;
   randomProducts:any[]=[];
   category;
+  sorts: Sort[] = [
+    {index: 1,value: 'Small'},
+    {index: 2,value: 'Medium'},
+    {index: 3,value: 'Large'}
+  ];
+  selectedSort=1;
+    
+  constructor(public server:ServerService,private router:ActivatedRoute) { }
+
   ngOnInit(): void {
     this.router.paramMap.subscribe(params=>this.productId=Number(params.get('id')));
     this.server.getDb().subscribe(val=>{
@@ -48,13 +54,5 @@ export class ProductComponent implements OnInit {
     }
     console.log(this.randomProducts);
     });    
-  }
-  sorts: Sort[] = [
-    {index: 1,value: 'Small'},
-    {index: 2,value: 'Medium'},
-    {index: 3,value: 'Large'}
-  ];
-  selectedSort=1;
-
-  
+  }  
 }

@@ -1,20 +1,11 @@
 import { Component, OnInit,Output, EventEmitter } from '@angular/core';
-import { Options, ChangeContext, PointerType } from '@angular-slider/ngx-slider';
+import { Options, ChangeContext } from '@angular-slider/ngx-slider';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss'],
 })
-export class SidebarComponent implements OnInit {
-
-  @Output() public filters= new EventEmitter();
-  constructor() {
-    
-   }
-   setCategory(category){
-    this.filters.emit(category);
-  }
-   
+export class SidebarComponent implements OnInit { 
   minValue: number = 40;
   maxValue: number = 110;
   options: Options = {
@@ -23,7 +14,16 @@ export class SidebarComponent implements OnInit {
   };
   minPrice?:number=40;
   maxPrice?:number=110;
+  @Output() public filters= new EventEmitter();
+  subPanelOpen= [false,false,false];
+  panelOpen=[false,false,false,false,false];
 
+  constructor() {}
+
+   setCategory(category){
+    this.filters.emit(category);
+  }
+  
   onUserChangeStart(changeContext: ChangeContext): void {
     this.minPrice = this.getChangeContextString(changeContext)[0];
     this.maxPrice = this.getChangeContextString(changeContext)[1];
@@ -43,13 +43,7 @@ export class SidebarComponent implements OnInit {
            return [changeContext.value,changeContext.highValue]
   }
 
-  
-
   ngOnInit(): void {
   }
-  subPanelOpen= [false,false,false];
-  panelOpen=[false,false,false,false,false];
-  
-  
-  
+    
 }

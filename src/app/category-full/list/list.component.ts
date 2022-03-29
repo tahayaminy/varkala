@@ -18,14 +18,8 @@ import { ServerService } from 'src/app/server.service';
   encapsulation: ViewEncapsulation.None,
 })
 export class ListComponent implements OnInit {
-  constructor(public server: ServerService) {}
-
   @Input() input?:any;
   @Output() public sort= new EventEmitter();
-  setSort(sort){
-    this.sort.emit(sort);
-  }
-
   products: any;
   srcProduct: any;
   firstIndex = 1;
@@ -36,6 +30,12 @@ export class ListComponent implements OnInit {
   limitUp = 4;
   limitDown = 0;
   @ViewChild('all') all!: ElementRef;
+
+  constructor(public server: ServerService) {}
+
+  setSort(sort){
+    this.sort.emit(sort);
+  }
 
   ngOnInit(): void {
     AOS.init();

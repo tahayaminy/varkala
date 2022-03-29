@@ -22,9 +22,18 @@ export class DialogComponent implements OnInit {
   
   fromPage!:string;
   fromDialog!:string;
+  category;
+  sorts: Sort[] = [
+    {index: 1,value: 'Small'},
+    {index: 2,value: 'Medium'},
+    {index: 3,value: 'Large'}
+  ];
+  selectedSort=1;
+  //thumbs
+  thumbsSwiper: any;
 
   constructor(public dialogRef:MatDialogRef<DialogComponent>,@Optional() @Inject(MAT_DIALOG_DATA) public data:any,public server:ServerService) { }
-  category;
+  
   ngOnInit(): void {
     this.fromDialog = "I am from dialog land...";
     this.server.getDb().subscribe(val=>{
@@ -37,12 +46,5 @@ export class DialogComponent implements OnInit {
   }
 
   closeDialog() { this.dialogRef.close({ event: 'close'}); }
-  sorts: Sort[] = [
-    {index: 1,value: 'Small'},
-    {index: 2,value: 'Medium'},
-    {index: 3,value: 'Large'}
-  ];
-  selectedSort=1;
-  //thumbs
-  thumbsSwiper: any;
+  
 }

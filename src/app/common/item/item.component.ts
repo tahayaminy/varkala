@@ -10,13 +10,14 @@ import { SimpleChanges } from '@angular/core';
   styleUrls: ['./item.component.scss']
 })
 export class ItemComponent implements OnInit {
-
-  constructor(public item:ServerService,public itemService:ItemService,public modal:ModalService) { }
   @Input() data!:Product;
   
   heart=false;
   cart=false;
   cartList=this.itemService.Cart;
+  
+  constructor(public item:ServerService,public itemService:ItemService,public modal:ModalService) { }
+  
   ngOnInit(): void {
     this.itemService.tst.subscribe(data=>{
       this.cart=data

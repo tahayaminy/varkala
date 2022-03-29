@@ -7,10 +7,11 @@ import { ServerService } from 'src/app/server.service';
   styleUrls: ['./category-full.component.scss']
 })
 export class CategoryFullComponent implements OnInit {
-
-  constructor(public server:ServerService) { }
   srcProduct;
   sort;
+
+  constructor(public server:ServerService) { }
+  
   ngOnInit(): void {
     this.server.getDb().subscribe((val) => {
       this.srcProduct = val['products'];

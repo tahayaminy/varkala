@@ -12,9 +12,6 @@ import { User } from 'src/assets/server/models/User';
 export class NavbarComponent implements OnInit {
 
   @Input() index!:boolean;
-  
-  constructor(public translate:TranslateService,public server:ServerService,public itemService:ItemService) {    
-  }
   Wishlist=this.itemService.Wishlist;
   Cart=this.itemService.Cart;
   navbar:any;
@@ -22,6 +19,12 @@ export class NavbarComponent implements OnInit {
   price=localStorage.getItem("price");
   logged=false;
   dashboard?:User;
+  Menu=false;
+  @ViewChild('contMenu') menuCont!:ElementRef;
+
+  constructor(public translate:TranslateService,public server:ServerService,public itemService:ItemService) {    
+  }
+  
   ngOnInit(): void {
     console.log(this.price)    
     this.translate.get('navbar').subscribe(val=>this.navbar=val);
@@ -45,18 +48,10 @@ export class NavbarComponent implements OnInit {
     sessionStorage.removeItem("userId");
     this.logged=false;
   }
-
-
-
   translator(lang){
     this.translate.use(lang);
     this.translate.get('navbar').subscribe(val=>this.navbar=val);
   }
-
-  Menu=false;
-
-  @ViewChild('contMenu') menuCont!:ElementRef;
-
   responsiveMenu(){
     this.Menu=!this.Menu;    
     if(this.Menu){

@@ -3,13 +3,8 @@ import { FormBuilder,Validators} from '@angular/forms';
 import { ServerService } from 'src/app/server.service';
 import { Router } from '@angular/router';
 import { upper, passLength,lower,isNumber,symbols } from '../passval';
-import { User } from 'src/assets/server/models/User';
 
-interface Register {
-  name: string;
-  email: string;
-  password: string;
-}
+
 
 @Component({
   selector: 'app-security',
@@ -19,9 +14,10 @@ interface Register {
 export class SecurityComponent implements OnInit {
   
   emailCheck=true;
+  USERS:any[]=[];
+  information=false;
   
   constructor(private fb: FormBuilder,public server:ServerService,public router:Router) {}
-  USERS:any[]=[];
   ngOnInit(): void {
     this.server.getDb().subscribe(val=>this.USERS=val["users"])
   }
@@ -45,7 +41,6 @@ export class SecurityComponent implements OnInit {
     }]
   });
 
-  information=false
   logIn(email,pass){
     this.USERS.map(user=>{
         if(user.email==email && user.password==pass){
@@ -74,7 +69,6 @@ export class SecurityComponent implements OnInit {
     
 
   }
-
   newEmail(email){
     if(this.registerForm.controls['email'].status=='VALID'){
         const index=this.USERS.findIndex(u=>u.email===email);
@@ -88,7 +82,5 @@ export class SecurityComponent implements OnInit {
           }
     }
   }
-  
-  
-  
+
 }

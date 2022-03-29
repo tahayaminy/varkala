@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DashboardGuard } from './dashboard.guard';
 
 const routes: Routes = [
   {path:'',
@@ -11,10 +12,12 @@ const routes: Routes = [
     loadChildren:()=> import('./category/category.module').then(m=>m.CategoryModule)
   },
   {path:'wishlist',
-    loadChildren:()=> import('./wishlist/wishlist.module').then(m=>m.WishlistModule)
+    loadChildren:()=> import('./wishlist/wishlist.module').then(m=>m.WishlistModule),
+    canLoad:[DashboardGuard]
   },
   {path:'shopping',
-  loadChildren:()=> import('./shopping/shopping.module').then(m=>m.ShoppingModule)
+  loadChildren:()=> import('./shopping/shopping.module').then(m=>m.ShoppingModule),
+  canLoad:[DashboardGuard]
   },
   {
     path:'category-full',
@@ -31,6 +34,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [DashboardGuard]
 })
 export class AppRoutingModule { }

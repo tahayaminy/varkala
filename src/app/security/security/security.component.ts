@@ -17,7 +17,7 @@ export class SecurityComponent implements OnInit {
   USERS:any[]=[];
   information=false;
   
-  constructor(private fb: FormBuilder,public server:ServerService,public router:Router) {}
+  constructor(private fb: FormBuilder,public server:ServerService) {}
   ngOnInit(): void {
     this.server.getDb().subscribe(val=>this.USERS=val["users"])
   }
@@ -45,7 +45,7 @@ export class SecurityComponent implements OnInit {
     this.USERS.map(user=>{
         if(user.email==email && user.password==pass){
           sessionStorage.setItem("userId", user.id);
-          this.router.navigate(['/']);
+          window.location.replace('/');
         }
         else{
           this.information=true;

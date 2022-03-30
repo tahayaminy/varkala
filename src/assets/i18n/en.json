@@ -229,5 +229,62 @@
       "under":"Underwear",
       "ex":"Accessories"
     }
-  }  
+  },
+  "category":{
+    "home":"Home",
+    "shop":"Shop",
+    "title":"Ladies",
+    "p":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt."
+  },
+  "category-full":{
+    "main":{
+      "h1":"Jackets and tops",
+      "p":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
+      "home":"Home",
+      "shop":"Shop"
+    },
+    "sidebar":{
+      "category":{
+        "name":"category",
+        "Sname":"Product Categories",
+        "trouser":"Trousers",
+        "jacket":"Jackets",
+        "t-shirt":"T-Shirts"
+      },
+      "price":{
+        "name":"Price",
+        "Sname":"Filter by price",
+        "from":"From",
+        "to":"To"
+      },
+      "brand":"Brand",
+      "Sbrand":"Filter by brand",
+      "size":{
+        "name":"Size",
+        "Sname":"Filter by size",
+        "small":"Small",
+        "medium":"Medium",
+        "large":"Large",
+        "x-large":"X-Large"
+      },
+      "color":"Colour",
+      "Scolor":"Filter by colour"
+    },
+    "list":{
+      "phrase":{
+        "show":"Showing",
+        "of":"of",
+        "product":"products"
+      },
+      "page":{
+        "show":"Show",
+        "all":"All"
+      },
+      "sort":{
+        "title":"Sort by",
+        "default":"Default",
+        "rating":"Rating"
+      }
+    }
+  }
 }

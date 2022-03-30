@@ -10,13 +10,13 @@
         </section>
         <section class="order-1 lg:order-2 lg:px-4 list">
             <header class="pb-14">
-                <h1>Jackets and tops</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                <h1>{{'category-full.main.h1' | translate}}</h1>
+                <p>{{'category-full.main.p' | translate}}</p>
             </header>
             <section class="breadcrump mb-5">
-                <span>Home  </span>
+                <span>{{'category-full.main.home' | translate}}  </span>
                 <span class="bi bi-dash-lg"></span>
-                <span>  Shop</span>
+                <span>  {{'category-full.main.shop' | translate}}</span>
             </section>
             <app-list [input]="srcProduct" (sort)="changeSort($event)"></app-list>
         </section>

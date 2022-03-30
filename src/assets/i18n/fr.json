@@ -404,6 +404,62 @@
       "under": "Sous-vêtements",
       "ex": "Accessoires"
     }
-  } 
-  
+  },
+  "category": {
+    "home": "Accueil",
+    "shop": "Boutique",
+    "title": "Dames",
+    "p": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt."
+  },
+  "category-full":{
+    "main": {
+      "h1": "Vestes et hauts",
+      "p": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
+      "home": "Accueil",
+      "shop": "Boutique"
+    },
+    "sidebar":{
+      "category": {
+        "name": "catégorie",
+        "Sname": "Catégories de produits",
+        "trouser": "Pantalons",
+        "jacket": "Vestes",
+        "t-shirt": "T-shirts"
+      },
+      "price": {
+        "name": "Prix",
+        "Sname": "Filtrer par prix",
+        "from": "De",
+        "to": "À"
+      },"brand": "Marque",
+      "Sbrand": "Filtrer par marque",
+      "size": {
+        "name": "Taille",
+        "Sname": "Filtrer par taille",
+        "small": "Small",
+        "medium": "Medium",
+        "large": "Large",
+        "x-large": "X-Large"
+      },
+      "color": "Couleur",
+      "Scolor": "Filtrer par couleur"
+
+    },
+    "list":{
+      "phrase": {
+        "show": "Affichage",
+        "of": "de",
+        "product": "produits"
+      },
+      "page": {
+        "show": "Afficher",
+        "all": "Tous"
+      },
+      "sort": {
+        "title": "Trier par",
+        "default": "Par défaut",
+        "rating": "Note"
+      }
+    }
+}
 }

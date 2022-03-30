@@ -1,5 +1,5 @@
 <section class="-mt-5 hidden lg:block category pb-8 border-b">
-  <h5>Category</h5>
+  <h5>{{'category-full.sidebar.category.name' | translate}}</h5>
   <section class="border-b">
     <mat-accordion>
       <mat-expansion-panel (opened)="subPanelOpen[0] = true"
@@ -7,7 +7,7 @@
         <mat-expansion-panel-header>
           <mat-panel-title (click)="setCategory(1)">
             <img src="../../../assets/icon/trousers.png" alt="" />
-            <span class="mr-2">Trousers</span>
+            <span class="mr-2">{{'category-full.sidebar.category.trouser' | translate}}</span>
             <span class="gray">120</span>
             <i [class.r-90]="subPanelOpen[0]" class="gray fas fa-angle-left ml-auto"></i>
           </mat-panel-title>
@@ -28,7 +28,7 @@
         <mat-expansion-panel-header>
           <mat-panel-title (click)="setCategory(2)">
             <img src="../../../assets/icon/jacket.png" alt="" />
-            <span class="mr-2">Jackets</span>
+            <span class="mr-2">{{'category-full.sidebar.category.jacket' | translate}}</span>
             <span class="gray">55</span>
             <i [class.r-90]="subPanelOpen[1]" class="gray fas fa-angle-left ml-auto"></i>
           </mat-panel-title>
@@ -49,7 +49,7 @@
         <mat-expansion-panel-header>
           <mat-panel-title (click)="setCategory(3)">
             <img src="../../../assets/icon/tshirt.png" alt="" />
-            <span class="mr-2">T-Shirts</span>
+            <span class="mr-2">{{'category-full.sidebar.category.t-shirt' | translate}}</span>
             <span class="gray">33</span>
             <i [class.r-90]="subPanelOpen[2]" class="gray fas fa-angle-left ml-auto"></i>
           </mat-panel-title>
@@ -72,7 +72,7 @@
       <mat-expansion-panel-header class="flex">
         <mat-panel-title>
           <h3>
-            Product Categories
+            {{'category-full.sidebar.category.Sname' | translate}}
           </h3>
           <span [class.indicator-side-active]="panelOpen[0]" class="relative indicator-side ml-auto"><i class="ver"></i><i class="hor"></i></span> 
         </mat-panel-title>
@@ -84,7 +84,7 @@
             <mat-expansion-panel-header>
               <mat-panel-title>
                 <img src="../../../assets/icon/trousers.png" alt="" />
-                <span class="mr-2">Trousers</span>
+                <span class="mr-2">{{'category-full.sidebar.category.trouser' | translate}}</span>
                 <span class="gray">120</span>
                 <i [class.r-90]="subPanelOpen[0]" class="gray fas fa-angle-left ml-auto"></i>
               </mat-panel-title>
@@ -105,7 +105,7 @@
             <mat-expansion-panel-header>
               <mat-panel-title>
                 <img src="../../../assets/icon/jacket.png" alt="" />
-                <span class="mr-2">Jackets</span>
+                <span class="mr-2">{{'category-full.sidebar.category.jacket' | translate}}</span>
                 <span class="gray">55</span>
                 <i [class.r-90]="subPanelOpen[1]" class="gray fas fa-angle-left ml-auto"></i>
               </mat-panel-title>
@@ -126,7 +126,7 @@
             <mat-expansion-panel-header>
               <mat-panel-title>
                 <img src="../../../assets/icon/tshirt.png" alt="" />
-                <span class="mr-2">T-Shirts</span>
+                <span class="mr-2">{{'category-full.sidebar.category.t-shirt' | translate}}</span>
                 <span class="gray">33</span>
                 <i [class.r-90]="subPanelOpen[2]" class="gray fas fa-angle-left ml-auto"></i>
               </mat-panel-title>
@@ -147,7 +147,7 @@
 
 
 <section class="hidden lg:block price py-10 border-b">
-  <h5>Price</h5>
+  <h5>{{'category-full.sidebar.price.name' | translate}}</h5>
   <section>
     <ngx-slider class="flex items-center" [(value)]="minValue"
             [(highValue)]="maxValue"
@@ -157,8 +157,8 @@
             (userChangeEnd)="onUserChangeEnd($event)">
 </ngx-slider>
 <div class="flex gray -mt-5">
-  <span>From ${{minPrice}}</span>
-  <span class="ml-auto">To ${{maxPrice}}</span>
+  <span>{{'category-full.sidebar.price.from' | translate}} ${{minPrice}}</span>
+  <span class="ml-auto">{{'category-full.sidebar.price.to' | translate}} ${{maxPrice}}</span>
 </div>
 
   </section>
@@ -171,7 +171,8 @@
         <mat-expansion-panel-header class="flex">
           <mat-panel-title>
             <h3>
-              Filter by price
+              {{'category-full.sidebar.price.Sname' | translate}}
+              
             </h3> 
             <span [class.indicator-side-active]="panelOpen[1]" class="relative indicator-side ml-auto"><i class="ver"></i><i class="hor"></i></span>
           </mat-panel-title>
@@ -185,8 +186,8 @@
                   (userChangeEnd)="onUserChangeEnd($event)">
       </ngx-slider>
       <div class="flex gray -mt-5">
-        <span>From ${{minPrice}}</span>
-        <span class="ml-auto">To ${{maxPrice}}</span>
+        <span>{{'category-full.sidebar.price.from' | translate}} ${{minPrice}}</span>
+        <span class="ml-auto">{{'category-full.sidebar.price.to' | translate}} ${{maxPrice}}</span>
       </div>
       
         </section>
@@ -195,7 +196,7 @@
   </section>
 <!-- END PRICE RESPONSIVE -->
 <section class="brand hidden lg:block py-8 border-b">
-  <h5>Brand</h5>
+  <h5>{{'category-full.sidebar.brand' | translate}}</h5>
   <section>
     <label class="checkbox">
       Calvin Kelin (18)
@@ -232,7 +233,8 @@
       <mat-expansion-panel-header class="flex">
         <mat-panel-title>
           <h3>
-            Filter by brand
+            {{'category-full.sidebar.Sbrand' | translate}}
+            
           </h3> 
         </mat-panel-title>
         <span [class.indicator-side-active]="panelOpen[2]" class="relative indicator-side ml-auto"><i class="ver"></i><i class="hor"></i></span>
@@ -269,25 +271,25 @@
 </section>
 <!-- END BRAND RESPONSIVE -->
 <section class="hidden lg:block size py-8 border-b">
-  <h5>Size</h5>
+  <h5>{{'category-full.sidebar.size.name' | translate}}</h5>
   <section>
     <label class="checkbox">
-      Small
+      {{'category-full.sidebar.size.small' | translate}}
       <input checked name="radio" type="radio" />
       <span class="rad"></span>
     </label>
     <label class="checkbox">
-      Medium
+      {{'category-full.sidebar.size.medium' | translate}}
       <input name="radio" type="radio" />
       <span class="rad"></span>
     </label>
     <label class="checkbox">
-      Large
+      {{'category-full.sidebar.size.large' | translate}}
       <input name="radio" type="radio" />
       <span class="rad"></span>
     </label>
     <label class="checkbox">
-      X-Large
+      {{'category-full.sidebar.size.x-large' | translate}}
       <input name="radio" type="radio" />
       <span class="rad"></span>
     </label>
@@ -301,29 +303,29 @@
       <mat-expansion-panel-header class="flex">
         <mat-panel-title>
           <h3>
-            Filter by size
+            {{'category-full.sidebar.size.Sname' | translate}}
           </h3>
         </mat-panel-title>
         <span [class.indicator-side-active]="panelOpen[3]" class="relative indicator-side ml-auto"><i class="ver"></i><i class="hor"></i></span>
       </mat-expansion-panel-header>
       <section class="mt-5">
         <label class="checkbox">
-          Small
+          {{'category-full.sidebar.size.small' | translate}}
           <input checked name="radio" type="radio" />
           <span class="rad"></span>
         </label>
         <label class="checkbox">
-          Medium
+          {{'category-full.sidebar.size.medium' | translate}}
           <input name="radio" type="radio" />
           <span class="rad"></span>
         </label>
         <label class="checkbox">
-          Large
+          {{'category-full.sidebar.size.large' | translate}}
           <input name="radio" type="radio" />
           <span class="rad"></span>
         </label>
         <label class="checkbox">
-          X-Large
+          {{'category-full.sidebar.size.x-large' | translate}}
           <input name="radio" type="radio" />
           <span class="rad"></span>
         </label>
@@ -333,7 +335,7 @@
 </section>
 <!-- END SIZE RESPONSIVE -->
 <section class="hidden lg:block colour py-8">
-  <h5>Colour</h5>
+  <h5>{{'category-full.sidebar.color' | translate}}</h5>
   <section>
     <label class="checkbox">
       <input type="checkbox" />
@@ -361,7 +363,7 @@
       <mat-expansion-panel-header class="flex">
         <mat-panel-title>
           <h3>
-            Filter by colour
+            {{'category-full.sidebar.Scolor' | translate}}
           </h3> 
         </mat-panel-title>
         <span [class.indicator-side-active]="panelOpen[4]" class="relative indicator-side ml-auto"><i class="ver"></i><i class="hor"></i></span>

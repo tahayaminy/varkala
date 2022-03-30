@@ -4,24 +4,24 @@
 >
   <section class="flex flex-wrap nav-full mb-9">
     <div class=" mb-6 mr-4">
-      Showing <span class="dark-2">{{firstIndex}}-{{lastIndex}}</span> of
-      <span class="dark-2">{{srcProduct?.length}}</span> products
+     {{'category-full.list.phrase.show' | translate}} <span class="dark-2">{{firstIndex}}-{{lastIndex}}</span> {{'category-full.list.phrase.of' | translate}}
+      <span class="dark-2">{{srcProduct?.length}}</span> {{'category-full.list.phrase.product' | translate}}
     </div>
     <div class="basis-full sm:basis-auto ml-auto md:mr-auto mb-4 count-num mr-4">
-      <span class="mr-2">Show</span>
+      <span class="mr-2">{{'category-full.list.page.show' | translate}}</span>
       <span class="mr-2" [class.dark-1]="itemInPage==1" (click)="itemPerPage(1)">2</span>
       <span class="mr-2" [class.dark-1]="itemInPage==3" (click)="itemPerPage(3)">4</span>
-      <span #all class="mr-2 dark-1" (click)="allItem()">All</span>
+      <span #all class="mr-2 dark-1" (click)="allItem()">{{'category-full.list.page.all' | translate}}</span>
     </div>
     <div class="basis-full md:basis-auto md:-mt-2 select">
-      <span class="mr-2 inline-block translate-y-1/2">Sort by</span>
+      <span class="mr-2 inline-block translate-y-1/2">{{'category-full.list.sort.title' | translate}}</span>
       <mat-form-field appearance="fill">
         <mat-select disableOptionCentering panelClass="drop-down" value="1">
           <mat-option (click)="sortBaseDefault()" value="1">
-            Default
+            {{'category-full.list.sort.default' | translate}}
           </mat-option>
           <mat-option (click)="sortBaseRate()" value="2">
-            Rating
+            {{'category-full.list.sort.rating' | translate}}
           </mat-option>
         </mat-select>
       </mat-form-field>

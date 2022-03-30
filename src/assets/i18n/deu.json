@@ -404,5 +404,62 @@
       "under": "Unterwäsche",
       "ex": "Accessoires"
     }
-  }  
+  },
+  "category": {
+    "home": "Home",
+    "shop": "Shop",
+    "title": "Damen",
+    "p": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt."
+  },
+  "category-full": {
+    "main": {
+      "h1": "Jacken und Oberteile",
+      "p": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
+      "home": "Home",
+      "shop": "Shop"
+    },
+    "sidebar":{
+      "category": {
+        "name": "Kategorie",
+        "Sname": "Produktkategorien",
+        "trouser": "Hosen",
+        "jacket": "Jacken",
+        "t-shirt": "T-Shirts"
+      },
+      "price": {
+        "name": "Preis",
+        "Sname": "Nach Preis filtern",
+        "from": "Von",
+        "to": "Bis"
+      },
+      "brand": "Marke",
+      "Sbrand": "Nach Marke filtern",
+      "size": {
+        "name": "Größe",
+        "Sname": "Nach Größe filtern",
+        "small": "Klein",
+        "medium": "Mittel",
+        "large": "Groß",
+        "x-large": "X-Large"
+      },
+      "color": "Farbe",
+      "Scolor": "Nach Farbe filtern"
+    },
+    "list":{
+      "phrase": {
+        "show": "Anzeigen",
+        "of": "von",
+        "product": "Produkten"
+      },
+      "page": {
+        "show": "Anzeigen",
+        "all": "Alle"
+      },
+      "sort": {
+        "title": "Sortieren nach",
+        "default": "Standard",
+        "rating": "Bewertung"
+      }
+    }
+  }
 }

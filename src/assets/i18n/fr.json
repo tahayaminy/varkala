@@ -392,5 +392,39 @@
     "price": "Prix à l'heure",
     "status": "Statut"
   }
+  },
+  "factor": {
+    "head": "Récapitulatif de la commande",
+    "desc": "Les frais d'expédition et les frais supplémentaires sont calculés en fonction des valeurs que vous avez saisies.",
+    "order": "Sous-total de la commande",
+    "ship": "Expédition et manutention",
+    "tax": "Taxes",
+    "total": "Total",
+    "final": "PASSER À LA CAISSE"
+  },
+  "shop":{
+    "home": "Accueil",
+  "title": "Panier",
+  "stock": {
+    "txt1": "Vous avez",
+    "txt2": "articles dans votre panier."
+  },
+  "p": {
+    "txt1": "Pour le paiement, vous pouvez utiliser soit un",
+    "gold1": "Commande sur plusieurs pages",
+    "txt2": "ou avoir tout sur une",
+    "gold2": "page unique."
+  },
+  "continue": "CONTINUER VOS ACHATS",
+  "update": "MISE À JOUR PANIER",
+  "item": {
+    "size": "Taille",
+    "large": "Large",
+    "color": "Couleur",
+    "green": "Vert",
+    "price": "Prix à l'heure",
+    "quant": "Quantité",
+    "total": "Prix total"
+  }
   }
 }

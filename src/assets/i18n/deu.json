@@ -389,8 +389,41 @@
   "large": "Groß",
   "color": "Farbe",
   "green": "Grün",
-  "price": "Preis pro Zeit",
-  "status": "Status"
+  "price": "Preis pro Zeit"
   }
+  },
+  "factor": {
+    "head": "Zusammenfassung der Bestellung",
+    "desc": "Versand- und Zusatzkosten werden anhand der von Ihnen eingegebenen Werte berechnet.",
+    "order": "Zwischensumme der Bestellung",
+    "ship": "Versandkosten",
+    "tax": "Steuern",
+    "total": "Gesamtsumme",
+    "final": "ZUR KASSE WEITER"
+  },
+  "shop":{
+    "home": "Startseite",
+    "title": "Warenkorb",
+    "stock": {
+      "txt1": "Sie haben",
+      "txt2": "Artikel in Ihrem Warenkorb."
+    },
+    "p": {
+      "txt1": "Für die Kasse können Sie entweder eine",
+      "gold1": "Mehrseiten-Kasse",
+      "txt2": "oder alles auf einer",
+      "gold2": "einzelnen Seite haben."
+    },
+    "continue": "WEITER EINKAUFEN",
+    "update": "EINKAUFSWAGEN AKTUALISIEREN",
+    "item": {
+      "size": "Größe",
+      "large": "Groß",
+      "color": "Farbe",
+      "green": "Grün",
+      "price": "Preis pro Zeit",
+      "quant": "Menge",
+      "total": "Gesamtpreis"
+    }
   }
 }

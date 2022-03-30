@@ -375,5 +375,39 @@
       "price":"Price per time",
       "status":"Status"
     }
+  },
+  "factor":{
+    "head":"Order summery",
+    "desc":"Shipping and additional costs are calculated based on values you have entered.",
+    "order":"Order Subtotal",
+    "ship":"Shipping and handling",
+    "tax":"Tax",
+    "total":"Total",
+    "final":"PROCEED TO CHECKOUT"
+  },
+  "shop":{
+    "home":"Home",
+    "title":"Shopping cart",
+    "stock":{
+      "txt1":"You have",
+      "txt2":"items in your cart."
+    },
+    "p":{
+      "txt1":"For the checkout, you can use either a",
+      "gold1":"Multiple pages checkout",
+      "txt2":"or have everything on a",
+      "gold2":"single page."
+    },
+    "continue":"CONTINUE SHOPPING",
+    "update":"UPDATE CART",
+    "item":{
+      "size":"Size",
+      "large":"Large",
+      "color":"Colour",
+      "green":"Green",
+      "price":"Price per time",
+      "quant":"Quantity",
+      "total":"Total price"
+    }
   }
 }

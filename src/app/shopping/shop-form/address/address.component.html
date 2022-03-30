@@ -70,24 +70,23 @@
   </form>
   <section class="basis-full lg:basis-4/12 lg:pl-4">
     <section class="order-summery rounded">
-      <div class="p-4 header rounded-t"><b>Order summery</b></div>
+      <div class="p-4 header rounded-t"><b>{{'factor.head' | translate}}</b></div>
       <div class="body px-4 pt-6 pb-5">
         <p>
-          Shipping and additional costs are calculated based on values you have
-          entered.
+          {{'factor.desc' | translate}}
         </p>
         <div class="flex py-6 px-2 border-b">
-          <span>Order Subtotal</span><span class="ml-auto gray">$560.00</span>
+          <span>{{'factor.order' | translate}}</span><span class="ml-auto gray">$560.00</span>
         </div>
         <div class="flex py-6 px-2 border-b">
-          <span>Shipping and handling</span
+          <span>{{'factor.ship' | translate}}</span
           ><span class="ml-auto gray">$10.00</span>
         </div>
         <div class="flex py-6 px-2 border-b">
-          <span>Tax</span><span class="ml-auto gray">$0.00</span>
+          <span>{{'factor.tax' | translate}}</span><span class="ml-auto gray">$0.00</span>
         </div>
         <div class="flex py-6 px-2">
-          <span>Total</span><span class="ml-auto total mt-3">$570.00</span>
+          <span>{{'factor.total' | translate}}</span><span class="ml-auto total mt-3">$570.00</span>
         </div>
       </div>
     </section>

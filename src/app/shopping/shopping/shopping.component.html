@@ -2,13 +2,13 @@
 <p class="pt-24 lg:pt-32"></p>
 <header class="pt-24 pb-28 container mx-auto">
   <div class="mb-3">
-    <span>Home </span>
+    <span>{{'shop.home' | translate}} </span>
     <span class="bi bi-dash-lg"></span>
-    <span> Shopping cart</span>
+    <span> {{'shop.title' | translate}}</span>
   </div>
-  <h1>Shopping cart</h1>
-  <p>You have 6 items in your cart.</p>
-  <p class="pt-1">For the checkout, you can use either a <span class="crem">Multiple pages checkout</span> or have everything on a <span class="crem">single page</span>.</p>
+  <h1>{{'shop.title' | translate}}</h1>
+  <p>{{'shop.stock.txt1' | translate}} 6 {{'shop.stock.txt2' | translate}}</p>
+  <p class="pt-1">{{'shop.p.txt1' | translate}} <span class="crem">{{'shop.p.gold1' | translate}}</span> {{'shop.p.txt2' | translate}} <span class="crem">{{'shop.p.gold2' | translate}}</span></p>
 </header>
 <main class="container flex flex-wrap mx-auto pb-24">
     <section class="basis-full lg:basis-8/12 xl:pr-12 pr-4">
@@ -20,8 +20,8 @@
                 </div>
                 <div class="flex ml-4 flex-col justify-center info">
                     <b>Ethnic Sweater</b>
-                    <span>Size: Large</span>
-                    <span>Colour: Green</span>
+                    <span>{{'shop.item.size' | translate}}: {{'shop.item.large' | translate}}</span>
+                <span>{{'shop.item.color' | translate}}: {{'shop.item.green' | translate}}</span>
                 </div>
             </div>
             <div class="hidden basis-7/12 sm:flex flex-row second">
@@ -42,10 +42,10 @@
             </div>
             <div class="third sm:hidden w-full pt-8">
                 <div class="flex w-full">
-                    <span class="gray">Price per time</span><span class="ml-auto">$40</span>
+                    <span class="gray">{{'shop.item.price' | translate}}</span><span class="ml-auto">$40</span>
                 </div>
                 <div class="flex w-full items-center">
-                    <span class="gray">Quantity</span>
+                    <span class="gray">{{'shop.item.quant' | translate}}</span>
                     <span class="ml-auto flex">
                         <button class="input-btn basis-1/12">-</button>
                         <input type="number" name="" id="">
@@ -53,7 +53,7 @@
                     </span>
                 </div>
                 <div class="flex w-full">
-                    <span class="gray">Total price</span><span class="ml-auto">$320.00</span>
+                    <span class="gray">{{'shop.item.total' | translate}}</span><span class="ml-auto">$320.00</span>
                 </div>
             </div>
         </section>
@@ -103,22 +103,22 @@
             </div>
         </section>
         <div class="options flex flex-wrap lg:flex-nowrap justify-center mt-8 lg:mt-12 lg:mb-0 mb-12">
-            <span class="basis-full text-center mb-5 lg:mb-0 lg:basis-auto"><i class="fas fa-angle-left"></i> CONTINUE SHOPPING</span><span class="ml-auto text-center basis-full lg:basis-auto"><i class="fas fa-sync-alt"></i> UPDATE CART</span>
+            <span class="basis-full text-center mb-5 lg:mb-0 lg:basis-auto"><i class="fas fa-angle-left"></i> {{'shop.continue' | translate}}</span><span class="ml-auto text-center basis-full lg:basis-auto"><i class="fas fa-sync-alt"></i> {{'shop.update' | translate}}</span>
         </div>
     </section>
     <section class="basis-full lg:basis-4/12 lg:pl-4">
         <section class="order-summery rounded">
-            <div class="p-4 header rounded-t"><b>Order summery</b></div>
+            <div class="p-4 header rounded-t"><b>{{'factor.head' | translate}}</b></div>
             <div class="body px-4 pt-6 pb-5">
                 <p>
-                    Shipping and additional costs are calculated based on values you have entered.
+                    {{'factor.desc' | translate}}
                 </p>
-                <div class="flex py-6 px-2 border-b"><span>Order Subtotal</span><span class="ml-auto gray">$560.00</span></div>
-                <div class="flex py-6 px-2 border-b"><span>Shipping and handling</span><span class="ml-auto gray">$10.00</span></div>
-                <div class="flex py-6 px-2 border-b"><span>Tax</span><span class="ml-auto gray">$0.00</span></div>
-                <div class="flex py-6 px-2"><span>Total</span><span class="ml-auto total mt-3">$570.00</span></div>
+                <div class="flex py-6 px-2 border-b"><span>{{'factor.order' | translate}}</span><span class="ml-auto gray">$560.00</span></div>
+                <div class="flex py-6 px-2 border-b"><span>{{'factor.ship' | translate}}</span><span class="ml-auto gray">$10.00</span></div>
+                <div class="flex py-6 px-2 border-b"><span>{{'factor.tax' | translate}}</span><span class="ml-auto gray">$0.00</span></div>
+                <div class="flex py-6 px-2"><span>{{'factor.total' | translate}}</span><span class="ml-auto total mt-3">$570.00</span></div>
             </div>
-            <div routerLink="form" class="px-3 py-4 text-center footer rounded-b">PROCEED TO CHECKOUT <i class="fas fa-angle-right"></i></div>
+            <div routerLink="form" class="px-3 py-4 text-center footer rounded-b">{{'factor.final' | translate}} <i class="fas fa-angle-right"></i></div>
         </section>
     </section>
 </main>

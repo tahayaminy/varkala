@@ -4,14 +4,14 @@
   <section
     class="flex flex-wrap sm:justify-start justify-center nav mb-9"
   >
-    <span class="mr-2" (click)="productFilter('all')">All Products</span>
-    <span class="mr-2 mute" (click)="productFilter('cloth')">Clothing</span>
-    <span class="mr-2 mute" (click)="productFilter('bag')">Bags</span>
-    <span class="mr-2 mute" (click)="productFilter('underwear')">Underwear</span>
-    <span class="mr-2 mute" (click)="productFilter('ex')">Accessories</span>
+    <span class="mr-2" (click)="productFilter('all')">{{'index.list.all' | translate}}</span>
+    <span class="mr-2 mute" (click)="productFilter('cloth')">{{'index.list.cloth' | translate}}</span>
+    <span class="mr-2 mute" (click)="productFilter('bag')">{{'index.list.bag' | translate}}</span>
+    <span class="mr-2 mute" (click)="productFilter('underwear')">{{'index.list.under' | translate}}</span>
+    <span class="mr-2 mute" (click)="productFilter('ex')">{{'index.list.ex' | translate}}</span>
     <span routerLink="/category-full"
-      class="block sm:inline sm:basis-auto basis-full text-center sm:mt-0 mt-7 sm:ml-auto"
-      >ALL PRODUCTS</span
+      class="uppercase block sm:inline sm:basis-auto basis-full text-center sm:mt-0 mt-7 sm:ml-auto"
+      >{{'index.list.all' | translate}}</span
     >
   </section>
   <section

@@ -396,6 +396,13 @@
       "h": "UNSERE GESCHICHTE",
       "p1": "Eines Morgens, als Gregor Samsa aus unruhigen Träumen erwachte, fand er sich in seinem Bett in ein schreckliches Ungeziefer verwandelt. Er lag auf seinem panzerartigen Rücken, und wenn er den Kopf ein wenig hob, konnte er seinen braunen Bauch sehen, leicht gewölbt und durch Wölbungen in steife Abschnitte geteilt",
       "p2": "Er muss es hundertmal versucht haben, schloss die Augen, damit er würde nicht auf die zappelnden Beine schauen müssen und hörte erst auf, als er dort einen leichten, dumpfen Schmerz zu spüren begann, den er noch nie zuvor gefühlt hatte."
+    },
+    "list": {
+      "all": "Alle Produkte",
+      "cloth": "Bekleidung",
+      "bag": "Taschen",
+      "under": "Unterwäsche",
+      "ex": "Accessoires"
     }
   }  
 }

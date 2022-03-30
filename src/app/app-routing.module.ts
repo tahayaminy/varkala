@@ -4,7 +4,7 @@ import { DashboardGuard } from './dashboard.guard';
 
 const routes: Routes = [
   {path:'',
-  loadChildren:()=> import('./index/index.module').then(m=>m.IndexModule)},
+    loadChildren:()=> import('./index/index.module').then(m=>m.IndexModule)},
   {path:'security',
     loadChildren:()=> import('./security/security.module').then(m=>m.SecurityModule)
   },
@@ -16,8 +16,8 @@ const routes: Routes = [
     canLoad:[DashboardGuard]
   },
   {path:'shopping',
-  loadChildren:()=> import('./shopping/shopping.module').then(m=>m.ShoppingModule),
-  canLoad:[DashboardGuard]
+    loadChildren:()=> import('./shopping/shopping.module').then(m=>m.ShoppingModule),
+    canLoad:[DashboardGuard]
   },
   {
     path:'category-full',

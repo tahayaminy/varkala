@@ -396,6 +396,13 @@
       "h": "NOTRE HISTOIRE",
       "p1": "Un matin, lorsque Gregor Samsa s'est réveillé de rêves troublés, il s'est retrouvé transformé dans son lit en une horrible vermine. Il était allongé sur son dos en forme d'armure, et s'il levait un peu la tête, il pouvait voir son ventre brun, légèrement bombé et divisé par des arcs en sections raides",
       "p2": "Il a dû l'essayer cent fois, ferma les yeux pour qu'il n'aurait pas eu à regarder les jambes pataugeantes, et ne s'est arrêté que lorsqu'il a commencé à ressentir une douleur légère et sourde qu'il n'avait jamais ressentie auparavant."
+    },
+    "list": {
+      "all": "Tous les produits",
+      "cloth": "Vêtements",
+      "bag": "Sacs",
+      "under": "Sous-vêtements",
+      "ex": "Accessoires"
     }
   } 
   

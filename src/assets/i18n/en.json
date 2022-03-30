@@ -318,5 +318,44 @@
       ]
     },
     "offer":"You might also like these"
+  },
+  "security":{
+    "home":"Home",
+    "title":"Customer zone",
+    "p":"You can use the navbar-modal link or this page for customers' sign in.",
+    "login":{
+      "head":"Login",
+      "ask":"Already our customer?",
+      "warn":"Information is incorrect",
+      "p":"Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet.",
+      "btn":"LOG IN",
+      "email":"Email",
+      "pass":"Password"
+    },
+    "sign":{
+      "head":"New account",
+      "ask":"Not our registered customer yet?",
+      "p":"With registration with us new world of fashion, fantastic discounts and much more opens to you! The whole process will not take you more than a minute!",
+      "p2":{
+        "txt1":"If you have any questions, please feel free to ",
+        "gold":"contact us",
+        "txt2":", our customer service center is working for you 24/7."
+      },
+      "btn":"REGISTER",
+      "name":"Name",
+      "email":"Email",
+      "pass":"Password",
+      "errors":{
+        "name":"at least 4 character",
+        "email":"this email is Already taken",
+        "pass":{
+          "length":"length at least 4",
+          "num":"numbers",
+          "up":"LETTERS",
+          "low":"letters",
+          "symbol":"symbols"
+        }
+      }
+    }
   }
 }

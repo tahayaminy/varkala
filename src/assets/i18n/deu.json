@@ -1,39 +1,19 @@
 {
   "navbar": {
     "title": "Kostenlose Lieferung ins Geschäft",
-    "lang": [
-      "Englisch",
-      "Deutsch",
-      "Französisch"
-    ],
-    "money": [
-      "USD",
-      "EUR",
-      "GBP"
-    ],
+    "lang": ["Englisch", "Deutsch", "Französisch"],
+    "money": ["USD", "EUR", "GBP"],
     "brand": "Varkala",
     "search": "Suchen",
-    "new":"Neu",
+    "new": "Neu",
     "menu": {
       "home": {
         "name": "Startseite",
         "submenu": [
-          [
-            "Startseite 1 - Mode",
-            false
-          ],
-          [
-            "Startseite 2 - Mode",
-            false
-          ],
-          [
-            "Startseite 3 - Mode",
-            true
-          ],
-          [
-            "Startseite 4 - Mode",
-            true
-          ]
+          ["Startseite 1 - Mode", false],
+          ["Startseite 2 - Mode", false],
+          ["Startseite 3 - Mode", true],
+          ["Startseite 4 - Mode", true]
         ]
       },
       "shop": {
@@ -42,57 +22,27 @@
           {
             "b": "Shopseiten",
             "span": [
-              [
-                "Volle Breite",
-                false
-              ],
-              [
-                "Volle Breite mit Kategoriemenü",
-                false
-              ],
-              [
-                "Volle Breite mit großen Produkten",
-                false
-              ],
-              [
-                "Feste Breite",
-                false
-              ],
-              [
-                "Feste Breite & Seitenleiste",
-                false
-              ],
-              [
-                "Feste Breite & Mauerwerk-Layout",
-                true
-              ],
-              [
-                "Unterkategorien",
-                false
-              ]
+              ["Volle Breite", false],
+              ["Volle Breite mit Kategoriemenü", false],
+              ["Volle Breite mit großen Produkten", false],
+              ["Feste Breite", false],
+              ["Feste Breite & Seitenleiste", false],
+              ["Feste Breite & Mauerwerk-Layout", true],
+              ["Unterkategorien", false]
             ]
           },
           {
             "b": "Produktseiten",
             "span": [
-              [
-                "Produkt mit Sticky-Info",
-                false
-              ],
-              [
-                "Produkt mit Hintergrund",
-                false
-              ],
-              [
-                "Produktstandard",
-                false
-              ]
+              ["Produkt mit Sticky-Info", false],
+              ["Produkt mit Hintergrund", false],
+              ["Produktstandard", false]
             ]
           }
         ]
       },
-      "icon":"Symbole",
-      "iconTxt":"Verpassen Sie nicht unsere größten Verkäufe in diesem Jahr. Verwenden Sie bis Juni den Code „SUMMER35“ an der Kasse. fünfzehn!",
+      "icon": "Symbole",
+      "iconTxt": "Verpassen Sie nicht unsere größten Verkäufe in diesem Jahr. Verwenden Sie bis Juni den Code „SUMMER35“ an der Kasse. fünfzehn!",
       "page": {
         "name": "Seiten",
         "cols": [
@@ -100,55 +50,22 @@
             {
               "b": "Startseite",
               "span": [
-                [
-                  "Startseite 1 - Mode",
-                  false
-                ],
-                [
-                  "Startseite 2 - Mode",
-                  false
-                ],
-                [
-                  "Startseite 3 - Mode",
-                  true
-                ],
-                [
-                  "Startseite 4 - Mode",
-                  true
-                ]
+                ["Startseite 1 - Mode", false],
+                ["Startseite 2 - Mode", false],
+                ["Startseite 3 - Mode", true],
+                ["Startseite 4 - Mode", true]
               ]
             },
             {
               "b": "Kategorie",
               "span": [
-                [
-                  "Volle Breite",
-                  false
-                ],
-                [
-                  "Volle Breite mit Kategoriemenü",
-                  false
-                ],
-                [
-                  "Volle Breite mit großen Produkten",
-                  false
-                ],
-                [
-                  "Feste Breite",
-                  false
-                ],
-                [
-                  "Feste Breite & Seitenleiste",
-                  false
-                ],
-                [
-                  "Feste Breite & Mauerwerk-Layout",
-                  true
-                ],
-                [
-                  "Unterkategorien",
-                  false
-                ]
+                ["Volle Breite", false],
+                ["Volle Breite mit Kategoriemenü", false],
+                ["Volle Breite mit großen Produkten", false],
+                ["Feste Breite", false],
+                ["Feste Breite & Seitenleiste", false],
+                ["Feste Breite & Mauerwerk-Layout", true],
+                ["Unterkategorien", false]
               ]
             }
           ],
@@ -156,44 +73,20 @@
             {
               "b": "Bestellvorgang",
               "span": [
-                [
-                  "Warenkorb",
-                  false
-                ],
-                [
-                  "Zur Kasse – Fünf Schritte",
-                  true
-                ],
-                [
-                  "Zur Kasse – Einzelseite",
-                  false
-                ],
-                [
-                  "Zur Kasse – bestätigt",
-                  false
-                ],
-                [
-                  "Wunschliste",
-                  false
-                ]
+                ["Warenkorb", false],
+                ["Zur Kasse – Fünf Schritte", true],
+                ["Zur Kasse – Einzelseite", false],
+                ["Zur Kasse – bestätigt", false],
+                ["Wunschliste", false]
               ]
             },
             {
               "b": "Produktseiten",
               "product": "Produkt",
               "span": [
-                [
-                  "Produkt mit Haftinfo",
-                  false
-                ],
-                [
-                  "Produkt mit Hintergrund",
-                  false
-                ],
-                [
-                  "Produktstandard",
-                  false
-                ]
+                ["Produkt mit Haftinfo", false],
+                ["Produkt mit Hintergrund", false],
+                ["Produktstandard", false]
               ]
             }
           ],
@@ -201,43 +94,19 @@
             {
               "b": "Blog",
               "span": [
-                [
-                  "Blog",
-                  false
-                ],
-                [
-                  "Blogtst - Mauerwerk",
-                  false
-                ],
-                [
-                  "Beitrag",
-                  false
-                ]
+                ["Blog", false],
+                ["Blogtst - Mauerwerk", false],
+                ["Beitrag", false]
               ]
             },
             {
               "b": "Seite",
               "span": [
-                [
-                  "Über - Unternehmen",
-                  true
-                ],
-                [
-                  "Über v.2 - Person",
-                  true
-                ],
-                [
-                  "F.A.Q",
-                  true
-                ],
-                [
-                  "Kontakt",
-                  false
-                ],
-                [
-                  "Datenschutz - Richtlinie",
-                  true
-                ]
+                ["Über - Unternehmen", true],
+                ["Über v.2 - Person", true],
+                ["F.A.Q", true],
+                ["Kontakt", false],
+                ["Datenschutz - Richtlinie", true]
               ]
             }
           ],
@@ -245,34 +114,13 @@
             {
               "b": "Kunde",
               "span": [
-                [
-                  "Anmelden/Registrieren",
-                  true
-                ],
-                [
-                  "Bestellungen",
-                  true
-                ],
-                [
-                  "Bestelldetails",
-                  true
-                ],
-                [
-                  "Auftragsverfolgung",
-                  true
-                ],
-                [
-                  "Adressen",
-                  true
-                ],
-                [
-                  "Profil",
-                  true
-                ],
-                [
-                  "Wunschliste",
-                  true
-                ]
+                ["Anmelden/Registrieren", true],
+                ["Bestellungen", true],
+                ["Bestelldetails", true],
+                ["Auftragsverfolgung", true],
+                ["Adressen", true],
+                ["Profil", true],
+                ["Wunschliste", true]
               ]
             }
           ]
@@ -294,8 +142,8 @@
       "check": "KASSE"
     }
   },
-  "footer":{
-    "term":{
+  "footer": {
+    "term": {
       "deliver": {
         "title": "Kostenloser Versand und Rücksendung",
         "txt": "Kostenloser Versand über 30 $"
@@ -312,23 +160,17 @@
         "txt": "Rund um die Uhr verfügbarer Support"
       }
     },
-    "main":{
-      "contact":{
+    "main": {
+      "contact": {
         "h": "In Verbindung bleiben",
         "p": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Bei itaque temporibus.",
         "holder": "Ihre E-Mail-Adresse"
       },
-      "shop":{
+      "shop": {
         "h": "Shop",
-        "li": [
-          "Für Frauen",
-          "Für Männer",
-          "Geschäfte",
-          "Unser Blog",
-          "Shop"
-        ]
+        "li": ["Für Frauen", "Für Männer", "Geschäfte", "Unser Blog", "Shop"]
       },
-      "company":{
+      "company": {
         "h": "Unternehmen",
         "li": [
           "Login",
@@ -338,7 +180,7 @@
           "Zur Kasse"
         ]
       },
-      "account":{
+      "account": {
         "h": "Ihr Konto",
         "li": [
           "Login",
@@ -357,8 +199,8 @@
       "Versprechen der Kundendaten"
     ]
   },
-  "index":{
-    "header":{
+  "index": {
+    "header": {
       "slider1": {
         "light": "UNSERE ALLZEITFAVORITEN",
         "h": "Blusen & Tops",
@@ -378,21 +220,21 @@
     },
     "Women": "Frauen Männer",
     "Men": "Due2385AE_1",
-    "Arrival":{
+    "Arrival": {
       "h": "Neuankömmlinge",
       "p": "Eines Morgens, als Gregor Samsa aus unruhigen Träumen erwachte, fand er sich in seinem Bett in ein schreckliches Ungeziefer verwandelt. Er lag auf seinem panzerartigen Rücken, und wenn er den Kopf ein wenig hob, konnte er seinen braunen Bauch sehen, leicht gewölbt und durch Wölbungen in steife Abschnitte unterteilt"
     },
-    "offer":{
+    "offer": {
       "danger": "DEAL OF THE WEAK",
       "h": "Übergroße Jeansjacke",
-      "off":"aus",
+      "off": "aus",
       "day": "Tage",
       "hour": "Stunden",
       "min": "Minuten",
       "sec": "Sekunden",
       "btn": "JETZT SHOPPEN"
     },
-    "history":{
+    "history": {
       "h": "UNSERE GESCHICHTE",
       "p1": "Eines Morgens, als Gregor Samsa aus unruhigen Träumen erwachte, fand er sich in seinem Bett in ein schreckliches Ungeziefer verwandelt. Er lag auf seinem panzerartigen Rücken, und wenn er den Kopf ein wenig hob, konnte er seinen braunen Bauch sehen, leicht gewölbt und durch Wölbungen in steife Abschnitte geteilt",
       "p2": "Er muss es hundertmal versucht haben, schloss die Augen, damit er würde nicht auf die zappelnden Beine schauen müssen und hörte erst auf, als er dort einen leichten, dumpfen Schmerz zu spüren begann, den er noch nie zuvor gefühlt hatte."
@@ -418,7 +260,7 @@
       "home": "Home",
       "shop": "Shop"
     },
-    "sidebar":{
+    "sidebar": {
       "category": {
         "name": "Kategorie",
         "Sname": "Produktkategorien",
@@ -445,7 +287,7 @@
       "color": "Farbe",
       "Scolor": "Nach Farbe filtern"
     },
-    "list":{
+    "list": {
       "phrase": {
         "show": "Anzeigen",
         "of": "von",
@@ -493,5 +335,44 @@
       ]
     },
     "offer": "Diese könnten Ihnen auch gefallen"
+  },
+  "security": {
+    "home": "Home",
+    "title": "Kundenbereich",
+    "p": "Sie können den Navbar-Modal-Link oder diese Seite für die Kundenanmeldung verwenden.",
+    "login": {
+      "head": "Login",
+      "ask": "Schon unser Kunde?",
+      "warn": "Informationen sind falsch",
+      "p": "Pellentesque habitant morbi tristique senectus et netus et malesuada Ruhm ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet.",
+      "btn": "LOG IN",
+      "email": "E-Mail",
+      "pass": "Passwort"
+    },
+    "sign": {
+      "head": "Neues Konto",
+      "ask": "Noch kein registrierter Kunde?",
+      "p": "Mit Registrierung bei uns eröffnen sich Ihnen neue Modewelten, fantastische Rabatte und vieles mehr! Der gesamte Vorgang dauert nicht länger als eine Minute!",
+      "p2": {
+        "txt1": "Wenn Sie Fragen haben, wenden Sie sich bitte an ",
+        "gold": "kontaktieren Sie uns",
+        "txt2": ", unser Kundenservice-Center arbeitet rund um die Uhr für Sie."
+      },
+      "btn": "REGISTRIEREN",
+      "name": "Name",
+      "email": "E-Mail",
+      "pass": "Passwort",
+      "errors": {
+        "name": "mindestens 4 Zeichen",
+        "email": "diese E-Mail ist bereits vergeben",
+        "pass": {
+          "length": "length at least 4",
+          "num": "Zahlen",
+          "up": "BUCHSTABEN",
+          "low": "Buchstaben",
+          "symbol": "Symbole"
+        }
+      }
+    }
   }
 }

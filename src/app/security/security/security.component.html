@@ -2,33 +2,31 @@
 <p class="pt-24 lg:pt-32"></p>
 <header class="pt-20 pb-24 container mx-auto">
   <div class="mb-3">
-    <span>Home </span>
+    <span>{{'security.home' | translate}} </span>
     <span class="bi bi-dash-lg"></span>
-    <span> Customer zone</span>
+    <span> {{'security.title' | translate}}</span>
   </div>
-  <h1>Customer zone</h1>
-  <p>You can use the navbar-modal link or this page for customers' sign in.</p>
+  <h1>{{'security.title' | translate}}</h1>
+  <p>{{'security.p' | translate}}</p>
 </header>
 <main class="flex flex-wrap container mx-auto pb-12">
   <section class="lg:basis-5/12">
     <div>
       <div class="header px-12 py-6">
-        <b>Login</b>
+        <b>{{'security.login.head' | translate}}</b>
       </div>
       <div class="body p-12">
-        <p class="title">Already our customer?</p>
+        <p class="title">{{'security.login.ask' | translate}}</p>
         <p>
-          Pellentesque habitant morbi tristique senectus et netus et malesuada
-          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
-          ultricies eget, tempor sit amet.
+          {{'security.login.p' | translate}}
         </p>
         <div class="hr mt-6 mb-7"></div>
-        <p style="color: red;" *ngIf="information">Information is incorrect</p>
+        <p style="color: red;" *ngIf="information">{{'security.login.warn' | translate}}</p>
         <form
             (ngSubmit)="logIn(loginEmail.value,loginPassword.value)"
           [formGroup]="LoginForm"
         >
-          <label for="Email" class="mb-2">Email</label>
+          <label for="Email" class="mb-2">{{'security.login.email' | translate}}</label>
           <input
             
             formControlName="email"
@@ -38,7 +36,7 @@
             #loginEmail
             required
           />
-          <label for="Password" class="mb-2">Password</label>
+          <label for="Password" class="mb-2">{{'security.login.pass' | translate}}</label>
           <input
             
             formControlName="password"
@@ -49,7 +47,7 @@
             required
           />
           <button [disabled]="!LoginForm.valid" type="submit">
-            <i class="fas fa-sign-in-alt mr-3"></i>LOG IN
+            <i class="fas fa-sign-in-alt mr-3"></i>{{'security.login.btn' | translate}}
           </button>
         </form>
       </div>
@@ -58,23 +56,19 @@
   <section class="lg:basis-6/12">
     <div class="lg:ml-auto custom-width">
       <div class="header px-12 py-6">
-        <b>New account</b>
+        <b>{{'security.sign.head' | translate}}</b>
       </div>
       <div class="body p-12">
-        <p class="title">Not our registered customer yet?</p>
+        <p class="title">{{'security.sign.ask' | translate}}</p>
         <p>
-          With registration with us new world of fashion, fantastic discounts
-          and much more opens to you! The whole process will not take you more
-          than a minute!
+          {{'security.sign.p' | translate}}
         </p>
         <p>
-          If you have any questions, please feel free to
-          <span class="gold">contact us</span>, our customer service center is
-          working for you 24/7.
-        </p>
+          {{'security.sign.p2.txt1' | translate}}
+          <span class="gold">{{'security.sign.p2.gold' | translate}}</span>{{'security.sign.p2.txt2' | translate}}</p>
         <div class="hr mt-6 mb-7"></div>
         <form (ngSubmit)="registery(registerName.value,registerEmail.value,registerPassword.value)" [formGroup]="registerForm">
-          <label class="mb-2" for="name">Name</label>
+          <label class="mb-2" for="name">{{'security.sign.name' | translate}}</label>
           <input
             type="text"
             formControlName="name"
@@ -83,8 +77,8 @@
             class="mb-3 w-full"
             required
           />
-          <p [hidden]="registerForm.controls['name'].status=='VALID'">at least 4 character</p>
-          <label class="mb-2 mt-5" for="email">Email</label>
+          <p [hidden]="registerForm.controls['name'].status=='VALID'">{{'security.sign.errors.name' | translate}}</p>
+          <label class="mb-2 mt-5" for="email">{{'security.sign.email' | translate}}</label>
           <input
             required
             [ngClass]="emailCheck ? 'mb-6' : 'mb-3'"
@@ -95,8 +89,8 @@
             (blur)="newEmail(registerEmail.value)"
             formControlName="email"
           />
-          <p class="mb-3" [hidden]="emailCheck">this email is Already taken</p>
-          <label class="mb-2" for="password">Password</label>
+          <p class="mb-3" [hidden]="emailCheck">{{'security.sign.errors.email' | translate}}</p>
+          <label class="mb-2" for="password">{{'security.sign.pass' | translate}}</label>
           <input
             formControlName="password"
             required
@@ -106,14 +100,14 @@
             #registerPassword
           />
           <p class="passwarn">
-            <span *ngIf="registerForm.get('password')?.errors?.['passLength']">length at least 4</span>
-            <span *ngIf="registerForm.get('password')?.errors?.['number']">numbers</span>
-            <span *ngIf="registerForm.get('password')?.errors?.['upper']">LETTERS</span>
-            <span *ngIf="registerForm.get('password')?.errors?.['lower']">letters</span>
-            <span *ngIf="registerForm.get('password')?.errors?.['symbol']">symbols</span>
+            <span *ngIf="registerForm.get('password')?.errors?.['passLength']">{{'security.sign.errors.pass.length' | translate}}</span>
+            <span *ngIf="registerForm.get('password')?.errors?.['number']">{{'security.sign.errors.pass.num' | translate}}</span>
+            <span *ngIf="registerForm.get('password')?.errors?.['upper']">{{'security.sign.errors.pass.up' | translate}}</span>
+            <span *ngIf="registerForm.get('password')?.errors?.['lower']">{{'security.sign.errors.pass.low' | translate}}</span>
+            <span *ngIf="registerForm.get('password')?.errors?.['symbol']">{{'security.sign.errors.pass.symbol' | translate}}</span>
           </p>
           <button type="submit" [disabled]="!registerForm.valid">
-            <i class="far fa-user mr-3"></i>REGISTER
+            <i class="far fa-user mr-3"></i>{{'security.sign.btn' | translate}}
           </button>
         </form>
       </div>

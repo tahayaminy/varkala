@@ -1,16 +1,8 @@
 {
   "navbar": {
     "title": "Livraison gratuite en magasin",
-    "lang": [
-      "Anglais",
-      "Allemand",
-      "Français"
-    ],
-    "money": [
-      "USD",
-      "EUR",
-      "GBP"
-    ],
+    "lang": ["Anglais", "Allemand", "Français"],
+    "money": ["USD", "EUR", "GBP"],
     "brand": "Varkala",
     "search": "Rechercher",
     "new": "Nouveau",
@@ -18,22 +10,10 @@
       "home": {
         "name": "Accueil",
         "submenu": [
-          [
-            "Accueil 1 - Mode",
-            false
-          ],
-          [
-            "Accueil 2 - Mode",
-            false
-          ],
-          [
-            "Accueil 3 - Mode",
-            true
-          ],
-          [
-            "Accueil 4 - Mode",
-            true
-          ]
+          ["Accueil 1 - Mode", false],
+          ["Accueil 2 - Mode", false],
+          ["Accueil 3 - Mode", true],
+          ["Accueil 4 - Mode", true]
         ]
       },
       "shop": {
@@ -42,57 +22,27 @@
           {
             "b": "Pages de la boutique",
             "span": [
-              [
-                "Pleine largeur",
-                false
-              ],
-              [
-                "Pleine largeur avec menu catégorie",
-                false
-              ],
-              [
-                "Pleine largeur avec gros produits",
-                false
-              ],
-              [
-                "Largeur fixe",
-                false
-              ],
-              [
-                "Largeur fixe et barre latérale",
-                false
-              ],
-              [
-                "Largeur fixe et mise en page maçonnerie",
-                true
-              ],
-              [
-                "Sous-catégories",
-                false
-              ]
+              ["Pleine largeur", false],
+              ["Pleine largeur avec menu catégorie", false],
+              ["Pleine largeur avec gros produits", false],
+              ["Largeur fixe", false],
+              ["Largeur fixe et barre latérale", false],
+              ["Largeur fixe et mise en page maçonnerie", true],
+              ["Sous-catégories", false]
             ]
           },
           {
             "b": "Pages produits",
             "span": [
-              [
-                "Produit avec info autocollante",
-                false
-              ],
-              [
-                "Produit avec arrière-plan",
-                false
-              ],
-              [
-                "norme produit",
-                false
-              ]
+              ["Produit avec info autocollante", false],
+              ["Produit avec arrière-plan", false],
+              ["norme produit", false]
             ]
           }
         ]
       },
-      "icon":"Icônes",
-      "iconTxt":"Ne manquez pas nos plus grosses ventes cette année. Utilisez le code 'SUMMER35' à la caisse jusqu'en juin. 15 !",
+      "icon": "Icônes",
+      "iconTxt": "Ne manquez pas nos plus grosses ventes cette année. Utilisez le code 'SUMMER35' à la caisse jusqu'en juin. 15 !",
       "page": {
         "name": "Pages",
         "cols": [
@@ -100,55 +50,22 @@
             {
               "b": "Accueil",
               "span": [
-                [
-                  "Accueil 1 - Mode",
-                  false
-                ],
-                [
-                  "Accueil 2 - Mode",
-                  false
-                ],
-                [
-                  "Accueil 3 - Mode",
-                  true
-                ],
-                [
-                  "Accueil 4 - Mode",
-                  true
-                ]
+                ["Accueil 1 - Mode", false],
+                ["Accueil 2 - Mode", false],
+                ["Accueil 3 - Mode", true],
+                ["Accueil 4 - Mode", true]
               ]
             },
             {
               "b": "Catégorie",
               "span": [
-                [
-                  "Pleine largeur",
-                  false
-                ],
-                [
-                  "Pleine largeur avec menu catégorie",
-                  false
-                ],
-                [
-                  "Pleine largeur avec gros produits",
-                  false
-                ],
-                [
-                  "Largeur fixe",
-                  false
-                ],
-                [
-                  "Largeur fixe et barre latérale",
-                  false
-                ],
-                [
-                  "Largeur fixe et mise en page maçonnerie",
-                  true
-                ],
-                [
-                  "Sous-catégories",
-                  false
-                ]
+                ["Pleine largeur", false],
+                ["Pleine largeur avec menu catégorie", false],
+                ["Pleine largeur avec gros produits", false],
+                ["Largeur fixe", false],
+                ["Largeur fixe et barre latérale", false],
+                ["Largeur fixe et mise en page maçonnerie", true],
+                ["Sous-catégories", false]
               ]
             }
           ],
@@ -156,44 +73,20 @@
             {
               "b": "Processus de commande",
               "span": [
-                [
-                  "Panier",
-                  false
-                ],
-                [
-                  "Commande - Cinq étapes",
-                  true
-                ],
-                [
-                  "Commande - Page unique",
-                  false
-                ],
-                [
-                  "Commande - confirmée",
-                  false
-                ],
-                [
-                  "Liste de souhaits",
-                  false
-                ]
+                ["Panier", false],
+                ["Commande - Cinq étapes", true],
+                ["Commande - Page unique", false],
+                ["Commande - confirmée", false],
+                ["Liste de souhaits", false]
               ]
             },
             {
               "b": "Pages produits",
               "product": "Produit",
               "span": [
-                [
-                  "Produit avec info collante",
-                  false
-                ],
-                [
-                  "Produit avec arrière-plan",
-                  false
-                ],
-                [
-                  "norme produit",
-                  false
-                ]
+                ["Produit avec info collante", false],
+                ["Produit avec arrière-plan", false],
+                ["norme produit", false]
               ]
             }
           ],
@@ -201,43 +94,19 @@
             {
               "b": "Blog",
               "span": [
-                [
-                  "Blog",
-                  false
-                ],
-                [
-                  "Blogtst - Maçonnerie",
-                  false
-                ],
-                [
-                  "Article",
-                  false
-                ]
+                ["Blog", false],
+                ["Blogtst - Maçonnerie", false],
+                ["Article", false]
               ]
             },
             {
               "b": "Page",
               "span": [
-                [
-                  "À propos - Entreprise",
-                  true
-                ],
-                [
-                  "À propos v.2 - Personne",
-                  true
-                ],
-                [
-                  "F.A.Q",
-                  true
-                ],
-                [
-                  "Contact",
-                  false
-                ],
-                [
-                  "Confidentialité - politique",
-                  true
-                ]
+                ["À propos - Entreprise", true],
+                ["À propos v.2 - Personne", true],
+                ["F.A.Q", true],
+                ["Contact", false],
+                ["Confidentialité - politique", true]
               ]
             }
           ],
@@ -245,34 +114,13 @@
             {
               "b": "Client",
               "span": [
-                [
-                  "Se connecter/s'inscrire",
-                  true
-                ],
-                [
-                  "Commandes",
-                  true
-                ],
-                [
-                  "Détail de la commande",
-                  true
-                ],
-                [
-                  "Suivi de commande",
-                  true
-                ],
-                [
-                  "Adresses",
-                  true
-                ],
-                [
-                  "Profil",
-                  true
-                ],
-                [
-                  "Liste de souhaits",
-                  true
-                ]
+                ["Se connecter/s'inscrire", true],
+                ["Commandes", true],
+                ["Détail de la commande", true],
+                ["Suivi de commande", true],
+                ["Adresses", true],
+                ["Profil", true],
+                ["Liste de souhaits", true]
               ]
             }
           ]
@@ -294,8 +142,8 @@
       "check": "CHECKOUT"
     }
   },
-  "footer":{
-    "term":{
+  "footer": {
+    "term": {
       "deliver": {
         "title": "Livraison et retour gratuits",
         "txt": "Livraison gratuite à partir de 30 $"
@@ -312,23 +160,17 @@
         "txt": "Assistance disponible 24h/24 et 7j/7"
       }
     },
-    "main":{
-      "contact":{
+    "main": {
+      "contact": {
         "h": "Soyez en contact",
         "p": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque temporibus.",
         "holder": "Votre adresse e-mail"
       },
-      "shop":{
+      "shop": {
         "h": "Boutique",
-        "li": [
-          "Pour Femme",
-          "Pour Homme",
-          "Magasins",
-          "Notre Blog",
-          "Boutique"
-        ]
+        "li": ["Pour Femme", "Pour Homme", "Magasins", "Notre Blog", "Boutique"]
       },
-      "company":{
+      "company": {
         "h": "Entreprise",
         "li": [
           "Connexion",
@@ -338,7 +180,7 @@
           "Commandes"
         ]
       },
-      "account":{
+      "account": {
         "h": "Votre compte",
         "li": [
           "Connexion",
@@ -350,15 +192,15 @@
       }
     },
     "copy": "2022 Votre entreprise. Tous droits réservés.",
-  "links": [
-    "Conditions générales",
-    "Confidentialité et cookies",
-    "Accessibilité",
-    "Promesse relative aux données client"
-  ]
+    "links": [
+      "Conditions générales",
+      "Confidentialité et cookies",
+      "Accessibilité",
+      "Promesse relative aux données client"
+    ]
   },
-  "index":{
-    "header":{
+  "index": {
+    "header": {
       "slider1": {
         "light": "NOS FAVORIS DE TOUS LES TEMPS",
         "h": "Blouses & Tops",
@@ -378,21 +220,21 @@
     },
     "Women": "Femme homme",
     "Men": "Due2385AE_1",
-    "Arrival":{
+    "Arrival": {
       "h": "Nouveautés",
       "p": "Un matin, lorsque Gregor Samsa s'est réveillé de rêves troublés, il s'est retrouvé transformé dans son lit en une horrible vermine. Il était allongé sur son dos en forme d'armure, et s'il levait un peu la tête, il pouvait voir son ventre brun, légèrement bombé et divisé par des arcs en sections rigides"
     },
-    "offer":{
+    "offer": {
       "danger": "OFFRE DES FAIBLES",
       "h": "Veste en jean surdimensionnée",
-      "off":"désactivé",
+      "off": "désactivé",
       "day": "jours",
       "hour": "heures",
       "min": "minutes",
       "sec": "secondes",
       "btn": "ACHETEZ MAINTENANT"
     },
-    "history":{
+    "history": {
       "h": "NOTRE HISTOIRE",
       "p1": "Un matin, lorsque Gregor Samsa s'est réveillé de rêves troublés, il s'est retrouvé transformé dans son lit en une horrible vermine. Il était allongé sur son dos en forme d'armure, et s'il levait un peu la tête, il pouvait voir son ventre brun, légèrement bombé et divisé par des arcs en sections raides",
       "p2": "Il a dû l'essayer cent fois, ferma les yeux pour qu'il n'aurait pas eu à regarder les jambes pataugeantes, et ne s'est arrêté que lorsqu'il a commencé à ressentir une douleur légère et sourde qu'il n'avait jamais ressentie auparavant."
@@ -411,14 +253,14 @@
     "title": "Dames",
     "p": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt."
   },
-  "category-full":{
+  "category-full": {
     "main": {
       "h1": "Vestes et hauts",
       "p": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
       "home": "Accueil",
       "shop": "Boutique"
     },
-    "sidebar":{
+    "sidebar": {
       "category": {
         "name": "catégorie",
         "Sname": "Catégories de produits",
@@ -431,7 +273,8 @@
         "Sname": "Filtrer par prix",
         "from": "De",
         "to": "À"
-      },"brand": "Marque",
+      },
+      "brand": "Marque",
       "Sbrand": "Filtrer par marque",
       "size": {
         "name": "Taille",
@@ -443,9 +286,8 @@
       },
       "color": "Couleur",
       "Scolor": "Filtrer par couleur"
-
     },
-    "list":{
+    "list": {
       "phrase": {
         "show": "Affichage",
         "of": "de",
@@ -461,37 +303,76 @@
         "rating": "Note"
       }
     }
-},
-"item": {
-  "cart": "Ajouter au panier"
-},
-"dialog": {
-  "review": "AVIS",
-  "size": "Taille",
-  "requir": "obligatoire",
-  "type": "Type",
-  "cart": "AJOUTER AU PANIER",
-  "wish": "Ajouter à la liste de souhaits",
-  "category": "Catégorie",
-  "tag": "Tags"
-},
-"detail": {
-  "notic": {
-    "msg": "Le t-shirt blanc a été ajouté à votre panier.",
-    "act": "Voir le panier"
   },
-  "home": "Accueil",
-  "desc": {
-    "name": "DESCRIPTION",
-    "h1": "À propos",
-    "h2": "Vous allez adorer",
-    "p": "Il a dû l'essayer une centaine de fois, fermez les yeux pour ne pas avoir à regarder les jambes pataugeantes, et ne s'est arrêté que lorsqu'il a commencé à ressentir une douleur légère et sourde qu'il n'avait jamais ressentie auparavant.",
-    "ul": [
-      "Il a dû essayer cent fois",
-      "il a fermé les yeux pour ne pas avoir à regarde",
-      "les jambes qui pataugent, et ne s'arrête"
-    ]
+  "item": {
+    "cart": "Ajouter au panier"
   },
-  "offer": "Vous pourriez aussi être intéressés par ceux-ci"
-}
+  "dialog": {
+    "review": "AVIS",
+    "size": "Taille",
+    "requir": "obligatoire",
+    "type": "Type",
+    "cart": "AJOUTER AU PANIER",
+    "wish": "Ajouter à la liste de souhaits",
+    "category": "Catégorie",
+    "tag": "Tags"
+  },
+  "detail": {
+    "notic": {
+      "msg": "Le t-shirt blanc a été ajouté à votre panier.",
+      "act": "Voir le panier"
+    },
+    "home": "Accueil",
+    "desc": {
+      "name": "DESCRIPTION",
+      "h1": "À propos",
+      "h2": "Vous allez adorer",
+      "p": "Il a dû l'essayer une centaine de fois, fermez les yeux pour ne pas avoir à regarder les jambes pataugeantes, et ne s'est arrêté que lorsqu'il a commencé à ressentir une douleur légère et sourde qu'il n'avait jamais ressentie auparavant.",
+      "ul": [
+        "Il a dû essayer cent fois",
+        "il a fermé les yeux pour ne pas avoir à regarde",
+        "les jambes qui pataugent, et ne s'arrête"
+      ]
+    },
+    "offer": "Vous pourriez aussi être intéressés par ceux-ci"
+  },
+  "security": {
+    "home": "Accueil",
+    "title": "Espace client",
+    "p": "Vous pouvez utiliser le lien navbar-modal ou cette page pour vous connecter.",
+    "login": {
+      "head": "Connexion",
+      "ask": "Déjà notre client ?",
+      "warn": "Information erronée",
+      "p": "Pellentesque habitant morbi tristique senectus et netus et malesuada Fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet.",
+      "btn": "CONNEXION",
+      "email": "Email",
+      "pass": "Mot de passe"
+    },
+    "sign": {
+      "head": "Nouveau compte",
+      "ask": "Pas encore notre client enregistré ?",
+      "p": "Avec l'inscription chez nous, un nouveau monde de la mode, des remises fantastiques et bien plus encore s'ouvrent à vous ! L'ensemble du processus ne vous prendra pas plus d'une minute !",
+      "p2": {
+        "txt1": "Si vous avez des questions, n'hésitez pas à ",
+        "gold": "nous contacter",
+        "txt2": ", notre centre de service client travaille pour vous 24h/24 et 7j/7."
+      },
+      "btn": "ENREGISTRER",
+      "name": "Nom",
+      "email": "Email",
+      "pass": "Mot de passe",
+      "errors": {
+        "name": "au moins 4 caractères",
+        "email": "ce mail est déjà pris",
+        "pass": {
+          "length": "length at least 4",
+          "num": "chiffres",
+          "up": "LETTRES",
+          "low": "lettres",
+          "symbol": "symboles"
+        }
+      }
+    }
+  }
 }

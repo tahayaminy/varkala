@@ -409,5 +409,33 @@
       "quant":"Quantity",
       "total":"Total price"
     }
+  },
+  "shopForm":{
+    "home":"Home",
+    "title":"Checkout",
+    "tabs":{
+      "address":"Address",
+      "delivery":"Delivery Method",
+      "compelete":"Compelete Order"
+    },
+    "address":{
+      "p":"Please fill in your address",
+      "form":{
+        "title":"Invoice address",
+        "name":"Full Name",
+        "email":"Email Address",
+        "street":"Street",
+        "city":"City",
+        "zip":"ZIP",
+        "state":"State",
+        "num":"Phone Number",
+        "check":"Use a diffrent shipping address"
+      },
+      "back":"BACK",
+      "next":"CHOOSE DELIVERY METHOD"
+    },
+    "delivery":{
+      
+    }
   }
 }

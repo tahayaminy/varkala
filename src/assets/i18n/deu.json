@@ -425,5 +425,30 @@
       "quant": "Menge",
       "total": "Gesamtpreis"
     }
+  },
+  "shopForm": {
+    "home": "Startseite",
+    "title": "Kasse",
+    "tabs": {
+      "address": "Adresse",
+      "delivery": "Lieferart",
+      "compelete": "Bestellung abschließen"
+    },
+    "address":{
+      "p": "Bitte geben Sie Ihre Adresse ein",
+      "form": {
+        "title": "Rechnungsadresse",
+        "name": "Vollständiger Name",
+        "email": "E-Mail-Adresse",
+        "street": "Straße",
+        "city": "Stadt",
+        "zip": "PLZ",
+        "state": "Bundesland",
+        "num": "Telefonnummer",
+        "check": "Andere Lieferadresse verwenden"
+      },
+      "back": "ZURÜCK",
+  "next": "VERSANDART WÄHLEN"
+    }
   }
 }

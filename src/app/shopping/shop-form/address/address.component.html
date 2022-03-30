@@ -2,69 +2,69 @@
 <p class="pt-24 lg:pt-32"></p>
 <header class="pt-24 pb-24 container mx-auto">
   <div class="mb-3">
-    <span>Home </span>
+    <span>{{'shopForm.home' | translate}} </span>
     <span class="bi bi-dash-lg"></span>
-    <span> Checkout</span>
+    <span> {{'shopForm.title' | translate}}</span>
   </div>
-  <h1>Checkout</h1>
-  <p>Please fill in your address.</p>
+  <h1>{{'shopForm.title' | translate}}</h1>
+  <p>{{'shopForm.address.p' | translate}}</p>
 </header>
 <main class="container flex flex-wrap mx-auto pb-10">
   <form [formGroup]="formshop" class="basis-full lg:basis-8/12 pr-4">
     <section class="grid tabbar grid-cols-1 lg:grid-cols-3 mb-14 rounded">
       <div class="active py-5 lg:rounded-l">
-        <div class="text-center">Address</div>
+        <div class="text-center">{{'shopForm.tabs.address' | translate}}</div>
       </div>
       <div class="py-5">
-        <div class="text-center lg:border-l">Delivery Method</div>
+        <div class="text-center lg:border-l">{{'shopForm.tabs.delivery' | translate}}</div>
       </div>
       <div class="py-5">
-        <div class="text-center lg:border-l">Compelete Order</div>
+        <div class="text-center lg:border-l">{{'shopForm.tabs.compelete' | translate}}</div>
       </div>
     </section>
     <section>
-      <h1>Invoice address</h1>
+      <h1>{{'shopForm.address.form.title' | translate}}</h1>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8">
         <div class="">
-          <label for="fullname">Full Name</label>
+          <label for="fullname">{{'shopForm.address.form.name' | translate}}</label>
           <input formControlName="name" required type="text" id="fullname" placeholder="Joe Black" />
         </div>
         <div class="">
-          <label for="email">Email Address</label>
+          <label for="email">{{'shopForm.address.form.email' | translate}}</label>
           <input formControlName="email" type="text" id="email" placeholder="joe.black@gmail.com" />
         </div>
         <div class="">
-          <label for="street">Street</label>
+          <label for="street">{{'shopForm.address.form.street' | translate}}</label>
           <input formControlName="street" type="text" id="street" placeholder="123 Main St." />
         </div>
         <div class="">
-          <label for="city">City</label>
+          <label for="city">{{'shopForm.address.form.city' | translate}}</label>
           <input formControlName="city" type="text" id="city" placeholder="City" />
         </div>
         <div class="">
-          <label for="zip">ZIP</label>
+          <label for="zip">{{'shopForm.address.form.zip' | translate}}</label>
           <input formControlName="zip" type="text" id="zip" placeholder="Postal code" />
         </div>
         <div class="">
-          <label for="state">State</label>
+          <label for="state">{{'shopForm.address.form.state' | translate}}</label>
           <input formControlName="state" type="text" id="state" placeholder="State" />
         </div>
         <div class="">
-          <label for="phone">Phone Number</label>
+          <label for="phone">{{'shopForm.address.form.num' | translate}}</label>
           <input formControlName="number" type="tel" id="phone" placeholder="Phone Number" />
         </div>
       </div>
       <div class="mt-5">
-        <input type="checkbox" name="" id="" /> Use a different shipping address
+        <input type="checkbox" name="" id="" /> {{'shopForm.address.form.check' | translate}}
       </div>
     </section>
     <div
       class="options flex flex-wrap lg:flex-nowrap justify-center mt-8 lg:mt-16 lg:mb-0 mb-12"
     >
       <span class="basis-full text-center mb-5 lg:mb-0 lg:basis-auto"
-        ><i class="fas fa-angle-left"></i> BACK</span
+        ><i class="fas fa-angle-left"></i> {{'shopForm.address.back' | translate}}</span
       ><button [disabled]="!formshop.valid" routerLink="delivery" class="ml-auto text-center basis-full lg:basis-auto"
-        >CHOOSE DELIVERY METHOD <i class="fas fa-angle-right"></i
+        >{{'shopForm.address.next' | translate}} <i class="fas fa-angle-right"></i
       ></button>
     </div>
   </form>

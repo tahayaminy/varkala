@@ -4,6 +4,9 @@
 .select .mat-select-arrow {
   display: none;
 }
+.mat-select-panel{
+  transform: scaleY(1) translateX(8px) !important;
+}
 .mat-select{
     transform: translateY(50%);
 }
@@ -29,7 +32,7 @@
 }
 .select .mat-select-value {
   text-transform: uppercase;
-  padding-left: 2px;
+  padding-left: 10px;
 }
 .select .mat-form-field-appearance-fill .mat-select-arrow-wrapper {
   transform: translateY(10%);

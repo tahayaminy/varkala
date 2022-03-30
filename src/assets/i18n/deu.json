@@ -449,6 +449,29 @@
       },
       "back": "ZURÜCK",
   "next": "VERSANDART WÄHLEN"
+    },
+    "delivery":{
+      "p": "Wählen Sie Ihre Liefermethode.",
+      "options":{
+        "day":{
+          "name": "Upse am nächsten Tag",
+          "desc": "Eines Morgens, als Gregor Samsa aus unruhigen Träumen erwachte, fand er sich in seinem Bett in ein schreckliches Ungeziefer verwandelt. Er lag auf seinem panzerartigen Rücken, und wenn er den Kopf ein wenig hob, konnte er seinen braunen Bauch sehen, leicht gewölbt und durch Wölbungen in steife Abschnitte unterteilt"
+        },
+        "dhl": {
+          "name": "DHL",
+          "desc": "Lieferung am nächsten Tag – schnellstmögliche Option."
+        },
+        "ppl": {
+          "name": "PPL",
+          "desc": "Lieferung am nächsten Tag – schnellstmögliche Option."
+        },
+        "ups": {
+          "name": "UPS",
+          "desc": "Lieferung am nächsten Tag – schnellstmögliche Option."
+        }
+      },
+      "back": "ZURÜCK ZUR ZAHLUNGSART",
+      "next": "BESTELLUNG AUFGEBEN"
     }
   }
 }

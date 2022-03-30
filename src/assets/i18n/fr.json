@@ -375,23 +375,23 @@
       }
     }
   },
-  "wishlist":{
+  "wishlist": {
     "home": "Accueil",
-  "title": "Liste de souhaits",
-  "p": {
-    "txt1": "Vous avez",
-    "txt2": "articles dans votre liste de souhaits. Voir une version de ce modèle pour",
-    "gold": "client connecté."
-  },
-  "item":{
-    "cart": "AJOUTER AU PANIER",
-    "size": "Taille",
-    "large": "Large",
-    "color": "Couleur",
-    "green": "Vert",
-    "price": "Prix à l'heure",
-    "status": "Statut"
-  }
+    "title": "Liste de souhaits",
+    "p": {
+      "txt1": "Vous avez",
+      "txt2": "articles dans votre liste de souhaits. Voir une version de ce modèle pour",
+      "gold": "client connecté."
+    },
+    "item": {
+      "cart": "AJOUTER AU PANIER",
+      "size": "Taille",
+      "large": "Large",
+      "color": "Couleur",
+      "green": "Vert",
+      "price": "Prix à l'heure",
+      "status": "Statut"
+    }
   },
   "factor": {
     "head": "Récapitulatif de la commande",
@@ -402,30 +402,30 @@
     "total": "Total",
     "final": "PASSER À LA CAISSE"
   },
-  "shop":{
+  "shop": {
     "home": "Accueil",
-  "title": "Panier",
-  "stock": {
-    "txt1": "Vous avez",
-    "txt2": "articles dans votre panier."
-  },
-  "p": {
-    "txt1": "Pour le paiement, vous pouvez utiliser soit un",
-    "gold1": "Commande sur plusieurs pages",
-    "txt2": "ou avoir tout sur une",
-    "gold2": "page unique."
-  },
-  "continue": "CONTINUER VOS ACHATS",
-  "update": "MISE À JOUR PANIER",
-  "item": {
-    "size": "Taille",
-    "large": "Large",
-    "color": "Couleur",
-    "green": "Vert",
-    "price": "Prix à l'heure",
-    "quant": "Quantité",
-    "total": "Prix total"
-  }
+    "title": "Panier",
+    "stock": {
+      "txt1": "Vous avez",
+      "txt2": "articles dans votre panier."
+    },
+    "p": {
+      "txt1": "Pour le paiement, vous pouvez utiliser soit un",
+      "gold1": "Commande sur plusieurs pages",
+      "txt2": "ou avoir tout sur une",
+      "gold2": "page unique."
+    },
+    "continue": "CONTINUER VOS ACHATS",
+    "update": "MISE À JOUR PANIER",
+    "item": {
+      "size": "Taille",
+      "large": "Large",
+      "color": "Couleur",
+      "green": "Vert",
+      "price": "Prix à l'heure",
+      "quant": "Quantité",
+      "total": "Prix total"
+    }
   },
   "shopForm": {
     "home": "Accueil",
@@ -435,7 +435,7 @@
       "delivery": "Méthode de livraison",
       "compelete": "Terminer la commande"
     },
-    "address":{
+    "address": {
       "p": "Veuillez remplir votre adresse",
       "form": {
         "title": "Adresse de facturation",
@@ -449,7 +449,31 @@
         "check": "Utiliser une adresse de livraison différente"
       },
       "back": "RETOUR",
-  "next": "CHOIX DU MODE DE LIVRAISON"
+      "next": "CHOIX DU MODE DE LIVRAISON"
+    },
+    "delivery":{
+      "p": "Choisissez votre méthode d'envoie.",
+      "options":{
+        "day": {
+          "name": "Upse day next",
+          "desc": "Un matin, lorsque Gregor Samsa se réveilla de rêves troublés, il se retrouva transformé dans son lit en une horrible vermine. Il était allongé sur son dos en forme d'armure, et s'il levait un peu la tête, il pouvait voir son ventre brun, légèrement bombé et divisé par des arcs en sections rigides"
+        },
+        "dhl": {
+          "name": "DHL",
+          "desc": "Faites-le bien le lendemain - option la plus rapide possible."
+        },
+        "ppl": {
+          "name": "PPL",
+          "desc": "Faites-le bien le lendemain - option la plus rapide possible."
+        },
+        "ups": {
+          "name": "UPS",
+          "desc": "Faites-le bien le lendemain - option la plus rapide possible."
+        }
+      },
+      "back": "RETOUR AU MODE DE PAIEMENT",
+      "next": "PASSER COMMANDE"
+    
     }
   }
 }

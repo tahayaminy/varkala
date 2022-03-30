@@ -2,24 +2,24 @@
 <p class="pt-24 lg:pt-32"></p>
 <header class="pt-24 pb-28 container mx-auto">
   <div class="mb-3">
-    <span>Home </span>
+    <span>{{'shopForm.home' | translate}} </span>
     <span class="bi bi-dash-lg"></span>
-    <span> Checkout</span>
+    <span> {{'shopForm.title' | translate}}</span>
   </div>
-  <h1>Checkout</h1>
-  <p>Choose your delivery method.</p>
+  <h1>{{'shopForm.title' | translate}}</h1>
+  <p>{{'shopForm.delivery.p' | translate}}</p>
 </header>
 <main class="container flex flex-wrap mx-auto pb-10">
   <form [formGroup]="deliverForm" class="basis-full lg:basis-8/12 pr-4">
     <section class="grid tabbar grid-cols-1 lg:grid-cols-3 mb-14 rounded">
       <div class="py-5">
-        <div class="text-center lg:border-r">Address</div>
+        <div class="text-center lg:border-r">{{'shopForm.tabs.address' | translate}}</div>
       </div>
       <div class="active py-5">
-        <div class="text-center">Delivery Method</div>
+        <div class="text-center">{{'shopForm.tabs.delivery' | translate}}</div>
       </div>
       <div class="py-5">
-        <div class="text-center lg:border-l">Compelete Order</div>
+        <div class="text-center lg:border-l">{{'shopForm.tabs.compelete' | translate}}</div>
       </div>
     </section>
     <section>
@@ -28,11 +28,11 @@
           <label class="rounded">
             <input required formControlName="deliver" value="upse"  type="radio">
             <div class="card">
-              <div class="p-4 header rounded-t">Upse next day</div>
+              <div class="p-4 header rounded-t">{{'shopForm.delivery.options.day.name' | translate}}</div>
             <div class="body px-4 rounded-b py-3">
               <h1>$10.00</h1>
             <p>
-              One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections
+              {{'shopForm.delivery.options.day.desc' | translate}}
             </p>
             </div>
             </div>
@@ -42,11 +42,11 @@
           <label class="rounded">
             <input required formControlName="deliver" value="DHL"  type="radio">
            <div class="card">
-            <div class="p-4 header rounded-t">DHL</div>
+            <div class="p-4 header rounded-t">{{'shopForm.delivery.options.dhl.name' | translate}}</div>
             <div class="body px-4 rounded-b py-3">
               <h1>$15.00</h1>
             <p>
-              Get it right on next day - fastest option possible.
+              {{'shopForm.delivery.options.dhl.desc' | translate}}
             </p>
             </div>
            </div>
@@ -56,11 +56,11 @@
           <label class="rounded">
             <input required formControlName="deliver" value="PPL"  type="radio">
             <div class="card">
-              <div class="p-4 header rounded-t">PPL</div>
+              <div class="p-4 header rounded-t">{{'shopForm.delivery.options.ppl.name' | translate}}</div>
             <div class="body px-4 rounded-b py-3">
               <h1>$8.00</h1>
             <p>
-              Get it right on next day - fastest option possible.
+              {{'shopForm.delivery.options.ppl.desc' | translate}}
             </p>
             </div>
             </div>
@@ -70,11 +70,11 @@
           <label class="rounded">
             <input required formControlName="deliver" value="UPS"  type="radio">
             <div class="card">
-              <div class="p-4 header rounded-t">UPS</div>
+              <div class="p-4 header rounded-t">{{'shopForm.delivery.options.ups.name' | translate}}</div>
             <div class="body px-4 rounded-b py-3">
               <h1>$20.00</h1>
             <p>
-              Get it right on next day - fastest option possible.
+              {{'shopForm.delivery.options.ups.desc' | translate}}
             </p>
             </div>
             </div>
@@ -86,9 +86,9 @@
       class="options flex flex-wrap lg:flex-nowrap justify-center mt-8 lg:mt-12 lg:mb-0 mb-12"
     >
       <span routerLink=".." class="basis-full text-center mb-5 lg:mb-0 lg:basis-auto"
-        ><i class="fas fa-angle-left"></i> BACK TO THE PAYMENT METHOD</span
+        ><i class="fas fa-angle-left"></i> {{'shopForm.delivery.back' | translate}}</span
       ><button [disabled]="!deliverForm.valid" routerLink="../confirm" class="ml-auto text-center basis-full lg:basis-auto"
-        >PLACE AN ORDER <i class="fas fa-angle-right"></i
+        >{{'shopForm.delivery.next' | translate}} <i class="fas fa-angle-right"></i
       ></button>
     </div>
   </form>

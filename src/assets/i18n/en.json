@@ -41,8 +41,8 @@
           }
         ]
       },
-      "icon":"Icons",
-      "iconTxt":"Don't miss our biggest sales this year. Use the code 'SUMMER35' at checkout until Jun. 15!",
+      "icon": "Icons",
+      "iconTxt": "Don't miss our biggest sales this year. Use the code 'SUMMER35' at checkout until Jun. 15!",
       "page": {
         "name": "Pages",
         "cols": [
@@ -82,7 +82,7 @@
             },
             {
               "b": "Product pages",
-              "product":"Product",
+              "product": "Product",
               "span": [
                 ["Product with sticky info", false],
                 ["Product with background", false],
@@ -92,350 +92,375 @@
           ],
           [
             {
-              "b":"Blog",
-              "span":[
-                ["Blog",false],
-                ["Blogtst - Masonry",false],
-                ["Post",false]
+              "b": "Blog",
+              "span": [
+                ["Blog", false],
+                ["Blogtst - Masonry", false],
+                ["Post", false]
               ]
             },
             {
-              "b":"Page",
-              "span":[
-                ["About - Company",true],
-                ["About v.2 - Person",true],
-                ["F.A.Q",true],
-                ["Contact",false],
-                ["Privacy - policy",true]
+              "b": "Page",
+              "span": [
+                ["About - Company", true],
+                ["About v.2 - Person", true],
+                ["F.A.Q", true],
+                ["Contact", false],
+                ["Privacy - policy", true]
               ]
             }
           ],
           [
             {
-              "b":"Customer",
-              "span":[
-                ["Login/sign up",true],
-                ["Orders",true],
-                ["Order detail",true],
-                ["Order tracking",true],
-                ["Addresses",true],
-                ["Profile",true],
-                ["Wishlist",true]
+              "b": "Customer",
+              "span": [
+                ["Login/sign up", true],
+                ["Orders", true],
+                ["Order detail", true],
+                ["Order tracking", true],
+                ["Addresses", true],
+                ["Profile", true],
+                ["Wishlist", true]
               ]
             }
           ]
         ]
       }
     },
-    "sidebar":{
-      "varkala":"Varkala",
-      "home":"Home",
-      "link":"Link",
-      "disable":"Disabled",
-      "dropdown":"Dropdown link",
-      "text":"Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame."
+    "sidebar": {
+      "varkala": "Varkala",
+      "home": "Home",
+      "link": "Link",
+      "disable": "Disabled",
+      "dropdown": "Dropdown link",
+      "text": "Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame."
     },
-    "bag":{
+    "bag": {
       "quantity": "Quantity",
-      "subtotal":"Subtotal",
-      "cart":"VIEW CART",
-      "check":"CHECKOUT"
+      "subtotal": "Subtotal",
+      "cart": "VIEW CART",
+      "check": "CHECKOUT"
     }
   },
-  "footer":{
-    "term":{
-      "deliver":{
-        "title":"Free shipping & return",
-        "txt":"Free Shipping over $30"
+  "footer": {
+    "term": {
+      "deliver": {
+        "title": "Free shipping & return",
+        "txt": "Free Shipping over $30"
       },
-      "money":{
-        "title":"Money back guarantee",
-        "txt":"30 Days Money Back Guarantee"
+      "money": {
+        "title": "Money back guarantee",
+        "txt": "30 Days Money Back Guarantee"
       },
-      "discount":{
-        "title":"Best prices",
-        "txt":"Always the best prices"
+      "discount": {
+        "title": "Best prices",
+        "txt": "Always the best prices"
       },
-      "support":{
-        "txt":"24/7 Available Support"
+      "support": {
+        "txt": "24/7 Available Support"
       }
     },
-    "main":{
-      "contact":{
-        "h":"Be in touch",
-        "p":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque temporibus.",
-        "holder":"Your Email Address"
+    "main": {
+      "contact": {
+        "h": "Be in touch",
+        "p": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque temporibus.",
+        "holder": "Your Email Address"
       },
-      "shop":{
-        "h":"Shop",
-        "li":["For Women","For Men","Stores","Our Blog","Shop"]
+      "shop": {
+        "h": "Shop",
+        "li": ["For Women", "For Men", "Stores", "Our Blog", "Shop"]
       },
-      "company":{
-        "h":"Company",
-        "li":["Login","Register","Wishlist","Our Product","Checkouts"]
+      "company": {
+        "h": "Company",
+        "li": ["Login", "Register", "Wishlist", "Our Product", "Checkouts"]
       },
-      "account":{
-        "h":"Your Account",
-        "li":["Login","Register","Wishlist","Our Product","Checkouts"]
+      "account": {
+        "h": "Your Account",
+        "li": ["Login", "Register", "Wishlist", "Our Product", "Checkouts"]
       }
     },
-    "copy":"2022 Your company. All rights reserved.",
-    "links":["Terms & Conditions","Privacy & cookies","Accessibility","Customer Data Promise"]
+    "copy": "2022 Your company. All rights reserved.",
+    "links": [
+      "Terms & Conditions",
+      "Privacy & cookies",
+      "Accessibility",
+      "Customer Data Promise"
+    ]
   },
-  "index":{
-    "header":{
-      "slider1":{
-        "light":"OUR ALL-TIME FAVOURITES",
-        "h":"Blouses & Tops",
-        "p":"The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pit",
-        "btn":"DISCOVER MORE"
+  "index": {
+    "header": {
+      "slider1": {
+        "light": "OUR ALL-TIME FAVOURITES",
+        "h": "Blouses & Tops",
+        "p": "The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pit",
+        "btn": "DISCOVER MORE"
       },
-      "slider2":{
-        "light":"BLUE & WHITE",
-        "h":"Linen and denim",
-        "btn":"START SHOPPING"
+      "slider2": {
+        "light": "BLUE & WHITE",
+        "h": "Linen and denim",
+        "btn": "START SHOPPING"
       },
-      "slider3":{
-        "light":"SNEAKERS",
-        "h":"For every occassion",
-        "btn":"START SHOPPING"
+      "slider3": {
+        "light": "SNEAKERS",
+        "h": "For every occassion",
+        "btn": "START SHOPPING"
       }
     },
-    "Women":"Women",
-    "Men":"Men",
-    "Arrival":{
-      "h":"New Arrivals",
-      "p":"One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections"
+    "Women": "Women",
+    "Men": "Men",
+    "Arrival": {
+      "h": "New Arrivals",
+      "p": "One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections"
     },
-    "offer":{
-      "danger":"DEAL OF THE WEAK",
-      "h":"Oversized denim jacket",
-      "off":"off",
-      "day":"days",
-      "hour":"hours",
-      "min":"minutes",
-      "sec":"seconds",
-      "btn":"SHOP NOW"
+    "offer": {
+      "danger": "DEAL OF THE WEAK",
+      "h": "Oversized denim jacket",
+      "off": "off",
+      "day": "days",
+      "hour": "hours",
+      "min": "minutes",
+      "sec": "seconds",
+      "btn": "SHOP NOW"
     },
-    "history":{
-      "h":"OUR HISTORY",
-      "p1":"One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections",
-      "p2":"He must have tried it a hundred times, shut his eyes so that he wouldn't have to look at the floundering legs, and only stopped when he began to feel a mild, dull pain there that he had never felt before."
+    "history": {
+      "h": "OUR HISTORY",
+      "p1": "One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections",
+      "p2": "He must have tried it a hundred times, shut his eyes so that he wouldn't have to look at the floundering legs, and only stopped when he began to feel a mild, dull pain there that he had never felt before."
     },
-    "list":{
-      "all":"All Products",
-      "cloth":"Clothing",
-      "bag":"Bags",
-      "under":"Underwear",
-      "ex":"Accessories"
+    "list": {
+      "all": "All Products",
+      "cloth": "Clothing",
+      "bag": "Bags",
+      "under": "Underwear",
+      "ex": "Accessories"
     }
   },
-  "category":{
-    "home":"Home",
-    "shop":"Shop",
-    "title":"Ladies",
-    "p":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt."
+  "category": {
+    "home": "Home",
+    "shop": "Shop",
+    "title": "Ladies",
+    "p": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt."
   },
-  "category-full":{
-    "main":{
-      "h1":"Jackets and tops",
-      "p":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
-      "home":"Home",
-      "shop":"Shop"
+  "category-full": {
+    "main": {
+      "h1": "Jackets and tops",
+      "p": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
+      "home": "Home",
+      "shop": "Shop"
     },
-    "sidebar":{
-      "category":{
-        "name":"category",
-        "Sname":"Product Categories",
-        "trouser":"Trousers",
-        "jacket":"Jackets",
-        "t-shirt":"T-Shirts"
+    "sidebar": {
+      "category": {
+        "name": "category",
+        "Sname": "Product Categories",
+        "trouser": "Trousers",
+        "jacket": "Jackets",
+        "t-shirt": "T-Shirts"
       },
-      "price":{
-        "name":"Price",
-        "Sname":"Filter by price",
-        "from":"From",
-        "to":"To"
+      "price": {
+        "name": "Price",
+        "Sname": "Filter by price",
+        "from": "From",
+        "to": "To"
       },
-      "brand":"Brand",
-      "Sbrand":"Filter by brand",
-      "size":{
-        "name":"Size",
-        "Sname":"Filter by size",
-        "small":"Small",
-        "medium":"Medium",
-        "large":"Large",
-        "x-large":"X-Large"
+      "brand": "Brand",
+      "Sbrand": "Filter by brand",
+      "size": {
+        "name": "Size",
+        "Sname": "Filter by size",
+        "small": "Small",
+        "medium": "Medium",
+        "large": "Large",
+        "x-large": "X-Large"
       },
-      "color":"Colour",
-      "Scolor":"Filter by colour"
+      "color": "Colour",
+      "Scolor": "Filter by colour"
     },
-    "list":{
-      "phrase":{
-        "show":"Showing",
-        "of":"of",
-        "product":"products"
+    "list": {
+      "phrase": {
+        "show": "Showing",
+        "of": "of",
+        "product": "products"
       },
-      "page":{
-        "show":"Show",
-        "all":"All"
+      "page": {
+        "show": "Show",
+        "all": "All"
       },
-      "sort":{
-        "title":"Sort by",
-        "default":"Default",
-        "rating":"Rating"
+      "sort": {
+        "title": "Sort by",
+        "default": "Default",
+        "rating": "Rating"
       }
     }
   },
-  "item":{
-    "cart":"Add to cart"
+  "item": {
+    "cart": "Add to cart"
   },
-  "dialog":{
-    "review":"REVIEWS",
-    "size":"Size",
-    "requir":"required",
-    "type":"Type",
-    "cart":"ADD TO CART",
-    "wish":"Add to wishlist",
-    "category":"Category",
-    "tag":"Tags"
+  "dialog": {
+    "review": "REVIEWS",
+    "size": "Size",
+    "requir": "required",
+    "type": "Type",
+    "cart": "ADD TO CART",
+    "wish": "Add to wishlist",
+    "category": "Category",
+    "tag": "Tags"
   },
-  "detail":{
-    "notic":{
-      "msg":"White Tee have been added to your cart.",
-      "act":"View Cart"
+  "detail": {
+    "notic": {
+      "msg": "White Tee have been added to your cart.",
+      "act": "View Cart"
     },
-    "home":"Home",
-    "desc":{
-      "name":"DESCRIPTION",
-      "h1":"About",
-      "h2":"You will love",
-      "p":"He must have tried it a hundred times, shut his eyes so that he wouldn't have to look at the floundering legs, and only stopped when he began to feel a mild, dull pain there that he had never felt before.",
-      "ul":[
+    "home": "Home",
+    "desc": {
+      "name": "DESCRIPTION",
+      "h1": "About",
+      "h2": "You will love",
+      "p": "He must have tried it a hundred times, shut his eyes so that he wouldn't have to look at the floundering legs, and only stopped when he began to feel a mild, dull pain there that he had never felt before.",
+      "ul": [
         "He must have tried it a hundred times",
         "shut his eyes so that he wouldn't have to look",
         "at the floundering legs, and only stopped"
       ]
     },
-    "offer":"You might also like these"
+    "offer": "You might also like these"
   },
-  "security":{
-    "home":"Home",
-    "title":"Customer zone",
-    "p":"You can use the navbar-modal link or this page for customers' sign in.",
-    "login":{
-      "head":"Login",
-      "ask":"Already our customer?",
-      "warn":"Information is incorrect",
-      "p":"Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet.",
-      "btn":"LOG IN",
-      "email":"Email",
-      "pass":"Password"
+  "security": {
+    "home": "Home",
+    "title": "Customer zone",
+    "p": "You can use the navbar-modal link or this page for customers' sign in.",
+    "login": {
+      "head": "Login",
+      "ask": "Already our customer?",
+      "warn": "Information is incorrect",
+      "p": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet.",
+      "btn": "LOG IN",
+      "email": "Email",
+      "pass": "Password"
     },
-    "sign":{
-      "head":"New account",
-      "ask":"Not our registered customer yet?",
-      "p":"With registration with us new world of fashion, fantastic discounts and much more opens to you! The whole process will not take you more than a minute!",
-      "p2":{
-        "txt1":"If you have any questions, please feel free to ",
-        "gold":"contact us",
-        "txt2":", our customer service center is working for you 24/7."
+    "sign": {
+      "head": "New account",
+      "ask": "Not our registered customer yet?",
+      "p": "With registration with us new world of fashion, fantastic discounts and much more opens to you! The whole process will not take you more than a minute!",
+      "p2": {
+        "txt1": "If you have any questions, please feel free to ",
+        "gold": "contact us",
+        "txt2": ", our customer service center is working for you 24/7."
       },
-      "btn":"REGISTER",
-      "name":"Name",
-      "email":"Email",
-      "pass":"Password",
-      "errors":{
-        "name":"at least 4 character",
-        "email":"this email is Already taken",
-        "pass":{
-          "length":"length at least 4",
-          "num":"numbers",
-          "up":"LETTERS",
-          "low":"letters",
-          "symbol":"symbols"
+      "btn": "REGISTER",
+      "name": "Name",
+      "email": "Email",
+      "pass": "Password",
+      "errors": {
+        "name": "at least 4 character",
+        "email": "this email is Already taken",
+        "pass": {
+          "length": "length at least 4",
+          "num": "numbers",
+          "up": "LETTERS",
+          "low": "letters",
+          "symbol": "symbols"
         }
       }
     }
   },
-  "wishlist":{
-    "home":"Home",
-    "title":"Wishlist",
-    "p":{
-      "txt1":"You have",
-      "txt2":"items in your wishlist. See a version of this template for",
-      "gold":"signed-in customer."
+  "wishlist": {
+    "home": "Home",
+    "title": "Wishlist",
+    "p": {
+      "txt1": "You have",
+      "txt2": "items in your wishlist. See a version of this template for",
+      "gold": "signed-in customer."
     },
-    "item":{
-      "cart":"ADD TO CART",
-      "size":"Size",
-      "large":"Large",
-      "color":"Colour",
-      "green":"Green",
-      "price":"Price per time",
-      "status":"Status"
+    "item": {
+      "cart": "ADD TO CART",
+      "size": "Size",
+      "large": "Large",
+      "color": "Colour",
+      "green": "Green",
+      "price": "Price per time",
+      "status": "Status"
     }
   },
-  "factor":{
-    "head":"Order summery",
-    "desc":"Shipping and additional costs are calculated based on values you have entered.",
-    "order":"Order Subtotal",
-    "ship":"Shipping and handling",
-    "tax":"Tax",
-    "total":"Total",
-    "final":"PROCEED TO CHECKOUT"
+  "factor": {
+    "head": "Order summery",
+    "desc": "Shipping and additional costs are calculated based on values you have entered.",
+    "order": "Order Subtotal",
+    "ship": "Shipping and handling",
+    "tax": "Tax",
+    "total": "Total",
+    "final": "PROCEED TO CHECKOUT"
   },
-  "shop":{
-    "home":"Home",
-    "title":"Shopping cart",
-    "stock":{
-      "txt1":"You have",
-      "txt2":"items in your cart."
+  "shop": {
+    "home": "Home",
+    "title": "Shopping cart",
+    "stock": {
+      "txt1": "You have",
+      "txt2": "items in your cart."
     },
-    "p":{
-      "txt1":"For the checkout, you can use either a",
-      "gold1":"Multiple pages checkout",
-      "txt2":"or have everything on a",
-      "gold2":"single page."
+    "p": {
+      "txt1": "For the checkout, you can use either a",
+      "gold1": "Multiple pages checkout",
+      "txt2": "or have everything on a",
+      "gold2": "single page."
     },
-    "continue":"CONTINUE SHOPPING",
-    "update":"UPDATE CART",
-    "item":{
-      "size":"Size",
-      "large":"Large",
-      "color":"Colour",
-      "green":"Green",
-      "price":"Price per time",
-      "quant":"Quantity",
-      "total":"Total price"
+    "continue": "CONTINUE SHOPPING",
+    "update": "UPDATE CART",
+    "item": {
+      "size": "Size",
+      "large": "Large",
+      "color": "Colour",
+      "green": "Green",
+      "price": "Price per time",
+      "quant": "Quantity",
+      "total": "Total price"
     }
   },
-  "shopForm":{
-    "home":"Home",
-    "title":"Checkout",
-    "tabs":{
-      "address":"Address",
-      "delivery":"Delivery Method",
-      "compelete":"Compelete Order"
+  "shopForm": {
+    "home": "Home",
+    "title": "Checkout",
+    "tabs": {
+      "address": "Address",
+      "delivery": "Delivery Method",
+      "compelete": "Compelete Order"
     },
-    "address":{
-      "p":"Please fill in your address",
-      "form":{
-        "title":"Invoice address",
-        "name":"Full Name",
-        "email":"Email Address",
-        "street":"Street",
-        "city":"City",
-        "zip":"ZIP",
-        "state":"State",
-        "num":"Phone Number",
-        "check":"Use a diffrent shipping address"
+    "address": {
+      "p": "Please fill in your address",
+      "form": {
+        "title": "Invoice address",
+        "name": "Full Name",
+        "email": "Email Address",
+        "street": "Street",
+        "city": "City",
+        "zip": "ZIP",
+        "state": "State",
+        "num": "Phone Number",
+        "check": "Use a diffrent shipping address"
       },
-      "back":"BACK",
-      "next":"CHOOSE DELIVERY METHOD"
+      "back": "BACK",
+      "next": "CHOOSE DELIVERY METHOD"
     },
-    "delivery":{
-      
+    "delivery": {
+      "p": "Choose your delivery method.",
+      "options": {
+        "day": {
+          "name": "Upse next day",
+          "desc": "One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections"
+        },
+        "dhl": {
+          "name": "DHL",
+          "desc": "Get it right on next day - fastest option possible."
+        },
+        "ppl": {
+          "name": "PPL",
+          "desc": "Get it right on next day - fastest option possible."
+        },
+        "ups": {
+          "name": "UPS",
+          "desc": "Get it right on next day - fastest option possible."
+        }
+      },
+      "back":"BACK TO THE PAYMENT METHOD",
+      "next":"PLACE AN ORDER"
     }
   }
 }

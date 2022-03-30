@@ -462,5 +462,19 @@
       "back":"BACK TO THE PAYMENT METHOD",
       "next":"PLACE AN ORDER"
     }
+  },
+  "orderConfirm":{
+    "home":"Home",
+    "title":"Order Confirmed",
+    "notic":"Your order is confirmed.",
+    "grate":"Thank you, Julie. Your order is confirmed.",
+    "news":"Your order hasn't shipped yet but we will send you ane email when it does.",
+    "btn":"VIEW OR MANAGE YOUR ORDER",
+    "detail":{
+      "first":"ORDER NO",
+      "second":"DATE",
+      "third":"TOTAL",
+      "fourth":"SHIPPING"
+    }
   }
 }

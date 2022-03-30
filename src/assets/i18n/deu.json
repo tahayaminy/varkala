@@ -473,5 +473,19 @@
       "back": "ZURÜCK ZUR ZAHLUNGSART",
       "next": "BESTELLUNG AUFGEBEN"
     }
+  },
+  "orderConfirm":{
+    "home": "Home",
+    "title": "Bestellung bestätigt",
+    "notic": "Ihre Bestellung wurde bestätigt.",
+    "grate": "Danke, Julie. Ihre Bestellung wurde bestätigt.",
+    "news": "Ihre Bestellung wurde noch nicht versandt, aber wir senden Ihnen eine E-Mail, wenn dies der Fall ist.",
+    "btn": "BESTELLUNG ANZEIGEN ODER VERWALTEN",
+    "detail": {
+      "first": "BESTELLNR.",
+      "second": "DATUM",
+      "third": "GESAMT",
+      "fourth": "VERSAND"
+    }
   }
 }

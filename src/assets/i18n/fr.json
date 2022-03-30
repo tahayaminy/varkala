@@ -473,7 +473,21 @@
       },
       "back": "RETOUR AU MODE DE PAIEMENT",
       "next": "PASSER COMMANDE"
-    
+      
+    }
+  },
+  "orderConfirm":{
+    "home": "Accueil",
+    "title": "Commande confirmée",
+    "notic": "Votre commande est confirmée.",
+    "grate": "Merci Julie. Votre commande est confirmée.",
+    "news": "Votre commande n'a pas encore été expédiée, mais nous vous enverrons un e-mail lorsqu'elle le sera.",
+    "btn": "VOIR OU GÉRER VOTRE COMMANDE",
+    "detail": {
+      "first": "N° DE COMMANDE",
+      "second": "DATE",
+      "third": "TOTAL",
+      "fourth": "EXPÉDITION"
     }
   }
 }

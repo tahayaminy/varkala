@@ -474,5 +474,24 @@
   "wish": "Ajouter à la liste de souhaits",
   "category": "Catégorie",
   "tag": "Tags"
+},
+"detail": {
+  "notic": {
+    "msg": "Le t-shirt blanc a été ajouté à votre panier.",
+    "act": "Voir le panier"
+  },
+  "home": "Accueil",
+  "desc": {
+    "name": "DESCRIPTION",
+    "h1": "À propos",
+    "h2": "Vous allez adorer",
+    "p": "Il a dû l'essayer une centaine de fois, fermez les yeux pour ne pas avoir à regarder les jambes pataugeantes, et ne s'est arrêté que lorsqu'il a commencé à ressentir une douleur légère et sourde qu'il n'avait jamais ressentie auparavant.",
+    "ul": [
+      "Il a dû essayer cent fois",
+      "il a fermé les yeux pour ne pas avoir à regarde",
+      "les jambes qui pataugent, et ne s'arrête"
+    ]
+  },
+  "offer": "Vous pourriez aussi être intéressés par ceux-ci"
 }
 }

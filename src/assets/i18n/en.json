@@ -299,5 +299,24 @@
     "wish":"Add to wishlist",
     "category":"Category",
     "tag":"Tags"
+  },
+  "detail":{
+    "notic":{
+      "msg":"White Tee have been added to your cart.",
+      "act":"View Cart"
+    },
+    "home":"Home",
+    "desc":{
+      "name":"DESCRIPTION",
+      "h1":"About",
+      "h2":"You will love",
+      "p":"He must have tried it a hundred times, shut his eyes so that he wouldn't have to look at the floundering legs, and only stopped when he began to feel a mild, dull pain there that he had never felt before.",
+      "ul":[
+        "He must have tried it a hundred times",
+        "shut his eyes so that he wouldn't have to look",
+        "at the floundering legs, and only stopped"
+      ]
+    },
+    "offer":"You might also like these"
   }
 }

@@ -474,5 +474,24 @@
     "wish": "Zur Wunschliste hinzufügen",
     "category": "Kategorie",
     "tag": "Tags"
+  },
+  "detail": {
+    "notic": {
+      "msg": "White Tee wurde Ihrem Einkaufswagen hinzugefügt.",
+      "act": "Einkaufswagen ansehen"
+    },
+    "home": "Startseite",
+    "desc": {
+      "name": "BESCHREIBUNG",
+      "h1": "Über",
+      "h2": "Sie werden es lieben",
+      "p": "Er muss es hundertmal versucht haben, schließe seine Augen, damit er es nicht tun müsste schau dir die zappelnden Beine an und hörte erst auf, als er dort einen leichten, dumpfen Schmerz zu spüren begann, den er noch nie zuvor gespürt hatte.",
+      "ul": [
+        "Er muss es hundertmal versucht haben",
+        "schloss die Augen, damit er es nicht musste schau",
+        "auf die zappelnden Beine, und halte nur inne"
+      ]
+    },
+    "offer": "Diese könnten Ihnen auch gefallen"
   }
 }

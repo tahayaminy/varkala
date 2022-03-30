@@ -461,5 +461,18 @@
         "rating": "Note"
       }
     }
+},
+"item": {
+  "cart": "Ajouter au panier"
+},
+"dialog": {
+  "review": "AVIS",
+  "size": "Taille",
+  "requir": "obligatoire",
+  "type": "Type",
+  "cart": "AJOUTER AU PANIER",
+  "wish": "Ajouter à la liste de souhaits",
+  "category": "Catégorie",
+  "tag": "Tags"
 }
 }

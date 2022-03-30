@@ -69,7 +69,7 @@
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
       </span>
-      <span class="review">{{data.reviews}} REVIEWS</span>
+      <span class="review">{{data.reviews}} {{'dialog.review' | translate}}</span>
       </span>
     </p>
     <p class="mute pb-3">
@@ -78,7 +78,7 @@
     <div class="flex flex-wrap">
       <div class="select lg:basis-full basis-full sm:basis-auto mb-6">
         <div class="mb-2">
-          <b>Size </b><span class="light"> (required)</span>
+          <b>{{'dialog.size' | translate}} </b><span class="light"> ({{'dialog.requir' | translate}})</span>
         </div>
         
         <mat-form-field appearance="fill">
@@ -90,7 +90,7 @@
         </mat-form-field>
       </div>
       <div class="lg:basis-full basis-full ml-auto sm:basis-auto">
-        <b>Type </b><span class="light"> (required)</span>
+        <b>{{'dialog.type' | translate}} </b><span class="light"> ({{'dialog.requir' | translate}})</span>
         <div class="mt-3 pb-12 type">
           <span>HOODIE</span>
           <span>COLLEGE</span>
@@ -99,18 +99,18 @@
     </div>
     <div class="flex shop mb-6">
       <input class="basis-2/12" value="1" type="number" name="" id="">
-      <button class="basis-10/12"><i class="fas fa-shopping-cart"></i> ADD TO CART</button>
+      <button class="basis-10/12"><i class="fas fa-shopping-cart"></i> {{'dialog.cart' | translate}}</button>
     </div>
     <div class="flex mb-6">
-      <div class="crem"><i class="far fa-heart"></i> Add to wishlist</div>
+      <div class="crem"><i class="far fa-heart"></i> {{'dialog.wish' | translate}}</div>
       <div class="ml-auto whitespace-nowrap"><i class="fab fa-facebook-f"></i><i class="fab fa-twitter ml-2"></i></div>
     </div>
     <div class="footer">
       <div>
-        <b>Category:</b><span class="mute"> {{category}}</span>
+        <b>{{'dialog.category' | translate}}:</b><span class="mute"> {{category}}</span>
       </div>
       <div>
-        <b>Tags:</b><span class="mute">  Leisure,Elegant</span>
+        <b>{{'dialog.tag' | translate}}:</b><span class="mute">  Leisure,Elegant</span>
       </div>
     </div>
   </section>

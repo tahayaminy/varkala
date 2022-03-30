@@ -286,5 +286,18 @@
         "rating":"Rating"
       }
     }
+  },
+  "item":{
+    "cart":"Add to cart"
+  },
+  "dialog":{
+    "review":"REVIEWS",
+    "size":"Size",
+    "requir":"required",
+    "type":"Type",
+    "cart":"ADD TO CART",
+    "wish":"Add to wishlist",
+    "category":"Category",
+    "tag":"Tags"
   }
 }

@@ -461,5 +461,18 @@
         "rating": "Bewertung"
       }
     }
+  },
+  "item": {
+    "cart": "Zum Warenkorb hinzufügen"
+  },
+  "dialog": {
+    "review": "BEWERTUNGEN",
+    "size": "Größe",
+    "requir": "erforderlich",
+    "type": "Typ",
+    "cart": "IN DEN WARENKORB HINZUFÜGEN",
+    "wish": "Zur Wunschliste hinzufügen",
+    "category": "Kategorie",
+    "tag": "Tags"
   }
 }

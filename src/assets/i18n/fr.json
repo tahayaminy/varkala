@@ -374,5 +374,23 @@
         }
       }
     }
+  },
+  "wishlist":{
+    "home": "Accueil",
+  "title": "Liste de souhaits",
+  "p": {
+    "txt1": "Vous avez",
+    "txt2": "articles dans votre liste de souhaits. Voir une version de ce modèle pour",
+    "gold": "client connecté."
+  },
+  "item":{
+    "cart": "AJOUTER AU PANIER",
+    "size": "Taille",
+    "large": "Large",
+    "color": "Couleur",
+    "green": "Vert",
+    "price": "Prix à l'heure",
+    "status": "Statut"
+  }
   }
 }

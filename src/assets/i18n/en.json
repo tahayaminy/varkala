@@ -357,5 +357,23 @@
         }
       }
     }
+  },
+  "wishlist":{
+    "home":"Home",
+    "title":"Wishlist",
+    "p":{
+      "txt1":"You have",
+      "txt2":"items in your wishlist. See a version of this template for",
+      "gold":"signed-in customer."
+    },
+    "item":{
+      "cart":"ADD TO CART",
+      "size":"Size",
+      "large":"Large",
+      "color":"Colour",
+      "green":"Green",
+      "price":"Price per time",
+      "status":"Status"
+    }
   }
 }

@@ -374,5 +374,23 @@
         }
       }
     }
+  },
+  "wishlist":{
+    "home": "Home",
+  "title": "Wunschliste",
+  "p": {
+    "txt1": "Sie haben",
+    "txt2": "Artikel auf Ihrer Wunschliste. Siehe eine Version dieser Vorlage für",
+    "gold": "angemeldeter Kunde."
+  },
+  "item": {
+    "cart": "ZUM WARENKORB HINZUFÜGEN",
+  "size": "Größe",
+  "large": "Groß",
+  "color": "Farbe",
+  "green": "Grün",
+  "price": "Preis pro Zeit",
+  "status": "Status"
+  }
   }
 }

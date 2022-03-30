@@ -2,13 +2,13 @@
 <p class="pt-24 lg:pt-32"></p>
 <header class="pt-24 pb-28 container mx-auto">
   <div class="mb-3">
-    <span>Home </span>
+    <span>{{'wishlist.home' | translate}} </span>
     <span class="bi bi-dash-lg"></span>
-    <span> Wishlist</span>
+    <span> {{'wishlist.title' | translate}}</span>
   </div>
-  <h1>Wishlist</h1>
+  <h1>{{'wishlist.title' | translate}}</h1>
   <p>
-    You have 3 items in your wishlist. See a version of this template for <span class="crem">signed-in customer</span>.
+    {{'wishlist.p.txt1' | translate}} 3 {{'wishlist.p.txt2' | translate}} <span class="crem">{{'wishlist.p.gold' | translate}}</span>
   </p>
 </header>
 <main class="container mx-auto pb-24"> 
@@ -20,8 +20,8 @@
             </div>
             <div class="flex ml-4 flex-col justify-center info">
                 <b>{{item.name}}</b>
-                <span>Size: Large</span>
-                <span>Colour: Green</span>
+                <span>{{'wishlist.item.size' | translate}}: {{'wishlist.item.large' | translate}}</span>
+                <span>{{'wishlist.item.color' | translate}}: {{'wishlist.item.green' | translate}}</span>
             </div>
         </div>
         <div class="hidden basis-7/12 lg:flex flex-row second">
@@ -32,7 +32,7 @@
                 <span class="bg-crem">{{item.status}}</span>
             </div>
             <div class="flex items-center justify-center">
-                <span>ADD TO CART</span>
+                <span>{{'wishlist.item.cart' | translate}}</span>
             </div>
             <div class="basis-1/6 flex items-center">
                 <span class="bi bi-x-lg"></span>
@@ -40,13 +40,13 @@
         </div>
         <div class="third lg:hidden w-full pt-10 lg:pt-7">
             <div class="flex w-full">
-                <span class="gray">Price per time</span><span class="ml-auto">${{item.price}}</span>
+                <span class="gray">{{'wishlist.item.price' | translate}}</span><span class="ml-auto">${{item.price}}</span>
             </div>
             <div class="flex w-full">
-                <span class="gray">Status</span><span class="bg-crem ml-auto">{{item.status}}</span>
+                <span class="gray">{{'wishlist.item.status' | translate}}</span><span class="bg-crem ml-auto">{{item.status}}</span>
             </div>
             <div class="flex mt-6">
-                <span>ADD TO CART</span>
+                <span>{{'wishlist.item.cart' | translate}}</span>
             </div>
         </div>
     </section>

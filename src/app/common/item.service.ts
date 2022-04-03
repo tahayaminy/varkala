@@ -7,14 +7,44 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root',
 })
 export class ItemService {
+  localCart=localStorage.getItem("cart")!;
 
+  Cart=JSON.parse(this.localCart).items;
   Wishlist: any[] = [];
-  Cart: any[] = [];
   price:number=0;
 
-  tst=new Subject<boolean>();
-
+  single=new Subject<any>();
+  list=new Subject<any>();
   constructor(private http:HttpClient) {}
+
+  addToCart(data) {
+    var index = this.Cart.indexOf(data);
+    if (index > -1) {
+      this.Cart.splice(index, 1);
+    } else {
+      this.Cart.push(data);
+    }
+    localStorage.setItem("cart",`{"items":${JSON.stringify(this.Cart)}}`);
+    this.list.next(this.Cart);
+    this.calcPrice()
+    this.single.next(this.price);
+  }
+  removeCart(data){
+    var index = this.Cart.indexOf(data);
+    this.Cart.splice(index, 1);
+    this.single.next(data.id);
+    this.calcPrice();
+    localStorage.setItem("cart",`{"items":${JSON.stringify(this.Cart)}}`);
+    this.list.next(this.Cart)
+  }
+  calcPrice(){
+    this.price=0;
+    for(let item of this.Cart){
+      this.price=this.price+((item.price)-(((item.price)*(item.discount.percent))/100));
+    }
+    localStorage.setItem("price",`${this.price}`);
+  }
+
 
 
   addToWishlist(data) {
@@ -24,43 +54,5 @@ export class ItemService {
     } else {
       this.Wishlist.push(data);
     }
-  }
-
-  addToCart(data) {
-    var index = this.Cart.indexOf(data);
-    if (index > -1) {
-      this.Cart.splice(index, 1);
-    } else {
-      this.Cart.push(data);
-    }
-    this.price=0;
-    for(let item of this.Cart){
-      this.price=this.price+((item.price)-(((item.price)*(item.discount.percent))/100));
-    }
-    localStorage.setItem("price",`${this.price}`);
-  }
-  removeCart(data){
-    var index = this.Cart.indexOf(data);
-    this.Cart.splice(index, 1);
-    this.tst.next(false);
-  }
-
-  wishCart(id){
-    let wish = this.Wishlist.indexOf(id);
-    let wishExist;
-    if (wish > -1) {
-      wishExist=true;
-    } else {
-      wishExist=false;
-    }
-
-    let cart = this.Cart.indexOf(id);
-    let cartExist;
-    if (cart > -1) {
-      cartExist=true;
-    } else {
-      cartExist=false;
-    }
-    return {wish:wishExist,cart:cartExist};
   }
 }

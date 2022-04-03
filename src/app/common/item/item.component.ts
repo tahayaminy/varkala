@@ -11,17 +11,26 @@ import { SimpleChanges } from '@angular/core';
 })
 export class ItemComponent implements OnInit {
   @Input() data!:Product;
-  
+
   heart=false;
   cart=false;
-  cartList=this.itemService.Cart;
-  
+
+  localCart=localStorage.getItem("cart")!;
+
+  Carts=JSON.parse(this.localCart).items;
   constructor(public item:ServerService,public itemService:ItemService,public modal:ModalService) { }
-  
+
   ngOnInit(): void {
-    this.itemService.tst.subscribe(data=>{
-      this.cart=data
-    })
+    this.itemService.single.subscribe(data=>{
+      if(data==this.data.id){
+        this.cart=false;
+      }
+    });
+    for(let item of this.Carts){
+      if(item.id==this.data.id){
+        this.cart=true;
+      }
+    }
   }
   addWishlist(data){
     this.heart=!this.heart;
@@ -30,8 +39,7 @@ export class ItemComponent implements OnInit {
   addCart(data){
     this.cart=true;
     this.itemService.addToCart(data);
-    console.log(this.cartList)
-  } 
+  }
   modalOpen(){
     this.modal.openTempDialog(this.data);
   }

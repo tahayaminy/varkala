@@ -14,7 +14,10 @@ export class NavbarComponent implements OnInit {
 
   @Input() index!:boolean;
   Wishlist=this.itemService.Wishlist;
-  Cart=this.itemService.Cart;
+
+  localCart=localStorage.getItem("cart")!;
+
+  Cart=JSON.parse(this.localCart).items;
   navbar:any;
   categories:any;
   price=localStorage.getItem("price");
@@ -23,11 +26,18 @@ export class NavbarComponent implements OnInit {
   Menu=false;
   @ViewChild('contMenu') menuCont!:ElementRef;
 
-  constructor(public translate:TranslateService,public server:ServerService,public itemService:ItemService) {    
+  constructor(public translate:TranslateService,public server:ServerService,public itemService:ItemService) {
   }
-  
+
   ngOnInit(): void {
-    console.log(this.price)    
+    this.itemService.list.subscribe(data=>{
+      this.Cart=data;
+    });
+    this.itemService.single.subscribe(data=>{
+      this.price=data;
+    });
+    console.log(this.price)
+    console.log(this.Cart)
     this.translate.get('navbar').subscribe(val=>this.navbar=val);
     this.server.getDb().subscribe(val=>this.categories=val["categories"]);
     var profile=sessionStorage.getItem("userId");
@@ -55,7 +65,7 @@ export class NavbarComponent implements OnInit {
     this.translate.get('navbar').subscribe(val=>this.navbar=val);
   }
   responsiveMenu(){
-    this.Menu=!this.Menu;    
+    this.Menu=!this.Menu;
     if(this.Menu){
       this.menuCont.nativeElement.style='height:auto;background-color:white;overflow-y:auto';
     }else{
@@ -64,5 +74,9 @@ export class NavbarComponent implements OnInit {
   }
   removeCart(data){
     this.itemService.removeCart(data);
+    this.price=localStorage.getItem("price");
+    this.itemService.list.subscribe(data=>{
+      this.Cart=data;
+    })
   }
 }

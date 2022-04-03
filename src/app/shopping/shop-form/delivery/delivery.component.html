@@ -23,10 +23,11 @@
       </div>
     </section>
     <section>
+      {{deliverForm.value.deliver}}
       <section class="cards grid md:grid-cols-2 grid-cols-1 gap-x-8">
         <div>
           <label class="rounded">
-            <input required formControlName="deliver" value="upse"  type="radio">
+            <input (change)="ship($event)" required formControlName="deliver" value="Upse next day" type="radio" checked>
             <div class="card">
               <div class="p-4 header rounded-t">{{'shopForm.delivery.options.day.name' | translate}}</div>
             <div class="body px-4 rounded-b py-3">
@@ -40,7 +41,7 @@
         </div>
         <div>
           <label class="rounded">
-            <input required formControlName="deliver" value="DHL"  type="radio">
+            <input (change)="ship($event)" required formControlName="deliver" value="DHL"  type="radio">
            <div class="card">
             <div class="p-4 header rounded-t">{{'shopForm.delivery.options.dhl.name' | translate}}</div>
             <div class="body px-4 rounded-b py-3">
@@ -54,7 +55,7 @@
         </div>
         <div>
           <label class="rounded">
-            <input required formControlName="deliver" value="PPL"  type="radio">
+            <input (change)="ship($event)" required formControlName="deliver" value="PPL"  type="radio">
             <div class="card">
               <div class="p-4 header rounded-t">{{'shopForm.delivery.options.ppl.name' | translate}}</div>
             <div class="body px-4 rounded-b py-3">
@@ -68,7 +69,7 @@
         </div>
         <div>
           <label class="rounded">
-            <input required formControlName="deliver" value="UPS"  type="radio">
+            <input (change)="ship($event)" required formControlName="deliver" value="UPS"  type="radio">
             <div class="card">
               <div class="p-4 header rounded-t">{{'shopForm.delivery.options.ups.name' | translate}}</div>
             <div class="body px-4 rounded-b py-3">
@@ -87,7 +88,7 @@
     >
       <span routerLink=".." class="basis-full inline-flex items-center text-center mb-5 lg:mb-0 lg:basis-auto"
         ><i class="fas fa-angle-left"></i> {{'shopForm.delivery.back' | translate}}</span
-      ><button [disabled]="!deliverForm.valid" routerLink="../confirm" class="ml-auto text-center basis-full lg:basis-auto"
+      ><button [disabled]="!deliverForm.valid" (click)="form()" class="ml-auto text-center basis-full lg:basis-auto"
         >{{'shopForm.delivery.next' | translate}} <i class="fas fa-angle-right"></i
       ></button>
     </div>
@@ -100,17 +101,17 @@
           {{'factor.desc' | translate}}
         </p>
         <div class="flex py-6 px-2 border-b">
-          <span>{{'factor.order' | translate}}</span><span class="ml-auto gray">$560.00</span>
+          <span>{{'factor.order' | translate}}</span><span class="ml-auto gray">${{orderTotal}}</span>
         </div>
         <div class="flex py-6 px-2 border-b">
           <span>{{'factor.ship' | translate}}</span
-          ><span class="ml-auto gray">$10.00</span>
+          ><span class="ml-auto gray">${{shipping}}</span>
         </div>
         <div class="flex py-6 px-2 border-b">
           <span>{{'factor.tax' | translate}}</span><span class="ml-auto gray">$0.00</span>
         </div>
         <div class="flex py-6 px-2">
-          <span>{{'factor.total' | translate}}</span><span class="ml-auto total mt-3">$570.00</span>
+          <span>{{'factor.total' | translate}}</span><span class="ml-auto total mt-3">${{total}}</span>
         </div>
       </div>
     </section>

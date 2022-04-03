@@ -7,10 +7,15 @@ import { numberValidate } from '../formval';
   styleUrls: ['./address.component.scss']
 })
 export class AddressComponent implements OnInit {
-
+  local=localStorage.getItem("shoppingCart")!;
+  items=JSON.parse(this.local).items;
+  orderTotal=0;
+  total=0;
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
+    console.log(this.items);
+    this.totalprice();
   }
   formshop=this.fb.group({
     name:['',Validators.required],
@@ -21,5 +26,10 @@ export class AddressComponent implements OnInit {
     state:['',Validators.required],
     number:['',[Validators.required,numberValidate()]]
   })
-
+  totalprice(){
+    for(let item of this.items){
+      this.orderTotal+=item.total;
+    }
+    this.total=this.orderTotal+10;
+  }
 }

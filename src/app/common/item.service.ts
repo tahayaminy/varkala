@@ -28,6 +28,7 @@ export class ItemService {
     this.list.next(this.Cart);
     this.calcPrice()
     this.single.next(this.price);
+
   }
   removeCart(data){
     var index = this.Cart.indexOf(data);

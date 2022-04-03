@@ -36,15 +36,11 @@ export class NavbarComponent implements OnInit {
     this.itemService.single.subscribe(data=>{
       this.price=data;
     });
-    console.log(this.price)
-    console.log(this.Cart)
     this.translate.get('navbar').subscribe(val=>this.navbar=val);
     this.server.getDb().subscribe(val=>this.categories=val["categories"]);
     var profile=sessionStorage.getItem("userId");
     if(profile){
       let data=Number(profile);
-      console.log(profile)
-      console.log(data);
       this.logged=true;
       this.server.getDb().subscribe(val=>{
         val["users"].map(user=>{

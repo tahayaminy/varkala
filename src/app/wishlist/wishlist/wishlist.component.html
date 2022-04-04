@@ -8,12 +8,12 @@
   </div>
   <h1>{{'wishlist.title' | translate}}</h1>
   <p>
-    {{'wishlist.p.txt1' | translate}} 3 {{'wishlist.p.txt2' | translate}} <span class="crem">{{'wishlist.p.gold' | translate}}</span>
+    {{'wishlist.p.txt1' | translate}} {{wishlist.length}} {{'wishlist.p.txt2' | translate}} <span class="crem">{{'wishlist.p.gold' | translate}}</span>
   </p>
 </header>
-<main class="container mx-auto pb-24"> 
+<main class="container mx-auto pb-24">
     <section *ngFor="let item of wishlist;let first=first;let last=last" [ngClass]="{'pt-14':first,'pt-10':!first,'border-b':!last}" class="flex flex-wrap lg:flex-nowrap product lg:pt-8 pb-6 border-b">
-        <span class="lg:hidden fas fa-times mb-1"></span>
+        <span class="lg:hidden fas fa-times mb-1 hover:cursor-pointer" (click)="removeWish(item)"></span>
         <div class="basis-full lg:basis-5/12 flex first">
             <div class="img">
                 <img src="../../{{item.image[0]}}" alt="">
@@ -35,7 +35,7 @@
                 <span>{{'wishlist.item.cart' | translate}}</span>
             </div>
             <div class="basis-1/6 flex items-center">
-                <span class="bi bi-x-lg"></span>
+                <span class="bi bi-x-lg hover:cursor-pointer" (click)="removeWish(item)"></span>
             </div>
         </div>
         <div class="third lg:hidden w-full pt-10 lg:pt-7">

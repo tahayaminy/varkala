@@ -13,7 +13,8 @@ import { Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
 
   @Input() index!:boolean;
-  Wishlist=this.itemService.Wishlist;
+  localWish=localStorage.getItem("wish")!;
+  Wishlist=JSON.parse(this.localWish).items;
 
   localCart=localStorage.getItem("cart")!;
 
@@ -32,6 +33,9 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.itemService.list.subscribe(data=>{
       this.Cart=data;
+    });
+    this.itemService.wishes.subscribe(data=>{
+      this.Wishlist=data;
     });
     this.itemService.single.subscribe(data=>{
       this.price=data;

@@ -8,9 +8,11 @@
     <img [src]="data.image?.[1]" class="w-full h-full" />
     <span class="absolute badge">{{data.status}}</span>
     <div class="absolute bottom-0 left-0 w-full label">
-      <span *ngIf="!cart" (click)="addCart(data)" class="cartitem hover:underline">{{'item.cart' | translate}}</span>
-      <span *ngIf="!heart" (click)="addWishlist(data)" class="bi bi-heart ml-auto"></span>
-      <span *ngIf="heart" (click)="addWishlist(data)" class="fas fa-heart ml-auto"></span>
+      <ng-container *ngIf="logged">
+        <span *ngIf="!cart" (click)="addCart(data)" class="cartitem hover:underline">{{'item.cart' | translate}}</span>
+        <span *ngIf="!heart" (click)="addWishlist(data)" class="bi bi-heart ml-auto"></span>
+        <span *ngIf="heart" (click)="removeWish(data)" class="fas fa-heart ml-auto"></span>
+      </ng-container>
       <span (click)="modalOpen()" class="bi bi-arrows-fullscreen ml-2"></span>
     </div>
   </div>

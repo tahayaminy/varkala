@@ -63,7 +63,7 @@
           class="inline-block p-2 pr-2"
           [ngClass]="homeAngle.menuOpen ? 'text-black' : ''"
         >
-        {{ ('navbar.menu.home.name' | translate) }} 
+        {{ ('navbar.menu.home.name' | translate) }}
           <i
             [ngClass]="homeAngle.menuOpen ? 'angle-180' : 'angle-0'"
             class="fas text-xs fa-angle-down"
@@ -81,7 +81,7 @@
           class="inline-block p-2 pr-2"
           [ngClass]="shopAngle.menuOpen ? 'text-black' : ''"
         >
-        {{ ('navbar.menu.shop.name' | translate) }} 
+        {{ ('navbar.menu.shop.name' | translate) }}
           <i
             [ngClass]="shopAngle.menuOpen ? 'angle-180' : 'angle-0'"
             class="fas text-xs fa-angle-down"
@@ -95,7 +95,7 @@
                 {{item[0]}}
                 <b *ngIf="item[1]" class="new inline-block rounded ml-1 fs-10">{{'navbar.new' | translate}}</b>
               </span>
-              
+
             </div>
             <div class="mat-shop-item pl-4 py-12 pr-12 ">
               <b class="py-2 inline-block">{{('navbar.menu.shop.menus' | translate)[1]?.b}}</b>
@@ -239,7 +239,7 @@
               <b class="item">
                 <span>Hello {{dashboard?.username}}!</span>
                 <i (click)="exit()" style="font-size: 27px;" class="ml-auto bi bi-box-arrow-in-right cursor-pointer"></i>
-              </b> 
+              </b>
             </section>
           </mat-menu>
         </ng-container>
@@ -248,21 +248,23 @@
             <i style="font-size: 27px" class="far mr-2 fa-user"></i>
           </li>
         </ng-container>
-        <li routerLink="/wishlist" class="inline-block">
+        <ng-container *ngIf="logged">
+          <li routerLink="/wishlist" class="inline-block">
           <span
             [matBadge]="Wishlist.length"
             style="font-size: 27px"
             class="far ml-3 fa-heart"
           ></span>
-        </li>
-        <li class="inline-block">
+          </li>
+          <li class="inline-block">
           <span
             [matBadge]="Cart.length"
             style="font-size: 27px"
             class="fas ml-3 fa-shopping-bag"
             (click)="drawer2.toggle()"
           ></span>
-        </li>
+          </li>
+        </ng-container>
         <li class="inline-block">
           <i
             (click)="drawer.toggle()"
@@ -280,23 +282,25 @@
               <b class="item">
                 <span>Hello {{dashboard?.username}}!</span>
                 <i (click)="exit()" style="font-size: 27px;" class="ml-auto bi bi-box-arrow-in-right cursor-pointer"></i>
-              </b> 
+              </b>
             </section>
           </mat-menu>
         </ng-container>
         <ng-container *ngIf="!logged">
             <i routerLink="/security" style="font-size: 27px" class="far mr-2 fa-user cursor-pointer"></i>
         </ng-container>
-        <span
-          routerLink="/wishlist"
-          [matBadge]="Wishlist.length"
-          class="far text-2xl ml-3 fa-heart cursor-pointer"
-        ></span>
-        <span 
-          [matBadge]="Cart.length"
-          class="fas text-2xl ml-3 fa-shopping-bag cursor-pointer"
-          (click)="drawer2.toggle()"
-        ></span>
+        <ng-container *ngIf="logged">
+          <span
+            routerLink="/wishlist"
+            [matBadge]="Wishlist.length"
+            class="far text-2xl ml-3 fa-heart cursor-pointer"
+          ></span>
+          <span
+            [matBadge]="Cart.length"
+            class="fas text-2xl ml-3 fa-shopping-bag cursor-pointer"
+            (click)="drawer2.toggle()"
+          ></span>
+        </ng-container>
       </div>
       <div class="lg:hidden w-full text-right">
         <i
@@ -451,7 +455,7 @@
       </form>
     </section>
   </section>
-  
+
 </nav>
 <mat-drawer-container class="sidenav-container" autosize [hasBackdrop]="true">
   <mat-drawer #drawer class="sidenav" mode="side" position="end">
@@ -496,7 +500,7 @@
             class="pl-4 flex product-content content-around grid content-around w-full py-3"
           >
             <div class="flex head">
-              <b>{{item.name}}              
+              <b>{{item.name}}
             <div class="border-c"></div></b
               ><i (click)="removeCart(item)" style="font-size: 24px" class="bi bi-x ml-auto"></i>
             </div>

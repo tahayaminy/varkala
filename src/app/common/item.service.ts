@@ -1,20 +1,24 @@
 import { EventEmitter, Injectable } from '@angular/core';
-import { Category } from 'src/assets/server/models/Category';
-import { Product } from 'src/assets/server/models/Product';
 import { Observable, Subject } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+if(localStorage.getItem("cart") === null){localStorage.setItem("cart",'{"items":[]}');}
+if(localStorage.getItem("wish") === null){localStorage.setItem("wish",'{"items":[]}');}
+
+
 @Injectable({
   providedIn: 'root',
 })
 export class ItemService {
   localCart=localStorage.getItem("cart")!;
-
+  localWish=localStorage.getItem("wish")!;
   Cart=JSON.parse(this.localCart).items;
-  Wishlist: any[] = [];
+  Wishlist=JSON.parse(this.localWish).items;
   price:number=0;
 
   single=new Subject<any>();
   list=new Subject<any>();
+  wishes=new Subject<any>();
   constructor(private http:HttpClient) {}
 
   addToCart(data) {
@@ -49,11 +53,23 @@ export class ItemService {
 
 
   addToWishlist(data) {
-    var index = this.Wishlist.indexOf(data);
+    var index;
+    index=this.Wishlist.indexOf(data);
     if (index > -1) {
       this.Wishlist.splice(index, 1);
     } else {
       this.Wishlist.push(data);
     }
+    console.log(this.Wishlist)
+    localStorage.setItem("wish",`{"items":${JSON.stringify(this.Wishlist)}}`);
+    this.wishes.next(this.Wishlist);
+  }
+  removeWish(data){
+    console.log(this.Wishlist)
+    var index = this.Wishlist.indexOf(data);
+    this.Wishlist.splice(index, 1);
+    localStorage.setItem("wish",`{"items":${JSON.stringify(this.Wishlist)}}`);
+    this.wishes.next(this.Wishlist)
+    console.log(this.Wishlist)
   }
 }

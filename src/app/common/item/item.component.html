@@ -6,12 +6,12 @@
       class="absolute hover:opacity-0 duration-500 top-0 left-0 z-0"
     />
     <img [src]="data.image?.[1]" class="w-full h-full" />
-    <span class="absolute badge">{{data.status}}</span>
+    <span [ngClass]="[(data.status=='Fresh')?'badge-fresh':'',(data.status=='Out of stock')?'badge-out':'',(data.status=='Being restocked')?'badge-come':'',(data.status=='In stock')?'badge-in':'']" class="absolute badge">{{data.status}}</span>
     <div class="absolute bottom-0 left-0 w-full label">
       <ng-container *ngIf="logged">
         <span *ngIf="!cart" (click)="addCart(data)" class="cartitem hover:underline">{{'item.cart' | translate}}</span>
         <span *ngIf="!heart" (click)="addWishlist(data)" class="bi bi-heart ml-auto"></span>
-        <span *ngIf="heart" (click)="removeWish(data)" class="fas fa-heart ml-auto"></span>
+        <span *ngIf="heart" (click)="removeWish(data)" class="bi bi-heart-fill ml-auto"></span>
       </ng-container>
       <span (click)="modalOpen()" class="bi bi-arrows-fullscreen ml-2"></span>
     </div>

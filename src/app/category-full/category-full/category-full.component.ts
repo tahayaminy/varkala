@@ -11,7 +11,7 @@ export class CategoryFullComponent implements OnInit {
   sort;
 
   constructor(public server:ServerService) { }
-  
+
   ngOnInit(): void {
     this.server.getDb().subscribe((val) => {
       this.srcProduct = val['products'];
@@ -23,7 +23,6 @@ export class CategoryFullComponent implements OnInit {
       val['products'].map(item=>{
         if(item.category==filter){
           this.srcProduct.push(item);
-          console.log(this.srcProduct);
         }
       })
       if(this.sort=="rate"){
@@ -40,7 +39,7 @@ export class CategoryFullComponent implements OnInit {
           }
         }
       }
-       
+
     });
   }
   changeSort(sort){

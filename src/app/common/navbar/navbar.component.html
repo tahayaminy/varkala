@@ -19,14 +19,16 @@
     </div>
     <div class="hidden justify-end sm:inline-flex items-center w-full">
       <button mat-button [matMenuTriggerFor]="lang" class="mx-4">
-        {{ ('navbar.lang' | translate)[0] }} <i class="fas fa-caret-down"></i>
+        {{ ('navbar.lang' | translate)[langId] }} <i class="fas fa-caret-down"></i>
       </button>
       <mat-menu class="mt-4 py-2" #lang="matMenu" xPosition="before">
         <section class="mat-upper-nav">
-          <b (click)="translator('deu')" mat-menu-item class="mat-item font-medium">{{('navbar.lang' | translate)[1]}}</b>
-          <b (click)="translator('fr')" mat-menu-item class="mat-item font-medium">{{('navbar.lang' | translate)[2]}}</b>
+          <ng-container *ngFor="let lang of langs;let index=index;">
+            <b *ngIf="langId!=index"  (click)="translator(lang,index)" mat-menu-item class="mat-item font-medium">{{('navbar.lang' | translate)[index]}}</b>
+          </ng-container>
         </section>
       </mat-menu>
+
       <button
         mat-button
         [matMenuTriggerFor]="usd"
@@ -128,7 +130,7 @@
           <section class="mat-icons">
             <section *ngIf="categories" class="main grid grid-cols-6 pt-12 px-6">
               <div  *ngFor="let category of categories" routerLink="/category">
-                <div><img width="48px" [src]="category.mainImage" alt="" /></div>
+                <div><img width="48px" [src]="'../../../assets/'+category.icon" alt="" /></div>
                 <div><h6>{{category.name}}</h6></div>
               </div>
             </section>
@@ -343,54 +345,10 @@
         <li tabindex="0" style="min-height: 42px" class="flex flex-wrap py-2 items-center">
           {{'navbar.menu.icon' | translate}} <i class="fas ml-auto mr-2 text-xs fa-angle-down"></i>
           <ul class="menu-cont basis-full custom-columns pl-4">
-            <div routerLink="/category">
-              <img width="48px" src="../assets/icon/trousers.png" alt="" />
-              <h6>Trousers</h6>
-            </div>
-            <div>
-              <img width="48px" src="../assets/icon/shorts.png" alt="" />
-              <h6>Shorts</h6>
-            </div>
-            <div>
-              <img width="48px" src="../assets/icon/jacket.png" alt="" />
-              <h6>Jackets</h6>
-            </div>
-            <div>
-              <img width="48px" src="../assets/icon/underwear.png" alt="" />
-              <h6>Underwear</h6>
-            </div>
-            <div>
-              <img width="48px" src="../assets/icon/tshirt.png" alt="" />
-              <h6>T-Shirts</h6>
-            </div>
-            <div>
-              <img width="48px" src="../assets/icon/watches.png" alt="" />
-              <h6>Watches</h6>
-            </div>
-            <div>
-              <img width="48px" src="../assets/icon/shirt.png" alt="" />
-              <h6>Shirts</h6>
-            </div>
-            <div>
-              <img width="48px" src="../assets/icon/bags.png" alt="" />
-              <h6>Bags</h6>
-            </div>
-            <div>
-              <img width="48px" src="../assets/icon/pullover.png" alt="" />
-              <h6>Pullovers</h6>
-            </div>
-            <div>
-              <img width="48px" src="../assets/icon/cap.png" alt="" />
-              <h6>Caps</h6>
-            </div>
-            <div>
-              <img width="48px" src="../assets/icon/scarf.png" alt="" />
-              <h6>Scarfs</h6>
-            </div>
-            <div>
-              <img width="48px" src="../assets/icon/accessories.png" alt="" />
-              <h6>Accessories</h6>
-            </div>
+            <li  *ngFor="let category of categories" routerLink="/category">
+              <div><img width="48px" [src]="'../../../assets/'+category.icon" alt="" /></div>
+              <div><h6>{{category.name}}</h6></div>
+            </li>
           </ul>
         </li>
 

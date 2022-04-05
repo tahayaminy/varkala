@@ -12,19 +12,27 @@ import { upper, passLength,lower,isNumber,symbols } from '../passval';
   styleUrls: ['./security.component.scss'],
 })
 export class SecurityComponent implements OnInit {
-  
+
   emailCheck=true;
   USERS:any[]=[];
   information=false;
-  
-  constructor(private fb: FormBuilder,public server:ServerService) {}
+
+  constructor(private fb: FormBuilder,public server:ServerService,private router:Router) {}
   ngOnInit(): void {
     this.server.getDb().subscribe(val=>this.USERS=val["users"])
   }
-  
+
   LoginForm = this.fb.group({
-    email: ['',Validators.email],
-    password:['']
+    email: ['',[Validators.email,Validators.required]],
+    password:['',{
+      validators:[
+        passLength(),
+        upper(),
+        lower(),
+        isNumber(),
+        symbols()
+      ]
+    }]
   });
 
   registerForm = this.fb.group({
@@ -45,7 +53,7 @@ export class SecurityComponent implements OnInit {
     this.USERS.map(user=>{
         if(user.email==email && user.password==pass){
           sessionStorage.setItem("userId", user.id);
-          window.location.replace('/');
+          this.router.navigate(['/']);
         }
         else{
           this.information=true;
@@ -63,10 +71,9 @@ export class SecurityComponent implements OnInit {
       password:pass
     }).subscribe(user=>{
       this.USERS.push(user);
-      console.log(this.USERS);
       window.location.reload();
     })
-    
+
 
   }
   newEmail(email){
@@ -74,7 +81,7 @@ export class SecurityComponent implements OnInit {
         const index=this.USERS.findIndex(u=>u.email===email);
 
           if(index>=0){
-            
+
             this.emailCheck=false;
             this.registerForm.controls['email'].setErrors({'incorrect': true});
           }else{

@@ -16,7 +16,7 @@ export class IndexComponent implements OnInit {
   hour: number = 0;
   min: number = 0;
   sec: number = 0;
-  timestamp = 1647790406000;
+  timestamp = 1649462399000;
   tracker!: Subscription;
   trackerShow: boolean = true;
 

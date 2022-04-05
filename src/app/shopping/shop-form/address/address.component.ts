@@ -14,7 +14,6 @@ export class AddressComponent implements OnInit {
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
-    console.log(this.items);
     this.totalprice();
   }
   formshop=this.fb.group({

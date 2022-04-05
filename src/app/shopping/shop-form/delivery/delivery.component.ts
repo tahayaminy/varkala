@@ -18,7 +18,6 @@ export class DeliveryComponent implements OnInit {
 
   ngOnInit(): void {
     this.totalprice();
-    console.log(this.deliverForm.value);
   }
 
   deliverForm=this.fb.group({
@@ -31,7 +30,6 @@ export class DeliveryComponent implements OnInit {
       this.orderTotal+=item.total;
     }
     this.total=this.orderTotal + this.shipping;
-    console.log(this.total)
   }
   ship(e){
     let value=e.target.value;

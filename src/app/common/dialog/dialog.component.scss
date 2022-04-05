@@ -14,12 +14,16 @@ $light: #adb5bd;
     width: 100%;
     height: 100%;
   }
-  
+  .typeSelected{
+      background-color: $crem;
+      color: #000 !important;
+
+  }
   .swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #fff;
-  
+
     /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
@@ -34,26 +38,26 @@ $light: #adb5bd;
     -webkit-align-items: center;
     align-items: center;
   }
-  
+
   .swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  
+
   .swiper {
     width: 100%;
     height: 300px;
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   .swiper-slide {
     background-size: cover;
     background-position: center;
   }
-  
+
   .mySwiper2 {
     width: 100%;
     height: 80%;
@@ -64,7 +68,7 @@ $light: #adb5bd;
       height: 80%;
     }
   }
-  
+
   .mySwiper {
     box-sizing: border-box;
     padding: 20px 0;
@@ -77,17 +81,17 @@ $light: #adb5bd;
       height: 15%;
     }
   }
-  
+
   .mySwiper .swiper-slide {
     width: 25%;
     height: 100%;
     opacity: 0.4;
   }
-  
+
   .mySwiper .swiper-slide-thumb-active {
     opacity: 1;
   }
-  
+
   .swiper-slide img {
     display: block;
     width: 100%;
@@ -95,7 +99,7 @@ $light: #adb5bd;
     object-fit: cover;
   }
   //SWIPER END
-  
+
   .mat-form-field-label-wrappe {
     display: none;
   }
@@ -174,7 +178,7 @@ $light: #adb5bd;
       font-size: .875rem;
       color:$gray;
     }
-    
+
     b{
       font-family: regular;
     }
@@ -259,15 +263,9 @@ $light: #adb5bd;
         font-size: .7rem;
         letter-spacing: .3em;
         margin-bottom: 48px;
-        &:first-child{
-          background-color: $crem;
-          color: #000;
-          margin-right: 4px;
-        }
-        &:last-child{
+        cursor: pointer;
           border: 2px solid $crem;
           color: $crem;
-        }
       }
     }
     .shop{
@@ -290,4 +288,16 @@ $light: #adb5bd;
       line-height: 1.6;
     }
   }
+}
+.badge-fresh{
+  background-color: #877f64;
+}
+.badge-out{
+  background-color: #dc3545;
+}
+.badge-come{
+  background-color: #212529;
+}
+.badge-in{
+  background-color: #bcac76;
 }

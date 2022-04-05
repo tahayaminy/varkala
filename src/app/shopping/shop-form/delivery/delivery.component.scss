@@ -79,7 +79,7 @@ main {
       color: white;
       background-color: $crem;
     }
-    
+
     @media only screen and (max-width:1024px){
       &>div:last-child{
         border-bottom-left-radius: .25rem;
@@ -143,9 +143,13 @@ main {
     }
   }
   .options {
-    letter-spacing: 0.25rem;
+    letter-spacing: 0.1rem;
     font-size: 0.8rem;
     padding: 8.4px 12px;
+    @media only screen and (max-width: 1024px){
+    padding-left: 0;
+    padding-right: 0;
+  }
     span,button {
       cursor: pointer;
     }
@@ -156,6 +160,7 @@ main {
       color: white;
       background-color: $black;
       padding: 8.4px 12px;
+      letter-spacing: .3em;
       &:disabled{
         opacity: .5;
         cursor: not-allowed;

@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
-import { CanLoad, Route, UrlSegment, UrlTree } from '@angular/router';
+import {CanLoad, Route, Router, UrlSegment, UrlTree} from '@angular/router';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DashboardGuard implements CanLoad {
+  constructor(private router:Router) {
+  }
   profile=sessionStorage.getItem("userId");
   canLoad(
     route: Route,
@@ -13,7 +15,7 @@ export class DashboardGuard implements CanLoad {
       if(this.profile){
         return true;
       }else{
-        window.location.replace("/")
+        this.router.navigate(['/']);
         return false;
       }
   }

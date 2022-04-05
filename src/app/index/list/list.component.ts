@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import {AfterViewInit, Component, ElementRef, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
 import AOS from 'aos';
 import { ServerService } from 'src/app/server.service';
 
@@ -13,23 +13,30 @@ interface Sort {
   styleUrls: ['./list.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class ListComponent implements OnInit {
+export class ListComponent implements OnInit,AfterViewInit {
   products: any[] = [];
   sorts: Sort[] = [
     { index: 1, value: 'Default' },
     { index: 2, value: 'Rating' },
   ];
   selectedSort = 1;
-
+  @ViewChild('all') all!:ElementRef;
+  lastfilter;
   constructor(public server: ServerService) {}
-  
+
   ngOnInit(): void {
     AOS.init();
     this.server.getDb().subscribe((val) => (this.products = val['products']));
   }
-  
-  
-  productFilter(filter) {
+
+ngAfterViewInit(){
+  this.lastfilter=this.all.nativeElement;
+}
+
+  productFilter(filter,id?) {
+    this.lastfilter.classList.add('mute');
+    id.classList.remove('mute');
+    this.lastfilter=id;
     switch (filter) {
       case 'all':
         this.server

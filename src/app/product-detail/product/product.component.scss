@@ -23,7 +23,7 @@ $light: #adb5bd;
 }
 
 
-    
+
 .swiper-pagination-bullet-active {
   background: #bcac76;
 }
@@ -85,7 +85,7 @@ $light: #adb5bd;
 header {
   .notif{
       font-size: 1rem;
-      margin-bottom: 48px;    
+      margin-bottom: 48px;
       background-color: #69c17d;
       color: white;
       padding: 20px 32px;
@@ -95,7 +95,7 @@ header {
           font-size: 3rem;
     }
   }
-  
+
   .bread-crumb{
     &>span{
       font-size: 14px;
@@ -114,7 +114,7 @@ header {
       color: $gray;
     }
   }
-  
+
 }
 .details {
   width: 100%;
@@ -154,7 +154,7 @@ header {
       font-size: .875rem;
       color:$gray;
     }
-    
+
     b{
       font-family: regular;
     }
@@ -239,15 +239,14 @@ header {
         font-size: .7rem;
         letter-spacing: .3em;
         margin-bottom: 48px;
-        &:first-child{
-          background-color: $crem;
-          color: #000;
-          margin-right: 4px;
-        }
-        &:last-child{
+        cursor: pointer;
           border: 2px solid $crem;
           color: $crem;
-        }
+      }
+      .typeSelected{
+        background-color: $crem;
+        color: #000 !important;
+
       }
     }
     .shop{
@@ -323,7 +322,6 @@ header {
       font-family: "regular";
     }
     .badge {
-      background-color: #877f64;
       color: white;
       padding: 2px 8px 0 8px;
       font-size: 12px;
@@ -347,8 +345,8 @@ header {
         }
       }
     }
-    .stars {  
-      transform: translateY(5%);     
+    .stars {
+      transform: translateY(5%);
       font-size: 11px;
       color: $gray;
     }
@@ -357,7 +355,7 @@ header {
         transition: .5s;
           opacity: 0;
           pointer-events: none;
-          
+
         transform: translateY(100%);
       }
       section:hover {

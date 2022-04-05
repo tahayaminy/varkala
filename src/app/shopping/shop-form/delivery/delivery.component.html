@@ -23,7 +23,6 @@
       </div>
     </section>
     <section>
-      {{deliverForm.value.deliver}}
       <section class="cards grid md:grid-cols-2 grid-cols-1 gap-x-8">
         <div>
           <label class="rounded">
@@ -84,9 +83,9 @@
       </section>
     </section>
     <div
-      class="options flex flex-wrap lg:flex-nowrap justify-center mt-8 lg:mt-12 lg:mb-0 mb-12"
+      class="options flex flex-wrap lg:flex-nowrap justify-center mt-12 lg:mb-0 mb-12"
     >
-      <span routerLink=".." class="basis-full inline-flex items-center text-center mb-5 lg:mb-0 lg:basis-auto"
+      <span routerLink=".." class="inline-flex mx-auto lg:mx-0 items-center text-center mb-3 lg:mb-0 lg:basis-auto"
         ><i class="fas fa-angle-left"></i> {{'shopForm.delivery.back' | translate}}</span
       ><button [disabled]="!deliverForm.valid" (click)="form()" class="ml-auto text-center basis-full lg:basis-auto"
         >{{'shopForm.delivery.next' | translate}} <i class="fas fa-angle-right"></i

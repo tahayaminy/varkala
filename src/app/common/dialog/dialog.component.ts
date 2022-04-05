@@ -19,7 +19,7 @@ interface Sort{
   encapsulation:ViewEncapsulation.None
 })
 export class DialogComponent implements OnInit {
-  
+
   fromPage!:string;
   fromDialog!:string;
   category;
@@ -31,9 +31,9 @@ export class DialogComponent implements OnInit {
   selectedSort=1;
   //thumbs
   thumbsSwiper: any;
-
+  typeSelected='hoodie';
   constructor(public dialogRef:MatDialogRef<DialogComponent>,@Optional() @Inject(MAT_DIALOG_DATA) public data:any,public server:ServerService) { }
-  
+
   ngOnInit(): void {
     this.fromDialog = "I am from dialog land...";
     this.server.getDb().subscribe(val=>{
@@ -46,5 +46,5 @@ export class DialogComponent implements OnInit {
   }
 
   closeDialog() { this.dialogRef.close({ event: 'close'}); }
-  
+
 }

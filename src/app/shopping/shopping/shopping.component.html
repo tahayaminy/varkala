@@ -12,7 +12,7 @@
 </header>
 <main class="container flex flex-wrap mx-auto pb-24">
     <section class="basis-full lg:basis-8/12 xl:pr-12 pr-4">
-        <section *ngFor="let data of shoppingCart;let first=first;let index=index;" [ngClass]="[(first)?'pt-14':'pt-12',(first)?'border-b':'']" class="flex flex-wrap sm:flex-nowrap product sm:pt-6 pb-8 ">
+        <section *ngFor="let data of shoppingCart;let first=first;let index=index;let last=last" [ngClass]="[(first)?'pt-14':'pt-12',(last)?'':'border-b']" class="flex flex-wrap sm:flex-nowrap product sm:pt-6 pb-8 ">
             <span class="sm:hidden hover:cursor-pointer fas fa-times mb-1" (click)="removeCart(data)"></span>
             <div class="basis-full sm:basis-5/12 flex first">
                 <div class="img">

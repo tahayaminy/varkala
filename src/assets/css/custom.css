@@ -12,13 +12,13 @@
 }
 .select .mat-select-arrow-wrapper {
   display: block;
-  
+
 }
 .select .mat-select-arrow-wrapper:hover::after {
-    
+
       color: hsl(0, 0%, 60%);
   }
-  
+
   .select .mat-select-arrow-wrapper::after {
     transition: 0.15s;
     content: "\f107";
@@ -54,12 +54,12 @@
   border: 1px solid hsl(0, 0%, 80%);
   border-radius: 1px;
   transition: 0.15s;
-  
+
 }
 .select .mat-form-field-wrapper:hover {
     border: 1px solid hsl(0, 0%, 60%);
   }
-  
+
   .select .mat-form-field-wrapper:focus-within {
     border: 1px solid #bcac76;
     outline: 5px solid rgba(188, 172, 118,.2);
@@ -78,19 +78,16 @@
 }
 
 /*FORM*/
-.ng-valid[required], .ng-valid:not(form)  {
+ .ng-valid:not(form,.mat-form-field,.mat-select)  {
   box-shadow: 5px 0px 0px 0px #42A948;
 }
 
-.ng-invalid:not(form){
+.ng-invalid:not(form,.mat-form-field,.mat-select){
   box-shadow: -5px 0px 0px 0px #a94442;
 }
-.ng-pristine:not(form)  {
+.ng-pristine:not(form,.mat-form-field,.mat-select)  {
   box-shadow: unset !important;
 }
 .ng-pristine + p{
     display: none;
   }
-  /* .ng-invalid + p{
-    display: block;
-  } */

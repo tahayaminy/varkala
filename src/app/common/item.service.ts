@@ -60,16 +60,13 @@ export class ItemService {
     } else {
       this.Wishlist.push(data);
     }
-    console.log(this.Wishlist)
     localStorage.setItem("wish",`{"items":${JSON.stringify(this.Wishlist)}}`);
     this.wishes.next(this.Wishlist);
   }
   removeWish(data){
-    console.log(this.Wishlist)
     var index = this.Wishlist.indexOf(data);
     this.Wishlist.splice(index, 1);
     localStorage.setItem("wish",`{"items":${JSON.stringify(this.Wishlist)}}`);
     this.wishes.next(this.Wishlist)
-    console.log(this.Wishlist)
   }
 }

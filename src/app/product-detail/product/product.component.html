@@ -108,13 +108,13 @@
           <div class="lg:basis-full basis-full ml-auto sm:basis-auto">
             <b>{{'dialog.type' | translate}} </b><span class="light"> ({{'dialog.requir' | translate}})</span>
             <div class="mt-3 pb-12 type">
-              <span>HOODIE</span>
-              <span>COLLEGE</span>
+              <span [class.typeSelected]="typeSelected=='hoodie'" (click)="typeSelected='hoodie'">HOODIE</span>
+              <span class="ml-1" [class.typeSelected]="typeSelected=='college'" (click)="typeSelected='college'">COLLEGE</span>
             </div>
           </div>
         </div>
         <div class="flex shop mb-6">
-          <input class="basis-4/12" value="1" type="number" name="" id="" />
+          <input min="1" class="basis-4/12" value="1" type="number" name="" id="" />
           <button class="basis-10/12">
             <i class="fas fa-shopping-cart"></i> {{'dialog.cart' | translate}}
           </button>
@@ -177,7 +177,7 @@
     [navigation]="true"
   >
     <ng-template *ngFor="let data of randomProducts" swiperSlide>
-      <app-item [data]="data"></app-item> 
+      <app-item [data]="data"></app-item>
     </ng-template>
   </swiper>
 </article>

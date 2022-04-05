@@ -34,7 +34,6 @@ export class ShoppingComponent implements OnInit {
       this.cart=data;
     });
     this.shoppingCart.shift();
-    console.log(this.shoppingCart);
     this.totalprice();
   }
   increase(id){
@@ -62,7 +61,6 @@ export class ShoppingComponent implements OnInit {
     this.router.navigate(["shopping/form"]);
   }
   removeCart(data){
-    console.log('run')
     this.itemService.removeCart(data);
 
     this.itemService.list.subscribe(data=>{

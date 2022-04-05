@@ -54,14 +54,18 @@
           <input formControlName="number" type="tel" id="phone" placeholder="Phone Number" />
         </div>
       </div>
-      <div class="mt-5">
-        <input type="checkbox" name="" id="" /> {{'shopForm.address.form.check' | translate}}
+      <div class="mt-3">
+        <label class="checkbox">
+          {{'shopForm.address.form.check' | translate}}
+          <input type="checkbox" />
+          <span class="check"></span>
+        </label>
       </div>
     </section>
     <div
-      class="options flex flex-wrap lg:flex-nowrap justify-center mt-8 lg:mt-16 lg:mb-0 mb-12"
+      class="options flex flex-wrap lg:flex-nowrap justify-center mt-20 lg:mt-16 lg:mb-0 mb-12"
     >
-      <span class="basis-full inline-flex items-center text-center mb-5 lg:mb-0 lg:basis-auto"
+      <span routerLink=".." class="inline-flex mx-auto lg:mx-0 items-center text-center mb-3 lg:mb-0 lg:basis-auto"
         ><i class="fas fa-angle-left"></i> {{'shopForm.address.back' | translate}}</span
       ><button [disabled]="!formshop.valid" routerLink="delivery" class="ml-auto text-center basis-full lg:basis-auto"
         >{{'shopForm.address.next' | translate}} <i class="fas fa-angle-right"></i

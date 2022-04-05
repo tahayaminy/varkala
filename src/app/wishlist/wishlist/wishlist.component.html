@@ -29,7 +29,7 @@
                 <span>${{item.price}}</span>
             </div>
             <div class="basis-1/4 flex items-center">
-                <span class="bg-crem">{{item.status}}</span>
+              <span [ngClass]="[(item.status=='Fresh')?'badge-fresh':'',(item.status=='Out of stock')?'badge-out':'',(item.status=='Being restocked')?'badge-come':'',(item.status=='In stock')?'badge-in':'']" class="badge">{{item.status}}</span>
             </div>
             <div class="flex items-center justify-center">
                 <span>{{'wishlist.item.cart' | translate}}</span>

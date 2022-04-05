@@ -24,11 +24,17 @@ export class ProductComponent implements OnInit {
     {index: 3,value: 'Large'}
   ];
   selectedSort=1;
-    
+
+  typeSelected='hoodie';
   constructor(public server:ServerService,private router:ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.router.paramMap.subscribe(params=>this.productId=Number(params.get('id')));
+    this.router.paramMap.subscribe(params=>{this.productId=Number(params.get('id'));
+
+      this.fetchData();
+    });
+  }
+  fetchData(){
     this.server.getDb().subscribe(val=>{
       val["products"].map(obj=>{
         if(obj.id==this.productId){
@@ -47,12 +53,11 @@ export class ProductComponent implements OnInit {
       var arr=val["products"];
       var i=11;
       while(i>=0){
-      var x=Math.floor(Math.random() * arr.length);
-      this.randomProducts?.push(arr[x]);
-      arr.splice(x,1);
-      i--;
-    }
-    console.log(this.randomProducts);
-    });    
-  }  
+        var x=Math.floor(Math.random() * arr.length);
+        this.randomProducts?.push(arr[x]);
+        arr.splice(x,1);
+        i--;
+      }
+    });
+  }
 }

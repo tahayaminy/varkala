@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Carrot-fit jeans",
       "description": "Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.",
-      "status": "FRESH",
+      "status": "Out of stock",
       "price": 40,
       "gender": "WOMEN",
       "discount": {
@@ -22,7 +22,7 @@
       "id": 2,
       "name": "College jacket",
       "description": "Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.",
-      "status": "FRESH",
+      "status": "Out of stock",
       "price": 40,
       "gender": "WOMEN",
       "discount": {
@@ -40,7 +40,7 @@
       "id": 3,
       "name": "Black blouse",
       "description": "Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.",
-      "status": "FRESH",
+      "status": "Out of stock",
       "price": 40,
       "gender": "WOMEN",
       "discount": {
@@ -58,7 +58,7 @@
       "id": 4,
       "name": "White Tee",
       "description": "Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.",
-      "status": "FRESH",
+      "status": "In stock",
       "price": 40,
       "gender": "WOMEN",
       "discount": {
@@ -76,7 +76,7 @@
       "id": 5,
       "name": "Trouser Kikiriki",
       "description": "Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.",
-      "status": "FRESH",
+      "status": "In stock",
       "price": 40,
       "gender": "MEN",
       "discount": {
@@ -94,7 +94,7 @@
       "id": 6,
       "name": "Shirt Six Zero Nine",
       "description": "Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.",
-      "status": "FRESH",
+      "status": "Out of stock",
       "price": 40,
       "gender": "MEN",
       "discount": {
@@ -112,7 +112,7 @@
       "id": 7,
       "name": "T-Shirt Espiur",
       "description": "Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.",
-      "status": "FRESH",
+      "status": "Out of stock",
       "price": 40,
       "gender": "MEN",
       "discount": {
@@ -130,7 +130,7 @@
       "id": 8,
       "name": "Jacket Kikiriki",
       "description": "Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.",
-      "status": "FRESH",
+      "status": "In stock",
       "price": 40,
       "gender": "MEN",
       "discount": {
@@ -148,7 +148,7 @@
       "id": 9,
       "name": "Bag male",
       "description": "Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.",
-      "status": "FRESH",
+      "status": "In stock",
       "price": 40,
       "gender": "MEN",
       "discount": {
@@ -166,7 +166,7 @@
       "id": 10,
       "name": "Bag female",
       "description": "Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.",
-      "status": "FRESH",
+      "status": "In stock",
       "price": 40,
       "gender": "WOMEN",
       "discount": {
@@ -184,7 +184,7 @@
       "id": 11,
       "name": "Cap male",
       "description": "Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.",
-      "status": "FRESH",
+      "status": "In stock",
       "price": 40,
       "gender": "MEN",
       "discount": {
@@ -202,7 +202,7 @@
       "id": 12,
       "name": "Cap female",
       "description": "Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.",
-      "status": "FRESH",
+      "status": "Being restocked",
       "price": 40,
       "gender": "WOMEN",
       "discount": {
@@ -220,7 +220,7 @@
       "id": 13,
       "name": "Watch Curos",
       "description": "Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.",
-      "status": "FRESH",
+      "status": "In stock",
       "price": 40,
       "gender": "WOMEN",
       "discount": {
@@ -238,7 +238,7 @@
       "id": 14,
       "name": "Watch Omax",
       "description": "Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.",
-      "status": "FRESH",
+      "status": "In stock",
       "price": 40,
       "gender": "MEN",
       "discount": {
@@ -256,7 +256,7 @@
       "id": 15,
       "name": "Hourglass gun",
       "description": "Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.",
-      "status": "FRESH",
+      "status": "Being restocked",
       "price": 40,
       "gender": "WOMEN",
       "discount": {
@@ -274,7 +274,7 @@
       "id": 16,
       "name": "Underwear Men",
       "description": "Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.",
-      "status": "FRESH",
+      "status": "In stock",
       "price": 40,
       "gender": "MEN",
       "discount": {
@@ -292,7 +292,7 @@
       "id": 17,
       "name": "Short Men",
       "description": "Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.",
-      "status": "FRESH",
+      "status": "In stock",
       "price": 40,
       "gender": "MEN",
       "discount": {
@@ -310,7 +310,7 @@
       "id": 18,
       "name": "Short Women",
       "description": "Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.",
-      "status": "FRESH",
+      "status": "Being restocked",
       "price": 40,
       "gender": "WOMEN",
       "discount": {
@@ -328,7 +328,7 @@
       "id": 19,
       "name": "Scarf Women",
       "description": "Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.",
-      "status": "FRESH",
+      "status": "In stock",
       "price": 40,
       "gender": "WOMEN",
       "discount": {
@@ -346,7 +346,7 @@
       "id": 20,
       "name": "Scarf Men",
       "description": "Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.",
-      "status": "FRESH",
+      "status": "Being restocked",
       "price": 40,
       "gender": "MEN",
       "discount": {
@@ -364,7 +364,7 @@
       "id": 21,
       "name": "Pullover Women",
       "description": "Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.",
-      "status": "FRESH",
+      "status": "Being restocked",
       "price": 40,
       "gender": "WOMEN",
       "discount": {
@@ -382,7 +382,7 @@
       "id": 22,
       "name": "Pullover Men",
       "description": "Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.",
-      "status": "FRESH",
+      "status": "Fresh",
       "price": 40,
       "gender": "MEN",
       "discount": {
@@ -400,7 +400,7 @@
       "id": 23,
       "name": "Bracelet Men",
       "description": "Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.",
-      "status": "FRESH",
+      "status": "Fresh",
       "price": 40,
       "gender": "MEN",
       "discount": {
@@ -418,7 +418,7 @@
       "id": 24,
       "name": "Necklace Women",
       "description": "Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.",
-      "status": "FRESH",
+      "status": "Fresh",
       "price": 40,
       "gender": "WOMEN",
       "discount": {
@@ -438,84 +438,84 @@
       "id": 1,
       "name": "Trousers",
       "description": "",
-      "icon": "",
+      "icon": "icon/trousers.png",
       "mainImage": "https://cdn.cliqueinc.com/posts/281351/loose-pants-for-women-281351-1563512196601-main.700x0c.jpg"
     },
     {
       "id": 2,
       "name": "Jackets",
       "description": "",
-      "icon": "",
+      "icon": "icon/jacket.png",
       "mainImage": "https://n.nordstrommedia.com/id/sr3/6afba3a9-aa0b-4a3e-be77-423659ba6438.jpeg?h=365&w=240&dpr=2"
     },
     {
       "id": 3,
       "name": "T-Shirts",
       "description": "",
-      "icon": "",
+      "icon": "icon/tshirt.png",
       "mainImage": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/white-tee-1623337322.jpg"
     },
     {
       "id": 4,
       "name": "Shirts",
       "description": "",
-      "icon": "",
+      "icon": "icon/shirt.png",
       "mainImage": "https://images.bewakoof.com/uploads/grid/app/types-of-shirts-for-men-bewakoof-blog-1-1610963787.jpg"
     },
     {
       "id": 5,
       "name": "Pullovers",
       "description": "",
-      "icon": "",
+      "icon": "icon/pullover.png",
       "mainImage": "https://cdn.shopify.com/s/files/1/0204/8934/products/BluetickQuarterZipOatmeal2_1024x1024.jpg?v=1643746698"
     },
     {
       "id": 6,
       "name": "Scarfs",
       "description": "",
-      "icon": "",
+      "icon": "icon/scarf.png",
       "mainImage": "https://images.accentuate.io/?image=https%3A%2F%2Fcdn.accentuate.io%2F6757871255716%2F1628676645452%2FAW21_NPA000033B_OLV_3.jpg%3Fv%3D0&c_options=w_504,h_576"
     },
     {
       "id": 7,
       "name": "Shorts",
       "description": "",
-      "icon": "",
+      "icon": "icon/shorts.png",
       "mainImage": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw86e4e147/images/hi-res/57185_NENA_MK1.jpg?sw=800&sh=800&sfrm=png&q=95&bgcolor=f5f5f5"
     },
     {
       "id": 8,
       "name": "Underwear",
       "description": "",
-      "icon": "",
+      "icon": "icon/underwear.png",
       "mainImage": "https://media.gq-magazine.co.uk/photos/60f93dc9c0e76ffbb9889499/master/w_1920,h_1280,c_limit/underwear_0004_Tom%20Ford.jpg"
     },
     {
       "id": 9,
       "name": "Watches",
       "description": "",
-      "icon": "",
+      "icon": "icon/watches.png",
       "mainImage": "https://media.istockphoto.com/photos/premium-mens-watch-on-hand-close-up-picture-id1065329058?k=20&m=1065329058&s=612x612&w=0&h=W2ibh4AmHRZO-T6TDgVmL79ql1iRbA1DsLka6mVX4Oc="
     },
     {
       "id": 10,
       "name": "Bags",
       "description": "",
-      "icon": "",
+      "icon": "icon/bags.png",
       "mainImage": "https://images.unsplash.com/photo-1544511196-1646449a253b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHw%3D&w=1000&q=80"
     },
     {
       "id": 11,
       "name": "Caps",
       "description": "",
-      "icon": "",
+      "icon": "icon/cap.png",
       "mainImage": "https://images.unsplash.com/photo-1592367630397-65872fe016e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FwfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
     },
     {
       "id": 12,
       "name": "Accessories",
       "description": "",
-      "icon": "",
+      "icon": "icon/accessories.png",
       "mainImage": "https://myrepublica.nagariknetwork.com/uploads/media/5b69706d6655d_20191125082831.jpg"
     }
   ],
@@ -525,6 +525,132 @@
       "username": "arya",
       "email": "arya@gmail.com",
       "password": "1Aa@"
+    },
+    {
+      "id": 2,
+      "username": "sfsdfasf",
+      "email": "sdfasdfsfdda@gmail.com",
+      "password": "78951Adfa@"
+    },
+    {
+      "id": 3,
+      "username": "sfsdfasf",
+      "email": "sdfasdfsfdda@gmail.com",
+      "password": "78951Adfa@"
+    },
+    {
+      "id": 4,
+      "username": "sfsdfasf",
+      "email": "sdfasdfsfdda@gmail.com",
+      "password": "78951Adfa@"
+    },
+    {
+      "id": 5,
+      "username": "sfsdfasf",
+      "email": "sdfasdfsfdda@gmail.com",
+      "password": "78951Adfa@"
+    },
+    {
+      "id": 6,
+      "username": "sfsdfasf",
+      "email": "sdfasdfsfdda@gmail.com",
+      "password": "78951Adfa@"
+    },
+    {
+      "id": 7,
+      "username": "sfsdfasf",
+      "email": "sdfasdfsfdda@gmail.com",
+      "password": "78951Adfa@"
+    },
+    {
+      "id": 8,
+      "username": "sfsdfasf",
+      "email": "sdfasdfsfdda@gmail.com",
+      "password": "78951Adfa@"
+    },
+    {
+      "id": 9,
+      "username": "sfsdfasf",
+      "email": "sdfasdfsfdda@gmail.com",
+      "password": "78951Adfa@"
+    },
+    {
+      "id": 10,
+      "username": "sfsdfasf",
+      "email": "sdfasdfsfdda@gmail.com",
+      "password": "78951Adfa@"
+    },
+    {
+      "id": 11,
+      "username": "sfsdfasf",
+      "email": "sdfasdfsfdda@gmail.com",
+      "password": "78951Adfa@"
+    },
+    {
+      "id": 12,
+      "username": "sfsdfasf",
+      "email": "sdfasdfsfdda@gmail.com",
+      "password": "78951Adfa@"
+    },
+    {
+      "id": 13,
+      "username": "sfsdfasf",
+      "email": "sdfasdfsfdda@gmail.com",
+      "password": "78951Adfa@"
+    },
+    {
+      "id": 14,
+      "username": "sfsdfasf",
+      "email": "sdfasdfsfdda@gmail.com",
+      "password": "78951Adfa@"
+    },
+    {
+      "id": 15,
+      "username": "sfsdfasf",
+      "email": "sdfasdfsfsdfsdfadfdda@gmail.com",
+      "password": "78951Adfa@"
+    },
+    {
+      "id": 16,
+      "username": "sfsdfasf",
+      "email": "sdfasdfsfsdfsdfadfdda@gmail.com",
+      "password": "78951Adfa@"
+    },
+    {
+      "id": 17,
+      "username": "sfsdfasf",
+      "email": "sdfasdfsfsdfsdfadfdda@gmail.com",
+      "password": "78951Adfa@"
+    },
+    {
+      "id": 18,
+      "username": "sfsdfasf",
+      "email": "sdfasdfsfsdfsdfadfdda@gmail.com",
+      "password": "78951Adfa@"
+    },
+    {
+      "id": 19,
+      "username": "sfsdfasf",
+      "email": "sdfasdfsfsdfsdfadfdda@gmail.com",
+      "password": "78951Adfa@"
+    },
+    {
+      "id": 20,
+      "username": "sfsdfasf",
+      "email": "sdfasdfsfsdfsdfadfdda@gmail.com",
+      "password": "78951Adfa@"
+    },
+    {
+      "id": 21,
+      "username": "sfsdfasf",
+      "email": "sdfasdfsfsdfsdfadfdda@gmail.com",
+      "password": "78951Adfa@"
+    },
+    {
+      "id": 22,
+      "username": "arya",
+      "email": "sdfsdfsf@gmaill.com",
+      "password": "dfasdf2424@SFSF"
     }
   ]
 }

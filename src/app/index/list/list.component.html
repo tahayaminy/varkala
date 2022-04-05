@@ -4,11 +4,11 @@
   <section
     class="flex flex-wrap sm:justify-start justify-center nav mb-9"
   >
-    <span class="mr-2" (click)="productFilter('all')">{{'index.list.all' | translate}}</span>
-    <span class="mr-2 mute" (click)="productFilter('cloth')">{{'index.list.cloth' | translate}}</span>
-    <span class="mr-2 mute" (click)="productFilter('bag')">{{'index.list.bag' | translate}}</span>
-    <span class="mr-2 mute" (click)="productFilter('underwear')">{{'index.list.under' | translate}}</span>
-    <span class="mr-2 mute" (click)="productFilter('ex')">{{'index.list.ex' | translate}}</span>
+    <span #all class="mr-2" (click)="productFilter('all',all)">{{'index.list.all' | translate}}</span>
+    <span #cloth class="mr-2 mute" (click)="productFilter('cloth',cloth)">{{'index.list.cloth' | translate}}</span>
+    <span #bag class="mr-2 mute" (click)="productFilter('bag',bag)">{{'index.list.bag' | translate}}</span>
+    <span #underwear class="mr-2 mute" (click)="productFilter('underwear',underwear)">{{'index.list.under' | translate}}</span>
+    <span #ex class="mr-2 mute" (click)="productFilter('ex',ex)">{{'index.list.ex' | translate}}</span>
     <span routerLink="/category-full"
       class="uppercase block sm:inline sm:basis-auto basis-full text-center sm:mt-0 mt-7 sm:ml-auto"
       >{{'index.list.all' | translate}}</span
@@ -17,6 +17,6 @@
   <section
     class="grid xl:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-x-8 gap-y-5"
   >
-  <app-item *ngFor="let item of products" [data]="item"></app-item>   
+  <app-item *ngFor="let item of products" [data]="item"></app-item>
   </section>
 </article>

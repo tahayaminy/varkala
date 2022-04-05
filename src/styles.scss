@@ -132,7 +132,6 @@ input:focus{
 }
 .dialog{
   .badge {
-    background-color: #bcac76;
     color: white;
     padding: 0px 8px 2px 8px;
     font-size: 12px;
@@ -150,7 +149,7 @@ input:focus{
     padding: 1rem;
   }
   @media only screen and (min-width:640px){
-    width: 600px !important;    
+    width: 600px !important;
     min-width: 600px !important;
     max-width: 600px !important;
   }

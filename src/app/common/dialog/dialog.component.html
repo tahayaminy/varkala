@@ -1,6 +1,6 @@
 <article class="dialogComponent grid lg:grid-cols-2 grid-cols-1 relative">
   <i (click)="closeDialog()" style="font-size: 27px;" class="absolute z-50 hover:rotate-90 cursor-pointer duration-300 fas fa-times right-5 top-3"></i>
-  <span class="absolute badge">{{data.status}}</span>
+  <span [ngClass]="[(data.status=='Fresh')?'badge-fresh':'',(data.status=='Out of stock')?'badge-out':'',(data.status=='Being restocked')?'badge-come':'',(data.status=='In stock')?'badge-in':'']" class="absolute badge">{{data.status}}</span>
   <section class="lg:pr-4 pb-5 lg:pb-0">
     <swiper
       style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff"
@@ -80,7 +80,7 @@
         <div class="mb-2">
           <b>{{'dialog.size' | translate}} </b><span class="light"> ({{'dialog.requir' | translate}})</span>
         </div>
-        
+
         <mat-form-field appearance="fill">
           <mat-select disableOptionCentering panelClass="drop-down" [(ngModel)]="selectedSort">
             <mat-option *ngFor="let sort of sorts" [value]="sort.index">
@@ -92,13 +92,13 @@
       <div class="lg:basis-full basis-full ml-auto sm:basis-auto">
         <b>{{'dialog.type' | translate}} </b><span class="light"> ({{'dialog.requir' | translate}})</span>
         <div class="mt-3 pb-12 type">
-          <span>HOODIE</span>
-          <span>COLLEGE</span>
+          <span [class.typeSelected]="typeSelected=='hoodie'" (click)="typeSelected='hoodie'">HOODIE</span>
+          <span class="ml-1" [class.typeSelected]="typeSelected=='college'" (click)="typeSelected='college'">COLLEGE</span>
         </div>
       </div>
     </div>
     <div class="flex shop mb-6">
-      <input class="basis-2/12" value="1" type="number" name="" id="">
+      <input min="1" class="basis-2/12" value="1" type="number" name="" id="">
       <button class="basis-10/12"><i class="fas fa-shopping-cart"></i> {{'dialog.cart' | translate}}</button>
     </div>
     <div class="flex mb-6">

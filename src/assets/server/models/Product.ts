@@ -28,6 +28,9 @@ export enum Gender {
     WOMEN = "WOMEN"
 }
 export enum Status {
-    FRESH = "FRESH",
-    NEW = "NEW"
+    FRESH="Fresh",
+    INSTOCK="In stock",
+    OUTOFSTOCK="Out of stock",
+    BEINGRESTOCKED="Being restocked"
+
 }

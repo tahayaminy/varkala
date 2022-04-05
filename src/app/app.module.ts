@@ -6,15 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './common/footer/footer.component';
 import { CommonShareModule } from './common/common-share.module';
-import { IndexModule } from './index/index.module';
-import { CategoryModule } from './category/category.module';
-import { SecurityModule } from './security/security.module';
-import { WishlistModule } from './wishlist/wishlist.module';
 import { CommonModule } from '@angular/common';
-import { ShoppingModule } from './shopping/shopping.module';
-import { ShopFormModule } from './shopping/shop-form/shop-form.module';
-import { CategoryFullModule } from './category-full/category-full.module';
-import { ProductDetailModule } from './product-detail/product-detail.module';
 
 import { TranslateModule,TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -36,14 +28,6 @@ export function HttpLoaderFactory(http:HttpClient){
     AppRoutingModule,
     BrowserAnimationsModule,
     CommonShareModule,
-    IndexModule,
-    CategoryModule,
-    SecurityModule,
-    WishlistModule,
-    ShoppingModule,
-    ShopFormModule,
-    CategoryFullModule,
-    ProductDetailModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader:{

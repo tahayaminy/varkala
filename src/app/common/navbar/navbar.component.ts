@@ -11,17 +11,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-
+  langs=['en', 'deu', 'fr'];
+  langId=0;
   @Input() index!:boolean;
   localWish=localStorage.getItem("wish")!;
   Wishlist=JSON.parse(this.localWish).items;
-
+  localprice=localStorage.getItem("price")!;
   localCart=localStorage.getItem("cart")!;
 
   Cart=JSON.parse(this.localCart).items;
   navbar:any;
   categories:any;
-  price=localStorage.getItem("price");
+  price='0';
   logged=false;
   dashboard?:User;
   Menu=false;
@@ -31,6 +32,9 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if(localStorage.getItem("price")!==null){
+      this.price=this.localprice;
+    }
     this.itemService.list.subscribe(data=>{
       this.Cart=data;
     });
@@ -60,7 +64,8 @@ export class NavbarComponent implements OnInit {
     this.logged=false;
     window.location.replace('/');
   }
-  translator(lang){
+  translator(lang,id){
+    this.langId=id;
     this.translate.use(lang);
     this.translate.get('navbar').subscribe(val=>this.navbar=val);
   }
@@ -74,7 +79,7 @@ export class NavbarComponent implements OnInit {
   }
   removeCart(data){
     this.itemService.removeCart(data);
-    this.price=localStorage.getItem("price");
+    this.price=this.localprice;
     this.itemService.list.subscribe(data=>{
       this.Cart=data;
     })

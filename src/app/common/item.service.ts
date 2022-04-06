@@ -19,6 +19,7 @@ export class ItemService {
   single=new Subject<any>();
   list=new Subject<any>();
   wishes=new Subject<any>();
+  pricew=new Subject<any>();
   constructor(private http:HttpClient) {}
 
   addToCart(data) {
@@ -36,6 +37,14 @@ export class ItemService {
   }
   removeCart(data){
     var index = this.Cart.indexOf(data);
+    let i=0
+    for(let x of this.Cart){
+      if(x.id == data.id){
+        index=i;
+      }
+      i++;
+    }
+    i=0;
     this.Cart.splice(index, 1);
     this.single.next(data.id);
     this.calcPrice();
@@ -48,6 +57,7 @@ export class ItemService {
       this.price=this.price+((item.price)-(((item.price)*(item.discount.percent))/100));
     }
     localStorage.setItem("price",`${this.price}`);
+    this.pricew.next(this.price)
   }
 
 

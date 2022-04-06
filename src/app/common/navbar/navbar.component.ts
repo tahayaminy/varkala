@@ -41,9 +41,9 @@ export class NavbarComponent implements OnInit {
     this.itemService.wishes.subscribe(data=>{
       this.Wishlist=data;
     });
-    this.itemService.single.subscribe(data=>{
+    this.itemService.pricew.subscribe(data=>{
       this.price=data;
-    });
+    })
     this.translate.get('navbar').subscribe(val=>this.navbar=val);
     this.server.getDb().subscribe(val=>this.categories=val["categories"]);
     var profile=sessionStorage.getItem("userId");
@@ -79,9 +79,9 @@ export class NavbarComponent implements OnInit {
   }
   removeCart(data){
     this.itemService.removeCart(data);
-    this.price=this.localprice;
     this.itemService.list.subscribe(data=>{
       this.Cart=data;
     })
+
   }
 }

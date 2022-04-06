@@ -13,7 +13,7 @@
 <main class="container flex flex-wrap mx-auto pb-24">
     <section class="basis-full lg:basis-8/12 xl:pr-12 pr-4">
         <section *ngFor="let data of shoppingCart;let first=first;let index=index;let last=last" [ngClass]="[(first)?'pt-14':'pt-12',(last)?'':'border-b']" class="flex flex-wrap sm:flex-nowrap product sm:pt-6 pb-8 ">
-            <span class="sm:hidden hover:cursor-pointer fas fa-times mb-1" (click)="removeCart(data)"></span>
+            <span class="sm:hidden hover:cursor-pointer fas fa-times mb-1" (click)="removeCart(data.item)"></span>
             <div class="basis-full sm:basis-5/12 flex first">
                 <div class="img">
                     <img [src]="'../../'+data.item?.['image']?.[0]" alt="">
@@ -37,7 +37,7 @@
                     <span>${{data.total}}</span>
                 </div>
                 <div class="basis-1/6 flex items-center justify-center">
-                    <span class="bi bi-x-lg hover:cursor-pointer" (click)="removeCart(data)"></span>
+                    <span class="bi bi-x-lg hover:cursor-pointer" (click)="removeCart(data.item)"></span>
                 </div>
             </div>
             <div class="third sm:hidden w-full pt-8">

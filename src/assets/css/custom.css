@@ -72,6 +72,7 @@
   font-size: 12.8px;
   font-family: "medium";
   letter-spacing: 0.3em;
+  margin-left:10px;
 }
 .mat-form-field-appearance-fill .mat-form-field-infix{
     padding: 0 !important;
@@ -91,3 +92,4 @@
 .ng-pristine + p{
     display: none;
   }
+

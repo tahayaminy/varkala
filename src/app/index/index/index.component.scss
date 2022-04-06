@@ -10,13 +10,11 @@ $crem: #bcac76;
   position: absolute;
   top: 0;
   min-height: 600px;
+  bottom: 0px;
 
   @media only screen and (max-width: 768px) {
-    .swiper-horizontal > .swiper-pagination-bullets,
-    .swiper-pagination-bullets.swiper-pagination-horizontal,
-    .swiper-pagination-custom,
-    .swiper-pagination-fraction {
-      bottom: 20px;
+    .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+      bottom: 0px;
     }
   }
 }
@@ -157,7 +155,7 @@ $crem: #bcac76;
 .history-slider {
   padding-right: 15px;
   padding-left: 15px;
-  padding-bottom: 48px;
+  padding-bottom: 48px !important;
   display: flex;
   align-items: center;
 

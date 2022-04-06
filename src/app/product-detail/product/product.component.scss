@@ -4,10 +4,10 @@ $crem: #bcac76;
 $light: #adb5bd;
 @import "~swiper/css";
 @import "~swiper/css/pagination";
-.swiper {
+.product .swiper {
   width: 100%;
   height: 100%;
-  padding-bottom: 48px;
+  padding-bottom: 48px !important;
 }
 
 .swiper-slide {

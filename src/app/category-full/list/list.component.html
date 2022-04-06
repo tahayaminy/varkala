@@ -2,7 +2,7 @@
   [class.mb-36]="!paginatorShow"
   class="product-list"
 >
-  <section class="flex flex-wrap nav-full mb-9">
+  <section class="flex flex-wrap nav-full mb-5">
     <div class=" mb-6 mr-4">
      {{'category-full.list.phrase.show' | translate}} <span class="dark-2">{{firstIndex}}-{{lastIndex}}</span> {{'category-full.list.phrase.of' | translate}}
       <span class="dark-2">{{srcProduct?.length}}</span> {{'category-full.list.phrase.product' | translate}}
@@ -31,11 +31,11 @@
     class="grid grid-cols-2 gap-x-8 gap-y-5 xl:grid-cols-4 sm:grid-cols-3"
   >
   <ng-container *ngIf="!paginatorShow">
-    <app-item *ngFor="let item of products" [data]="item"></app-item> 
-  </ng-container> 
+    <app-item *ngFor="let item of products" [data]="item"></app-item>
+  </ng-container>
   <ng-container *ngIf="paginatorShow">
-    <app-item *ngFor="let item of products[page]" [data]="item"></app-item> 
-  </ng-container>  
+    <app-item *ngFor="let item of products[page]" [data]="item"></app-item>
+  </ng-container>
   </section>
 </article>
 

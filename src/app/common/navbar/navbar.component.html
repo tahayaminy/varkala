@@ -447,7 +447,7 @@
     <div class="flex justify-end p-4">
       <i (click)="drawer2.toggle()" class="fas text-3xl px-2 fa-times"></i>
     </div>
-    <div *ngIf="logged" class="pt-4 bag">
+    <div class="pt-4 bag">
       <div class="main px-12 py-4">
         <!-- USE TRANSLATE NGX, JUST FOR ONE PRODUCT!  -->
         <section *ngFor="let item of Cart;let first=first;let last=last" [ngClass]="{'pt-8':!first,'border-b':!last}" class="pb-9 flex product ">
@@ -476,9 +476,6 @@
         <button routerLink="/shopping" class="w-full viewcart mb-4">{{'navbar.bag.cart' | translate}}</button>
         <button class="w-full checkout">{{'navbar.bag.check' | translate}}</button>
       </div>
-    </div>
-    <div class="text-center text-red-500" *ngIf="!logged">
-      FIRST LOGIN
     </div>
   </mat-drawer>
 </mat-drawer-container>

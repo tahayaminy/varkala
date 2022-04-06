@@ -58,7 +58,7 @@
       </div>
     </section>
     <section
-      class="xl:ml-auto pl-5 order-1 mb-6 lg:mb-0 basis-full lg:order-2 lg:basis-5/12 xl:basis-4/12"
+      class="xl:ml-auto lg:pl-5 order-1 mb-6 lg:mb-0 basis-full lg:order-2 lg:basis-5/12 xl:basis-4/12"
     >
       <section class="details">
         <h2>{{ product?.name }}</h2>
@@ -84,7 +84,7 @@
             <span class="review">{{ product?.reviews }} {{'dialog.review' | translate}}</span>
           </span>
         </p>
-        <p class="mute pb-3">
+        <p class="mute pb-3" style="line-height: 1.6em">
           {{ product?.description }}
         </p>
         <div class="flex flex-wrap">
@@ -107,7 +107,7 @@
           </div>
           <div class="lg:basis-full basis-full ml-auto sm:basis-auto">
             <b>{{'dialog.type' | translate}} </b><span class="light"> ({{'dialog.requir' | translate}})</span>
-            <div class="mt-3 pb-12 type">
+            <div class="mt-3 pb-8 type">
               <span [class.typeSelected]="typeSelected=='hoodie'" (click)="typeSelected='hoodie'">HOODIE</span>
               <span class="ml-1" [class.typeSelected]="typeSelected=='college'" (click)="typeSelected='college'">COLLEGE</span>
             </div>
@@ -135,7 +135,7 @@
     </section>
   </article>
 </main>
-<article class="container mx-auto">
+<article class="container mx-auto product">
   <section class="-mt-5 lg:mt-16 intro-tab mb-6">
     <span>{{'detail.desc.name' | translate}}</span>
   </section>

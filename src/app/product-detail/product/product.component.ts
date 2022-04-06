@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import {Component, OnDestroy, OnInit, ViewEncapsulation} from '@angular/core';
 import { ServerService } from 'src/app/server.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -12,7 +12,7 @@ interface Sort{
   styleUrls: ['./product.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class ProductComponent implements OnInit {
+export class ProductComponent implements OnInit,OnDestroy {
   notif=true;
   productId;
   product;
@@ -59,5 +59,7 @@ export class ProductComponent implements OnInit {
         i--;
       }
     });
+  }
+  ngOnDestroy() {
   }
 }
